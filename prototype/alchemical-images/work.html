@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alchemical Images — Essay</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0e0d0a;
+      --surface: #1c1a14;
+      --surface2: #242018;
+      --surface3: #2c2820;
+      --gold: #c8a020;
+      --gold-dim: #8a6c10;
+      --text: #e8d9b5;
+      --text-dim: #9a8a6a;
+      --ancient: #7a2800;
+      --ancient-light: #c04000;
+      --medieval: #3a2455;
+      --medieval-light: #6a3ea0;
+      --early: #103040;
+      --early-light: #205870;
+      --radius: 6px;
+      --font-body: 'Georgia', serif;
+      --font-ui: 'Trebuchet MS', system-ui, sans-serif;
+    }
+
+    body { background: var(--bg); color: var(--text); font-family: var(--font-body); line-height: 1.7; }
+
+    /* ── NAV ── */
+    nav.top-nav {
+      background: var(--surface);
+      border-bottom: 1px solid #2a2618;
+      padding: .6rem 2rem;
+      display: flex; gap: 1rem; align-items: center;
+      font-family: var(--font-ui); font-size: .8rem;
+    }
+    nav.top-nav a { color: var(--text-dim); text-decoration: none; }
+    nav.top-nav a:hover { color: var(--gold); }
+    nav.top-nav .sep { color: #3a3020; }
+    nav.top-nav .breadcrumb-title { color: var(--text); font-style: italic; }
+
+    /* ── WORK HEADER ── */
+    .work-header {
+      padding: 3rem 2rem 2rem;
+      max-width: 1100px; margin: 0 auto;
+      border-bottom: 1px solid #2a2618;
+    }
+    .work-header .period-tag {
+      font-family: var(--font-ui); font-size: .65rem; letter-spacing: .15em; text-transform: uppercase;
+      padding: .2rem .5rem; border-radius: 2px; display: inline-block; margin-bottom: 1rem;
+    }
+    .work-header .period-tag.ancient { background: var(--ancient); color: #ffb080; }
+    .work-header .period-tag.medieval { background: var(--medieval); color: #c0a0f0; }
+    .work-header .period-tag.early_modern { background: var(--early); color: #80c0e0; }
+
+    .work-header h1 { font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--gold); font-weight: normal; letter-spacing: .03em; margin-bottom: .4rem; line-height: 1.2; }
+    .work-header .work-subtitle { font-size: 1.1rem; color: var(--text-dim); font-style: italic; margin-bottom: 1.5rem; }
+
+    .work-meta-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: .75rem 2rem;
+      font-family: var(--font-ui); font-size: .8rem;
+    }
+    .meta-item label { display: block; color: var(--gold-dim); font-size: .65rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .15rem; }
+    .meta-item span { color: var(--text); }
+
+    .status-badge {
+      display: inline-flex; align-items: center; gap: .4rem;
+      font-family: var(--font-ui); font-size: .7rem; padding: .3rem .6rem; border-radius: 3px;
+      margin-top: 1rem;
+    }
+    .status-badge.in_corpus { background: rgba(64,192,96,.15); border: 1px solid rgba(64,192,96,.4); color: #80e0a0; }
+    .status-badge.partial { background: rgba(192,160,32,.15); border: 1px solid rgba(192,160,32,.4); color: #e0c060; }
+    .status-badge.needs_sourcing { background: rgba(192,64,64,.15); border: 1px solid rgba(192,64,64,.4); color: #e08080; }
+
+    /* ── LAYOUT ── */
+    .content-area { max-width: 1100px; margin: 0 auto; padding: 2rem 2rem 4rem; display: grid; grid-template-columns: 1fr 320px; gap: 3rem; }
+    @media (max-width: 900px) { .content-area { grid-template-columns: 1fr; } }
+
+    /* ── IMAGE SEQUENCE ── */
+    .image-sequence { margin-bottom: 2rem; }
+    .image-sequence h2 { font-size: 1rem; color: var(--text-dim); font-family: var(--font-ui); letter-spacing: .08em; text-transform: uppercase; font-size: .75rem; margin-bottom: 1rem; }
+    .image-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; }
+
+    .image-card {
+      background: var(--surface); border: 1px solid #2a2618; border-radius: var(--radius); overflow: hidden;
+    }
+    .image-placeholder {
+      aspect-ratio: 3/4; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 1rem; position: relative; overflow: hidden;
+    }
+    .ancient .image-placeholder { background: linear-gradient(160deg, #4a1000 0%, #1e0600 100%); }
+    .medieval .image-placeholder { background: linear-gradient(160deg, #200e30 0%, #0c0418 100%); }
+    .early_modern .image-placeholder { background: linear-gradient(160deg, #081420 0%, #030a10 100%); }
+
+    .image-placeholder .big-symbol { font-size: 2.5rem; opacity: .12; position: absolute; }
+    .image-placeholder .img-label { position: relative; z-index: 1; font-size: .65rem; text-align: center; color: rgba(255,255,255,.55); font-family: var(--font-ui); }
+    .image-placeholder .img-folio { font-size: .6rem; color: rgba(255,255,255,.3); text-align: center; margin-top: .3rem; font-style: italic; font-family: var(--font-ui); }
+    .image-card-body { padding: .5rem .6rem .6rem; }
+    .image-card-body .img-card-title { font-size: .75rem; color: var(--text); line-height: 1.3; margin-bottom: .25rem; }
+    .image-card-body .img-card-desc { font-size: .68rem; color: var(--text-dim); line-height: 1.4; }
+
+    /* ── ESSAY TABS ── */
+    .essay-section { }
+    .tab-nav { display: flex; gap: 0; margin-bottom: 0; border-bottom: 1px solid #2a2618; flex-wrap: wrap; }
+    .tab-btn {
+      background: none; border: none; border-bottom: 2px solid transparent; color: var(--text-dim);
+      cursor: pointer; font-family: var(--font-ui); font-size: .75rem; letter-spacing: .05em;
+      padding: .6rem .9rem; transition: all .15s; margin-bottom: -1px;
+    }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+    .tab-panel { display: none; padding: 1.5rem 0; }
+    .tab-panel.active { display: block; }
+
+    .essay-prose p { margin-bottom: 1rem; font-size: .95rem; line-height: 1.75; color: var(--text); }
+    .essay-prose p:last-child { margin-bottom: 0; }
+    .essay-prose em { color: var(--gold-dim); font-style: italic; }
+    .essay-prose strong { color: var(--text); }
+    .essay-prose blockquote {
+      border-left: 3px solid var(--gold-dim); padding: .5rem 1rem; margin: 1rem 0;
+      color: var(--text-dim); font-style: italic; font-size: .9rem;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar { }
+    .sidebar-card { background: var(--surface); border: 1px solid #2a2618; border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1.5rem; }
+    .sidebar-card h3 { font-family: var(--font-ui); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 1rem; }
+
+    /* bibliography */
+    .bib-list { list-style: none; }
+    .bib-list li { font-size: .78rem; color: var(--text-dim); line-height: 1.5; padding: .5rem 0; border-bottom: 1px solid #2a2618; }
+    .bib-list li:last-child { border-bottom: none; }
+    .bib-list a { color: var(--gold-dim); text-decoration: none; font-size: .7rem; }
+    .bib-list a:hover { color: var(--gold); }
+
+    /* links */
+    .link-list { list-style: none; }
+    .link-list li { margin-bottom: .6rem; }
+    .link-list a { color: var(--gold-dim); text-decoration: none; font-size: .82rem; }
+    .link-list a:hover { color: var(--gold); }
+    .link-list .link-desc { font-size: .7rem; color: var(--text-dim); display: block; margin-top: .15rem; }
+
+    /* related */
+    .related-list { list-style: none; }
+    .related-list li { margin-bottom: .5rem; }
+    .related-list a { color: var(--text-dim); text-decoration: none; font-size: .82rem; display: flex; align-items: center; gap: .4rem; }
+    .related-list a:hover { color: var(--text); }
+    .related-list .rel-period {
+      font-size: .55rem; letter-spacing: .1em; text-transform: uppercase; padding: .1rem .3rem; border-radius: 2px;
+    }
+    .related-list .rel-period.ancient { background: var(--ancient); color: #ffb080; }
+    .related-list .rel-period.medieval { background: var(--medieval); color: #c0a0f0; }
+    .related-list .rel-period.early_modern { background: var(--early); color: #80c0e0; }
+
+    /* ── PREV / NEXT ── */
+    .work-nav {
+      max-width: 1100px; margin: 0 auto; padding: 1.5rem 2rem 3rem;
+      display: flex; justify-content: space-between; gap: 1rem;
+      border-top: 1px solid #2a2618;
+    }
+    .work-nav a {
+      color: var(--text-dim); text-decoration: none; font-family: var(--font-ui); font-size: .8rem;
+      display: flex; align-items: center; gap: .5rem; padding: .5rem .75rem;
+      background: var(--surface); border: 1px solid #2a2618; border-radius: var(--radius);
+      transition: all .15s; max-width: 45%;
+    }
+    .work-nav a:hover { border-color: var(--gold-dim); color: var(--text); }
+    .work-nav .nav-label { font-size: .65rem; color: var(--text-dim); display: block; text-transform: uppercase; letter-spacing: .08em; }
+    .work-nav .nav-title { color: var(--text); display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    /* ── FOOTNOTE CITATIONS in essay ── */
+    .citation { font-size: .8rem; color: var(--text-dim); font-style: italic; }
+    sup { font-size: .65rem; color: var(--gold-dim); }
+  </style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="index.html">← All Works</a>
+  <span class="sep">|</span>
+  <a href="../gallery.html">Gallery</a>
+  <span class="sep">|</span>
+  <a href="../emblems.html">Emblems</a>
+  <span class="sep">|</span>
+  <span class="breadcrumb-title" id="nav-title">Loading…</span>
+</nav>
+
+<div class="work-header" id="work-header">
+  <div id="loading" style="padding:4rem;text-align:center;color:var(--text-dim)">Loading…</div>
+</div>
+
+<div class="content-area" id="content-area" style="display:none">
+  <!-- image sequence -->
+  <div class="main-col">
+    <div class="image-sequence" id="image-sequence"></div>
+    <!-- essay tabs -->
+    <div class="essay-section">
+      <div class="tab-nav">
+        <button class="tab-btn active" data-tab="visual">Visual Description</button>
+        <button class="tab-btn" data-tab="historical">Historical Context</button>
+        <button class="tab-btn" data-tab="provenance">Provenance</button>
+        <button class="tab-btn" data-tab="processes">Alchemical Processes</button>
+        <button class="tab-btn" data-tab="scholarly">Scholarly Discussion</button>
+      </div>
+      <div class="tab-panel active essay-prose" id="tab-visual"></div>
+      <div class="tab-panel essay-prose" id="tab-historical"></div>
+      <div class="tab-panel essay-prose" id="tab-provenance"></div>
+      <div class="tab-panel essay-prose" id="tab-processes"></div>
+      <div class="tab-panel essay-prose" id="tab-scholarly"></div>
+    </div>
+  </div>
+  <!-- sidebar -->
+  <aside class="sidebar" id="sidebar"></aside>
+</div>
+
+<nav class="work-nav" id="work-nav"></nav>
+
+<script src="data.js"></script>
+<script src="data-em.js"></script>
+<script>
+const params = new URLSearchParams(location.search);
+const id = params.get('id');
+const work = WORKS_BY_ID[id];
+
+if (!work) {
+  document.getElementById('work-header').innerHTML = `
+    <h1 style="color:var(--gold)">Work not found</h1>
+    <p style="color:var(--text-dim);margin-top:1rem">No work with id "${id}". <a href="index.html" style="color:var(--gold-dim)">← Return to index</a></p>
+  `;
+} else {
+  document.title = `${work.title} — Alchemical Images`;
+  document.getElementById('nav-title').textContent = work.title;
+  document.getElementById('content-area').style.display = 'grid';
+
+  // HEADER
+  const hdr = document.getElementById('work-header');
+  hdr.className = `work-header ${work.period}`;
+  hdr.innerHTML = `
+    <span class="period-tag ${work.period}">${periodLabel(work.period)}</span>
+    <h1>${work.title}</h1>
+    ${work.subtitle ? `<p class="work-subtitle">${work.subtitle}</p>` : ''}
+    <div class="work-meta-grid">
+      <div class="meta-item"><label>Date</label><span>${work.date_display}</span></div>
+      <div class="meta-item"><label>Author / Attribution</label><span>${work.author}</span></div>
+      <div class="meta-item"><label>Medium</label><span>${work.medium}</span></div>
+      <div class="meta-item"><label>Repository</label><span>${work.repository}</span></div>
+      ${work.shelfmark ? `<div class="meta-item"><label>Shelfmark</label><span>${work.shelfmark}</span></div>` : ''}
+    </div>
+    <span class="status-badge ${work.status}">
+      ${statusIcon(work.status)} ${statusLabel(work.status)}
+    </span>
+  `;
+
+  // IMAGE SEQUENCE
+  const seq = document.getElementById('image-sequence');
+  if (work.images && work.images.length > 0) {
+    seq.innerHTML = `<h2>Image Sequence — ${work.images.length} image${work.images.length>1?'s':''}</h2>`;
+    const grid = document.createElement('div');
+    grid.className = 'image-grid';
+    work.images.forEach(img => {
+      const card = document.createElement('div');
+      card.className = `image-card ${work.period}`;
+      card.innerHTML = `
+        <div class="image-placeholder">
+          <span class="big-symbol">${work.symbol || '⚗'}</span>
+          <div class="img-label">${img.label}</div>
+          ${img.folio_or_plate ? `<div class="img-folio">${img.folio_or_plate}</div>` : ''}
+        </div>
+        <div class="image-card-body">
+          <div class="img-card-title">${img.label}</div>
+          <div class="img-card-desc">${img.thumb_description}</div>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+    seq.appendChild(grid);
+  }
+
+  // ESSAY TABS
+  const essay = work.essay || {};
+  document.getElementById('tab-visual').innerHTML    = essay.visual_description    || '<p style="color:var(--text-dim);font-style:italic">Essay section not yet written.</p>';
+  document.getElementById('tab-historical').innerHTML = essay.historical_context   || '<p style="color:var(--text-dim);font-style:italic">Essay section not yet written.</p>';
+  document.getElementById('tab-provenance').innerHTML = essay.provenance           || '<p style="color:var(--text-dim);font-style:italic">Essay section not yet written.</p>';
+  document.getElementById('tab-processes').innerHTML  = essay.alchemical_processes || '<p style="color:var(--text-dim);font-style:italic">Essay section not yet written.</p>';
+  document.getElementById('tab-scholarly').innerHTML  = essay.scholarly_discussion || '<p style="color:var(--text-dim);font-style:italic">Essay section not yet written.</p>';
+
+  // TAB LOGIC
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // SIDEBAR
+  const sidebar = document.getElementById('sidebar');
+
+  // Bibliography
+  if (work.bibliography && work.bibliography.length > 0) {
+    const card = document.createElement('div');
+    card.className = 'sidebar-card';
+    card.innerHTML = `<h3>Bibliography</h3><ul class="bib-list">` +
+      work.bibliography.map(b => `<li>${b.citation}${b.url ? ` <a href="${b.url}" target="_blank">[link]</a>` : ''}</li>`).join('') +
+      `</ul>`;
+    sidebar.appendChild(card);
+  }
+
+  // Links
+  if (work.links && work.links.length > 0) {
+    const card = document.createElement('div');
+    card.className = 'sidebar-card';
+    card.innerHTML = `<h3>External Resources</h3><ul class="link-list">` +
+      work.links.map(l => `<li><a href="${l.url}" target="_blank">${l.label}</a><span class="link-desc">${l.description}</span></li>`).join('') +
+      `</ul>`;
+    sidebar.appendChild(card);
+  }
+
+  // Related works
+  const related = (work.related || []).map(rid => WORKS_BY_ID[rid]).filter(Boolean);
+  if (related.length > 0) {
+    const card = document.createElement('div');
+    card.className = 'sidebar-card';
+    card.innerHTML = `<h3>Related Works</h3><ul class="related-list">` +
+      related.map(r => `
+        <li><a href="work.html?id=${r.id}">
+          <span class="rel-period ${r.period}">${periodShort(r.period)}</span>
+          ${r.title}
+        </a></li>`).join('') +
+      `</ul>`;
+    sidebar.appendChild(card);
+  }
+
+  // Source info
+  const sourceCard = document.createElement('div');
+  sourceCard.className = 'sidebar-card';
+  sourceCard.innerHTML = `
+    <h3>Sourcing Status</h3>
+    <p style="font-size:.8rem;color:var(--text-dim);margin-bottom:.75rem">${sourcingNote(work)}</p>
+    <a href="index.html" style="font-family:var(--font-ui);font-size:.75rem;color:var(--gold-dim);text-decoration:none">← All Works</a>
+  `;
+  sidebar.appendChild(sourceCard);
+
+  // PREV / NEXT
+  const idx = WORKS.indexOf(work);
+  const prev = WORKS[idx - 1];
+  const next = WORKS[idx + 1];
+  const nav = document.getElementById('work-nav');
+  nav.innerHTML = `
+    ${prev ? `<a href="work.html?id=${prev.id}"><span>←</span><span><span class="nav-label">Previous</span><span class="nav-title">${prev.title}</span></span></a>` : '<span></span>'}
+    ${next ? `<a href="work.html?id=${next.id}" style="text-align:right"><span><span class="nav-label">Next</span><span class="nav-title">${next.title}</span></span><span>→</span></a>` : '<span></span>'}
+  `;
+}
+
+function periodLabel(p) {
+  return { ancient: 'Ancient & Late Antique', medieval: 'Medieval', early_modern: 'Early Modern' }[p] || p;
+}
+function periodShort(p) {
+  return { ancient: 'Anc', medieval: 'Med', early_modern: 'EM' }[p] || p;
+}
+function statusIcon(s) {
+  return { in_corpus: '●', partial: '◐', needs_sourcing: '○' }[s] || '';
+}
+function statusLabel(s) {
+  return { in_corpus: 'In corpus — extracted', partial: 'Partially sourced', needs_sourcing: 'Needs sourcing' }[s] || s;
+}
+function sourcingNote(w) {
+  if (w.status === 'in_corpus') return 'Images from this work have been extracted and are available in the Emblem Print Shop gallery.';
+  if (w.status === 'partial') return 'Some images are available. Full digitization access needed.';
+  return 'Images from this work have not yet been downloaded. See links for digitization access.';
+}
+</script>
+</body>
+</html>

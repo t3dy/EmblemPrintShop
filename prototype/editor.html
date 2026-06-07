@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Editor — Emblem Print Shop</title>
+<style>
+:root {
+  --ink:    #1a1208; --paper: #f5edd8; --paper2: #ede0c4; --paper3: #e5d4b0;
+  --accent: #8b3a1c; --accent2: #5c6b2e; --muted: #6b5d48;
+  --border: #c8b89a; --card: #faf3e4;
+  --sans: 'Georgia', serif; --mono: 'Courier New', monospace; --r: 4px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #2a2520; color: var(--paper); font-family: var(--sans); font-size: 14px; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+
+/* ── Top bar ──────────────────────────────────── */
+.topbar {
+  background: var(--ink); border-bottom: 2px solid var(--accent);
+  padding: .4rem .8rem; display: flex; align-items: center; gap: .6rem; flex-shrink: 0; flex-wrap: wrap;
+}
+.topbar-title { font-size: .82rem; color: var(--paper); opacity: .8; margin-right: .5rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 260px; }
+.tb-sep { width: 1px; height: 20px; background: rgba(255,255,255,.15); }
+.tb-btn {
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2);
+  color: var(--paper); padding: .25rem .6rem; border-radius: var(--r);
+  font-family: var(--sans); font-size: .75rem; cursor: pointer; white-space: nowrap;
+  display: flex; align-items: center; gap: .3rem; transition: all .1s;
+}
+.tb-btn:hover { background: rgba(255,255,255,.18); }
+.tb-btn.active { background: var(--accent); border-color: var(--accent); }
+.tb-btn.danger { border-color: rgba(180,60,30,.6); }
+.tb-btn.danger:hover { background: rgba(180,60,30,.3); }
+.tb-btn.save { background: var(--accent2); border-color: var(--accent2); }
+.tb-btn.save:hover { filter: brightness(1.15); }
+.tb-label { font-size: .65rem; color: rgba(245,237,216,.5); }
+.tb-range { width: 90px; accent-color: var(--accent); vertical-align: middle; }
+.tb-num { font-family: var(--mono); font-size: .7rem; color: rgba(245,237,216,.7); min-width: 26px; }
+#undo-count { font-family: var(--mono); font-size: .65rem; color: rgba(245,237,216,.4); }
+
+/* ── Main layout ──────────────────────────────── */
+.main { display: flex; flex: 1; overflow: hidden; }
+
+/* Canvas area */
+.canvas-area {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  overflow: hidden; position: relative; background: #1a1510;
+  background-image: radial-gradient(rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+#canvas-container {
+  position: relative; cursor: crosshair;
+  box-shadow: 0 4px 32px rgba(0,0,0,.6);
+}
+#main-canvas { display: block; }
+/* checkerboard behind canvas to show transparency */
+#canvas-container::before {
+  content: ''; position: absolute; inset: 0; z-index: -1;
+  background-image:
+    linear-gradient(45deg,#555 25%,transparent 25%),
+    linear-gradient(-45deg,#555 25%,transparent 25%),
+    linear-gradient(45deg,transparent 75%,#555 75%),
+    linear-gradient(-45deg,transparent 75%,#555 75%);
+  background-size: 16px 16px;
+  background-position: 0 0,0 8px,8px -8px,-8px 0;
+  background-color: #444;
+}
+#cursor-ring {
+  position: absolute; border-radius: 50%; pointer-events: none; z-index: 10;
+  transform: translate(-50%,-50%); display: none;
+}
+
+/* Reference image strip */
+.ref-strip {
+  width: 180px; flex-shrink: 0; background: #1e1a16;
+  border-left: 1px solid rgba(255,255,255,.1);
+  display: flex; flex-direction: column; overflow-y: auto;
+}
+.ref-header { padding: .4rem .6rem; font-size: .62rem; text-transform: uppercase; letter-spacing: .1em; color: rgba(245,237,216,.4); border-bottom: 1px solid rgba(255,255,255,.08); }
+.ref-img { width: 100%; display: block; border-bottom: 1px solid rgba(255,255,255,.06); }
+.ref-label { font-size: .58rem; color: rgba(245,237,216,.4); padding: .2rem .5rem; font-family: var(--mono); }
+
+/* ── Right panel ─────────────────────────────── */
+.right-panel {
+  width: 220px; flex-shrink: 0; background: var(--ink);
+  border-left: 1px solid rgba(255,255,255,.1);
+  display: flex; flex-direction: column; overflow: hidden;
+}
+.rp-section { padding: .6rem .7rem; border-bottom: 1px solid rgba(255,255,255,.08); }
+.rp-title { font-size: .6rem; text-transform: uppercase; letter-spacing: .1em; color: rgba(245,237,216,.4); margin-bottom: .4rem; }
+.stats-row { display: flex; justify-content: space-between; font-size: .75rem; margin-bottom: .2rem; }
+.stats-val { font-family: var(--mono); color: rgba(245,237,216,.8); }
+
+/* Edit log */
+.log-area { flex: 1; overflow-y: auto; padding: .5rem .6rem; }
+.log-entry {
+  font-size: .68rem; padding: .3rem .4rem; margin-bottom: .25rem;
+  background: rgba(255,255,255,.05); border-radius: 2px; border-left: 2px solid;
+  font-family: var(--mono); line-height: 1.4;
+}
+.log-entry.eraser { border-color: #c84040; }
+.log-entry.restore { border-color: #40a050; }
+.log-entry.crop    { border-color: #4080c8; }
+.log-entry.adjust  { border-color: #c8a020; }
+.log-time { color: rgba(245,237,216,.4); font-size: .58rem; }
+
+/* Note input */
+.note-row { padding: .5rem .6rem; border-top: 1px solid rgba(255,255,255,.08); }
+.note-label { font-size: .6rem; color: rgba(245,237,216,.4); margin-bottom: .3rem; text-transform: uppercase; letter-spacing: .08em; }
+#quality-note {
+  width: 100%; padding: .3rem .4rem; background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15); border-radius: var(--r);
+  color: var(--paper); font-family: var(--sans); font-size: .75rem;
+  resize: none; line-height: 1.4;
+}
+#quality-note:focus { outline: 1px solid var(--accent); }
+.save-row { padding: .5rem .6rem; display: flex; flex-direction: column; gap: .3rem; }
+#save-btn { width: 100%; padding: .4rem; background: var(--accent2); border: none; border-radius: var(--r); color: var(--paper); font-family: var(--sans); font-size: .8rem; cursor: pointer; }
+#save-btn:hover { filter: brightness(1.1); }
+#save-btn:disabled { opacity: .4; cursor: default; }
+#save-status { font-size: .68rem; font-family: var(--mono); color: rgba(245,237,216,.5); text-align: center; }
+
+/* ── Status bar ───────────────────────────────── */
+.statusbar {
+  background: var(--ink); border-top: 1px solid rgba(255,255,255,.08);
+  padding: .2rem .8rem; display: flex; gap: 1.2rem; font-size: .65rem;
+  color: rgba(245,237,216,.4); font-family: var(--mono); flex-shrink: 0;
+}
+.statusbar span { white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<!-- ── Top toolbar ─────────────────────────────────────────── -->
+<div class="topbar">
+  <div class="topbar-title" id="topbar-title">No image loaded</div>
+  <div class="tb-sep"></div>
+
+  <!-- Tools -->
+  <button class="tb-btn active" id="btn-eraser" onclick="setTool('eraser')" title="Eraser (E)">
+    ⬜ Eraser
+  </button>
+  <button class="tb-btn" id="btn-restore" onclick="setTool('restore')" title="Restore brush (R) — paint back from source crop">
+    🖌 Restore
+  </button>
+  <div class="tb-sep"></div>
+
+  <!-- Brush size -->
+  <span class="tb-label">Size</span>
+  <input class="tb-range" type="range" id="brush-size" min="3" max="120" value="20" oninput="updateBrushUI()">
+  <span class="tb-num" id="brush-size-val">20</span>
+  <div class="tb-sep"></div>
+
+  <!-- Adjust -->
+  <span class="tb-label">Brightness</span>
+  <input class="tb-range" type="range" id="brightness" min="-100" max="100" value="0" oninput="applyAdjustments()">
+  <span class="tb-num" id="brightness-val">0</span>
+  <span class="tb-label">Contrast</span>
+  <input class="tb-range" type="range" id="contrast" min="-100" max="100" value="0" oninput="applyAdjustments()">
+  <span class="tb-num" id="contrast-val">0</span>
+  <div class="tb-sep"></div>
+
+  <!-- Zoom -->
+  <span class="tb-label">Zoom</span>
+  <input class="tb-range" type="range" id="zoom" min="25" max="400" step="25" value="100" oninput="applyZoom()">
+  <span class="tb-num" id="zoom-val">100%</span>
+  <div class="tb-sep"></div>
+
+  <!-- Actions -->
+  <button class="tb-btn" onclick="cropToContent()" title="Trim transparent border">✂ Crop</button>
+  <button class="tb-btn" onclick="undo()" title="Undo (Ctrl+Z)">↩ Undo <span id="undo-count"></span></button>
+  <button class="tb-btn danger" onclick="resetToOriginal()" title="Reset all edits">↺ Reset</button>
+  <div class="tb-sep"></div>
+  <button class="tb-btn save" onclick="saveEdits()">💾 Save edits</button>
+</div>
+
+<!-- ── Main area ───────────────────────────────────────────── -->
+<div class="main">
+
+  <!-- Canvas -->
+  <div class="canvas-area" id="canvas-area">
+    <div id="no-image" style="text-align:center;color:rgba(245,237,216,.3);font-size:.9rem;padding:2rem">
+      No image loaded.<br>
+      <span style="font-size:.75rem">Open from Review Queue via the Edit button,<br>or add ?path=... to the URL.</span>
+    </div>
+    <div id="canvas-container" style="display:none">
+      <canvas id="main-canvas"></canvas>
+      <div id="cursor-ring"></div>
+    </div>
+  </div>
+
+  <!-- Reference strip -->
+  <div class="ref-strip">
+    <div class="ref-header">Reference</div>
+    <img class="ref-img" id="ref-crop" src="" alt="" title="Source crop — use Restore brush to paint pixels back">
+    <div class="ref-label">Source crop</div>
+    <img class="ref-img" id="ref-original" src="" alt="" title="Original transparent PNG before any edits">
+    <div class="ref-label">Original cutout</div>
+  </div>
+
+  <!-- Right panel -->
+  <div class="right-panel">
+    <div class="rp-section">
+      <div class="rp-title">Statistics</div>
+      <div class="stats-row"><span>Coverage</span><span class="stats-val" id="stat-coverage">—</span></div>
+      <div class="stats-row"><span>Non-transparent px</span><span class="stats-val" id="stat-px">—</span></div>
+      <div class="stats-row"><span>Edit sessions</span><span class="stats-val" id="stat-sessions">0</span></div>
+    </div>
+
+    <div class="rp-section">
+      <div class="rp-title">Edit Log</div>
+    </div>
+    <div class="log-area" id="log-area">
+      <div style="color:rgba(245,237,216,.25);font-size:.68rem;font-family:var(--mono)">No edits yet.</div>
+    </div>
+
+    <div class="note-row">
+      <div class="note-label">Quality note</div>
+      <textarea id="quality-note" rows="3" placeholder="Describe what you fixed (e.g. 'Removed background hatching around dragon\'s tail')…"></textarea>
+    </div>
+    <div class="save-row">
+      <button id="save-btn" disabled>💾 Save edits</button>
+      <div id="save-status"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Status bar ──────────────────────────────────────────── -->
+<div class="statusbar">
+  <span id="sb-pos">x: — y: —</span>
+  <span id="sb-tool">tool: eraser</span>
+  <span id="sb-size">size: 20px</span>
+  <span id="sb-edits">edits: 0</span>
+  <span id="sb-path" style="margin-left:auto;opacity:.5"></span>
+</div>
+
+<script>
+// ── State ──────────────────────────────────────────────────
+const canvas = document.getElementById('main-canvas');
+const ctx    = canvas.getContext('2d', { willReadFrequently: true });
+
+let originalPath  = '';   // relative path of the _transparent.png
+let cropPath      = '';   // relative path of the _crop.jpg
+let originalData  = null; // ImageData — never modified (for reset + restore brush)
+let sourceData    = null; // ImageData from crop (for restore brush)
+let undoStack     = [];   // ImageData snapshots
+let isDrawing     = false;
+let currentTool   = 'eraser';
+let brushSize     = 20;
+let brightness    = 0;
+let contrast      = 0;
+let zoom          = 1.0;
+let editEvents    = [];
+let currentStroke = null; // {tool, size, points, coverage_before}
+let editSessions  = 0;
+let dirty         = false;
+
+// ── Init ───────────────────────────────────────────────────
+async function init() {
+  const p = new URLSearchParams(location.search);
+  const path  = p.get('path')   || p.get('transparent_png') || '';
+  const crop  = p.get('crop')   || p.get('crop_jpg') || '';
+  const title = p.get('title')  || p.get('prompt') || path.split('/').pop();
+
+  document.getElementById('topbar-title').textContent = title;
+  document.getElementById('sb-path').textContent = path;
+
+  if (!path) return;
+
+  originalPath = path;
+  cropPath = crop;
+
+  // Load the transparent PNG
+  await loadImage(path);
+
+  // Load source crop as reference
+  if (crop) {
+    document.getElementById('ref-crop').src = '../' + crop;
+    await loadCropData(crop);
+  }
+  document.getElementById('ref-original').src = '../' + path;
+
+  // Check for existing edit log
+  const logPath = path.replace('_transparent.png', '_edits.json').replace('_edited.png', '_edits.json');
+  try {
+    const r = await fetch('../' + logPath);
+    if (r.ok) {
+      const log = await r.json();
+      editSessions = log.total_sessions || log.edits?.length || 0;
+      document.getElementById('stat-sessions').textContent = editSessions;
+    }
+  } catch(e) {}
+
+  document.getElementById('save-btn').disabled = false;
+}
+
+async function loadImage(path) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => {
+      canvas.width  = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0);
+      originalData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      updateStats();
+      document.getElementById('no-image').style.display  = 'none';
+      document.getElementById('canvas-container').style.display = '';
+      applyZoom();
+      resolve();
+    };
+    img.onerror = reject;
+    img.src = '../' + path + '?_=' + Date.now();
+  });
+}
+
+async function loadCropData(path) {
+  return new Promise(resolve => {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => {
+      const tmp = document.createElement('canvas');
+      tmp.width = canvas.width; tmp.height = canvas.height;
+      const tc = tmp.getContext('2d');
+      tc.drawImage(img, 0, 0, canvas.width, canvas.height);
+      sourceData = tc.getImageData(0, 0, canvas.width, canvas.height);
+      resolve();
+    };
+    img.onerror = resolve;
+    img.src = '../' + path + '?_=' + Date.now();
+  });
+}
+
+// ── Tool selection ─────────────────────────────────────────
+function setTool(tool) {
+  currentTool = tool;
+  document.getElementById('btn-eraser').classList.toggle('active', tool === 'eraser');
+  document.getElementById('btn-restore').classList.toggle('active', tool === 'restore');
+  updateCursorRing();
+  document.getElementById('sb-tool').textContent = 'tool: ' + tool;
+}
+
+// ── Brush size / zoom ──────────────────────────────────────
+function updateBrushUI() {
+  brushSize = +document.getElementById('brush-size').value;
+  document.getElementById('brush-size-val').textContent = brushSize;
+  document.getElementById('sb-size').textContent = 'size: ' + brushSize + 'px';
+  updateCursorRing();
+}
+
+function applyZoom() {
+  zoom = +document.getElementById('zoom').value / 100;
+  document.getElementById('zoom-val').textContent = Math.round(zoom * 100) + '%';
+  document.getElementById('canvas-container').style.transform = `scale(${zoom})`;
+  document.getElementById('canvas-container').style.transformOrigin = 'center center';
+  updateCursorRing();
+}
+
+// ── Brightness/contrast ────────────────────────────────────
+function applyAdjustments() {
+  brightness = +document.getElementById('brightness').value;
+  contrast   = +document.getElementById('contrast').value;
+  document.getElementById('brightness-val').textContent = brightness;
+  document.getElementById('contrast-val').textContent   = contrast;
+
+  if (!originalData) return;
+
+  // Apply to a copy of originalData (non-destructive preview)
+  const adj = new ImageData(
+    new Uint8ClampedArray(ctx.getImageData(0, 0, canvas.width, canvas.height).data),
+    canvas.width, canvas.height
+  );
+  const src = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const d = src.data;
+  const factor = (259 * (contrast + 255)) / (255 * (259 - contrast));
+
+  for (let i = 0; i < d.length; i += 4) {
+    if (d[i+3] === 0) continue; // skip transparent
+    d[i]   = clamp(factor * (d[i]   + brightness - 128) + 128);
+    d[i+1] = clamp(factor * (d[i+1] + brightness - 128) + 128);
+    d[i+2] = clamp(factor * (d[i+2] + brightness - 128) + 128);
+  }
+  ctx.putImageData(src, 0, 0);
+}
+function clamp(v) { return Math.max(0, Math.min(255, Math.round(v))); }
+
+// ── Mouse events ───────────────────────────────────────────
+const cc = document.getElementById('canvas-container');
+const cursor = document.getElementById('cursor-ring');
+
+cc.addEventListener('mouseenter', () => { cursor.style.display = 'block'; });
+cc.addEventListener('mouseleave', () => { cursor.style.display = 'none'; if (isDrawing) endStroke(); });
+
+cc.addEventListener('mousemove', e => {
+  const pt = getCanvasPoint(e);
+  document.getElementById('sb-pos').textContent = `x: ${pt.x} y: ${pt.y}`;
+
+  // Move cursor ring
+  const rect = cc.getBoundingClientRect();
+  cursor.style.left = (e.clientX - rect.left) + 'px';
+  cursor.style.top  = (e.clientY - rect.top)  + 'px';
+  const displaySize = brushSize * zoom;
+  cursor.style.width  = displaySize + 'px';
+  cursor.style.height = displaySize + 'px';
+  cursor.style.border = `2px solid ${currentTool === 'eraser' ? '#ff6040' : '#40c060'}`;
+  cursor.style.background = currentTool === 'eraser'
+    ? 'rgba(255,80,40,.08)' : 'rgba(40,192,80,.08)';
+
+  if (isDrawing && currentStroke) {
+    currentStroke.points.push([pt.x, pt.y]);
+    applyBrush(pt.x, pt.y);
+  }
+});
+
+cc.addEventListener('mousedown', e => {
+  if (e.button !== 0) return;
+  pushUndo();
+  const pt = getCanvasPoint(e);
+  const coverageBefore = computeCoverage();
+  currentStroke = {
+    tool: currentTool,
+    brush_size: brushSize,
+    points: [[pt.x, pt.y]],
+    coverage_before: coverageBefore,
+    ts: new Date().toISOString(),
+  };
+  isDrawing = true;
+  applyBrush(pt.x, pt.y);
+});
+
+cc.addEventListener('mouseup', () => { if (isDrawing) endStroke(); });
+
+function endStroke() {
+  isDrawing = false;
+  if (currentStroke) {
+    currentStroke.coverage_after = computeCoverage();
+    editEvents.push(currentStroke);
+    appendLogEntry(currentStroke);
+    currentStroke = null;
+    dirty = true;
+    updateStats();
+    document.getElementById('sb-edits').textContent = 'edits: ' + editEvents.length;
+  }
+}
+
+function getCanvasPoint(e) {
+  const rect = canvas.getBoundingClientRect();
+  // Account for zoom
+  const scaleX = canvas.width  / (rect.width);
+  const scaleY = canvas.height / (rect.height);
+  return {
+    x: Math.round((e.clientX - rect.left) * scaleX),
+    y: Math.round((e.clientY - rect.top)  * scaleY),
+  };
+}
+
+// ── Brush application ──────────────────────────────────────
+function applyBrush(cx, cy) {
+  const r = brushSize / 2;
+  if (currentTool === 'eraser') {
+    ctx.save();
+    ctx.globalCompositeOperation = 'destination-out';
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(0,0,0,1)';
+    ctx.fill();
+    ctx.restore();
+  } else if (currentTool === 'restore' && sourceData) {
+    // Paint back pixels from source crop within brush circle
+    const x0 = Math.max(0, Math.floor(cx - r));
+    const y0 = Math.max(0, Math.floor(cy - r));
+    const x1 = Math.min(canvas.width  - 1, Math.ceil(cx + r));
+    const y1 = Math.min(canvas.height - 1, Math.ceil(cy + r));
+    const imgData = ctx.getImageData(x0, y0, x1 - x0 + 1, y1 - y0 + 1);
+    const d = imgData.data;
+    const r2 = r * r;
+    for (let y = y0; y <= y1; y++) {
+      for (let x = x0; x <= x1; x++) {
+        const dx = x - cx, dy = y - cy;
+        if (dx*dx + dy*dy > r2) continue;
+        const srcIdx = (y * canvas.width + x) * 4;
+        const dstIdx = ((y - y0) * (x1 - x0 + 1) + (x - x0)) * 4;
+        // Soft edge (linear falloff)
+        const dist = Math.sqrt(dx*dx + dy*dy);
+        const alpha = 1 - (dist / r) * 0.3;
+        d[dstIdx]   = sourceData.data[srcIdx];
+        d[dstIdx+1] = sourceData.data[srcIdx+1];
+        d[dstIdx+2] = sourceData.data[srcIdx+2];
+        d[dstIdx+3] = Math.min(255, Math.round(sourceData.data[srcIdx+3] * alpha));
+      }
+    }
+    ctx.putImageData(imgData, x0, y0);
+  }
+}
+
+// ── Cursor ring helper ─────────────────────────────────────
+function updateCursorRing() {
+  const displaySize = brushSize * zoom;
+  cursor.style.width  = displaySize + 'px';
+  cursor.style.height = displaySize + 'px';
+}
+
+// ── Undo ───────────────────────────────────────────────────
+function pushUndo() {
+  undoStack.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+  if (undoStack.length > 50) undoStack.shift();
+  document.getElementById('undo-count').textContent = `(${undoStack.length})`;
+}
+
+function undo() {
+  if (!undoStack.length) return;
+  ctx.putImageData(undoStack.pop(), 0, 0);
+  document.getElementById('undo-count').textContent = `(${undoStack.length})`;
+  updateStats();
+}
+
+// ── Crop to content ────────────────────────────────────────
+function cropToContent() {
+  const d = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+  let minX = canvas.width, maxX = 0, minY = canvas.height, maxY = 0;
+  for (let y = 0; y < canvas.height; y++) {
+    for (let x = 0; x < canvas.width; x++) {
+      if (d[(y * canvas.width + x) * 4 + 3] > 10) {
+        minX = Math.min(minX, x); maxX = Math.max(maxX, x);
+        minY = Math.min(minY, y); maxY = Math.max(maxY, y);
+      }
+    }
+  }
+  if (maxX <= minX || maxY <= minY) return;
+  const pad = 4;
+  minX = Math.max(0, minX - pad); minY = Math.max(0, minY - pad);
+  maxX = Math.min(canvas.width - 1,  maxX + pad);
+  maxY = Math.min(canvas.height - 1, maxY + pad);
+  const w = maxX - minX + 1, h = maxY - minY + 1;
+
+  pushUndo();
+  const cropped = ctx.getImageData(minX, minY, w, h);
+  canvas.width = w; canvas.height = h;
+  ctx.putImageData(cropped, 0, 0);
+
+  editEvents.push({ tool: 'crop', ts: new Date().toISOString(),
+    crop_rect: [minX, minY, w, h] });
+  appendLogEntry({ tool: 'crop', crop_rect: [minX, minY, w, h] });
+  dirty = true;
+  updateStats();
+}
+
+// ── Reset ──────────────────────────────────────────────────
+function resetToOriginal() {
+  if (!confirm('Reset all edits? This will undo everything since last save.')) return;
+  if (!originalData) return;
+  canvas.width  = originalData.width;
+  canvas.height = originalData.height;
+  ctx.putImageData(originalData, 0, 0);
+  undoStack = [];
+  document.getElementById('undo-count').textContent = '';
+  updateStats();
+}
+
+// ── Stats ──────────────────────────────────────────────────
+function computeCoverage() {
+  const d = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+  let nonTransparent = 0;
+  for (let i = 3; i < d.length; i += 4) if (d[i] > 10) nonTransparent++;
+  const total = canvas.width * canvas.height;
+  return total > 0 ? (nonTransparent / total * 100) : 0;
+}
+
+function updateStats() {
+  const d = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+  let nonT = 0;
+  for (let i = 3; i < d.length; i += 4) if (d[i] > 10) nonT++;
+  document.getElementById('stat-coverage').textContent = (nonT / (canvas.width * canvas.height) * 100).toFixed(1) + '%';
+  document.getElementById('stat-px').textContent = nonT.toLocaleString();
+}
+
+// ── Log entries ────────────────────────────────────────────
+function appendLogEntry(ev) {
+  const area = document.getElementById('log-area');
+  // Clear placeholder
+  if (area.querySelector('div[style]')) area.innerHTML = '';
+
+  const time = ev.ts ? ev.ts.split('T')[1].slice(0, 8) : '';
+  let desc = '';
+  if (ev.tool === 'eraser')  desc = `Erase  r=${ev.brush_size}px  ${ev.points?.length || 0} pts  cov ${ev.coverage_before?.toFixed(1)}→${ev.coverage_after?.toFixed(1)}%`;
+  if (ev.tool === 'restore') desc = `Restore r=${ev.brush_size}px  ${ev.points?.length || 0} pts`;
+  if (ev.tool === 'crop')    desc = `Crop to ${ev.crop_rect?.[2]}×${ev.crop_rect?.[3]}`;
+
+  const el = document.createElement('div');
+  el.className = `log-entry ${ev.tool}`;
+  el.innerHTML = `${desc}<br><span class="log-time">${time}</span>`;
+  area.insertBefore(el, area.firstChild);
+}
+
+// ── Save ───────────────────────────────────────────────────
+async function saveEdits() {
+  if (!originalPath) return;
+  document.getElementById('save-status').textContent = 'Saving…';
+  document.getElementById('save-btn').disabled = true;
+
+  const dataURL = canvas.toDataURL('image/png');
+  const note = document.getElementById('quality-note').value;
+
+  // Compact strokes (keep only first/last/every 5th point to reduce payload)
+  const compactEvents = editEvents.map(ev => {
+    if (!ev.points) return ev;
+    const pts = ev.points;
+    const compact = pts.length > 10
+      ? [pts[0], ...pts.filter((_, i) => i % 4 === 0), pts[pts.length - 1]]
+      : pts;
+    return { ...ev, points: compact, point_count: pts.length };
+  });
+
+  try {
+    const r = await fetch('/api/save-edit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        original_path: originalPath,
+        edited_data: dataURL,
+        edit_events: compactEvents,
+        quality_note: note,
+      }),
+    });
+    const result = await r.json();
+    if (r.ok) {
+      document.getElementById('save-status').textContent = 'Saved: ' + result.saved.split('/').pop();
+      editSessions++;
+      document.getElementById('stat-sessions').textContent = editSessions;
+      editEvents = []; // reset after save
+      document.getElementById('log-area').innerHTML = '<div style="color:rgba(245,237,216,.25);font-size:.68rem;font-family:var(--mono)">Saved. New session starts here.</div>';
+      dirty = false;
+    } else {
+      document.getElementById('save-status').textContent = 'Error: ' + result.error;
+    }
+  } catch(e) {
+    document.getElementById('save-status').textContent = 'Server error — is serve.py running?';
+  }
+  document.getElementById('save-btn').disabled = false;
+}
+
+// The save btn in topbar
+document.querySelector('.tb-btn.save').addEventListener('click', saveEdits);
+
+// ── Keyboard shortcuts ─────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if (e.key === 'z' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); undo(); }
+  if (e.key === 'e' && !e.ctrlKey) setTool('eraser');
+  if (e.key === 'r' && !e.ctrlKey) setTool('restore');
+  if (e.key === '[') {
+    const s = document.getElementById('brush-size');
+    s.value = Math.max(+s.min, +s.value - 5);
+    updateBrushUI();
+  }
+  if (e.key === ']') {
+    const s = document.getElementById('brush-size');
+    s.value = Math.min(+s.max, +s.value + 5);
+    updateBrushUI();
+  }
+});
+
+// ── Boot ───────────────────────────────────────────────────
+init();
+</script>
+</body>
+</html>

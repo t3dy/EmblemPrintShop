@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emblem Print Shop — Workbench</title>
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #1a1710;
+      --surface: #231f14;
+      --surface2: #2d2818;
+      --border: #4a4228;
+      --border-light: #5c5438;
+      --gold: #c9a84c;
+      --gold-dim: #8a7030;
+      --text: #e8dfc0;
+      --text-dim: #9a9070;
+      --text-muted: #5a5440;
+      --red: #c04030;
+      --green: #4a8060;
+      --tag-af: #3a2e10;
+      --tag-hp: #102030;
+      --tag-af-text: #c9a84c;
+      --tag-hp-text: #5ab0d8;
+      --panel-w: 380px;
+    }
+    html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(--text); font-family: 'Georgia', serif; font-size: 13px; }
+
+    /* ── Layout ── */
+    #app { display: flex; flex-direction: column; height: 100%; }
+    #toolbar { display: flex; align-items: center; gap: 10px; padding: 8px 14px; background: var(--surface); border-bottom: 1px solid var(--border); flex-shrink: 0; flex-wrap: wrap; }
+    #main { display: flex; flex: 1; overflow: hidden; }
+    #grid-panel { flex: 1; overflow-y: auto; padding: 12px; }
+    #detail-panel { width: var(--panel-w); flex-shrink: 0; border-left: 1px solid var(--border); overflow-y: auto; background: var(--surface); display: none; }
+    #detail-panel.open { display: flex; flex-direction: column; }
+
+    /* ── Toolbar ── */
+    #toolbar h1 { font-size: 14px; font-weight: normal; color: var(--gold); letter-spacing: 0.05em; margin-right: 8px; white-space: nowrap; }
+    .sep { width: 1px; height: 20px; background: var(--border); flex-shrink: 0; }
+    label.filter-group { display: flex; align-items: center; gap: 5px; color: var(--text-dim); font-size: 11px; }
+    select, input[type=text] {
+      background: var(--surface2); border: 1px solid var(--border); color: var(--text);
+      padding: 3px 7px; font-size: 11px; font-family: inherit; border-radius: 2px;
+    }
+    select:focus, input:focus { outline: none; border-color: var(--gold-dim); }
+    #search { width: 160px; }
+    #count-badge { margin-left: auto; font-size: 11px; color: var(--text-muted); white-space: nowrap; }
+    .tb-btn {
+      background: var(--surface2); border: 1px solid var(--border); color: var(--text-dim);
+      padding: 3px 10px; font-size: 11px; cursor: pointer; border-radius: 2px;
+    }
+    .tb-btn:hover { border-color: var(--gold-dim); color: var(--text); }
+    .tb-btn.active { background: var(--tag-af); border-color: var(--gold-dim); color: var(--gold); }
+
+    /* ── Grid ── */
+    #grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px; }
+    .card {
+      background: var(--surface2); border: 1px solid var(--border);
+      cursor: pointer; border-radius: 2px; overflow: hidden;
+      transition: border-color 0.1s;
+      display: flex; flex-direction: column;
+    }
+    .card:hover { border-color: var(--gold-dim); }
+    .card.selected { border-color: var(--gold); }
+    .card-img { position: relative; width: 100%; aspect-ratio: 1 / 1; background: #111; overflow: hidden; }
+    .card-img img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.9; }
+    .card-img .no-img { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; color: var(--text-muted); font-size: 10px; text-align: center; padding: 6px; }
+    .card-source { position: absolute; top: 3px; left: 3px; font-size: 9px; padding: 1px 4px; border-radius: 1px; letter-spacing: 0.04em; }
+    .card-source.af { background: var(--tag-af); color: var(--tag-af-text); }
+    .card-source.hp { background: var(--tag-hp); color: var(--tag-hp-text); }
+    .card-body { padding: 5px 7px; flex: 1; }
+    .card-label { font-size: 10px; color: var(--text); line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .card-meta { margin-top: 3px; font-size: 9px; color: var(--text-muted); }
+    .card-motifs { margin-top: 3px; display: flex; flex-wrap: wrap; gap: 2px; }
+    .motif-tag { font-size: 9px; background: var(--bg); border: 1px solid var(--border); color: var(--text-muted); padding: 0px 4px; border-radius: 1px; }
+    .review-dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; margin-right: 3px; }
+    .review-dot.stub { background: var(--text-muted); }
+    .review-dot.reviewed { background: var(--green); }
+
+    /* ── Detail panel ── */
+    #detail-inner { padding: 14px; display: flex; flex-direction: column; gap: 12px; }
+    #detail-close { align-self: flex-end; background: none; border: none; color: var(--text-muted); font-size: 16px; cursor: pointer; padding: 0; line-height: 1; }
+    #detail-close:hover { color: var(--text); }
+    #detail-img { width: 100%; aspect-ratio: 1 / 1; background: #111; border: 1px solid var(--border); overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    #detail-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+    #detail-img .no-img { color: var(--text-muted); font-size: 11px; text-align: center; padding: 10px; }
+    #detail-title { font-size: 14px; line-height: 1.4; color: var(--text); }
+    .detail-row { display: flex; gap: 8px; font-size: 11px; }
+    .detail-key { color: var(--text-muted); min-width: 110px; flex-shrink: 0; }
+    .detail-val { color: var(--text); flex: 1; }
+    .detail-section { border-top: 1px solid var(--border); padding-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+    .detail-section h3 { font-size: 10px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-muted); font-weight: normal; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 3px; }
+    .tag { font-size: 10px; background: var(--surface2); border: 1px solid var(--border); color: var(--text-dim); padding: 1px 6px; border-radius: 2px; }
+    .tag.motif { border-color: var(--gold-dim); color: var(--gold); }
+    .discourse-text { font-size: 11px; color: var(--text-dim); line-height: 1.6; }
+    a.ext-link { color: var(--gold-dim); font-size: 10px; text-decoration: none; }
+    a.ext-link:hover { color: var(--gold); text-decoration: underline; }
+
+    /* ── Empty state ── */
+    #empty-state { display: none; padding: 60px 20px; text-align: center; color: var(--text-muted); }
+    #empty-state.show { display: block; }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--border-light); }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div id="toolbar">
+    <h1>⚗ Emblem Print Shop</h1>
+    <div class="sep"></div>
+
+    <label class="filter-group">
+      Source:
+      <select id="filter-work">
+        <option value="">All works</option>
+        <option value="atalanta_fugiens">Atalanta Fugiens (Maier)</option>
+        <option value="hypnerotomachia_poliphili">Hypnerotomachia Poliphili</option>
+      </select>
+    </label>
+
+    <label class="filter-group">
+      Motif:
+      <select id="filter-motif">
+        <option value="">All motifs</option>
+      </select>
+    </label>
+
+    <label class="filter-group">
+      Category:
+      <select id="filter-category">
+        <option value="">All categories</option>
+      </select>
+    </label>
+
+    <label class="filter-group">
+      Stage:
+      <select id="filter-stage">
+        <option value="">All stages</option>
+      </select>
+    </label>
+
+    <label class="filter-group">
+      <input type="text" id="search" placeholder="Search labels, motifs…">
+    </label>
+
+    <button class="tb-btn" id="btn-clear-filters">Clear filters</button>
+
+    <span id="count-badge">— emblems</span>
+  </div>
+
+  <div id="main">
+    <div id="grid-panel">
+      <div id="grid"></div>
+      <div id="empty-state">No emblems match the current filters.</div>
+    </div>
+    <div id="detail-panel">
+      <div id="detail-inner">
+        <button id="detail-close" title="Close">✕</button>
+        <div id="detail-img"><span class="no-img">No image</span></div>
+        <div id="detail-title">—</div>
+        <div id="detail-fields"></div>
+        <div id="detail-motifs" class="detail-section" style="display:none">
+          <h3>Motif candidates</h3>
+          <div class="tag-list" id="detail-motif-tags"></div>
+        </div>
+        <div id="detail-concepts" class="detail-section" style="display:none">
+          <h3>Key concepts</h3>
+          <div class="tag-list" id="detail-concept-tags"></div>
+        </div>
+        <div id="detail-discourse" class="detail-section" style="display:none">
+          <h3>Discourse / Context</h3>
+          <p class="discourse-text" id="detail-discourse-text"></p>
+        </div>
+        <div id="detail-links" class="detail-section" style="display:none">
+          <h3>Links</h3>
+          <div id="detail-link-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── Data paths (relative to prototype/) ──
+const DATA_PATH = '../data/';
+const SOURCES_PATH = '../';
+
+let EMBLEMS = [];
+let MOTIFS = [];
+let WORKS = {};
+let selectedId = null;
+
+// ── Load data ──
+async function loadData() {
+  const [emblems, motifs, works] = await Promise.all([
+    fetch(DATA_PATH + 'emblems.json').then(r => r.json()),
+    fetch(DATA_PATH + 'motifs.json').then(r => r.json()),
+    fetch(DATA_PATH + 'works.json').then(r => r.json()),
+  ]);
+  EMBLEMS = emblems;
+  MOTIFS = motifs;
+  WORKS = Object.fromEntries(works.map(w => [w.id, w]));
+  buildFilters();
+  renderGrid();
+}
+
+// ── Build filter dropdowns ──
+function buildFilters() {
+  // Motifs
+  const motifSel = document.getElementById('filter-motif');
+  MOTIFS.forEach(m => {
+    const opt = document.createElement('option');
+    opt.value = m.id;
+    opt.textContent = m.label;
+    motifSel.appendChild(opt);
+  });
+
+  // HP categories
+  const cats = new Set();
+  EMBLEMS.forEach(e => { if (e.subject_category) cats.add(e.subject_category); });
+  const catSel = document.getElementById('filter-category');
+  [...cats].sort().forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c;
+    opt.textContent = c.charAt(0) + c.slice(1).toLowerCase();
+    catSel.appendChild(opt);
+  });
+
+  // Alchemical stages
+  const stages = new Set();
+  EMBLEMS.forEach(e => { if (e.alchemical_stage) stages.add(e.alchemical_stage); });
+  const stageSel = document.getElementById('filter-stage');
+  [...stages].sort().forEach(s => {
+    const opt = document.createElement('option');
+    opt.value = s;
+    opt.textContent = s;
+    stageSel.appendChild(opt);
+  });
+}
+
+// ── Filter logic ──
+function getFilters() {
+  return {
+    work: document.getElementById('filter-work').value,
+    motif: document.getElementById('filter-motif').value,
+    category: document.getElementById('filter-category').value,
+    stage: document.getElementById('filter-stage').value,
+    search: document.getElementById('search').value.trim().toLowerCase(),
+  };
+}
+
+function matchesFilters(e, f) {
+  if (f.work && e.work_id !== f.work) return false;
+  if (f.category && e.subject_category !== f.category) return false;
+  if (f.stage && e.alchemical_stage !== f.stage) return false;
+  if (f.motif) {
+    const motif = MOTIFS.find(m => m.id === f.motif);
+    if (!motif) return false;
+    const allVariants = [motif.id, ...motif.variants];
+    const candidates = (e.motif_candidates || []).join(' ').toLowerCase();
+    if (!allVariants.some(v => candidates.includes(v.toLowerCase()))) return false;
+  }
+  if (f.search) {
+    const haystack = [
+      e.label || '', e.description || '', e.narrative_context || '',
+      (e.motif_candidates || []).join(' '),
+      (e.key_concepts || []).join(' '),
+      e.discourse_excerpt || '',
+      e.latin_motto || '', e.english_motto || '',
+      e.alchemical_stage || '',
+    ].join(' ').toLowerCase();
+    if (!haystack.includes(f.search)) return false;
+  }
+  return true;
+}
+
+// ── Render grid ──
+function renderGrid() {
+  const f = getFilters();
+  const filtered = EMBLEMS.filter(e => matchesFilters(e, f));
+
+  document.getElementById('count-badge').textContent =
+    `${filtered.length} / ${EMBLEMS.length} emblems`;
+
+  const grid = document.getElementById('grid');
+  grid.innerHTML = '';
+  const empty = document.getElementById('empty-state');
+
+  if (filtered.length === 0) {
+    empty.classList.add('show');
+    return;
+  }
+  empty.classList.remove('show');
+
+  filtered.forEach(e => {
+    const card = document.createElement('div');
+    card.className = 'card' + (e.id === selectedId ? ' selected' : '');
+    card.dataset.id = e.id;
+
+    const isAF = e.work_id === 'atalanta_fugiens';
+    const imgSrc = SOURCES_PATH + e.image_path;
+    const motifs = (e.motif_candidates || []).slice(0, 3);
+
+    card.innerHTML = `
+      <div class="card-img">
+        <img src="${imgSrc}" alt="${esc(e.label)}" loading="lazy"
+             onerror="this.parentElement.innerHTML='<span class=\'no-img\'>No image<br>${esc(e.id)}</span>'">
+        <span class="card-source ${isAF ? 'af' : 'hp'}">${isAF ? 'AF' : 'HP'}</span>
+      </div>
+      <div class="card-body">
+        <div class="card-label">${esc(e.label)}</div>
+        <div class="card-meta">
+          <span class="review-dot ${e.review_status}"></span>
+          ${isAF ? (e.roman ? 'Emblem ' + esc(e.roman) : 'Frontispiece') : 'p.' + e.page_1499}
+        </div>
+        ${motifs.length ? `<div class="card-motifs">${motifs.map(m => `<span class="motif-tag">${esc(m)}</span>`).join('')}</div>` : ''}
+      </div>
+    `;
+
+    card.addEventListener('click', () => openDetail(e.id));
+    grid.appendChild(card);
+  });
+}
+
+// ── Detail panel ──
+function openDetail(id) {
+  selectedId = id;
+  const e = EMBLEMS.find(x => x.id === id);
+  if (!e) return;
+
+  // Update selected state in grid
+  document.querySelectorAll('.card').forEach(c => {
+    c.classList.toggle('selected', c.dataset.id === id);
+  });
+
+  const panel = document.getElementById('detail-panel');
+  panel.classList.add('open');
+
+  // Image
+  const imgDiv = document.getElementById('detail-img');
+  const imgSrc = SOURCES_PATH + e.image_path;
+  imgDiv.innerHTML = `<img src="${imgSrc}" alt="${esc(e.label)}"
+    onerror="this.parentElement.innerHTML='<span class=\'no-img\'>No image available</span>'">`;
+
+  // Title
+  document.getElementById('detail-title').textContent = e.label || e.id;
+
+  // Fields
+  const fields = document.getElementById('detail-fields');
+  const rows = [];
+  const isAF = e.work_id === 'atalanta_fugiens';
+  const work = WORKS[e.work_id];
+  rows.push(['Work', work ? work.title : e.work_id]);
+  if (isAF) {
+    if (e.roman) rows.push(['Emblem', e.roman]);
+    if (e.latin_motto) rows.push(['Latin motto', e.latin_motto]);
+    if (e.english_motto) rows.push(['English motto', e.english_motto]);
+    if (e.alchemical_stage) rows.push(['Alch. stage', e.alchemical_stage]);
+    if (e.color_association) rows.push(['Color', e.color_association]);
+    if (e.planetary_association) rows.push(['Planetary', e.planetary_association]);
+    if (e.de_jong_pages) rows.push(['De Jong pp.', e.de_jong_pages]);
+    if (e.stage) rows.push(['Stage (site)', e.stage]);
+  } else {
+    rows.push(['Page (1499)', 'p.' + e.page_1499]);
+    rows.push(['Signature', e.signature_1499]);
+    if (e.subject_category) rows.push(['Category', e.subject_category]);
+    rows.push(['Tradition', e.tradition]);
+    rows.push(['IA page', 'n' + e.ia_page]);
+  }
+  rows.push(['Review', e.review_status]);
+  fields.innerHTML = rows.map(([k, v]) =>
+    `<div class="detail-row"><span class="detail-key">${esc(k)}</span><span class="detail-val">${esc(String(v))}</span></div>`
+  ).join('');
+
+  // Motifs
+  const motifSection = document.getElementById('detail-motifs');
+  const motifTags = document.getElementById('detail-motif-tags');
+  const candidates = e.motif_candidates || [];
+  if (candidates.length) {
+    motifTags.innerHTML = candidates.map(m => `<span class="tag motif">${esc(m)}</span>`).join('');
+    motifSection.style.display = '';
+  } else {
+    motifSection.style.display = 'none';
+  }
+
+  // Key concepts
+  const conceptSection = document.getElementById('detail-concepts');
+  const conceptTags = document.getElementById('detail-concept-tags');
+  const concepts = e.key_concepts || [];
+  if (concepts.length) {
+    conceptTags.innerHTML = concepts.map(c => `<span class="tag">${esc(c)}</span>`).join('');
+    conceptSection.style.display = '';
+  } else {
+    conceptSection.style.display = 'none';
+  }
+
+  // Discourse / narrative context
+  const discourseSection = document.getElementById('detail-discourse');
+  const discourseText = document.getElementById('detail-discourse-text');
+  const text = e.discourse_excerpt || e.narrative_context || e.description || '';
+  if (text) {
+    discourseText.textContent = text;
+    discourseSection.style.display = '';
+  } else {
+    discourseSection.style.display = 'none';
+  }
+
+  // Links
+  const linkSection = document.getElementById('detail-links');
+  const linkList = document.getElementById('detail-link-list');
+  const links = [];
+  if (e.furnace_fugue_url) links.push([e.furnace_fugue_url, 'Furnace & Fugue']);
+  if (e.furnace_fugue_image_url) links.push([e.furnace_fugue_image_url, 'Hi-res image (F&F)']);
+  if (e.provenance_url) links.push([e.provenance_url, isAF ? 'Science History Institute' : 'Internet Archive']);
+  if (links.length) {
+    linkList.innerHTML = links.map(([href, label]) =>
+      `<div><a class="ext-link" href="${esc(href)}" target="_blank" rel="noopener">↗ ${esc(label)}</a></div>`
+    ).join('');
+    linkSection.style.display = '';
+  } else {
+    linkSection.style.display = 'none';
+  }
+}
+
+function closeDetail() {
+  selectedId = null;
+  document.getElementById('detail-panel').classList.remove('open');
+  document.querySelectorAll('.card.selected').forEach(c => c.classList.remove('selected'));
+}
+
+// ── Utilities ──
+function esc(s) {
+  if (s == null) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── Event wiring ──
+['filter-work','filter-motif','filter-category','filter-stage'].forEach(id => {
+  document.getElementById(id).addEventListener('change', renderGrid);
+});
+document.getElementById('search').addEventListener('input', renderGrid);
+document.getElementById('btn-clear-filters').addEventListener('click', () => {
+  document.getElementById('filter-work').value = '';
+  document.getElementById('filter-motif').value = '';
+  document.getElementById('filter-category').value = '';
+  document.getElementById('filter-stage').value = '';
+  document.getElementById('search').value = '';
+  renderGrid();
+});
+document.getElementById('detail-close').addEventListener('click', closeDetail);
+
+// ── Boot ──
+loadData().catch(err => {
+  document.getElementById('grid').innerHTML =
+    `<p style="color:#c04030;padding:20px;">Error loading data: ${err.message}</p>`;
+});
+</script>
+</body>
+</html>

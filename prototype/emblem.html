@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">Emblem — Emblem Print Shop</title>
+<style>
+/* ── Design tokens ───────────────────────────────────────────── */
+:root {
+  --ink:       #1a1208;
+  --paper:     #f5edd8;
+  --paper2:    #ede0c4;
+  --paper3:    #e5d4b0;
+  --accent:    #8b3a1c;
+  --accent2:   #5c6b2e;
+  --muted:     #6b5d48;
+  --border:    #c8b89a;
+  --card:      #faf3e4;
+  --sans:      'Georgia', serif;
+  --mono:      'Courier New', monospace;
+  --r:         4px;
+  --nigredo:   #2a2218;
+  --albedo:    #e8e0d0;
+  --citrinitas:#c8a020;
+  --rubedo:    #8b1a10;
+  --stage-text-nigredo: #c8b89a;
+  --stage-text-albedo:  #1a1208;
+  --stage-text-citrinitas: #1a1208;
+  --stage-text-rubedo:  #f5edd8;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.65; }
+
+/* ── Nav ─────────────────────────────────────────────────────── */
+nav.topnav {
+  background: var(--ink); color: var(--paper);
+  padding: .6rem 1.5rem; display: flex; gap: 1.2rem; align-items: center;
+  border-bottom: 3px solid var(--accent); font-size: .8rem; position: sticky; top: 0; z-index: 50;
+}
+nav.topnav strong { font-size: .95rem; letter-spacing: .04em; margin-right: .5rem; }
+nav.topnav a { color: var(--paper); text-decoration: none; opacity: .7; }
+nav.topnav a:hover { opacity: 1; }
+#breadcrumb { font-size: .72rem; color: rgba(245,237,216,.6); margin-left: auto; }
+#breadcrumb a { color: rgba(245,237,216,.7); text-decoration: none; }
+#breadcrumb a:hover { color: var(--paper); }
+#breadcrumb span { margin: 0 .3rem; }
+
+/* ── Hero ────────────────────────────────────────────────────── */
+.hero {
+  background: var(--ink); color: var(--paper);
+  padding: 1.5rem 2rem 1.2rem;
+  border-bottom: 1px solid #333;
+}
+.hero-inner { max-width: 1100px; margin: 0 auto; display: flex; gap: 2rem; align-items: flex-start; }
+.hero-text { flex: 1; }
+.source-line { font-size: .72rem; font-family: var(--mono); color: rgba(245,237,216,.6); margin-bottom: .4rem; letter-spacing: .05em; text-transform: uppercase; }
+.hero-title { font-size: 1.8rem; font-weight: normal; font-style: italic; line-height: 1.2; margin-bottom: .5rem; }
+.hero-latin { font-size: .88rem; color: rgba(245,237,216,.7); margin-bottom: .8rem; font-style: italic; }
+.hero-stage { display: inline-flex; align-items: center; gap: .4rem; font-family: var(--mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; padding: .25rem .7rem; border-radius: 3px; }
+.hero-stage.NIGREDO    { background: var(--nigredo);    color: var(--stage-text-nigredo); }
+.hero-stage.ALBEDO     { background: var(--albedo);     color: var(--stage-text-albedo);  border: 1px solid var(--border); }
+.hero-stage.CITRINITAS { background: var(--citrinitas); color: var(--stage-text-citrinitas); }
+.hero-stage.RUBEDO     { background: var(--rubedo);     color: var(--stage-text-rubedo); }
+.hero-stage .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: .7; }
+
+/* ── Motto ───────────────────────────────────────────────────── */
+.motto-banner {
+  background: var(--paper3); border-top: 1px solid var(--border); border-bottom: 3px solid var(--accent);
+  padding: .9rem 2rem; text-align: center;
+}
+.motto-banner blockquote {
+  font-size: 1.05rem; font-style: italic; color: var(--ink);
+  max-width: 700px; margin: 0 auto .25rem;
+}
+.motto-source { font-size: .7rem; color: var(--muted); font-family: var(--mono); }
+
+/* ── Layout ──────────────────────────────────────────────────── */
+.page-body { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; display: grid; grid-template-columns: 320px 1fr; gap: 2.5rem; }
+@media (max-width: 850px) { .page-body { grid-template-columns: 1fr; } }
+
+/* ── Left column ─────────────────────────────────────────────── */
+.plate-col {}
+.plate-wrap { position: sticky; top: 56px; }
+.emblem-plate { width: 100%; border: 1px solid var(--border); border-radius: var(--r); }
+.plate-caption { font-size: .65rem; color: var(--muted); text-align: center; margin-top: .3rem; font-family: var(--mono); }
+
+.col-section { margin-top: 1.5rem; }
+.col-section h4 {
+  font-size: .62rem; text-transform: uppercase; letter-spacing: .1em;
+  color: var(--muted); margin-bottom: .6rem; border-bottom: 1px solid var(--border); padding-bottom: .3rem;
+}
+
+/* Extracted elements grid */
+.cutouts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); gap: .4rem; }
+.cutout-item {
+  aspect-ratio: 1; border: 1px solid var(--border); border-radius: 2px; overflow: hidden;
+  background-image: linear-gradient(45deg,#d4c8a8 25%,transparent 25%),
+    linear-gradient(-45deg,#d4c8a8 25%,transparent 25%),
+    linear-gradient(45deg,transparent 75%,#d4c8a8 75%),
+    linear-gradient(-45deg,transparent 75%,#d4c8a8 75%);
+  background-size: 10px 10px; background-color: #e8dbbf;
+  display: flex; align-items: center; justify-content: center; cursor: pointer;
+  transition: border-color .15s;
+}
+.cutout-item:hover { border-color: var(--accent); }
+.cutout-item img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.cutout-label { font-size: .58rem; color: var(--muted); text-align: center; margin-top: .15rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* Related emblems */
+.related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: .5rem; }
+.related-item { display: flex; flex-direction: column; align-items: center; gap: .2rem; cursor: pointer; }
+.related-item img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; border: 1px solid var(--border); border-radius: 2px; }
+.related-item img:hover { border-color: var(--accent); }
+.related-num { font-family: var(--mono); font-size: .58rem; color: var(--muted); }
+
+/* Motif chips */
+.chip-list { display: flex; flex-wrap: wrap; gap: .3rem; }
+.chip {
+  font-size: .67rem; padding: .12rem .45rem; border-radius: 10px;
+  background: var(--paper2); border: 1px solid var(--border); color: var(--ink);
+  text-decoration: none; cursor: pointer; display: inline-block;
+}
+.chip:hover { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+.chip.concept { background: var(--paper3); }
+
+/* ── Essay column ────────────────────────────────────────────── */
+.essay-col {}
+.essay-section { margin-bottom: 2rem; }
+.essay-section h2 {
+  font-size: .65rem; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--accent); margin-bottom: .7rem; border-bottom: 1px solid var(--border);
+  padding-bottom: .3rem; font-weight: normal;
+}
+.essay-section h2 .section-icon { margin-right: .4rem; opacity: .7; }
+
+/* Discourse */
+.discourse-text { font-size: .92rem; line-height: 1.75; color: var(--ink); }
+.discourse-text p { margin-bottom: .8rem; }
+.discourse-citation {
+  font-size: .7rem; color: var(--muted); font-family: var(--mono);
+  border-left: 2px solid var(--border); padding-left: .6rem; margin-top: .5rem;
+  font-style: italic;
+}
+
+/* Classification grid */
+.class-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem .8rem; }
+@media (max-width: 600px) { .class-grid { grid-template-columns: 1fr; } }
+.class-item { display: flex; flex-direction: column; gap: .1rem; }
+.class-label { font-size: .62rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.class-value { font-size: .88rem; color: var(--ink); }
+
+/* Interpretation block */
+.interp-block {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--r);
+  padding: .8rem 1rem; margin-bottom: .7rem;
+}
+.interp-label { font-size: .62rem; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin-bottom: .3rem; }
+.interp-text { font-size: .88rem; line-height: 1.6; }
+
+/* Concept links */
+.concept-link-item { padding: .5rem 0; border-bottom: 1px solid var(--border); }
+.concept-link-item:last-child { border-bottom: none; }
+.concept-link-name { font-size: .9rem; color: var(--accent); font-weight: normal; text-decoration: none; }
+.concept-link-name:hover { text-decoration: underline; }
+.concept-link-meta { font-size: .68rem; color: var(--muted); margin: .1rem 0; font-family: var(--mono); }
+.concept-link-desc { font-size: .82rem; line-height: 1.5; color: var(--ink); }
+
+/* Sources / bibliography */
+.sources-table { width: 100%; font-size: .82rem; border-collapse: collapse; }
+.sources-table td { padding: .25rem .4rem; vertical-align: top; border-bottom: 1px solid var(--border); }
+.sources-table td:first-child { white-space: nowrap; color: var(--accent); font-family: var(--mono); font-size: .7rem; width: 120px; }
+.bib-entry { font-size: .8rem; line-height: 1.5; margin-bottom: .5rem; padding-left: 1.5rem; text-indent: -1.5rem; }
+.bib-entry cite { font-style: italic; }
+.bib-note { font-size: .72rem; color: var(--muted); }
+.de-jong-ref {
+  background: var(--paper3); border: 1px solid var(--border); border-radius: var(--r);
+  padding: .5rem .8rem; font-size: .82rem; margin-bottom: .6rem;
+}
+.de-jong-ref strong { color: var(--accent); }
+
+/* ── Prev/Next nav ───────────────────────────────────────────── */
+.emblem-nav {
+  background: var(--paper2); border-top: 3px solid var(--accent);
+  padding: 1rem 2rem; display: flex; gap: 1rem; align-items: center; justify-content: center;
+  font-size: .85rem;
+}
+.nav-link {
+  display: flex; align-items: center; gap: .4rem;
+  color: var(--ink); text-decoration: none; padding: .4rem .9rem;
+  border: 1px solid var(--border); border-radius: var(--r); background: var(--card);
+  transition: all .12s;
+}
+.nav-link:hover { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+.nav-link.center { background: transparent; border: none; color: var(--muted); font-size: .78rem; }
+.nav-link.center:hover { color: var(--ink); }
+.nav-label { display: flex; flex-direction: column; font-size: .72rem; }
+.nav-label .num { font-family: var(--mono); font-size: .6rem; color: var(--muted); }
+.nav-label .title { font-style: italic; }
+
+/* ── Loading / error ─────────────────────────────────────────── */
+#loading { padding: 3rem; text-align: center; color: var(--muted); }
+#error   { padding: 3rem; text-align: center; color: var(--accent); }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <strong>Emblem Print Shop</strong>
+  <a href="emblems.html">Emblem Catalog</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="review.html">Review Queue</a>
+  <span id="breadcrumb"></span>
+</nav>
+
+<div id="loading">Loading emblem…</div>
+<div id="error" style="display:none">Emblem not found.</div>
+
+<div id="emblem-root" style="display:none">
+  <!-- Hero -->
+  <header id="hero" class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="source-line" id="source-line"></div>
+        <h1 class="hero-title" id="hero-title"></h1>
+        <p class="hero-latin" id="hero-latin"></p>
+        <div id="hero-stage" class="hero-stage"><span class="dot"></span><span id="stage-text"></span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Motto banner -->
+  <div class="motto-banner" id="motto-banner" style="display:none">
+    <blockquote id="motto-text"></blockquote>
+    <div class="motto-source" id="motto-source"></div>
+  </div>
+
+  <!-- Main body -->
+  <div class="page-body">
+
+    <!-- ── Left column ── -->
+    <aside class="plate-col">
+      <div class="plate-wrap">
+        <img class="emblem-plate" id="plate-img" src="" alt="">
+        <div class="plate-caption" id="plate-caption"></div>
+
+        <!-- Extracted elements -->
+        <div class="col-section" id="cutouts-section" style="display:none">
+          <h4>Extracted Elements</h4>
+          <div class="cutouts-grid" id="cutouts-grid"></div>
+          <div style="margin-top:.5rem">
+            <a id="gallery-link" href="gallery.html" class="chip" style="font-size:.68rem">View all in Gallery →</a>
+          </div>
+        </div>
+
+        <!-- Visual elements (motif chips) -->
+        <div class="col-section" id="ve-section" style="display:none">
+          <h4>Visual Elements</h4>
+          <div class="chip-list" id="ve-chips"></div>
+        </div>
+
+        <!-- Key concepts -->
+        <div class="col-section" id="kc-section" style="display:none">
+          <h4>Alchemical Operations</h4>
+          <div class="chip-list" id="kc-chips"></div>
+        </div>
+
+        <!-- Related emblems -->
+        <div class="col-section" id="related-section" style="display:none">
+          <h4>Related Emblems</h4>
+          <div class="related-grid" id="related-grid"></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── Essay column ── -->
+    <article class="essay-col">
+
+      <!-- Maier's Discourse -->
+      <section class="essay-section" id="discourse-section" style="display:none">
+        <h2><span class="section-icon">✦</span>Maier's Discourse</h2>
+        <div class="discourse-text" id="discourse-text"></div>
+        <div class="discourse-citation" id="discourse-citation"></div>
+      </section>
+
+      <!-- Classification -->
+      <section class="essay-section" id="classification-section">
+        <h2><span class="section-icon">⊕</span>Alchemical Classification</h2>
+        <div class="class-grid" id="class-grid"></div>
+      </section>
+
+      <!-- Divine principle & spiritual meaning -->
+      <section class="essay-section" id="interp-section" style="display:none">
+        <h2><span class="section-icon">◈</span>Interpretation</h2>
+        <div id="interp-blocks"></div>
+      </section>
+
+      <!-- Concept links -->
+      <section class="essay-section" id="concepts-section" style="display:none">
+        <h2><span class="section-icon">⊞</span>Linked Alchemical Concepts</h2>
+        <div id="concept-links"></div>
+      </section>
+
+      <!-- Provenance & scholarship -->
+      <section class="essay-section" id="provenance-section">
+        <h2><span class="section-icon">📜</span>Scholarship &amp; Sources</h2>
+        <div id="de-jong-block"></div>
+        <div id="sources-block"></div>
+        <div id="bib-block"></div>
+      </section>
+
+    </article>
+  </div><!-- end page-body -->
+
+  <!-- Prev/Next navigation -->
+  <nav class="emblem-nav" id="emblem-nav"></nav>
+
+</div><!-- end emblem-root -->
+
+<script>
+// ── Authority source bibliography ─────────────────────────────
+const SOURCE_BIB = {
+  AUTH_LAMBSPRINCK: {
+    short: 'Lambspring (1625)',
+    full: 'Lambspring [pseud.]. <cite>De Lapide Philosophico / On the Philosophers\' Stone</cite>. Frankfurt: Lucas Jennis, 1625. [Emblematic sequence of fifteen engravings on the Work].',
+  },
+  AUTH_LULLIUS: {
+    short: 'Lull (attrib., 14th c.)',
+    full: 'Attributed to Ramon Lull. <cite>Testamentum</cite> and <cite>Codicillum</cite>. c. 14th century. [Pseudo-Lullian alchemical corpus; widely circulated in Maier\'s milieu].',
+  },
+  AUTH_SENIOR: {
+    short: 'Senior Zadith (c. 10th c.)',
+    full: 'Senior Zadith (Ibn Umail al-Tamimi). <cite>De Chemia Seniori</cite>. c. 900–1000 CE. [Arabic alchemical text; Latin translation widely cited in Western alchemy].',
+  },
+  AUTH_ROSARIUM: {
+    short: 'Rosarium Philosophorum (1550)',
+    full: '<cite>Rosarium Philosophorum</cite>. Frankfurt: Cyriacus Jacobus, 1550. [Woodcut series depicting the coniunctio; foundational for Maier\'s iconography].',
+  },
+  AUTH_AURORA: {
+    short: 'Aurora Consurgens (c. 1420)',
+    full: '<cite>Aurora Consurgens</cite>. c. 1420. Attributed (falsely) to Thomas Aquinas. [Illuminated MS; key source for Maier\'s solar symbolism].',
+  },
+  AUTH_SOLOMONIC: {
+    short: 'Solomonic tradition',
+    full: 'Solomonic alchemical tradition. Various texts, including <cite>Clavicula Salomonis</cite> derivatives and hermetic aphorisms attributed to Solomon.',
+  },
+  AUTH_RIPLEY: {
+    short: 'Ripley (1471)',
+    full: 'George Ripley. <cite>Compound of Alchymy</cite>. 1471. [Twelve Gates sequence; influential English alchemical poem].',
+  },
+  AUTH_PARACELSUS: {
+    short: 'Paracelsus (d. 1541)',
+    full: 'Paracelsus (Theophrastus Bombastus von Hohenheim). <cite>Opera Omnia</cite>. Geneva: de Tournes, 1658. [Maier responds to, extends, and at times corrects Paracelsian doctrine].',
+  },
+  AUTH_BASILIUS: {
+    short: 'Basil Valentine (1604)',
+    full: 'Basilius Valentinus [pseud.]. <cite>Triumphwagen Antimonii</cite>. Leipzig, 1604. [Antimony treatise; alchemical authority in Maier\'s circle].',
+  },
+  AUTH_MORIENUS: {
+    short: 'Morienus (c. 8th c.)',
+    full: 'Morienus Romanus. <cite>De Compositione Alchemiae</cite>. c. 8th century. Trans. Robert of Chester, 1144. [First Western alchemical text to name the Philosopher\'s Stone].',
+  },
+  AUTH_JABIR: {
+    short: 'Jabir / Geber (c. 9th c.)',
+    full: 'Jabir ibn Hayyan (attrib.) / Pseudo-Geber. <cite>Summa Perfectionis</cite>. c. 9th–13th century. [Sulphur-mercury theory foundational for Maier\'s material philosophy].',
+  },
+  AUTH_PONTANUS: {
+    short: 'Pontanus (c. 1600)',
+    full: 'Johannes Isaacus Pontanus. <cite>Epistola de Lapide Philosophico</cite>. c. 1600. [Widely quoted authority on the secret fire].',
+  },
+};
+
+const STAGE_LABEL = {
+  NIGREDO: 'Nigredo — Blackening',
+  ALBEDO: 'Albedo — Whitening',
+  CITRINITAS: 'Citrinitas — Yellowing',
+  RUBEDO: 'Rubedo — Reddening',
+};
+
+const STAGE_DESC = {
+  NIGREDO: 'The first stage of the Great Work: calcination, putrefaction, dissolution. The prima materia is broken down; death precedes new life.',
+  ALBEDO: 'The second stage: purification and washing. The blackened matter is washed until the white appears. The soul revives from the prima materia.',
+  CITRINITAS: 'The third stage (sometimes subsumed into Rubedo in later alchemists): the yellowing that signals the approach of perfection. The reddening Sol asserts itself.',
+  RUBEDO: 'The final stage: the red Stone achieved. Fixation, multiplication, projection. The philosophers\'s gold emerges from the perfected matter.',
+};
+
+// ── Load catalog + render ─────────────────────────────────────
+let ALL_EMBLEMS = [];
+
+async function init() {
+  const id = new URLSearchParams(location.search).get('id');
+  if (!id) { showError('No emblem ID in URL (?id=af_16)'); return; }
+
+  try {
+    const r = await fetch('emblem_catalog.json?_=' + Date.now());
+    if (!r.ok) throw new Error(r.status);
+    const data = await r.json();
+    ALL_EMBLEMS = data.emblems || [];
+    const emblem = ALL_EMBLEMS.find(e => e.id === id);
+    if (!emblem) { showError(`Emblem "${id}" not found in catalog.`); return; }
+    render(emblem);
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('emblem-root').style.display = 'block';
+  } catch(e) {
+    showError('Could not load emblem_catalog.json — run: python scripts/build_emblem_catalog.py');
+  }
+}
+
+function showError(msg) {
+  document.getElementById('loading').style.display = 'none';
+  const el = document.getElementById('error');
+  el.textContent = msg; el.style.display = 'block';
+}
+
+function render(e) {
+  // Page title
+  document.title = `${e.label || e.english_title} — Emblem Print Shop`;
+  document.getElementById('page-title').textContent = document.title;
+
+  // Breadcrumb
+  const bc = document.getElementById('breadcrumb');
+  const src = e.source_work || 'Unknown';
+  const num = e.roman ? `Emblem ${e.roman}` : (e.emblem_number !== undefined ? `No. ${e.emblem_number}` : '');
+  bc.innerHTML = `<a href="emblems.html">Emblem Catalog</a><span>›</span><a href="emblems.html?source=${encodeURIComponent(src)}">${src}</a><span>›</span>${num}`;
+
+  // Hero
+  document.getElementById('source-line').textContent =
+    `${src}${e.emblem_number !== undefined ? ' · ' + (e.roman || '#' + e.emblem_number) : ''}`;
+  document.getElementById('hero-title').textContent = e.label || e.english_title || '';
+  const latin = e.latin_title || '';
+  if (latin && latin !== e.label) {
+    document.getElementById('hero-latin').textContent = latin;
+  }
+  const stageEl = document.getElementById('hero-stage');
+  const stage = e.stage || '';
+  if (stage) {
+    stageEl.classList.add(stage);
+    document.getElementById('stage-text').textContent = STAGE_LABEL[stage] || stage;
+  } else {
+    stageEl.style.display = 'none';
+  }
+
+  // Plate image
+  if (e.image_web) {
+    document.getElementById('plate-img').src = e.image_web;
+    document.getElementById('plate-img').alt = e.label || '';
+    document.getElementById('plate-caption').textContent =
+      `${src}${e.emblem_number !== undefined ? ', emblem ' + (e.roman || e.emblem_number) : ''}`;
+  }
+
+  // Motto
+  if (e.motto) {
+    document.getElementById('motto-text').textContent = '“' + e.motto + '”';
+    document.getElementById('motto-source').textContent = e.motto_source || '';
+    document.getElementById('motto-banner').style.display = '';
+  }
+
+  // Extracted elements
+  const elems = e.extracted_elements || [];
+  if (elems.length) {
+    const grid = document.getElementById('cutouts-grid');
+    elems.slice(0, 12).forEach(el => {
+      const wrap = document.createElement('div');
+      const item = document.createElement('div');
+      item.className = 'cutout-item';
+      item.title = el.prompt || '';
+      if (el.transparent_png_web) {
+        const img = document.createElement('img');
+        img.src = el.transparent_png_web; img.alt = el.prompt || '';
+        item.appendChild(img);
+      }
+      const lbl = document.createElement('div');
+      lbl.className = 'cutout-label'; lbl.textContent = el.prompt || '';
+      wrap.appendChild(item); wrap.appendChild(lbl);
+      grid.appendChild(wrap);
+    });
+    const galleryLink = document.getElementById('gallery-link');
+    galleryLink.href = `gallery.html?emblem=${encodeURIComponent(e.id)}`;
+    document.getElementById('cutouts-section').style.display = '';
+  }
+
+  // Visual elements chips
+  const ves = e.visual_elements || [];
+  if (ves.length) {
+    const c = document.getElementById('ve-chips');
+    ves.forEach(v => {
+      const a = document.createElement('a');
+      a.className = 'chip'; a.textContent = v;
+      a.href = `emblems.html?ve=${encodeURIComponent(v)}`;
+      c.appendChild(a);
+    });
+    document.getElementById('ve-section').style.display = '';
+  }
+
+  // Key concepts chips
+  const kcs = e.key_concepts || [];
+  if (kcs.length) {
+    const c = document.getElementById('kc-chips');
+    kcs.forEach(k => {
+      const a = document.createElement('a');
+      a.className = 'chip concept'; a.textContent = k;
+      a.href = `emblems.html?search=${encodeURIComponent(k)}`;
+      c.appendChild(a);
+    });
+    document.getElementById('kc-section').style.display = '';
+  }
+
+  // Related emblems
+  const rel = e.related_emblems || [];
+  if (rel.length) {
+    const grid = document.getElementById('related-grid');
+    rel.forEach(num => {
+      const target = ALL_EMBLEMS.find(x =>
+        x.emblem_number === num && x.source_work === e.source_work
+      );
+      if (!target) return;
+      const wrap = document.createElement('a');
+      wrap.className = 'related-item'; wrap.href = `emblem.html?id=${target.id}`;
+      if (target.image_web) {
+        const img = document.createElement('img');
+        img.src = target.image_web; img.alt = target.label || '';
+        wrap.appendChild(img);
+      }
+      const lbl = document.createElement('div');
+      lbl.className = 'related-num';
+      lbl.textContent = target.roman || '#' + target.emblem_number;
+      wrap.appendChild(lbl);
+      grid.appendChild(wrap);
+    });
+    document.getElementById('related-section').style.display = '';
+  }
+
+  // Discourse
+  if (e.discourse) {
+    const dt = document.getElementById('discourse-text');
+    e.discourse.split('\n').filter(p => p.trim()).forEach(p => {
+      const el = document.createElement('p'); el.textContent = p.trim();
+      dt.appendChild(el);
+    });
+    const roman = e.roman ? `, Emblem ${e.roman}` : '';
+    document.getElementById('discourse-citation').innerHTML =
+      `Michael Maier, <cite>Atalanta Fugiens</cite>${roman} (Oppenheim: de Bry, 1618). Commentary synthesized from scholarly analysis.`;
+    document.getElementById('discourse-section').style.display = '';
+  }
+
+  // Classification
+  const classGrid = document.getElementById('class-grid');
+  function classRow(label, value) {
+    if (!value) return;
+    const item = document.createElement('div'); item.className = 'class-item';
+    item.innerHTML = `<span class="class-label">${label}</span><span class="class-value">${value}</span>`;
+    classGrid.appendChild(item);
+  }
+  if (stage) {
+    const item = document.createElement('div'); item.className = 'class-item';
+    const badge = `<span class="hero-stage ${stage}" style="display:inline-flex;font-size:.65rem;padding:.15rem .5rem">${STAGE_LABEL[stage] || stage}</span>`;
+    item.innerHTML = `<span class="class-label">Stage</span><div style="margin-top:.15rem">${badge}</div>`;
+    if (STAGE_DESC[stage]) {
+      const desc = document.createElement('p');
+      desc.style.cssText = 'font-size:.78rem;color:var(--muted);line-height:1.5;margin-top:.3rem;grid-column:1/-1';
+      desc.textContent = STAGE_DESC[stage];
+      classGrid.appendChild(item);
+      classGrid.style.gridTemplateColumns = '1fr';
+      classGrid.appendChild(desc);
+    } else {
+      classGrid.appendChild(item);
+    }
+  }
+  classRow('Stage detail', e.stage_detailed);
+  classRow('Planetary', e.planetary_association);
+  classRow('Color symbolism', e.color_association);
+  classRow('Confidence', e.confidence);
+
+  // Interpretation
+  const interp = document.getElementById('interp-blocks');
+  let hasInterp = false;
+  function interpBlock(label, text) {
+    if (!text) return;
+    hasInterp = true;
+    interp.innerHTML += `
+      <div class="interp-block">
+        <div class="interp-label">${label}</div>
+        <div class="interp-text">${text}</div>
+      </div>`;
+  }
+  interpBlock('Divine Principle', e.divine_principle);
+  interpBlock('Spiritual Meaning', e.spiritual_meaning);
+  if (hasInterp) document.getElementById('interp-section').style.display = '';
+
+  // Concept links
+  const links = e.concept_links || [];
+  if (links.length) {
+    const cl = document.getElementById('concept-links');
+    links.forEach(c => {
+      cl.innerHTML += `
+        <div class="concept-link-item">
+          <a class="concept-link-name" href="emblems.html?concept=${encodeURIComponent(c.concept_name)}">${c.concept_name}</a>
+          <div class="concept-link-meta">${c.link_type} · confidence: ${c.confidence}</div>
+          <div class="concept-link-desc">${c.explanation || ''}</div>
+        </div>`;
+    });
+    document.getElementById('concepts-section').style.display = '';
+  }
+
+  // Provenance / scholarship
+  if (e.de_jong_pages) {
+    document.getElementById('de-jong-block').innerHTML = `
+      <div class="de-jong-ref">
+        <strong>H.M.E. de Jong:</strong>
+        <em>Michael Maier's Atalanta Fugiens: Sources of an Alchemical Book of Emblems</em> (Leiden: Brill, 1969).
+        Pages&nbsp;${e.de_jong_pages}.
+      </div>`;
+  }
+
+  // Source codes → bibliography
+  const srcs = e.sources || [];
+  if (srcs.length) {
+    let html = '<table class="sources-table">';
+    srcs.forEach(s => {
+      const bib = SOURCE_BIB[s];
+      if (bib) {
+        html += `<tr><td>${bib.short}</td><td>${bib.full}</td></tr>`;
+      } else {
+        html += `<tr><td style="font-family:var(--mono);font-size:.7rem;color:var(--muted)">${s}</td><td></td></tr>`;
+      }
+    });
+    html += '</table>';
+    document.getElementById('sources-block').innerHTML = html;
+  }
+
+  // Standing bibliography (always shown for Atalanta Fugiens)
+  if (e.source_key === 'claudiens') {
+    document.getElementById('bib-block').innerHTML = `
+      <h3 style="font-size:.75rem;color:var(--muted);margin:.8rem 0 .4rem;font-weight:normal;text-transform:uppercase;letter-spacing:.08em">Further Reading</h3>
+      <p class="bib-entry">Maier, Michael. <cite>Atalanta Fugiens, hoc est, Emblemata Nova de Secretis Naturae Chymica</cite>. Oppenheim: Johann Theodor de Bry, 1618.</p>
+      <p class="bib-entry">de Jong, H.M.E. <cite>Michael Maier's Atalanta Fugiens: Sources of an Alchemical Book of Emblems</cite>. Leiden: E.J. Brill, 1969. [The standard scholarly commentary; pages ${e.de_jong_pages || 'see index'} most relevant to this emblem].</p>
+      <p class="bib-entry">McLean, Adam. <cite>A Commentary on the Mutus Liber</cite> and <cite>The Alchemical Mandala</cite>. Grand Rapids: Phanes Press. [Contextual iconographic analysis].</p>
+      <p class="bib-entry">Fabricius, Johannes. <cite>Alchemy: The Medieval Alchemists and Their Royal Art</cite>. Copenhagen: Rosenkilde and Bagger, 1976. [Extensive plate analysis].</p>
+      <p class="bib-entry">Abraham, Lyndy. <cite>A Dictionary of Alchemical Imagery</cite>. Cambridge: Cambridge University Press, 1998. [Essential reference for iconographic vocabulary].</p>
+    `;
+  }
+
+  // Prev / Next navigation
+  const idx = ALL_EMBLEMS.findIndex(x => x.id === e.id);
+  const prev = ALL_EMBLEMS[idx - 1];
+  const next = ALL_EMBLEMS[idx + 1];
+  const nav = document.getElementById('emblem-nav');
+  nav.innerHTML = '';
+  if (prev) {
+    nav.innerHTML += `<a class="nav-link" href="emblem.html?id=${prev.id}">
+      ← <span class="nav-label"><span class="num">${prev.roman || (prev.emblem_number !== undefined ? '#' + prev.emblem_number : '')}</span><span class="title">${(prev.label || '').slice(0,30)}</span></span>
+    </a>`;
+  }
+  nav.innerHTML += `<a class="nav-link center" href="emblems.html">All Emblems</a>`;
+  if (next) {
+    nav.innerHTML += `<a class="nav-link" href="emblem.html?id=${next.id}">
+      <span class="nav-label"><span class="num">${next.roman || (next.emblem_number !== undefined ? '#' + next.emblem_number : '')}</span><span class="title">${(next.label || '').slice(0,30)}</span></span> →
+    </a>`;
+  }
+}
+
+init();
+</script>
+</body>
+</html>

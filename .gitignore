@@ -1,0 +1,29 @@
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+dist/
+build/
+.env
+.env.*
+
+# Large binary asset directories — not tracked in git
+# Run the extraction pipeline locally to regenerate
+assets/extracted/
+assets/extracted_all/
+
+# Raw source image archives (multi-GB)
+sources/*/images/
+sources/*/site/images/
+
+# Runtime logs
+*.log
+logs/
+
+# Pytest cache
+.pytest_cache/
+
+# Memory files (local only)
+.claude/

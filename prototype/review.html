@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emblem Print Shop — Review Queue</title>
+<style>
+:root {
+  --ink:      #1a1208;
+  --paper:    #f5edd8;
+  --paper2:   #ede0c4;
+  --paper3:   #e5d4b0;
+  --accent:   #8b3a1c;
+  --accent2:  #5c6b2e;
+  --muted:    #6b5d48;
+  --border:   #c8b89a;
+  --card-bg:  #faf3e4;
+  --sans:     'Georgia', 'Times New Roman', serif;
+  --mono:     'Courier New', monospace;
+  --r:        4px;
+  --approved: #3a7c3a;
+  --rejected: #8b1a1a;
+  --flagged:  #7c6010;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 15px; }
+
+/* ── Header ───────────────────────────────── */
+header {
+  background: var(--ink); color: var(--paper);
+  padding: .7rem 1.5rem; display: flex; gap: 1rem; align-items: center;
+  border-bottom: 3px solid var(--accent);
+}
+header h1 { font-size: 1rem; letter-spacing: .04em; font-weight: normal; white-space: nowrap; }
+header h1 span { color: var(--accent); font-style: italic; }
+#stats-bar { display: flex; gap: 1rem; font-size: .75rem; font-family: var(--mono); }
+.stat { padding: .15rem .5rem; border-radius: 2px; }
+.stat-pending  { background: rgba(255,255,255,.15); }
+.stat-approved { background: var(--approved); }
+.stat-rejected { background: var(--rejected); }
+.stat-flagged  { background: var(--flagged); }
+header nav { display: flex; gap: .8rem; margin-left: auto; align-items: center; }
+header nav a { color: var(--paper); font-size: .78rem; opacity: .7; text-decoration: none; }
+header nav a:hover { opacity: 1; }
+
+/* ── Layout ───────────────────────────────── */
+.shell { display: flex; min-height: calc(100vh - 53px); }
+
+/* ── Sidebar ──────────────────────────────── */
+aside {
+  width: 200px; flex-shrink: 0; background: var(--paper2);
+  border-right: 1px solid var(--border); padding: .8rem .7rem;
+  position: sticky; top: 0; height: calc(100vh - 53px); overflow-y: auto;
+}
+aside h3 {
+  font-size: .65rem; text-transform: uppercase; letter-spacing: .1em;
+  color: var(--muted); margin-bottom: .35rem; margin-top: .9rem;
+}
+aside h3:first-child { margin-top: 0; }
+.filter-btn {
+  display: block; width: 100%; text-align: left; padding: .28rem .5rem;
+  margin-bottom: 2px; border: 1px solid transparent; border-radius: var(--r);
+  background: transparent; cursor: pointer; font-family: var(--sans);
+  font-size: .78rem; color: var(--ink); transition: all .1s;
+}
+.filter-btn:hover { background: var(--paper); border-color: var(--border); }
+.filter-btn.active { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+#search-box {
+  width: 100%; padding: .32rem .45rem;
+  border: 1px solid var(--border); border-radius: var(--r);
+  background: var(--card-bg); font-family: var(--sans); font-size: .78rem;
+  color: var(--ink); margin-bottom: .6rem;
+}
+#search-box:focus { outline: 2px solid var(--accent); }
+.export-btn {
+  display: block; width: 100%; padding: .35rem .5rem; margin-top: .4rem;
+  background: var(--accent); color: var(--paper); border: none; border-radius: var(--r);
+  font-family: var(--sans); font-size: .75rem; cursor: pointer; text-align: center;
+}
+.export-btn:hover { filter: brightness(1.1); }
+.clear-btn {
+  display: block; width: 100%; padding: .3rem .5rem; margin-top: .3rem;
+  background: transparent; color: var(--muted); border: 1px solid var(--border);
+  border-radius: var(--r); font-family: var(--sans); font-size: .72rem; cursor: pointer;
+}
+.clear-btn:hover { background: var(--paper3); }
+.help-text {
+  font-size: .65rem; color: var(--muted); line-height: 1.5; margin-top: .8rem;
+  border-top: 1px solid var(--border); padding-top: .5rem;
+}
+
+/* ── Main ─────────────────────────────────── */
+main { flex: 1; padding: 1rem 1.2rem; }
+#loading { color: var(--muted); font-size: .85rem; padding: 1rem 0; }
+#empty   { display: none; color: var(--muted); font-size: .85rem; padding: 1rem 0; }
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+/* ── Review card ──────────────────────────── */
+.rcard {
+  background: var(--card-bg); border: 1px solid var(--border);
+  border-radius: var(--r); overflow: hidden;
+  transition: box-shadow .15s;
+}
+.rcard:hover { box-shadow: 0 3px 12px rgba(0,0,0,.12); }
+.rcard.status-approved { border-color: var(--approved); }
+.rcard.status-rejected { border-color: var(--rejected); opacity: .6; }
+.rcard.status-flagged  { border-color: var(--flagged); }
+
+.rcard-images {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+}
+.rcard-img {
+  position: relative; aspect-ratio: 1;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; background: var(--paper2);
+}
+.rcard-img:first-child { border-right: 1px solid var(--border); }
+/* checkerboard for transparency */
+.rcard-img.transparent::before {
+  content: ''; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(45deg,#d4c8a8 25%,transparent 25%),
+    linear-gradient(-45deg,#d4c8a8 25%,transparent 25%),
+    linear-gradient(45deg,transparent 75%,#d4c8a8 75%),
+    linear-gradient(-45deg,transparent 75%,#d4c8a8 75%);
+  background-size: 16px 16px;
+  background-position: 0 0,0 8px,8px -8px,-8px 0;
+  background-color: #e8dbbf; opacity: .55;
+}
+.rcard-img img {
+  position: relative; max-width: 100%; max-height: 100%; object-fit: contain;
+}
+.rcard-img-label {
+  position: absolute; bottom: 2px; left: 3px;
+  font-size: .55rem; color: var(--muted); font-family: var(--mono);
+  background: rgba(245,237,216,.75); padding: 0 3px; border-radius: 2px;
+}
+
+.rcard-body { padding: .55rem .65rem .45rem; }
+.rcard-id   { font-family: var(--mono); font-size: .62rem; color: var(--muted); }
+.rcard-prompt { font-size: .78rem; font-style: italic; margin: .1rem 0 .3rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rcard-score  { font-family: var(--mono); font-size: .65rem; color: var(--muted); margin-bottom: .45rem; }
+
+/* status badge */
+.status-badge {
+  display: inline-block; font-size: .6rem; font-family: var(--mono);
+  padding: .08rem .4rem; border-radius: 10px; margin-bottom: .4rem;
+  text-transform: uppercase; letter-spacing: .05em;
+}
+.badge-pending  { background: var(--paper3); color: var(--muted); }
+.badge-approved { background: var(--approved); color: #fff; }
+.badge-rejected { background: var(--rejected); color: #fff; }
+.badge-flagged  { background: var(--flagged);  color: #fff; }
+
+/* review action buttons */
+.rcard-actions { display: flex; gap: .35rem; flex-wrap: wrap; }
+.act-btn {
+  flex: 1; min-width: 0; padding: .25rem .3rem; font-family: var(--sans); font-size: .72rem;
+  border: 1px solid var(--border); border-radius: var(--r); cursor: pointer;
+  background: var(--paper2); color: var(--ink); transition: all .1s; white-space: nowrap;
+}
+.act-btn:hover { filter: brightness(.93); }
+.act-approve { border-color: var(--approved); }
+.act-approve:hover, .act-approve.active { background: var(--approved); color: #fff; border-color: var(--approved); }
+.act-reject  { border-color: var(--rejected); }
+.act-reject:hover, .act-reject.active  { background: var(--rejected); color: #fff; border-color: var(--rejected); }
+.act-flag    { border-color: var(--flagged); }
+.act-flag:hover, .act-flag.active    { background: var(--flagged);  color: #fff; border-color: var(--flagged); }
+.act-reset   { font-size: .65rem; color: var(--muted); flex: 0; }
+.act-reset:hover { color: var(--ink); }
+.act-edit { border-color: #4a6a9a; color: #4a6a9a; }
+.act-edit:hover { background: #4a6a9a; color: #fff; border-color: #4a6a9a; }
+
+/* note field */
+.note-row { margin-top: .35rem; }
+.note-input {
+  width: 100%; padding: .22rem .4rem; font-family: var(--sans); font-size: .7rem;
+  border: 1px solid var(--border); border-radius: var(--r); background: var(--paper);
+  color: var(--ink); resize: none;
+}
+.note-input:focus { outline: 1px solid var(--accent); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Emblem <span>Print Shop</span> — Review Queue</h1>
+  <div id="stats-bar">
+    <span class="stat stat-pending"  id="st-pending">…</span>
+    <span class="stat stat-approved" id="st-approved">0 approved</span>
+    <span class="stat stat-rejected" id="st-rejected">0 rejected</span>
+    <span class="stat stat-flagged"  id="st-flagged">0 flagged</span>
+  </div>
+  <nav>
+    <a href="gallery.html">Gallery</a>
+    <a href="emblems.html">Emblem Catalog</a>
+  </nav>
+</header>
+
+<div class="shell">
+<aside>
+  <input id="search-box" type="search" placeholder="Search…" autocomplete="off">
+
+  <h3>Status</h3>
+  <button class="filter-btn active" data-filter="all" onclick="setFilter('all',this)">All</button>
+  <button class="filter-btn" data-filter="pending"  onclick="setFilter('pending',this)">Pending</button>
+  <button class="filter-btn" data-filter="approved" onclick="setFilter('approved',this)">Approved</button>
+  <button class="filter-btn" data-filter="rejected" onclick="setFilter('rejected',this)">Rejected</button>
+  <button class="filter-btn" data-filter="flagged"  onclick="setFilter('flagged',this)">Flagged</button>
+
+  <h3>Project</h3>
+  <div id="project-filters"></div>
+
+  <h3>Export / Reset</h3>
+  <button class="export-btn" onclick="exportReviews()">Export JSON</button>
+  <button class="clear-btn"  onclick="confirmClearAll()">Clear all decisions</button>
+
+  <p class="help-text">
+    Decisions are saved in your browser (localStorage).<br>
+    Export to save them permanently.
+  </p>
+</aside>
+
+<main>
+  <div id="loading">Loading catalog…</div>
+  <div id="empty">No extractions match the current filter.</div>
+  <div id="grid"></div>
+</main>
+</div>
+
+<script>
+const STORAGE_KEY = 'emblem_review_v1';
+let ALL = [];
+let FILTERED = [];
+let activeFilter = 'all';
+let activeProject = null;
+let searchQ = '';
+let REVIEWS = {};  // key → {status, note, reviewed_at}
+
+function reviewKey(r) { return `${r.emblem_id}__${r.prompt}`; }
+
+// ── Persistence ───────────────────────────────
+function loadReviews() {
+  try { REVIEWS = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); }
+  catch(e) { REVIEWS = {}; }
+}
+function saveReviews() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(REVIEWS));
+}
+function setReview(key, status, note) {
+  if (status === 'pending') {
+    delete REVIEWS[key];
+  } else {
+    REVIEWS[key] = { status, note: note||'', reviewed_at: new Date().toISOString() };
+  }
+  saveReviews();
+}
+function getStatus(r) { return (REVIEWS[reviewKey(r)] || {}).status || 'pending'; }
+function getNote(r)   { return (REVIEWS[reviewKey(r)] || {}).note || ''; }
+
+// ── Load ──────────────────────────────────────
+async function loadCatalog() {
+  loadReviews();
+  try {
+    const resp = await fetch('gallery_catalog.json?_=' + Date.now());
+    if (!resp.ok) throw new Error(resp.status);
+    const data = await resp.json();
+    ALL = data.records || [];
+    buildProjectFilters(data.projects || []);
+    applyFilters();
+    document.getElementById('loading').style.display = 'none';
+  } catch(e) {
+    document.getElementById('loading').textContent =
+      'Could not load gallery_catalog.json — run: python scripts/build_catalog.py';
+  }
+}
+
+function buildProjectFilters(projects) {
+  const pf = document.getElementById('project-filters');
+  const all = document.createElement('button');
+  all.className = 'filter-btn active'; all.textContent = 'All projects';
+  all.onclick = () => { activeProject = null; setProjectActive(all); applyFilters(); };
+  pf.appendChild(all);
+  projects.forEach(p => {
+    const b = document.createElement('button');
+    b.className = 'filter-btn'; b.textContent = p;
+    b.onclick = () => { activeProject = p; setProjectActive(b); applyFilters(); };
+    pf.appendChild(b);
+  });
+}
+
+function setProjectActive(el) {
+  document.querySelectorAll('#project-filters .filter-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+}
+
+// ── Filters ───────────────────────────────────
+function setFilter(f, el) {
+  activeFilter = f;
+  document.querySelectorAll('[data-filter]').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  applyFilters();
+}
+
+document.getElementById('search-box').addEventListener('input', function() {
+  searchQ = this.value.toLowerCase(); applyFilters();
+});
+
+function applyFilters() {
+  FILTERED = ALL.filter(r => {
+    if (activeProject && r.project !== activeProject) return false;
+    const st = getStatus(r);
+    if (activeFilter !== 'all' && st !== activeFilter) return false;
+    if (searchQ) {
+      const hay = [r.emblem_id, r.prompt, r.project, ...(r.tags||[])].join(' ').toLowerCase();
+      if (!hay.includes(searchQ)) return false;
+    }
+    return true;
+  });
+  updateStats();
+  document.getElementById('empty').style.display = FILTERED.length === 0 ? 'block' : 'none';
+  renderGrid();
+}
+
+function updateStats() {
+  const counts = { pending: 0, approved: 0, rejected: 0, flagged: 0 };
+  ALL.forEach(r => { const s = getStatus(r); counts[s] = (counts[s]||0) + 1; });
+  document.getElementById('st-pending').textContent  = `${counts.pending} pending`;
+  document.getElementById('st-approved').textContent = `${counts.approved} approved`;
+  document.getElementById('st-rejected').textContent = `${counts.rejected} rejected`;
+  document.getElementById('st-flagged').textContent  = `${counts.flagged} flagged`;
+}
+
+// ── Render ────────────────────────────────────
+function renderGrid() {
+  const g = document.getElementById('grid');
+  g.innerHTML = '';
+  FILTERED.forEach(r => g.appendChild(makeCard(r)));
+}
+
+function makeCard(r) {
+  const key = reviewKey(r);
+  const status = getStatus(r);
+  const note   = getNote(r);
+  const score  = r.score || 0;
+
+  const card = document.createElement('div');
+  card.className = `rcard status-${status}`;
+  card.id = `card-${CSS.escape(key)}`;
+
+  card.innerHTML = `
+    <div class="rcard-images">
+      <div class="rcard-img">
+        ${r.crop_jpg_web
+          ? `<img src="${r.crop_jpg_web}" alt="crop" loading="lazy">`
+          : `<span style="font-size:.65rem;color:var(--muted)">No crop</span>`}
+        <span class="rcard-img-label">source</span>
+      </div>
+      <div class="rcard-img transparent">
+        ${r.transparent_png_web
+          ? `<img src="${r.transparent_png_web}" alt="cutout" loading="lazy">`
+          : `<span style="font-size:.65rem;color:var(--muted)">No cutout</span>`}
+        <span class="rcard-img-label">cutout</span>
+      </div>
+    </div>
+    <div class="rcard-body">
+      <span class="status-badge badge-${status}" id="badge-${CSS.escape(key)}">${status}</span>
+      <div class="rcard-id">${r.emblem_id || '–'} · ${r.project || ''}</div>
+      <div class="rcard-prompt">${r.prompt || '–'}</div>
+      <div class="rcard-score">score ${(score*100).toFixed(0)}%${r.coverage_pct != null ? ' · coverage '+r.coverage_pct+'%' : ''}</div>
+      <div class="rcard-actions">
+        <button class="act-btn act-approve${status==='approved'?' active':''}" onclick="review('${escKey(key)}','approved',this)">✓ Approve</button>
+        <button class="act-btn act-reject${status==='rejected'?' active':''}"  onclick="review('${escKey(key)}','rejected',this)">✗ Reject</button>
+        <button class="act-btn act-flag${status==='flagged'?' active':''}"    onclick="review('${escKey(key)}','flagged',this)">⚑ Flag</button>
+        <button class="act-btn act-reset" onclick="review('${escKey(key)}','pending',this)" title="Reset to pending">↺</button>
+        ${r.transparent_png_web ? `<a class="act-btn act-edit" href="editor.html?path=${encodeURIComponent(r.transparent_png||'')}&crop=${encodeURIComponent(r.crop_jpg||'')}&title=${encodeURIComponent(r.prompt||r.emblem_id||'')}" target="_blank" style="text-decoration:none">✏ Edit</a>` : ''}
+      </div>
+      <div class="note-row">
+        <textarea class="note-input" rows="1" placeholder="Note…" onchange="saveNote('${escKey(key)}',this.value)">${escHtml(note)}</textarea>
+      </div>
+    </div>`;
+  return card;
+}
+
+function escKey(k) { return k.replace(/\\/g,'\\\\').replace(/'/g,"\\'"); }
+function escHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+function review(key, status, btn) {
+  const note = REVIEWS[key]?.note || '';
+  setReview(key, status, note);
+
+  // Update card class + badge without full re-render
+  const cardEl = document.getElementById(`card-${CSS.escape(key)}`);
+  if (cardEl) {
+    cardEl.className = `rcard status-${status}`;
+    const badge = document.getElementById(`badge-${CSS.escape(key)}`);
+    if (badge) { badge.className = `status-badge badge-${status}`; badge.textContent = status; }
+    cardEl.querySelectorAll('.act-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+
+  // If filtered to a specific status, the card may need to disappear
+  if (activeFilter !== 'all' && activeFilter !== status) {
+    if (cardEl) cardEl.style.display = 'none';
+  }
+  updateStats();
+}
+
+function saveNote(key, val) {
+  const st = (REVIEWS[key] || {}).status || 'pending';
+  setReview(key, st === 'pending' ? 'flagged' : st, val);
+  // Auto-flag if adding a note on a pending item
+  if (!REVIEWS[key] || REVIEWS[key].status === 'pending') {
+    const badge = document.getElementById(`badge-${CSS.escape(key)}`);
+    if (badge) { badge.className = 'status-badge badge-flagged'; badge.textContent = 'flagged'; }
+  }
+  updateStats();
+}
+
+// ── Export ────────────────────────────────────
+function exportReviews() {
+  const out = ALL.map(r => ({
+    emblem_id: r.emblem_id,
+    prompt: r.prompt,
+    project: r.project,
+    score: r.score,
+    transparent_png: r.transparent_png,
+    status: getStatus(r),
+    note: getNote(r),
+    reviewed_at: (REVIEWS[reviewKey(r)] || {}).reviewed_at || null,
+  }));
+  const blob = new Blob([JSON.stringify(out, null, 2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `review_status_${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+function confirmClearAll() {
+  if (confirm('Clear all review decisions? This cannot be undone.')) {
+    REVIEWS = {};
+    saveReviews();
+    applyFilters();
+  }
+}
+
+// ── Boot ──────────────────────────────────────
+loadCatalog();
+</script>
+</body>
+</html>

@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emblem Print Shop — Alchemical Emblem Catalog</title>
+<style>
+/* ── Design tokens ─────────────────────────────── */
+:root {
+  --ink:       #1a1208;
+  --paper:     #f5edd8;
+  --paper2:    #ede0c4;
+  --paper3:    #e5d4b0;
+  --accent:    #8b3a1c;
+  --accent2:   #5c6b2e;
+  --muted:     #6b5d48;
+  --border:    #c8b89a;
+  --card:      #faf3e4;
+  --highlight: #fff8e7;
+  --sans:      'Georgia', serif;
+  --mono:      'Courier New', monospace;
+  --r:         4px;
+  /* Stage colors */
+  --nigredo:   #2a2218;
+  --albedo:    #e8e0d0;
+  --citrinitas:#c8a020;
+  --rubedo:    #8b1a10;
+}
+* { box-sizing: border-box; margin:0; padding:0; }
+body { background:var(--paper); color:var(--ink); font-family:var(--sans); font-size:15px; }
+
+/* ── Nav ───────────────────────────────────────── */
+nav {
+  background:var(--ink); color:var(--paper);
+  padding:.7rem 1.5rem; display:flex; gap:1.5rem; align-items:center;
+  border-bottom:3px solid var(--accent); font-size:.8rem;
+}
+nav strong { font-size:1rem; letter-spacing:.04em; }
+nav a { color:var(--paper); text-decoration:none; opacity:.7; }
+nav a:hover { opacity:1; }
+nav a.active { opacity:1; border-bottom:1px solid var(--accent); }
+
+/* ── Layout ────────────────────────────────────── */
+.shell { display:flex; min-height:calc(100vh - 46px); }
+
+/* ── Sidebar ───────────────────────────────────── */
+aside {
+  width:240px; flex-shrink:0; background:var(--paper2);
+  border-right:1px solid var(--border); padding:1rem .9rem;
+  position:sticky; top:0; height:calc(100vh - 46px); overflow-y:auto;
+}
+aside section { margin-bottom:1.2rem; }
+aside h3 {
+  font-size:.65rem; text-transform:uppercase; letter-spacing:.1em;
+  color:var(--muted); margin-bottom:.4rem;
+}
+.filter-btn {
+  display:block; width:100%; text-align:left; padding:.28rem .5rem;
+  margin-bottom:2px; border:1px solid transparent; border-radius:var(--r);
+  background:transparent; cursor:pointer; font-family:var(--sans);
+  font-size:.78rem; color:var(--ink); transition:all .1s;
+}
+.filter-btn:hover { background:var(--paper); border-color:var(--border); }
+.filter-btn.active { background:var(--accent); color:var(--paper); border-color:var(--accent); }
+.stage-dot {
+  display:inline-block; width:8px; height:8px; border-radius:50%;
+  margin-right:5px; vertical-align:middle;
+}
+.stage-NIGREDO   .stage-dot { background:var(--nigredo); }
+.stage-ALBEDO    .stage-dot { background:var(--albedo); border:1px solid var(--border); }
+.stage-CITRINITAS .stage-dot { background:var(--citrinitas); }
+.stage-RUBEDO    .stage-dot { background:var(--rubedo); }
+
+#search-box {
+  width:100%; padding:.35rem .5rem;
+  border:1px solid var(--border); border-radius:var(--r);
+  background:var(--card); font-family:var(--sans); font-size:.8rem;
+  color:var(--ink); margin-bottom:.6rem;
+}
+#search-box:focus { outline:2px solid var(--accent); }
+
+/* ── Main ──────────────────────────────────────── */
+main { flex:1; padding:1.2rem 1.5rem; max-width:1100px; }
+.toolbar {
+  display:flex; gap:.8rem; align-items:center; margin-bottom:1rem;
+  font-size:.78rem; color:var(--muted);
+}
+.toolbar select {
+  padding:.25rem .5rem; border:1px solid var(--border); border-radius:var(--r);
+  background:var(--card); font-family:var(--sans); font-size:.78rem;
+}
+.btn-view {
+  padding:.25rem .6rem; border:1px solid var(--border); border-radius:var(--r);
+  background:var(--paper2); cursor:pointer; font-size:.78rem; transition:background .1s;
+}
+.btn-view.active, .btn-view:hover { background:var(--ink); color:var(--paper); }
+#count-line { margin-left:auto; }
+
+/* ── Grid view ─────────────────────────────────── */
+#grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:1rem; }
+
+.card {
+  background:var(--card); border:1px solid var(--border); border-radius:var(--r);
+  overflow:hidden; cursor:pointer; transition:box-shadow .15s, transform .15s;
+}
+.card:hover { box-shadow:0 4px 16px rgba(0,0,0,.15); transform:translateY(-2px); }
+.card-img {
+  width:100%; aspect-ratio:3/4; background:var(--paper2);
+  display:flex; align-items:center; justify-content:center; overflow:hidden;
+}
+.card-img img { width:100%; height:100%; object-fit:cover; object-position:top; }
+.card-body { padding:.6rem .7rem; }
+.card-num  { font-family:var(--mono); font-size:.6rem; color:var(--muted); }
+.card-title { font-size:.78rem; font-style:italic; margin:.15rem 0; line-height:1.3; }
+.card-motto { font-size:.68rem; color:var(--muted); margin-bottom:.3rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.card-tags  { display:flex; gap:.25rem; flex-wrap:wrap; }
+.stage-badge {
+  font-size:.56rem; padding:.1rem .35rem; border-radius:2px; text-transform:uppercase;
+  letter-spacing:.06em; font-family:var(--mono);
+}
+.NIGREDO    { background:var(--nigredo);   color:#c8b89a; }
+.ALBEDO     { background:var(--albedo);    color:var(--ink); border:1px solid var(--border); }
+.CITRINITAS { background:var(--citrinitas); color:#1a1208; }
+.RUBEDO     { background:var(--rubedo);    color:#f5edd8; }
+
+/* ── List view ─────────────────────────────────── */
+#list { display:none; }
+.list-row {
+  display:grid; grid-template-columns:60px 1fr 2fr auto;
+  gap:.8rem; align-items:start; padding:.7rem 0;
+  border-bottom:1px solid var(--border); cursor:pointer;
+  transition:background .1s;
+}
+.list-row:hover { background:var(--highlight); margin:0 -1rem; padding:0.7rem 1rem; }
+.list-thumb { width:60px; height:80px; object-fit:cover; object-position:top; border:1px solid var(--border); }
+.list-meta h4 { font-size:.85rem; font-style:italic; margin-bottom:.2rem; }
+.list-meta .motto { font-size:.72rem; color:var(--muted); margin-bottom:.3rem; }
+.list-concepts { display:flex; flex-wrap:wrap; gap:.2rem; }
+.concept-tag {
+  font-size:.58rem; padding:.08rem .35rem; border-radius:10px;
+  background:var(--paper2); border:1px solid var(--border); color:var(--ink);
+}
+.list-stage { text-align:right; }
+
+/* ── Detail panel ──────────────────────────────── */
+#overlay {
+  display:none; position:fixed; inset:0; background:rgba(26,18,8,.88);
+  z-index:100; align-items:flex-start; justify-content:center;
+  padding:2rem 1.5rem; overflow-y:auto;
+}
+#overlay.open { display:flex; }
+#panel {
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--r); width:100%; max-width:1000px;
+  display:grid; grid-template-columns:350px 1fr;
+}
+.panel-left { border-right:1px solid var(--border); padding:1.2rem; }
+.panel-left img.plate { width:100%; border:1px solid var(--border); }
+.panel-left h3 { font-size:.65rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:.8rem 0 .3rem; }
+.cutouts { display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.3rem; }
+.cutout-thumb {
+  width:70px; height:90px;
+  background-image: linear-gradient(45deg,#d4c8a8 25%,transparent 25%),
+    linear-gradient(-45deg,#d4c8a8 25%,transparent 25%),
+    linear-gradient(45deg,transparent 75%,#d4c8a8 75%),
+    linear-gradient(-45deg,transparent 75%,#d4c8a8 75%);
+  background-size:12px 12px; background-color:#e8dbbf;
+  border:1px solid var(--border); cursor:pointer; overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
+}
+.cutout-thumb img { max-width:100%; max-height:100%; object-fit:contain; }
+.cutout-thumb .no-img { font-size:.55rem; color:var(--muted); text-align:center; padding:4px; }
+
+.panel-right { padding:1.2rem 1.4rem; overflow-y:auto; max-height:90vh; }
+.close-btn {
+  float:right; background:var(--ink); color:var(--paper); border:none;
+  width:1.8rem; height:1.8rem; border-radius:50%; cursor:pointer;
+  font-size:1rem; display:flex; align-items:center; justify-content:center;
+}
+.panel-right h2 { font-size:1.1rem; font-weight:normal; font-style:italic; margin-bottom:.15rem; }
+.source-line { font-size:.7rem; color:var(--muted); font-family:var(--mono); margin-bottom:.8rem; }
+
+.metadata-block { margin-bottom:1rem; }
+.metadata-block h3 {
+  font-size:.62rem; text-transform:uppercase; letter-spacing:.08em;
+  color:var(--muted); border-bottom:1px solid var(--border); padding-bottom:.2rem; margin-bottom:.4rem;
+}
+.field-row { display:flex; gap:.5rem; margin-bottom:.25rem; font-size:.78rem; align-items:baseline; }
+.field-label { color:var(--muted); min-width:120px; font-size:.68rem; text-transform:uppercase; letter-spacing:.04em; flex-shrink:0; }
+.field-value { color:var(--ink); }
+blockquote.motto {
+  font-style:italic; border-left:3px solid var(--accent); padding-left:.8rem;
+  color:var(--ink); font-size:.88rem; margin:.5rem 0 .8rem; line-height:1.6;
+}
+.discourse-text {
+  font-size:.78rem; line-height:1.7; color:#3a2d1a;
+  max-height:120px; overflow:hidden; position:relative;
+}
+.discourse-text.expanded { max-height:none; }
+.show-more { font-size:.7rem; color:var(--accent); cursor:pointer; margin-top:.2rem; }
+
+.ve-list { display:flex; flex-wrap:wrap; gap:.3rem; }
+.ve-chip {
+  font-size:.68rem; padding:.12rem .45rem; border-radius:10px;
+  background:var(--paper2); border:1px solid var(--border);
+  color:var(--ink); text-decoration:none; display:inline-block;
+}
+a.ve-chip:hover { background:var(--accent); color:var(--paper); border-color:var(--accent); }
+.concept-list { font-size:.75rem; }
+.concept-item { padding:.3rem 0; border-bottom:1px solid var(--border); }
+.concept-item strong { color:var(--accent); }
+.concept-item .conf { font-size:.62rem; color:var(--muted); }
+.related-list { display:flex; flex-wrap:wrap; gap:.4rem; }
+.related-link {
+  font-size:.7rem; padding:.12rem .45rem; border:1px solid var(--border);
+  border-radius:var(--r); cursor:pointer; background:var(--paper2);
+  transition:background .1s;
+}
+.related-link:hover { background:var(--accent); color:var(--paper); }
+
+/* ── Empty / loading ────────────────────────────── */
+#loading { padding:3rem; text-align:center; color:var(--muted); font-style:italic; }
+#empty { display:none; padding:3rem; text-align:center; color:var(--muted); font-style:italic; }
+
+@media(max-width:700px) {
+  #panel { grid-template-columns:1fr; }
+  .panel-left { border-right:none; border-bottom:1px solid var(--border); }
+  aside { display:none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <strong>Emblem Print Shop</strong>
+  <a href="gallery.html">Gallery</a>
+  <a href="emblems.html" class="active">Emblem Catalog</a>
+  <a href="motifs.html">Motif Atlas</a>
+  <a href="review.html">Review Queue</a>
+</nav>
+
+<div class="shell">
+<aside>
+  <input id="search-box" type="search" placeholder="Search emblem, motto, concept…">
+
+  <section>
+    <h3>Source Work</h3>
+    <div id="source-filters"></div>
+  </section>
+
+  <section>
+    <h3>Alchemical Stage</h3>
+    <div id="stage-filters"></div>
+  </section>
+
+  <section>
+    <h3>Concepts</h3>
+    <div id="concept-filters" style="max-height:200px;overflow-y:auto;"></div>
+  </section>
+
+  <section>
+    <h3>Motifs <span style="font-size:.55rem;opacity:.6;font-weight:normal">(all AF)</span></h3>
+    <div id="motif-filters" style="max-height:200px;overflow-y:auto;"></div>
+  </section>
+  <section>
+    <h3>Visual Elements <span style="font-size:.55rem;opacity:.6;font-weight:normal">(Theo.)</span></h3>
+    <div id="ve-filters" style="max-height:120px;overflow-y:auto;"></div>
+  </section>
+  <section style="margin-top:.5rem">
+    <a href="motifs.html" style="font-size:.7rem;color:var(--accent);text-decoration:none;display:block;padding:.25rem .5rem;border:1px solid var(--border);border-radius:var(--r);text-align:center">Browse Motif Atlas →</a>
+  </section>
+</aside>
+
+<main>
+  <div class="toolbar">
+    <button class="btn-view active" id="btn-grid" onclick="setView('grid')">Grid</button>
+    <button class="btn-view" id="btn-list" onclick="setView('list')">List</button>
+    <select id="sort-sel" onchange="applyFilters()">
+      <option value="source">Source order</option>
+      <option value="stage">Stage order (nigredo→rubedo)</option>
+      <option value="score">Extraction confidence ↓</option>
+    </select>
+    <span id="count-line">— emblems</span>
+    <button onclick="loadCatalog()" style="margin-left:.5rem;padding:.2rem .5rem;border:1px solid var(--border);border-radius:var(--r);cursor:pointer;font-size:.72rem;background:var(--paper2)">↻</button>
+  </div>
+
+  <div id="loading">Loading emblem catalog…</div>
+  <div id="empty">No emblems match the current filters.</div>
+  <div id="grid"></div>
+  <div id="list"></div>
+</main>
+</div>
+
+<!-- Detail overlay -->
+<div id="overlay" onclick="handleOverlayClick(event)">
+  <div id="panel">
+    <div class="panel-left" id="panel-left"></div>
+    <div class="panel-right" id="panel-right"></div>
+  </div>
+</div>
+
+<script>
+let ALL = [];
+let FILTERED = [];
+let activeSource = null;
+let activeStage  = null;
+let activeConcepts = new Set();
+let activeMotifs   = new Set();
+let activeVEs      = new Set();
+let searchQ = '';
+let viewMode = 'grid';
+
+const STAGE_ORDER = ['NIGREDO','ALBEDO','CITRINITAS','RUBEDO'];
+
+// ── Load ──────────────────────────────────────────
+async function loadCatalog() {
+  try {
+    const r = await fetch('emblem_catalog.json?_=' + Date.now());
+    if (!r.ok) throw new Error(r.status);
+    const data = await r.json();
+    ALL = data.emblems || [];
+    buildSidebar(data);
+    applyFilters();
+    document.getElementById('loading').style.display = 'none';
+  } catch(e) {
+    document.getElementById('loading').textContent =
+      'Could not load emblem_catalog.json — run: python scripts/build_emblem_catalog.py';
+  }
+}
+
+// ── Sidebar ───────────────────────────────────────
+function buildSidebar(data) {
+  const sources = [...new Set(ALL.map(e => e.source_work))];
+  const sf = document.getElementById('source-filters');
+  allBtn(sf, 'All sources', null, 'source');
+  sources.forEach(s => allBtn(sf, s, s, 'source'));
+
+  const stagef = document.getElementById('stage-filters');
+  allBtn(stagef, 'All stages', null, 'stage');
+  ['NIGREDO','ALBEDO','CITRINITAS','RUBEDO'].forEach(s => {
+    const b = btn(s.charAt(0) + s.slice(1).toLowerCase(), s, 'stage');
+    b.classList.add(`stage-${s}`);
+    const dot = document.createElement('span');
+    dot.className = 'stage-dot';
+    b.insertBefore(dot, b.firstChild);
+    stagef.appendChild(b);
+  });
+
+  // Top 20 concepts by emblem count
+  const cf = document.getElementById('concept-filters');
+  const concepts = (data.concepts || []).sort((a,b)=>b.emblem_count - a.emblem_count).slice(0,20);
+  concepts.forEach(c => {
+    const b = btn(`${c.name} (${c.emblem_count})`, c.name, 'concept');
+    cf.appendChild(b);
+  });
+
+  // Motif tags (controlled vocabulary from visual-data.json — all AF emblems)
+  const motifCounts = {};
+  ALL.forEach(e => (e.motif_tags||[]).forEach(t => motifCounts[t] = (motifCounts[t]||0)+1));
+  const topMotifs = Object.entries(motifCounts).sort((a,b)=>b[1]-a[1]);
+  const mf = document.getElementById('motif-filters');
+  topMotifs.forEach(([tag, cnt]) => {
+    const label = tag.replace(/_/g,' ');
+    const b = btn(`${label} (${cnt})`, tag, 'motif');
+    mf.appendChild(b);
+  });
+
+  // Top visual elements (TheoAlchDB only, fewer emblems)
+  const veCounts = {};
+  ALL.forEach(e => (e.visual_elements||[]).forEach(v => veCounts[v] = (veCounts[v]||0)+1));
+  const topVEs = Object.entries(veCounts).sort((a,b)=>b[1]-a[1]).slice(0,20)
+    .filter(([,cnt]) => cnt > 0 && !['symbolic','alchemical','geometric'].includes(''));
+  const vef = document.getElementById('ve-filters');
+  topVEs.forEach(([ve, cnt]) => {
+    const b = btn(`${ve} (${cnt})`, ve, 've');
+    vef.appendChild(b);
+  });
+
+  // Apply URL search params for motif/ve filter
+  const urlP = new URLSearchParams(location.search);
+  const urlMotif = urlP.get('motif');
+  const urlVe    = urlP.get('ve');
+  const urlConcept = urlP.get('concept');
+  const urlSrc   = urlP.get('source');
+  if (urlMotif) {
+    activeMotifs.add(urlMotif);
+    document.querySelectorAll('[data-type="motif"]').forEach(b => {
+      if (b.dataset.value === urlMotif) b.classList.add('active');
+    });
+  }
+  if (urlVe) {
+    activeVEs.add(urlVe);
+    document.querySelectorAll('[data-type="ve"]').forEach(b => {
+      if (b.dataset.value === urlVe) b.classList.add('active');
+    });
+  }
+  if (urlConcept) {
+    activeConcepts.add(urlConcept);
+    document.querySelectorAll('[data-type="concept"]').forEach(b => {
+      if (b.dataset.value === urlConcept) b.classList.add('active');
+    });
+  }
+}
+
+function allBtn(container, label, value, type) {
+  const b = btn(label, value, type);
+  if (!value) b.classList.add('active');
+  container.appendChild(b);
+}
+
+function btn(label, value, type) {
+  const b = document.createElement('button');
+  b.className = 'filter-btn';
+  b.textContent = label;
+  b.dataset.value = value || '';
+  b.dataset.type = type;
+  b.onclick = () => handleFilter(b, type, value);
+  return b;
+}
+
+function handleFilter(el, type, value) {
+  if (type === 'source') {
+    document.querySelectorAll('[data-type="source"]').forEach(b => b.classList.remove('active'));
+    el.classList.add('active'); activeSource = value;
+  } else if (type === 'stage') {
+    document.querySelectorAll('[data-type="stage"]').forEach(b => b.classList.remove('active'));
+    el.classList.add('active'); activeStage = value;
+  } else if (type === 'concept') {
+    if (activeConcepts.has(value)) { activeConcepts.delete(value); el.classList.remove('active'); }
+    else { activeConcepts.add(value); el.classList.add('active'); }
+  } else if (type === 've') {
+    if (activeVEs.has(value)) { activeVEs.delete(value); el.classList.remove('active'); }
+    else { activeVEs.add(value); el.classList.add('active'); }
+  } else if (type === 'motif') {
+    if (activeMotifs.has(value)) { activeMotifs.delete(value); el.classList.remove('active'); }
+    else { activeMotifs.add(value); el.classList.add('active'); }
+  }
+  applyFilters();
+}
+
+document.getElementById('search-box').addEventListener('input', function() {
+  searchQ = this.value.toLowerCase(); applyFilters();
+});
+
+// ── Filter ────────────────────────────────────────
+function applyFilters() {
+  FILTERED = ALL.filter(e => {
+    if (activeSource && e.source_work !== activeSource) return false;
+    if (activeStage  && e.stage !== activeStage)   return false;
+    if (activeConcepts.size > 0) {
+      const eConceptNames = (e.concept_links||[]).map(c => c.concept_name);
+      if (![...activeConcepts].every(c => eConceptNames.includes(c))) return false;
+    }
+    if (activeVEs.size > 0) {
+      const ves = (e.visual_elements||[]);
+      if (![...activeVEs].every(v => ves.includes(v))) return false;
+    }
+    if (activeMotifs.size > 0) {
+      const mt = (e.motif_tags||[]).concat(e.operation_tags||[]);
+      if (![...activeMotifs].every(m => mt.includes(m))) return false;
+    }
+    if (searchQ) {
+      const hay = [e.label, e.motto, e.english_title, e.latin_title,
+                   (e.key_concepts||[]).join(' '), (e.visual_elements||[]).join(' '),
+                   (e.motif_tags||[]).join(' '), (e.operation_tags||[]).join(' '),
+                   e.discourse, e.stage].join(' ').toLowerCase();
+      if (!hay.includes(searchQ)) return false;
+    }
+    return true;
+  });
+
+  const sort = document.getElementById('sort-sel').value;
+  if (sort === 'stage') {
+    FILTERED.sort((a,b) => STAGE_ORDER.indexOf(a.stage) - STAGE_ORDER.indexOf(b.stage));
+  } else if (sort === 'score') {
+    FILTERED.sort((a,b) => {
+      const as = Math.max(0, ...(a.extracted_elements||[]).map(e=>e.score||0));
+      const bs = Math.max(0, ...(b.extracted_elements||[]).map(e=>e.score||0));
+      return bs - as;
+    });
+  }
+
+  document.getElementById('count-line').textContent = `${FILTERED.length} / ${ALL.length} emblems`;
+  document.getElementById('empty').style.display = FILTERED.length === 0 ? 'block' : 'none';
+  renderGrid();
+  renderList();
+}
+
+function setView(mode) {
+  viewMode = mode;
+  document.getElementById('grid').style.display = mode === 'grid' ? 'grid' : 'none';
+  document.getElementById('list').style.display = mode === 'list' ? 'block' : 'none';
+  document.getElementById('btn-grid').classList.toggle('active', mode === 'grid');
+  document.getElementById('btn-list').classList.toggle('active', mode === 'list');
+}
+
+// ── Grid ──────────────────────────────────────────
+function renderGrid() {
+  const g = document.getElementById('grid');
+  g.innerHTML = '';
+  FILTERED.forEach(e => g.appendChild(makeCard(e)));
+}
+
+function makeCard(e) {
+  const card = document.createElement('div');
+  card.className = 'card';
+  // Left-click: open full emblem page; right-click or ctrl+click: detail panel
+  card.onclick = ev => {
+    if (ev.ctrlKey || ev.metaKey) { openDetail(e); return; }
+    window.open(`emblem.html?id=${encodeURIComponent(e.id)}`, '_blank');
+  };
+  card.title = 'Click to open full page · Ctrl+click for quick panel';
+  const imgSrc = e.image_web || '';
+  const stageBadge = e.stage
+    ? `<span class="stage-badge ${e.stage}">${e.stage}</span>` : '';
+  const num = e.roman || (e.emblem_number !== undefined ? `#${e.emblem_number}` : '');
+  card.innerHTML = `
+    <div class="card-img">
+      ${imgSrc ? `<img src="${imgSrc}" alt="${e.label}" loading="lazy">` : '<div style="padding:1rem;color:var(--muted);font-size:.7rem;text-align:center">No image</div>'}
+    </div>
+    <div class="card-body">
+      <div class="card-num">${e.source_work} ${num}</div>
+      <div class="card-title">${e.label || e.english_title || ''}</div>
+      <div class="card-motto">${e.motto ? '"' + e.motto.slice(0,60) + (e.motto.length>60?'…':'"') : ''}</div>
+      <div class="card-tags">${stageBadge}</div>
+    </div>`;
+  return card;
+}
+
+// ── List ──────────────────────────────────────────
+function renderList() {
+  const l = document.getElementById('list');
+  l.innerHTML = '';
+  FILTERED.forEach(e => {
+    const row = document.createElement('div');
+    row.className = 'list-row';
+    row.onclick = () => openDetail(e);
+    const imgSrc = e.image_web || '';
+    const concepts = (e.concept_links||[]).slice(0,5).map(c =>
+      `<span class="concept-tag">${c.concept_name}</span>`).join('');
+    const stageBadge = e.stage
+      ? `<span class="stage-badge ${e.stage}">${e.stage}</span>` : '';
+    row.innerHTML = `
+      ${imgSrc ? `<img class="list-thumb" src="${imgSrc}" alt="" loading="lazy">` : '<div class="list-thumb" style="background:var(--paper3)"></div>'}
+      <div class="list-meta">
+        <h4>${e.label}</h4>
+        <div class="motto">${e.motto ? '"' + e.motto.slice(0,80) + '…"' : ''}</div>
+        <div class="list-concepts">${concepts}</div>
+      </div>
+      <div style="font-size:.75rem;color:var(--muted);line-height:1.5">
+        ${(e.visual_elements||[]).slice(0,4).join(' · ')}
+      </div>
+      <div class="list-stage">${stageBadge}</div>`;
+    l.appendChild(row);
+  });
+}
+
+// ── Detail panel ──────────────────────────────────
+function openDetail(e) {
+  const left  = document.getElementById('panel-left');
+  const right = document.getElementById('panel-right');
+
+  // Build cutout thumbnails
+  const cutouts = (e.extracted_elements||[]).slice(0,8).map(el => `
+    <div class="cutout-thumb" title="${el.prompt} (${(el.score*100).toFixed(0)}%)">
+      ${el.transparent_png_web
+        ? `<img src="${el.transparent_png_web}" alt="${el.prompt}" loading="lazy">`
+        : `<div class="no-img">${el.prompt}</div>`}
+    </div>`).join('');
+
+  const nEl = (e.extracted_elements||[]).length;
+  left.innerHTML = `
+    ${e.image_web ? `<img class="plate" src="${e.image_web}" alt="${e.label}">` : '<div style="height:200px;background:var(--paper3);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.8rem">No plate image</div>'}
+    ${cutouts ? `<h3>Extracted Elements</h3><div class="cutouts">${cutouts}</div>` : ''}
+    <div style="margin-top:.8rem;display:flex;gap:.6rem;flex-wrap:wrap">
+      ${nEl > 0
+        ? `<a href="gallery.html?emblem=${encodeURIComponent(e.id)}" style="font-size:.72rem;color:var(--accent);text-decoration:none;border:1px solid var(--accent);padding:.2rem .5rem;border-radius:3px">View ${nEl} element${nEl!==1?'s':''} in Gallery →</a>`
+        : `<a href="gallery.html?search=${encodeURIComponent(e.label||e.english_title||'')}" style="font-size:.72rem;color:var(--muted);text-decoration:none;border:1px solid var(--border);padding:.2rem .5rem;border-radius:3px">Search gallery →</a>`}
+      ${e.wellcome_url ? `<a href="${e.wellcome_url}" target="_blank" style="font-size:.72rem;color:var(--accent)">Wellcome Collection →</a>` : ''}
+    </div>`;
+
+  // Right panel metadata
+  const stageLabel = e.stage || '';
+  const num = e.roman ? `Emblem ${e.roman}` : (e.emblem_number !== undefined ? `No. ${e.emblem_number}` : '');
+  const concepts = (e.concept_links||[]).map(c => `
+    <div class="concept-item">
+      <a href="gallery.html?search=${encodeURIComponent(c.concept_name)}" style="color:var(--accent);text-decoration:none;font-weight:bold" title="View in gallery">${c.concept_name}</a>
+      <span class="conf"> — ${c.link_type} (${c.confidence})</span>
+      <br><span style="font-size:.7rem;color:var(--muted)">${c.explanation}</span>
+    </div>`).join('');
+  const relEmblems = (e.related_emblems||[]).map(n =>
+    `<span class="related-link" onclick="goToEmblem(${n})">${n}</span>`).join('');
+  const veChips = (e.visual_elements||[]).map(v =>
+    `<a class="ve-chip" href="gallery.html?search=${encodeURIComponent(v)}" title="View in gallery: ${v}">${v}</a>`).join('');
+  const keyConceptChips = (e.key_concepts||[]).map(k =>
+    `<a class="ve-chip" href="gallery.html?search=${encodeURIComponent(k)}" style="background:var(--paper3)" title="View in gallery: ${k}">${k}</a>`).join('');
+  const discourse = e.discourse || '';
+
+  right.innerHTML = `
+    <button class="close-btn" onclick="closeDetail()">✕</button>
+    <div class="source-line">${e.source_work} · ${num} · ${stageLabel}</div>
+    <h2>${e.label || e.english_title || ''}</h2>
+    ${e.latin_title && e.latin_title !== e.label ? `<div style="font-size:.78rem;color:var(--muted);margin-bottom:.5rem;font-style:italic">${e.latin_title}</div>` : ''}
+
+    ${e.motto ? `<blockquote class="motto">${e.motto}</blockquote>` : ''}
+
+    <div class="metadata-block">
+      <h3>Classification</h3>
+      ${row('Stage', e.stage || '—')}
+      ${row('Stage (detail)', e.stage_detailed || '—')}
+      ${row('Color symbolism', e.color_association || '—')}
+      ${row('Planetary', e.planetary_association || '—')}
+    </div>
+
+    ${e.visual_elements && e.visual_elements.length ? `
+    <div class="metadata-block">
+      <h3>Depicted Visual Elements</h3>
+      <div class="ve-list">${veChips}</div>
+    </div>` : ''}
+
+    ${e.key_concepts && e.key_concepts.length ? `
+    <div class="metadata-block">
+      <h3>Alchemical Operations / Key Concepts</h3>
+      <div class="ve-list">${keyConceptChips}</div>
+    </div>` : ''}
+
+    ${e.divine_principle || e.spiritual_meaning ? `
+    <div class="metadata-block">
+      <h3>Interpretation</h3>
+      ${e.divine_principle ? row('Divine principle', e.divine_principle) : ''}
+      ${e.spiritual_meaning ? `<div style="font-size:.78rem;line-height:1.6;margin-top:.3rem">${e.spiritual_meaning}</div>` : ''}
+    </div>` : ''}
+
+    ${discourse ? `
+    <div class="metadata-block">
+      <h3>Maier's Discourse</h3>
+      <div class="discourse-text" id="disc-text">${discourse}</div>
+      <div class="show-more" onclick="toggleDiscourse()">Show more ▾</div>
+    </div>` : ''}
+
+    ${concepts ? `
+    <div class="metadata-block">
+      <h3>Linked Alchemical Concepts</h3>
+      <div class="concept-list">${concepts}</div>
+    </div>` : ''}
+
+    ${relEmblems ? `
+    <div class="metadata-block">
+      <h3>Related Emblems</h3>
+      <div class="related-list">${relEmblems}</div>
+    </div>` : ''}
+
+    ${e.confidence || e.de_jong_pages ? `
+    <div class="metadata-block">
+      <h3>Provenance</h3>
+      ${row('Confidence', e.confidence || '—')}
+      ${row('De Jong pages', e.de_jong_pages || '—')}
+      ${row('Motto source', e.motto_source || '—')}
+    </div>` : ''}`;
+
+  document.getElementById('overlay').classList.add('open');
+}
+
+function row(label, value) {
+  return `<div class="field-row"><span class="field-label">${label}</span><span class="field-value">${value}</span></div>`;
+}
+
+function toggleDiscourse() {
+  const t = document.getElementById('disc-text');
+  t.classList.toggle('expanded');
+  document.querySelector('.show-more').textContent = t.classList.contains('expanded') ? 'Show less ▴' : 'Show more ▾';
+}
+
+function closeDetail() {
+  document.getElementById('overlay').classList.remove('open');
+}
+
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('overlay')) closeDetail();
+}
+
+function goToEmblem(num) {
+  closeDetail();
+  const target = ALL.find(e => e.emblem_number === num && e.source_work.includes('Atalanta'));
+  if (target) { setTimeout(() => openDetail(target), 100); }
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetail(); });
+
+// ── URL param: ?emblem=af_37 auto-opens detail ───
+function applyUrlParams() {
+  const p = new URLSearchParams(location.search);
+  const emblemId = p.get('emblem');
+  if (!emblemId) return;
+  // Try direct match first, then convert "emblem-37" → "af_37" format
+  let target = ALL.find(e => e.id === emblemId);
+  if (!target) {
+    const m = emblemId.match(/^emblem-(\d+)$/);
+    if (m) {
+      const afId = 'af_' + String(parseInt(m[1])).padStart(2, '0');
+      target = ALL.find(e => e.id === afId);
+    }
+  }
+  if (target) openDetail(target);
+}
+
+// ── Boot ──────────────────────────────────────────
+loadCatalog().then(() => applyUrlParams()).catch(() => {});
+</script>
+</body>
+</html>

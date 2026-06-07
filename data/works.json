@@ -1,0 +1,34 @@
+[
+  {
+    "id": "atalanta_fugiens",
+    "short_id": "AF",
+    "title": "Atalanta Fugiens",
+    "author": "Michael Maier",
+    "date": 1618,
+    "publisher": "Johann Theodor de Bry",
+    "place": "Oppenheim",
+    "language": "Latin",
+    "description": "Maier's polymodal emblem book: 50 emblems plus a frontispiece, each combining an engraved plate, a Latin epigram, and a polyphonic fugue. The sequence encodes the alchemical opus from prima materia to the Philosopher's Stone.",
+    "tradition": "alchemical_emblem",
+    "rights_note": "Public domain. Images from furnaceandfugue.org and Science History Institute.",
+    "source_project": "claudiens",
+    "local_image_dir": "sources/claudiens/site/images/emblems",
+    "provenance_url": "https://furnaceandfugue.org/atalanta-fugiens/"
+  },
+  {
+    "id": "hypnerotomachia_poliphili",
+    "short_id": "HP",
+    "title": "Hypnerotomachia Poliphili",
+    "author": "Francesco Colonna",
+    "date": 1499,
+    "publisher": "Aldus Manutius",
+    "place": "Venice",
+    "language": "Vernacular Italian / Latin / Greek",
+    "description": "Aldine first edition. One of the most lavishly illustrated incunabula, containing ~172 woodcut illustrations. Classified here as alchemical reception context: the book encodes Neoplatonic, Hermetic, and architectural themes that overlap significantly with contemporary alchemical emblem traditions.",
+    "tradition": "alchemical_reception",
+    "rights_note": "Public domain. Images from Internet Archive (1499 Aldine edition).",
+    "source_project": "hypnerotomachia-polyphili",
+    "local_image_dir": "sources/hypnerotomachia-polyphili/site/images/woodcuts_1499",
+    "provenance_url": "https://archive.org/details/hypnerotomachiap00colo"
+  }
+]

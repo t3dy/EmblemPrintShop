@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Alchemical Images — A Visual History</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0e0d0a;
+      --surface: #1c1a14;
+      --surface2: #242018;
+      --gold: #c8a020;
+      --gold-dim: #8a6c10;
+      --text: #e8d9b5;
+      --text-dim: #9a8a6a;
+      --ancient: #7a2800;
+      --ancient-light: #c04000;
+      --medieval: #3a2455;
+      --medieval-light: #6a3ea0;
+      --early: #103040;
+      --early-light: #205870;
+      --radius: 6px;
+      --font-body: 'Georgia', serif;
+      --font-ui: 'Trebuchet MS', system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(180deg, #1a1710 0%, var(--bg) 100%);
+      border-bottom: 1px solid var(--gold-dim);
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+    }
+    header .eyebrow {
+      font-family: var(--font-ui);
+      font-size: .75rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      margin-bottom: .75rem;
+    }
+    header h1 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      color: var(--gold);
+      font-weight: normal;
+      letter-spacing: .04em;
+      line-height: 1.2;
+      margin-bottom: .75rem;
+    }
+    header .subtitle {
+      font-size: 1rem;
+      color: var(--text-dim);
+      max-width: 60ch;
+      margin: 0 auto 1.5rem;
+      font-style: italic;
+    }
+    .header-stats {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .stat { font-family: var(--font-ui); font-size: .8rem; color: var(--text-dim); }
+    .stat strong { color: var(--gold); font-size: 1.1rem; display: block; }
+
+    /* ── NAV ── */
+    nav.site-nav {
+      background: var(--surface);
+      border-bottom: 1px solid #2a2618;
+      padding: .6rem 2rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    nav.site-nav a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-family: var(--font-ui);
+      font-size: .8rem;
+      letter-spacing: .05em;
+    }
+    nav.site-nav a:hover { color: var(--gold); }
+    nav.site-nav .sep { color: #3a3020; }
+
+    /* ── CONTROLS ── */
+    .controls {
+      padding: 1.5rem 2rem;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .controls label {
+      font-family: var(--font-ui);
+      font-size: .8rem;
+      color: var(--text-dim);
+      margin-right: .25rem;
+    }
+    .filter-btn {
+      background: var(--surface);
+      border: 1px solid #2a2618;
+      border-radius: 3px;
+      color: var(--text-dim);
+      cursor: pointer;
+      font-family: var(--font-ui);
+      font-size: .75rem;
+      padding: .35rem .75rem;
+      transition: all .15s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: #0e0d0a;
+    }
+    #search {
+      background: var(--surface);
+      border: 1px solid #2a2618;
+      border-radius: 3px;
+      color: var(--text);
+      font-family: var(--font-ui);
+      font-size: .8rem;
+      padding: .35rem .75rem;
+      width: 220px;
+      margin-left: auto;
+    }
+    #search::placeholder { color: var(--text-dim); }
+    #search:focus { outline: 1px solid var(--gold-dim); }
+
+    /* ── MAIN LAYOUT ── */
+    main { max-width: 1400px; margin: 0 auto; padding: 0 2rem 4rem; }
+
+    /* ── PERIOD SECTIONS ── */
+    .period-section { margin-bottom: 4rem; }
+    .period-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: .75rem;
+      border-bottom: 1px solid;
+    }
+    .period-header.ancient { border-color: var(--ancient-light); }
+    .period-header.medieval { border-color: var(--medieval-light); }
+    .period-header.early_modern { border-color: var(--early-light); }
+
+    .period-badge {
+      font-family: var(--font-ui);
+      font-size: .65rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      padding: .25rem .6rem;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+    .period-badge.ancient { background: var(--ancient); color: #ffb080; }
+    .period-badge.medieval { background: var(--medieval); color: #c0a0f0; }
+    .period-badge.early_modern { background: var(--early); color: #80c0e0; }
+
+    .period-header h2 {
+      font-size: 1.4rem;
+      font-weight: normal;
+      color: var(--text);
+      letter-spacing: .03em;
+    }
+    .period-header .period-dates {
+      font-size: .85rem;
+      color: var(--text-dim);
+      font-style: italic;
+      margin-left: auto;
+    }
+
+    /* ── CARD GRID ── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    /* ── CARD ── */
+    .work-card {
+      background: var(--surface);
+      border: 1px solid #2a2618;
+      border-radius: var(--radius);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform .15s, border-color .15s, box-shadow .15s;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+    .work-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold-dim);
+      box-shadow: 0 8px 24px rgba(0,0,0,.4);
+    }
+
+    /* placeholder image */
+    .card-image {
+      position: relative;
+      aspect-ratio: 3/4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 1.5rem;
+    }
+    .ancient .card-image { background: linear-gradient(160deg, #5a1800 0%, #2a0800 100%); }
+    .medieval .card-image { background: linear-gradient(160deg, #281840 0%, #100820 100%); }
+    .early_modern .card-image { background: linear-gradient(160deg, #0a2030 0%, #050f18 100%); }
+
+    .card-image .symbol {
+      font-size: 3.5rem;
+      opacity: .18;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      line-height: 1;
+    }
+    .card-image .img-title {
+      position: relative;
+      z-index: 1;
+      font-size: .75rem;
+      text-align: center;
+      color: rgba(255,255,255,.65);
+      font-family: var(--font-ui);
+      letter-spacing: .04em;
+    }
+    .card-image .img-date {
+      font-size: .65rem;
+      color: rgba(255,255,255,.35);
+      text-align: center;
+      margin-top: .35rem;
+      font-family: var(--font-ui);
+      font-style: italic;
+    }
+    .card-image .img-repo {
+      font-size: .6rem;
+      color: rgba(255,255,255,.25);
+      text-align: center;
+      margin-top: .25rem;
+      font-family: var(--font-ui);
+    }
+
+    /* status pip */
+    .status-pip {
+      position: absolute;
+      top: .5rem;
+      right: .5rem;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+    }
+    .status-pip.in_corpus { background: #40c060; }
+    .status-pip.partial { background: #c0a020; }
+    .status-pip.needs_sourcing { background: #c04040; }
+
+    /* priority ring */
+    .priority-ring {
+      position: absolute;
+      top: .45rem;
+      left: .5rem;
+      font-family: var(--font-ui);
+      font-size: .55rem;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      padding: .15rem .35rem;
+      border-radius: 2px;
+    }
+    .priority-ring.critical { background: rgba(180,30,10,.7); color: #ffaa80; }
+    .priority-ring.high { background: rgba(180,100,10,.6); color: #ffd080; }
+    .priority-ring.medium { background: rgba(30,80,100,.6); color: #80c0e0; }
+    .priority-ring.low { background: rgba(40,40,40,.6); color: #808080; }
+
+    /* card body */
+    .card-body { padding: .85rem 1rem 1rem; flex: 1; display: flex; flex-direction: column; }
+    .card-title {
+      font-size: .9rem;
+      font-weight: bold;
+      color: var(--text);
+      margin-bottom: .2rem;
+      line-height: 1.3;
+    }
+    .card-subtitle {
+      font-size: .75rem;
+      color: var(--gold-dim);
+      font-style: italic;
+      margin-bottom: .5rem;
+    }
+    .card-desc {
+      font-size: .78rem;
+      color: var(--text-dim);
+      line-height: 1.5;
+      flex: 1;
+    }
+    .card-footer {
+      margin-top: .75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .card-medium {
+      font-family: var(--font-ui);
+      font-size: .6rem;
+      color: var(--text-dim);
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .card-arrow {
+      font-size: .7rem;
+      color: var(--gold-dim);
+    }
+
+    /* image count badge */
+    .img-count {
+      font-family: var(--font-ui);
+      font-size: .6rem;
+      background: var(--surface2);
+      border: 1px solid #2a2618;
+      border-radius: 2px;
+      padding: .1rem .3rem;
+      color: var(--text-dim);
+    }
+
+    /* ── STATUS LEGEND ── */
+    .legend {
+      display: flex;
+      gap: 1.5rem;
+      padding: .75rem 2rem;
+      font-family: var(--font-ui);
+      font-size: .7rem;
+      color: var(--text-dim);
+      border-bottom: 1px solid #1a1810;
+      flex-wrap: wrap;
+    }
+    .legend-item { display: flex; align-items: center; gap: .35rem; }
+    .legend-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+    }
+
+    /* ── HIDDEN ── */
+    .work-card.hidden { display: none; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid #1a1810;
+      padding: 2rem;
+      text-align: center;
+      font-family: var(--font-ui);
+      font-size: .75rem;
+      color: var(--text-dim);
+    }
+    footer a { color: var(--gold-dim); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+  </style>
+</head>
+<body>
+
+<header>
+  <p class="eyebrow">Emblem Print Shop — Reference Collection</p>
+  <h1>Complete Alchemical Images</h1>
+  <p class="subtitle">A visual history of alchemical iconography from the ancient Greek papyri through the early modern emblem tradition</p>
+  <div class="header-stats">
+    <div class="stat"><strong id="total-count">—</strong>Works cataloged</div>
+    <div class="stat"><strong id="corpus-count">—</strong>In corpus</div>
+    <div class="stat"><strong id="source-count">—</strong>Needs sourcing</div>
+    <div class="stat"><strong>~3,000 years</strong>Covered</div>
+  </div>
+</header>
+
+<nav class="site-nav">
+  <a href="../gallery.html">← Gallery</a>
+  <span class="sep">|</span>
+  <a href="../emblems.html">Emblems</a>
+  <span class="sep">|</span>
+  <a href="index.html" style="color:var(--gold)">Alchemical Images</a>
+  <span class="sep">|</span>
+  <a href="../../docs/IMAGES_TO_SOURCE.md" target="_blank">Source Inventory</a>
+</nav>
+
+<div class="legend">
+  <span>Status:</span>
+  <span class="legend-item"><span class="legend-dot" style="background:#40c060"></span>In corpus (extracted)</span>
+  <span class="legend-item"><span class="legend-dot" style="background:#c0a020"></span>Partially sourced</span>
+  <span class="legend-item"><span class="legend-dot" style="background:#c04040"></span>Needs sourcing</span>
+  <span style="margin-left:auto">Priority: <span style="color:#ffaa80">■ Critical</span> &nbsp; <span style="color:#ffd080">■ High</span> &nbsp; <span style="color:#80c0e0">■ Medium</span></span>
+</div>
+
+<div class="controls">
+  <label>Period:</label>
+  <button class="filter-btn active" data-filter="period" data-value="all">All</button>
+  <button class="filter-btn" data-filter="period" data-value="ancient">Ancient</button>
+  <button class="filter-btn" data-filter="period" data-value="medieval">Medieval</button>
+  <button class="filter-btn" data-filter="period" data-value="early_modern">Early Modern</button>
+  &nbsp;
+  <label>Status:</label>
+  <button class="filter-btn active" data-filter="status" data-value="all">All</button>
+  <button class="filter-btn" data-filter="status" data-value="needs_sourcing">Needs Sourcing</button>
+  <button class="filter-btn" data-filter="status" data-value="in_corpus">In Corpus</button>
+  <input id="search" type="search" placeholder="Search titles, authors, repositories…">
+</div>
+
+<main id="main-content">
+  <!-- Rendered by JS from data.js -->
+</main>
+
+<footer>
+  <p>Part of the <a href="../gallery.html">Emblem Print Shop</a> scholarly visual pipeline. &nbsp;|&nbsp;
+  Research data compiled 2026-06-06. &nbsp;|&nbsp;
+  <a href="../../docs/IMAGES_TO_SOURCE.md" target="_blank">IMAGES_TO_SOURCE.md</a></p>
+</footer>
+
+<script src="data.js"></script>
+<script src="data-em.js"></script>
+<script>
+const main = document.getElementById('main-content');
+const PERIODS = [
+  { key: 'ancient',      label: 'Ancient & Late Antique',      dates: '3rd century BC – 7th century AD' },
+  { key: 'medieval',     label: 'Medieval Manuscripts',         dates: '8th – 15th century' },
+  { key: 'early_modern', label: 'Early Modern Printed Works',   dates: '1499 – 1700' },
+];
+
+let activeFilters = { period: 'all', status: 'all' };
+let searchQuery = '';
+
+function renderAll() {
+  const query = searchQuery.toLowerCase();
+  main.innerHTML = '';
+
+  let totalCount = 0, corpusCount = 0, sourceCount = 0;
+
+  PERIODS.forEach(p => {
+    const works = WORKS.filter(w => {
+      if (activeFilters.period !== 'all' && w.period !== activeFilters.period) return false;
+      if (activeFilters.status !== 'all' && w.status !== activeFilters.status) return false;
+      if (query) {
+        const hay = [w.title, w.subtitle, w.author, w.repository, w.card_description].join(' ').toLowerCase();
+        if (!hay.includes(query)) return false;
+      }
+      return w.period === p.key;
+    });
+
+    if (works.length === 0 && activeFilters.period !== 'all' && activeFilters.period !== p.key) return;
+    if (works.length === 0 && (activeFilters.period === 'all' || activeFilters.period === p.key)) return;
+
+    totalCount += works.length;
+    works.forEach(w => {
+      if (w.status === 'in_corpus') corpusCount++;
+      if (w.status === 'needs_sourcing') sourceCount++;
+    });
+
+    const section = document.createElement('section');
+    section.className = 'period-section';
+    section.innerHTML = `
+      <div class="period-header ${p.key}">
+        <span class="period-badge ${p.key}">${p.key === 'early_modern' ? 'Early Modern' : p.key.charAt(0).toUpperCase() + p.key.slice(1)}</span>
+        <h2>${p.label}</h2>
+        <span class="period-dates">${p.dates}</span>
+      </div>
+      <div class="card-grid" id="grid-${p.key}"></div>
+    `;
+    main.appendChild(section);
+
+    const grid = section.querySelector('.card-grid');
+    works.forEach(w => grid.appendChild(makeCard(w)));
+  });
+
+  // Update stats
+  const allFiltered = WORKS.filter(w => {
+    if (query) {
+      const hay = [w.title, w.subtitle, w.author, w.repository, w.card_description].join(' ').toLowerCase();
+      return hay.includes(query);
+    }
+    return true;
+  });
+  document.getElementById('total-count').textContent = WORKS.length;
+  document.getElementById('corpus-count').textContent = WORKS.filter(w=>w.status==='in_corpus').length;
+  document.getElementById('source-count').textContent = WORKS.filter(w=>w.status==='needs_sourcing').length;
+
+  if (!main.firstChild) {
+    main.innerHTML = '<p style="padding:3rem;text-align:center;color:var(--text-dim)">No works match the current filters.</p>';
+  }
+}
+
+function makeCard(w) {
+  const a = document.createElement('a');
+  a.className = `work-card ${w.period}`;
+  a.href = `work.html?id=${w.id}`;
+
+  const imgCount = w.images ? w.images.length : 0;
+
+  a.innerHTML = `
+    <div class="card-image">
+      <span class="symbol">${w.symbol || '⚗'}</span>
+      <div class="img-title">${w.title}</div>
+      ${w.subtitle ? `<div class="img-date">${w.subtitle}</div>` : ''}
+      <div class="img-date">${w.date_display}</div>
+      <div class="img-repo">${w.repository}</div>
+      <span class="status-pip ${w.status}" title="${statusLabel(w.status)}"></span>
+      <span class="priority-ring ${w.priority}">${w.priority === 'critical' ? '★' : w.priority.charAt(0).toUpperCase()}</span>
+    </div>
+    <div class="card-body">
+      <div class="card-title">${w.title}</div>
+      ${w.subtitle ? `<div class="card-subtitle">${w.subtitle}</div>` : ''}
+      <div class="card-desc">${w.card_description}</div>
+      <div class="card-footer">
+        <span class="card-medium">${w.medium}</span>
+        ${imgCount > 0 ? `<span class="img-count">${imgCount} image${imgCount>1?'s':''}</span>` : ''}
+        <span class="card-arrow">→</span>
+      </div>
+    </div>
+  `;
+  return a;
+}
+
+function statusLabel(s) {
+  return { in_corpus: 'In corpus', partial: 'Partially sourced', needs_sourcing: 'Needs sourcing' }[s] || s;
+}
+
+// Filter buttons
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const f = btn.dataset.filter;
+    document.querySelectorAll(`.filter-btn[data-filter="${f}"]`).forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilters[f] = btn.dataset.value;
+    renderAll();
+  });
+});
+
+// Search
+document.getElementById('search').addEventListener('input', e => {
+  searchQuery = e.target.value.trim();
+  renderAll();
+});
+
+renderAll();
+</script>
+</body>
+</html>
