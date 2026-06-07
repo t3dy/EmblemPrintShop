@@ -246,6 +246,10 @@
       font-family: var(--font-ui);
       font-style: italic;
     }
+    .card-image img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: top center;
+    }
     .card-image .img-repo {
       font-size: .6rem;
       color: rgba(255,255,255,.25);
@@ -502,11 +506,12 @@ function makeCard(w) {
 
   a.innerHTML = `
     <div class="card-image">
-      <span class="symbol">${w.symbol || '⚗'}</span>
-      <div class="img-title">${w.title}</div>
-      ${w.subtitle ? `<div class="img-date">${w.subtitle}</div>` : ''}
-      <div class="img-date">${w.date_display}</div>
-      <div class="img-repo">${w.repository}</div>
+      ${w.card_image ? `<img src="${w.card_image}" alt="${w.title}" loading="lazy">` : ''}
+      <span class="symbol" style="${w.card_image ? 'display:none' : ''}">${w.symbol || '⚗'}</span>
+      <div class="img-title" style="position:relative;z-index:2;${w.card_image ? 'text-shadow:0 1px 4px rgba(0,0,0,.9)' : ''}">${w.title}</div>
+      ${w.subtitle ? `<div class="img-date" style="position:relative;z-index:2;${w.card_image ? 'text-shadow:0 1px 3px rgba(0,0,0,.9)' : ''}">${w.subtitle}</div>` : ''}
+      <div class="img-date" style="position:relative;z-index:2">${w.date_display}</div>
+      <div class="img-repo" style="position:relative;z-index:2">${w.repository}</div>
       <span class="status-pip ${w.status}" title="${statusLabel(w.status)}"></span>
       <span class="priority-ring ${w.priority}">${w.priority === 'critical' ? '★' : w.priority.charAt(0).toUpperCase()}</span>
     </div>

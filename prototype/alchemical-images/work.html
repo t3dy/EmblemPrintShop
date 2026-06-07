@@ -95,6 +95,16 @@
     .medieval .image-placeholder { background: linear-gradient(160deg, #200e30 0%, #0c0418 100%); }
     .early_modern .image-placeholder { background: linear-gradient(160deg, #081420 0%, #030a10 100%); }
 
+    .image-placeholder img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: contain; object-position: center; background: #0a0806;
+    }
+    .image-placeholder .img-attribution {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: rgba(0,0,0,.55); font-size: .5rem; color: rgba(255,255,255,.5);
+      text-align: center; padding: .2rem .4rem; font-family: var(--font-ui);
+      z-index: 2;
+    }
     .image-placeholder .big-symbol { font-size: 2.5rem; opacity: .12; position: absolute; }
     .image-placeholder .img-label { position: relative; z-index: 1; font-size: .65rem; text-align: center; color: rgba(255,255,255,.55); font-family: var(--font-ui); }
     .image-placeholder .img-folio { font-size: .6rem; color: rgba(255,255,255,.3); text-align: center; margin-top: .3rem; font-style: italic; font-family: var(--font-ui); }
@@ -266,12 +276,17 @@ if (!work) {
       card.className = `image-card ${work.period}`;
       card.innerHTML = `
         <div class="image-placeholder">
-          <span class="big-symbol">${work.symbol || '⚗'}</span>
-          <div class="img-label">${img.label}</div>
-          ${img.folio_or_plate ? `<div class="img-folio">${img.folio_or_plate}</div>` : ''}
+          ${img.src
+            ? `<img src="${img.src}" alt="${img.label}" loading="lazy">
+               ${img.attribution ? `<div class="img-attribution">${img.attribution}</div>` : ''}`
+            : `<span class="big-symbol">${work.symbol || '⚗'}</span>
+               <div class="img-label">${img.label}</div>
+               ${img.folio_or_plate ? `<div class="img-folio">${img.folio_or_plate}</div>` : ''}`
+          }
         </div>
         <div class="image-card-body">
           <div class="img-card-title">${img.label}</div>
+          ${img.folio_or_plate ? `<div style="font-size:.6rem;color:var(--text-dim);font-style:italic;margin-bottom:.2rem">${img.folio_or_plate}</div>` : ''}
           <div class="img-card-desc">${img.thumb_description}</div>
         </div>
       `;
