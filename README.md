@@ -164,6 +164,27 @@ The `object_catalog` field in each emblem record:
 
 **Works covered:** Codex Marcianus gr. Z. 299 · Leiden/Stockholm Papyri · Aurora Consurgens · Ripley Scroll · Buch der Heiligen Dreifaltigkeit · Donum Dei · Turba Philosophorum · Flamel Figures · Rosarium Philosophorum 1550 · Splendor Solis (Berlin & BL) · Hypnerotomachia Poliphili · Libavius Alchymia · Khunrath Amphitheatrum · Basil Valentine Azoth · Fludd Utriusque Cosmi · Maier Atalanta Fugiens · Maier Symbola Aureae Mensae · Mylius Opus Medico-Chymicum · Lambspring De Lapide · Stolcius Viridarium · Cramer Emblemata Sacra · Mylius Philosophia Reformata · Maier Arcana Arcanissima · Mutus Liber · Maier Septimana · Geheime Figuren der Rosenkreuzer
 
+**Image sourcing status:**
+
+| Work | Image source | Status |
+|------|-------------|--------|
+| Aurora Consurgens | e-codices IIIF (ZBZ Ms. Rh. 172) | ✅ 3 folios live |
+| Ripley Scroll | Huntington ContentDM IIIF (HM 30313) | ✅ 4 sections live |
+| Buch der Dreifaltigkeit | BSB MDZ IIIF (Cgm 598) | ✅ 4 folios live |
+| Flamel Figures | BnF Gallica IIIF (fr. 14765) | ✅ 3 pages live |
+| Splendor Solis (BL Harley) | Wikimedia Commons (5 folios available) | ⚠️ partial — BL IIIF offline (cyberattack) |
+| Libavius Alchymia | Wellcome/Wikimedia CC BY 4.0 | ✅ 3 plates live |
+| Basil Valentine Azoth | SLUB Deutsche Fotothek CC BY-SA 3.0 | ✅ Azoth diagram + 2 plates live |
+| Fludd Utriusque Cosmi | Internet Archive (utriusquecosmima01flud) | ✅ 3 pages live |
+| Mutus Liber | BnF Gallica IIIF (bpt6k15122214) | ✅ all 15 plates live |
+| Geheime Figuren | Internet Archive (GeheimeFigurenDerRosenkreutz) | ✅ 3 plates live |
+| Codex Marcianus | Biblissima IIIF viewer — no direct img URL confirmed | 🔴 needs sourcing |
+| Leiden/Stockholm Papyri | RMO/KB — no IIIF confirmed | 🔴 needs sourcing (no illustrations) |
+| Donum Dei | Leiden VCF 15 IIIF — canvas IDs unconfirmed for Donum Dei folios | 🔴 needs sourcing |
+| Turba Philosophorum | No illustrated copy with IIIF confirmed | 🔴 needs sourcing |
+| Splendor Solis Berlin | SMB — not fully digitized | 🔴 needs sourcing |
+| Maier Symbola / Viatorium / Septimana | HAB/BSB — not yet wired up | 🟡 accessible, not wired |
+
 **Sourcing inventory:** [`docs/IMAGES_TO_SOURCE.md`](docs/IMAGES_TO_SOURCE.md) — full provenance records, repository shelfmarks, digitization URLs, and download notes for each work.
 
 ## Related Projects
