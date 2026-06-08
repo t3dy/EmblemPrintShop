@@ -412,17 +412,27 @@ WORKS.push(
     date_sort: 1617,
     author: "Michael Maier (1568–1622)",
     medium: "Printed folio with 12 engraved emblem plates",
-    repository: "HAB Wolfenbüttel; BSB Munich; Bayerische Staatsbibliothek (digitized)",
-    shelfmark: "HAB: Xb 4501.2° (3); BSB: Res/4 Alch. 16",
-    status: "needs_sourcing",
+    repository: "HAB Wolfenbüttel; BSB Munich; Internet Archive (symbolaavreaemen00maie)",
+    shelfmark: "HAB: Xb 4501.2° (3); BSB: Res/4 Alch. 51; IA: symbolaavreaemen00maie",
+    status: "partial",
     priority: "high",
     symbol: "🜄",
+    card_image: "https://archive.org/download/symbolaavreaemen00maie/page/n0_w800.jpg",
     card_description: "Maier's Symbola Aureae Mensae (1617) presents twelve 'master alchemists' seated at a golden table — Hermes Trismegistus, Pythagoras, Democritus, Maria the Jewess, Khalid, Geber, Albertus Magnus, and others — each with an emblematic portrait and commentary. It is the key document in the history of the alchemical canon.",
     related: ["maier-atalanta", "maier-arcana"],
     images: [
-      { id: "sym-hermes", label: "Hermes Trismegistus", folio_or_plate: "Plate 1", thumb_description: "Bearded sage in classical robes seated at table with Emerald Tablet; Egyptian pyramids in background." },
-      { id: "sym-maria", label: "Maria the Jewess", folio_or_plate: "Plate 5", thumb_description: "First named female alchemist; depicted with the bain-marie apparatus she invented, scrolls, and furnace." },
-      { id: "sym-golden-table", label: "The Golden Table — Assembly", folio_or_plate: "Frontispiece", thumb_description: "All twelve sages seated around a round table bearing alchemical vessels; allegorical figures of Philosophy and Nature standing at either end." }
+      { id: "sym-title", label: "Title Page — 1617 Frankfurt Edition", folio_or_plate: "Title page",
+        src: "https://archive.org/download/symbolaavreaemen00maie/page/n0_w800.jpg",
+        attribution: "Internet Archive (symbolaavreaemen00maie), Getty Research Library copy — Public domain",
+        thumb_description: "Title page of the 1617 Frankfurt Luca Jennis edition of the Symbola Aureae Mensae." },
+      { id: "sym-hermes", label: "Hermes Trismegistus", folio_or_plate: "Plate 1 (early leaves)",
+        src: "https://archive.org/download/symbolaavreaemen00maie/page/n5_w800.jpg",
+        attribution: "Internet Archive (symbolaavreaemen00maie) — Public domain",
+        thumb_description: "Bearded sage in classical robes seated at table with Emerald Tablet; Egyptian pyramids in background." },
+      { id: "sym-golden-table", label: "The Golden Table — Assembly", folio_or_plate: "Frontispiece",
+        src: "https://archive.org/download/symbolaavreaemen00maie/page/n10_w800.jpg",
+        attribution: "Internet Archive (symbolaavreaemen00maie) — Public domain",
+        thumb_description: "All twelve sages seated around a round table bearing alchemical vessels; allegorical figures of Philosophy and Nature standing at either end." }
     ],
     essay: {
       visual_description: `<p>The twelve plates of the Symbola each show a named alchemical authority in a historiated setting. The engraving style — probably by the same Frankfurt workshop responsible for the 1617 Luca Jennis publications — is competent rather than exceptional, lacking Merian's finesse. Each portrait sets the sage against a background relevant to their attributed discovery or nationality: Hermes before Egyptian monuments, Maria the Jewess with her bain-marie apparatus, Geber in an Arab architectural setting. The frontispiece shows all twelve at a circular table — a Last Supper composition with Alchemy as the presiding deity.</p>`,
@@ -436,6 +446,7 @@ WORKS.push(
       { citation: "Newman, William R. Gehennical Fire: The Lives of George Starkey. Chicago: University of Chicago Press, 2003.", url: "" }
     ],
     links: [
+      { label: "Internet Archive (1617 edition)", url: "https://archive.org/details/symbolaavreaemen00maie", description: "Getty Research Library copy — free full-text browse" },
       { label: "BSB Digital (1617)", url: "https://www.digitale-sammlungen.de/de/details/bsb10145024", description: "BSB Munich digitized copy of the 1617 edition" },
       { label: "HAB Wolfenbüttel", url: "https://diglib.hab.de/", description: "HAB digital library — search Maier Symbola" }
     ]
@@ -532,16 +543,23 @@ WORKS.push(
     date_sort: 1618,
     author: "Michael Maier (1568–1622)",
     medium: "Printed octavo with 10 engraved emblem plates",
-    repository: "HAB Wolfenbüttel; BSB Munich; NLM",
-    shelfmark: "HAB: Xb 4508.8° (4); NLM: WZ 230 M217v 1618",
-    status: "needs_sourcing",
+    repository: "HAB Wolfenbüttel; BSB Munich; NLM; Internet Archive (majeriviatoriumh00maie)",
+    shelfmark: "HAB: Xb 4508.8° (4); NLM: WZ 230 M217v 1618; IA: majeriviatoriumh00maie",
+    status: "partial",
     priority: "medium",
     symbol: "⛰",
+    card_image: "https://archive.org/download/majeriviatoriumh00maie/page/n0_w800.jpg",
     card_description: "Maier's Viatorium (1618) describes an allegorical journey through the seven planetary mountains, each a stage of the alchemical work. Its 10 engraved plates show the mountains with their associated metals and operations. A rare Maier octavo, less studied than the Atalanta but part of the same 1618 Frankfurt publishing programme.",
     related: ["maier-atalanta", "maier-symbola"],
     images: [
-      { id: "viat-saturn-mountain", label: "Mountain of Saturn (Lead / Nigredo)", folio_or_plate: "Plate 1", thumb_description: "Dark craggy mountain with Saturn's scythe symbol; figure of Saturn as old man with hourglass at the summit." },
-      { id: "viat-sol-mountain", label: "Mountain of Sol (Gold / Rubedo)", folio_or_plate: "Plate 7", thumb_description: "Radiant golden mountain with Apollo at summit; sunrise landscape, phoenix in lower corner." }
+      { id: "viat-title", label: "Title Page — 1618 Edition", folio_or_plate: "Title page",
+        src: "https://archive.org/download/majeriviatoriumh00maie/page/n0_w800.jpg",
+        attribution: "Internet Archive (majeriviatoriumh00maie) — Public domain",
+        thumb_description: "Title page of the 1618 Luca Jennis edition of the Viatorium, de montibus planetarum septem." },
+      { id: "viat-saturn-mountain", label: "Mountain of Saturn (Lead / Nigredo)", folio_or_plate: "Plate 1 (early plates)",
+        src: "https://archive.org/download/majeriviatoriumh00maie/page/n3_w800.jpg",
+        attribution: "Internet Archive (majeriviatoriumh00maie) — Public domain",
+        thumb_description: "Dark craggy mountain with Saturn's scythe symbol; figure of Saturn as old man with hourglass at the summit." }
     ],
     essay: {
       visual_description: `<p>The ten plates of the Viatorium are smaller in format than the Atalanta (octavo vs. folio) and show a more schematic compositional approach: each planetary mountain occupies the full plate as a centralised conical or craggy peak, with the planet's deity or attribute at the summit and appropriate metal/mineral associations in the foreground. The landscapes are less detailed than Merian's finest work but share the same idiom of Dutch-influenced topography.</p>`,
@@ -555,6 +573,7 @@ WORKS.push(
       { citation: "Tilton, Hereward. The Quest for the Phoenix. Berlin: De Gruyter, 2003.", url: "" }
     ],
     links: [
+      { label: "Internet Archive (1618 edition)", url: "https://archive.org/details/majeriviatoriumh00maie", description: "Free full-text browse — NLM/IA copy" },
       { label: "HAB Wolfenbüttel", url: "https://diglib.hab.de/", description: "HAB digital library — search 'Maier Viatorium'" },
       { label: "NLM Digital Collections", url: "https://collections.nlm.nih.gov/", description: "NLM copy — search 'Maier Viatorium'" }
     ]
@@ -786,15 +805,23 @@ WORKS.push(
     date_sort: 1620,
     author: "Michael Maier (1568–1622)",
     medium: "Printed octavo with engraved plates",
-    repository: "HAB Wolfenbüttel; BSB Munich; NLM",
-    shelfmark: "HAB: Xb 4527.8° (3); NLM: WZ 230 M217s 1620",
-    status: "needs_sourcing",
+    repository: "HAB Wolfenbüttel; BSB Munich; NLM; Internet Archive (septimanaphiloso00maie)",
+    shelfmark: "HAB: Xb 4527.8° (3); NLM: WZ 230 M217s 1620; IA: septimanaphiloso00maie",
+    status: "partial",
     priority: "low",
     symbol: "🜞",
+    card_image: "https://archive.org/download/septimanaphiloso00maie/page/n0_w800.jpg",
     card_description: "Maier's Septimana Philosophica (1620) is a seven-day philosophical dialogue structured around the days of the week and their planetary correspondences. Less visually rich than the Atalanta, it treats the alchemical philosophy through the genre of the learned dialogue, with each day's conversation addressing one planetary metal and its alchemical significance.",
     related: ["maier-atalanta", "maier-viatorium"],
     images: [
-      { id: "sept-day-one", label: "Day One — Saturn and Lead", folio_or_plate: "Plate 1", thumb_description: "Saturn enthroned with scythe and hourglass; lead ingot in foreground — the beginning, nigredo." }
+      { id: "sept-title", label: "Title Page — 1620 Frankfurt Edition", folio_or_plate: "Title page",
+        src: "https://archive.org/download/septimanaphiloso00maie/page/n0_w800.jpg",
+        attribution: "Internet Archive (septimanaphiloso00maie) — Public domain",
+        thumb_description: "Title page of the 1620 Frankfurt Luca Jennis edition of the Septimana Philosophica." },
+      { id: "sept-day-one", label: "Day One — Saturn and Lead", folio_or_plate: "Plate 1 (early content)",
+        src: "https://archive.org/download/septimanaphiloso00maie/page/n3_w800.jpg",
+        attribution: "Internet Archive (septimanaphiloso00maie) — Public domain",
+        thumb_description: "Saturn enthroned with scythe and hourglass; lead ingot in foreground — the beginning, nigredo." }
     ],
     essay: {
       visual_description: `<p>The Septimana Philosophica is primarily a text rather than an image work; its illustrations are fewer and less elaborate than the Atalanta or Viatorium. The plates that exist follow the planetary-day structure: Saturn (Saturday/Day 1), Sol (Sunday/Day 2), Luna (Monday/Day 3), Mars (Tuesday/Day 4), Mercury (Wednesday/Day 5), Jupiter (Thursday/Day 6), Venus (Friday/Day 7).</p>`,
@@ -808,6 +835,7 @@ WORKS.push(
       { citation: "Tilton, Hereward. The Quest for the Phoenix. Berlin: De Gruyter, 2003.", url: "" }
     ],
     links: [
+      { label: "Internet Archive (1620 edition)", url: "https://archive.org/details/septimanaphiloso00maie", description: "Free full-text browse" },
       { label: "HAB Wolfenbüttel", url: "https://diglib.hab.de/", description: "HAB digital library — search 'Maier Septimana'" },
       { label: "NLM Digital Collections", url: "https://collections.nlm.nih.gov/", description: "NLM copy" }
     ]

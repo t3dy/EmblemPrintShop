@@ -180,10 +180,12 @@ The `object_catalog` field in each emblem record:
 | Geheime Figuren | Internet Archive (GeheimeFigurenDerRosenkreutz) | ✅ 3 plates live |
 | Codex Marcianus | Biblissima IIIF viewer — no direct img URL confirmed | 🔴 needs sourcing |
 | Leiden/Stockholm Papyri | RMO/KB — no IIIF confirmed | 🔴 needs sourcing (no illustrations) |
-| Donum Dei | Leiden VCF 15 IIIF — canvas IDs unconfirmed for Donum Dei folios | 🔴 needs sourcing |
+| Donum Dei | Leiden University IIIF (VCF 15, fol. 319v–335r, 4 confirmed roundels) | ✅ 4 roundels live |
+| Maier Symbola Aureae Mensae | Internet Archive (symbolaavreaemen00maie) | ✅ 3 pages live |
+| Maier Viatorium | Internet Archive (majeriviatoriumh00maie) | ✅ 2 pages live |
+| Maier Septimana Philosophica | Internet Archive (septimanaphiloso00maie) | ✅ 2 pages live |
 | Turba Philosophorum | No illustrated copy with IIIF confirmed | 🔴 needs sourcing |
 | Splendor Solis Berlin | SMB — not fully digitized | 🔴 needs sourcing |
-| Maier Symbola / Viatorium / Septimana | HAB/BSB — not yet wired up | 🟡 accessible, not wired |
 
 **Sourcing inventory:** [`docs/IMAGES_TO_SOURCE.md`](docs/IMAGES_TO_SOURCE.md) — full provenance records, repository shelfmarks, digitization URLs, and download notes for each work.
 
