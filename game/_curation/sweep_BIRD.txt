@@ -1,0 +1,16 @@
+0	C:\Dev\EmblemPrintShop\assets\extracted_all\mclean_second_p0042\individual\bird_transparent.png	bird	mclean	0.01
+1	C:\Dev\EmblemPrintShop\assets\extracted_all\khunrath_p0197\individual\peacock_transparent.png	peacock	khunrath	0.08
+2	C:\Dev\EmblemPrintShop\assets\extracted_all\splendor_solis_ia_p0035\individual\bird_transparent.png	bird	splendor_solis	0.01
+3	C:\Dev\EmblemPrintShop\assets\extracted_all\splendor_solis_ia_p0019\individual\bird_transparent.png	bird	splendor_solis	0.01
+4	C:\Dev\EmblemPrintShop\assets\extracted_all\splendor_solis_ia_p0019\individual\bird_02_transparent.png	bird	splendor_solis	0.01
+5	C:\Dev\EmblemPrintShop\assets\extracted_all\splendor_solis_local_p0008\individual\bird_transparent.png	bird	splendor_solis	0.01
+6	C:\Dev\EmblemPrintShop\assets\extracted_all\splendor_solis_local_p0005\individual\bird_transparent.png	bird	splendor_solis	0.02
+7	C:\Dev\EmblemPrintShop\assets\extracted_all\stolcius_plate_016\individual\bird_transparent.png	bird	stolcius	0.03
+8	C:\Dev\EmblemPrintShop\assets\extracted_all\splendor_solis_local_p0014\individual\bird_transparent.png	bird	splendor_solis	0.05
+9	C:\Dev\EmblemPrintShop\assets\extracted_all\splendor_solis_local_p0014\individual\bird_02_transparent.png	bird	splendor_solis	0.02
+10	C:\Dev\EmblemPrintShop\assets\extracted_all\splendor_solis_local_p0008\individual\bird_02_transparent.png	bird	splendor_solis	0.02
+11	C:\Dev\EmblemPrintShop\assets\extracted_all\splendor_solis_ia_p0012\individual\bird_transparent.png	bird	splendor_solis	0.01
+12	C:\Dev\EmblemPrintShop\assets\extracted_all\maier_arcana_p0005\individual\bird_transparent.png	bird	maier_arcana	0.03
+13	C:\Dev\EmblemPrintShop\assets\extracted_all\splendor_solis_local_p0007\individual\bird_transparent.png	bird	splendor_solis	0.01
+14	C:\Dev\EmblemPrintShop\assets\extracted_all\splendor_solis_ia_p0035\individual\bird_02_transparent.png	bird	splendor_solis	0.03
+15	C:\Dev\EmblemPrintShop\assets\extracted_all\splendor_solis_local_p0022\individual\bird_transparent.png	bird	splendor_solis	0.02

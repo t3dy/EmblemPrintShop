@@ -18,6 +18,12 @@ assets/extracted_all/
 sources/*/images/
 sources/*/site/images/
 
+# Emblem Knight game: generated cache + regenerable QA artifacts
+game/tools/.cast_index.json
+game/_curation/*.png
+game/_curation/*.jpg
+game/assets/sprites/_SHEET.png
+
 # Runtime logs
 *.log
 logs/

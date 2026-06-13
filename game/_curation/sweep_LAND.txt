@@ -1,0 +1,16 @@
+0	C:\Dev\EmblemPrintShop\assets\extracted_all\stolcius_plate_031\individual\forest_transparent.png	forest	stolcius	0.48
+1	C:\Dev\EmblemPrintShop\assets\extracted_all\mclean_second_p0056\individual\cave_transparent.png	cave	mclean	0.19
+2	C:\Dev\EmblemPrintShop\assets\extracted_all\mclean_second_p0055\individual\cave_transparent.png	cave	mclean	0.03
+3	C:\Dev\EmblemPrintShop\assets\extracted_all\emblem-28\individual\forest_transparent.png	forest	claudiens	0.06
+4	C:\Dev\EmblemPrintShop\assets\extracted_all\stolcius_plate_005\individual\mountain_hill_transparent.png	mountain hill	stolcius	0.06
+5	C:\Dev\EmblemPrintShop\assets\extracted_all\cramer_page_0105\individual\mountain_cliff_hill_transparent.png	mountain cliff hill	cramer	0.02
+6	C:\Dev\EmblemPrintShop\assets\extracted_all\cramer_page_0033\individual\forest_transparent.png	forest	cramer	0.01
+7	C:\Dev\EmblemPrintShop\assets\extracted_all\emblem-15\individual\cave_transparent.png	cave	claudiens	0.09
+8	C:\Dev\EmblemPrintShop\assets\extracted_all\stolcius_plate_061\individual\forest_transparent.png	forest	stolcius	0.22
+9	C:\Dev\EmblemPrintShop\assets\extracted_all\mclean_second_p0026\individual\river_water_sea_transparent.png	river water sea	mclean	0.01
+10	C:\Dev\EmblemPrintShop\assets\extracted_all\emblem-09\individual\cave_transparent.png	cave	claudiens	0.94
+11	C:\Dev\EmblemPrintShop\assets\extracted_all\emblem-46\individual\mountain_hill_transparent.png	mountain hill	claudiens	0.05
+12	C:\Dev\EmblemPrintShop\assets\extracted_all\emblem-37\individual\forest_transparent.png	forest	claudiens	0.04
+13	C:\Dev\EmblemPrintShop\assets\extracted_all\mclean_second_p0056\individual\river_water_sea_transparent.png	river water sea	mclean	0.08
+14	C:\Dev\EmblemPrintShop\assets\extracted_all\maier_arcana_p0180\individual\cliff_transparent.png	cliff	maier_arcana	0.08
+15	C:\Dev\EmblemPrintShop\assets\extracted_all\mclean_second_p0037\individual\river_sea_transparent.png	river sea	mclean	0.12

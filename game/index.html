@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Emblem Knight — and the Alchemical Dragon</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="frame">
+    <div id="stage">
+      <canvas id="game" width="768" height="576"></canvas>
+    </div>
+    <div id="touch">
+      <div class="dpad">
+        <button data-key="ArrowUp"    class="db up">▲</button>
+        <button data-key="ArrowLeft"  class="db left">◀</button>
+        <button data-key="ArrowRight" class="db right">▶</button>
+        <button data-key="ArrowDown"  class="db down">▼</button>
+      </div>
+      <div class="acts">
+        <button data-key="x" class="ab">B</button>
+        <button data-key="z" class="ab">A</button>
+      </div>
+    </div>
+    <p id="hint">Arrows / WASD to move &nbsp;•&nbsp; Z or Space = confirm &nbsp;•&nbsp; X = cancel/save &nbsp;•&nbsp; M = music on/off</p>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

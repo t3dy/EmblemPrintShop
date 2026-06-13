@@ -1,0 +1,18 @@
+0	C:\Dev\EmblemPrintShop\assets\extracted_all\emblem-28\individual\window_transparent.png	window	0.5586522221565247
+1	C:\Dev\EmblemPrintShop\assets\extracted_all\emblem-13\individual\bridge_transparent.png	bridge	0.5435194373130798
+2	C:\Dev\EmblemPrintShop\assets\extracted_all\emblem-10\individual\altar_transparent.png	altar	0.5410031676292419
+3	C:\Dev\EmblemPrintShop\assets\extracted_all\emblem-08\individual\altar_transparent.png	altar	0.5346019864082336
+4	C:\Dev\EmblemPrintShop\assets\extracted_all\stolcius_plate_002\individual\castle_transparent.png	castle	0.5189113020896912
+5	C:\Dev\EmblemPrintShop\assets\extracted_all\stolcius_plate_055\individual\arch_transparent.png	arch	0.5133811235427856
+6	C:\Dev\EmblemPrintShop\assets\extracted_all\mclean_second_p0055\individual\door_transparent.png	door	0.5075163245201111
+7	C:\Dev\EmblemPrintShop\assets\extracted_all\cramer_page_0077\individual\tower_transparent.png	tower	0.5037391185760498
+8	C:\Dev\EmblemPrintShop\assets\extracted_all\mclean_second_p0055\individual\tower_transparent.png	tower	0.500281035900116
+9	C:\Dev\EmblemPrintShop\assets\extracted_all\paul_marshall_p0178\individual\altar_transparent.png	altar	0.49719828367233276
+10	C:\Dev\EmblemPrintShop\assets\extracted_all\cramer_page_0097\individual\tower_chimney_transparent.png	tower chimney	0.49615174531936646
+11	C:\Dev\EmblemPrintShop\assets\extracted_all\emblem-08\individual\door_transparent.png	door	0.4865322411060333
+12	C:\Dev\EmblemPrintShop\assets\extracted_all\mclean_second_p0050\individual\gate_bridge_transparent.png	gate bridge	0.48638635873794556
+13	C:\Dev\EmblemPrintShop\assets\extracted_all\paul_marshall_p0178\individual\window_transparent.png	window	0.48602575063705444
+14	C:\Dev\EmblemPrintShop\assets\extracted_all\emblem-16\individual\window_transparent.png	window	0.4855036735534668
+15	C:\Dev\EmblemPrintShop\assets\extracted_all\emblem-17\individual\window_transparent.png	window	0.4842885434627533
+16	C:\Dev\EmblemPrintShop\assets\extracted_all\khunrath_p0024\individual\arch_transparent.png	arch	0.4816794693470001
+17	C:\Dev\EmblemPrintShop\assets\extracted_all\cramer_page_0041\individual\tower_chimney_transparent.png	tower chimney	0.4815804660320282

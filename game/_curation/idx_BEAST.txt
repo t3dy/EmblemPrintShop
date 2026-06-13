@@ -1,0 +1,18 @@
+0	C:\Dev\EmblemPrintShop\assets\extracted_all\stolcius_plate_006\individual\dog_transparent.png	dog	0.44342154264450073
+1	C:\Dev\EmblemPrintShop\assets\extracted_all\emblem-24\individual\bear_ox_frog_transparent.png	bear ox frog	0.4228360056877136
+2	C:\Dev\EmblemPrintShop\assets\extracted_all\stolcius_plate_078\individual\wolf_frog_transparent.png	wolf frog	0.3881685733795166
+3	C:\Dev\EmblemPrintShop\assets\extracted_all\stolcius_plate_013\individual\dog_transparent.png	dog	0.3820556104183197
+4	C:\Dev\EmblemPrintShop\assets\extracted_all\cramer_page_0057\individual\dog_transparent.png	dog	0.38200047612190247
+5	C:\Dev\EmblemPrintShop\assets\extracted_all\emblem-14\individual\bear_ox_transparent.png	bear ox	0.37967589497566223
+6	C:\Dev\EmblemPrintShop\assets\extracted_all\splendor_solis_ia_p0019\individual\wolf_frog_transparent.png	wolf frog	0.35392293334007263
+7	C:\Dev\EmblemPrintShop\assets\extracted_all\stolcius_plate_100\individual\lamb_frog_transparent.png	lamb frog	0.35077986121177673
+8	C:\Dev\EmblemPrintShop\assets\extracted_all\splendor_solis_ia_p0035\individual\wolf_lamb_frog_transparent.png	wolf lamb frog	0.34989720582962036
+9	C:\Dev\EmblemPrintShop\assets\extracted_all\emblem-39\individual\lamb_frog_transparent.png	lamb frog	0.34971943497657776
+10	C:\Dev\EmblemPrintShop\assets\extracted_all\splendor_solis_local_p0020\individual\eagle_dragon_peacock_transparent.png	eagle dragon peacock	0.3476199805736542
+11	C:\Dev\EmblemPrintShop\assets\extracted_all\stolcius_plate_017\individual\frog_transparent.png	frog	0.34535694122314453
+12	C:\Dev\EmblemPrintShop\assets\extracted_all\obrist_debuts_p0001\individual\dog_wolf_lamb_frog_f_transparent.png	dog wolf lamb frog fox	0.3446129858493805
+13	C:\Dev\EmblemPrintShop\assets\extracted_all\emblem-02\individual\dog_lamb_transparent.png	dog lamb	0.3421124815940857
+14	C:\Dev\EmblemPrintShop\assets\extracted_all\emblem-37\individual\dog_bear_ox_transparent.png	dog bear ox	0.34066855907440186
+15	C:\Dev\EmblemPrintShop\assets\extracted_all\splendor_solis_local_p0008\individual\wolf_frog_fox_transparent.png	wolf frog fox	0.3396681547164917
+16	C:\Dev\EmblemPrintShop\assets\extracted_all\emblem-41\individual\lamb_frog_transparent.png	lamb frog	0.33755019307136536
+17	C:\Dev\EmblemPrintShop\assets\extracted_all\stolcius_plate_016\individual\lamb_frog_transparent.png	lamb frog	0.33653724193573
