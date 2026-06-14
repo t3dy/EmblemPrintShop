@@ -29,7 +29,7 @@ from scripts.extract_all_objects import extract_all_objects, DEFAULT_OUTPUT_DIR
 # Canonical source directories relative to project root
 SOURCE_DIRS: dict[str, str] = {
     "claudiens":               "sources/claudiens/site/images/emblems",
-    "hypnerotomachia-polyphili": "sources/hypnerotomachia-polyphili/woodcuts_1499",
+    "hypnerotomachia-polyphili": "sources/hypnerotomachia-polyphili/site/images/woodcuts_1499",
     "cramer":                  "sources/cramer/images",
     "rosarium":                "sources/rosarium/images",
     "splendor_solis":          "sources/splendor_solis/images",
