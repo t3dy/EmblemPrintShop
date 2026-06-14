@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Export & Download — Emblem Print Shop</title>
+<style>
+:root {
+  --ink: #1a1208;
+  --paper: #f5edd8;
+  --paper2: #ede0c4;
+  --accent: #8b3a1c;
+  --accent2: #5c6b2e;
+  --muted: #6b5d48;
+  --border: #c8b89a;
+  --sans: 'Georgia', serif;
+  --mono: 'Courier New', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.65; }
+
+nav { background: var(--ink); color: var(--paper); padding: .6rem 1.5rem; display: flex; gap: 1.2rem; align-items: center; border-bottom: 3px solid var(--accent); font-size: .8rem; position: sticky; top: 0; z-index: 50; }
+nav a { color: var(--paper); text-decoration: none; opacity: .7; } nav a:hover { opacity: 1; }
+nav strong { font-size: .95rem; margin-right: .5rem; }
+
+header { background: var(--ink); color: var(--paper); padding: 2rem 1.5rem; border-bottom: 1px solid #333; }
+header h1 { font-size: 1.6rem; margin-bottom: .4rem; }
+header p { opacity: .8; font-size: .9rem; max-width: 800px; }
+
+main { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+.section { margin-bottom: 2.5rem; }
+.section h2 { font-size: 1.1rem; color: var(--accent); margin-bottom: 1rem; padding-bottom: .5rem; border-bottom: 1px solid var(--border); }
+
+.export-box {
+  padding: 1.2rem; background: var(--paper2); border: 1px solid var(--border); border-radius: 4px;
+  margin-bottom: 1rem;
+}
+.export-box h3 { font-size: 1rem; margin-bottom: .4rem; }
+.export-box .desc { font-size: .85rem; color: var(--muted); margin-bottom: .8rem; line-height: 1.6; }
+.export-box .meta { font-size: .75rem; color: var(--muted); margin-bottom: .8rem; }
+
+.download-btn {
+  display: inline-block; padding: .5rem 1rem; background: var(--accent); color: var(--paper);
+  text-decoration: none; border-radius: 3px; font-size: .8rem; font-weight: 600; cursor: pointer;
+  border: none;
+}
+.download-btn:hover { opacity: .9; }
+.download-btn.secondary {
+  background: var(--paper2); color: var(--accent); border: 1px solid var(--accent);
+}
+
+.format-options { display: flex; gap: .5rem; flex-wrap: wrap; }
+select { padding: .3rem .6rem; background: var(--paper2); border: 1px solid var(--border); border-radius: 2px; font-size: .85rem; }
+
+.code-block {
+  background: #f5f0e8; padding: 1rem; border-radius: 4px; overflow-x: auto;
+  font-family: var(--mono); font-size: .75rem; line-height: 1.5;
+}
+
+.status { padding: .8rem; background: #e8f4e8; border-left: 3px solid var(--accent2); border-radius: 2px; margin: 1rem 0; }
+.status.pending { background: #f4e8d8; border-left-color: #c9a84c; }
+
+table { width: 100%; border-collapse: collapse; font-size: .85rem; margin: 1rem 0; }
+table th { background: var(--border); padding: .5rem; text-align: left; font-weight: 600; }
+table td { padding: .5rem; border-bottom: 1px solid var(--border); }
+</style>
+</head>
+<body>
+
+<nav>
+  <strong>Emblem Print Shop</strong>
+  <a href="index.html">Home</a>
+  <a href="emblems.html">Emblem Catalog</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="export.html">Export</a>
+</nav>
+
+<header>
+  <h1>Export & Download Datasets</h1>
+  <p>Download emblem data in research-friendly formats. All catalogs are available as JSON; individual datasets can be exported as CSV or compiled collections.</p>
+</header>
+
+<main>
+
+<div class="section">
+  <h2>Full Catalogs (JSON)</h2>
+  <p style="margin-bottom:1rem;color:var(--muted);font-size:.9rem">Complete datasets ready for research, analysis, and integration. Updated automatically when extraction completes.</p>
+
+  <div class="export-box">
+    <h3>Gallery Catalog (All Elements)</h3>
+    <p class="desc">Complete collection of 7,097 extracted visual elements with metadata: source image, bounding box, category, tags, confidence scores, web paths.</p>
+    <p class="meta">Format: JSON • Size: ~5 MB • 7,097 records • Updated: 2026-06-14 03:45</p>
+    <button class="download-btn" onclick="downloadJSON('gallery_catalog.json', 'gallery-catalog')">Download gallery_catalog.json</button>
+  </div>
+
+  <div class="export-box">
+    <h3>Emblem Catalog</h3>
+    <p class="desc">51 Atalanta Fugiens emblems with scholarly metadata: titles, stage classifications (nigredo/albedo/citrinitas/rubedo), planetary associations, motif tags, de Jong page references.</p>
+    <p class="meta">Format: JSON • Size: ~200 KB • 51 emblems • Updated: 2026-06-06</p>
+    <button class="download-btn" onclick="downloadJSON('emblem_catalog.json', 'emblem-catalog')">Download emblem_catalog.json</button>
+  </div>
+
+  <div class="export-box">
+    <h3>Concept Index</h3>
+    <p class="desc">140 alchemical concepts mapped to 7,097 emblems and 140 source chapters. Includes co-occurrence relationships and frequency data.</p>
+    <p class="meta">Format: JSON • Size: ~300 KB • 140 concepts • Updated: 2026-06-14 03:45</p>
+    <button class="download-btn" onclick="downloadJSON('concept_index.json', 'concept-index')">Download concept_index.json</button>
+  </div>
+
+  <div class="export-box">
+    <h3>Text-Visual Links</h3>
+    <p class="desc">Mappings between 56 emblems and related source text chapters. Shows which emblems are mentioned in which alchemical texts.</p>
+    <p class="meta">Format: JSON • Size: ~64 KB • 56 emblem-chapter links • Updated: 2026-06-14 03:45</p>
+    <button class="download-btn" onclick="downloadJSON('emblem_text_links.json', 'text-links')">Download emblem_text_links.json</button>
+  </div>
+
+  <div class="export-box">
+    <h3>Text Chapters Index</h3>
+    <p class="desc">140 extracted chapters from 9 alchemical source books, with titles, page ranges, word counts, and excerpt previews.</p>
+    <p class="meta">Format: JSON • Size: ~144 KB • 140 chapters • Updated: 2026-06-14 03:45</p>
+    <button class="download-btn" onclick="downloadJSON('text_chapters.json', 'text-chapters')">Download text_chapters.json</button>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Source Materials (Markdown)</h2>
+  <p style="margin-bottom:1rem;color:var(--muted);font-size:.9rem">Full extracted texts from alchemical source books as chapter-split Markdown files.</p>
+
+  <div class="status">
+    <strong>Source Books Available:</strong>
+    <table style="margin-top:.5rem">
+      <tr><td>Rosarium Philosophorum</td><td>5 chapters</td><td><a href="javascript:downloadMarkdownSet('rosarium')">Download</a></td></tr>
+      <tr><td>Splendor Solis</td><td>8 chapters</td><td><a href="javascript:downloadMarkdownSet('splendor_solis')">Download</a></td></tr>
+      <tr><td>Cramer Emblemata Sacra</td><td>58 chapters</td><td><a href="javascript:downloadMarkdownSet('cramer_emblemata_sacra')">Download</a></td></tr>
+      <tr><td>Fludd Mosaicall Philosophy</td><td>61 chapters</td><td><a href="javascript:downloadMarkdownSet('fludd_mosaicall_philosophy')">Download</a></td></tr>
+      <tr><td>Maier Viatorium</td><td>5 chapters</td><td><a href="javascript:downloadMarkdownSet('maier_viatorium')">Download</a></td></tr>
+      <tr><td>Maier Arcana Arcanissima</td><td>whole text</td><td><a href="javascript:downloadMarkdownSet('maier_arcana_arcanissima')">Download</a></td></tr>
+      <tr><td>Khunrath Amphitheatrum</td><td>whole text</td><td><a href="javascript:downloadMarkdownSet('khunrath_amphitheatrum')">Download</a></td></tr>
+      <tr><td>Hall Alchemical Manuscripts</td><td>whole text</td><td><a href="javascript:downloadMarkdownSet('hall_manuscripts')">Download</a></td></tr>
+    </table>
+  </div>
+
+  <div class="export-box">
+    <h3>All Markdown (ZIP)</h3>
+    <p class="desc">Complete Markdown/ directory with all 140 chapters from all 8 books, organized by source.</p>
+    <p class="meta">Format: ZIP (Markdown files) • Size: ~2.5 MB</p>
+    <button class="download-btn" onclick="alert('Use your browser to download: Right-click Markdown/ folder > Save Link As')">Download All Markdown (ZIP)</button>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Custom Exports</h2>
+
+  <div class="export-box">
+    <h3>Filtered Gallery Export</h3>
+    <p class="desc">Export gallery elements matching your criteria (by concept, tag, source, category).</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0">
+      <div>
+        <label style="display:block;margin-bottom:.3rem;font-size:.8rem;color:var(--muted)">Concept:</label>
+        <select id="concept-filter" style="width:100%">
+          <option value="">All concepts</option>
+          <option value="mercury">Mercury</option>
+          <option value="distillation">Distillation</option>
+          <option value="calcination">Calcination</option>
+          <option value="lion">Lion</option>
+        </select>
+      </div>
+      <div>
+        <label style="display:block;margin-bottom:.3rem;font-size:.8rem;color:var(--muted)">Format:</label>
+        <select id="export-format" style="width:100%">
+          <option value="json">JSON</option>
+          <option value="csv">CSV</option>
+        </select>
+      </div>
+    </div>
+    <button class="download-btn" onclick="exportFiltered()">Generate Custom Export</button>
+  </div>
+</div>
+
+<div class="section">
+  <h2>API Access</h2>
+  <p style="color:var(--muted);font-size:.9rem;margin-bottom:1rem">For developers: All catalog JSONs are directly accessible via HTTP GET. Use these endpoints in your applications.</p>
+
+  <div class="export-box">
+    <h3>Direct JSON Endpoints</h3>
+    <p class="desc">Base URL: <code style="background:var(--paper);padding:.1rem .3rem">/prototype/</code></p>
+    <div class="code-block" style="margin-top:.5rem">
+/gallery_catalog.json
+/emblem_catalog.json
+/concept_index.json
+/emblem_text_links.json
+/text_chapters.json
+    </div>
+    <p style="margin-top:.5rem;font-size:.75rem;color:var(--muted)">Example: <code style="background:var(--paper);padding:.1rem .3rem">fetch('/prototype/gallery_catalog.json').then(r => r.json())</code></p>
+  </div>
+
+  <div class="export-box">
+    <h3>CORS Policy</h3>
+    <p class="desc">All endpoints are CORS-enabled for safe cross-origin requests. Use in browser applications, dashboards, and external analysis tools.</p>
+  </div>
+</div>
+
+<div class="section" style="background:var(--paper2);padding:1.5rem;border-radius:4px;border-left:3px solid var(--accent2)">
+  <h2>Research Workflows</h2>
+  <p style="margin-bottom:1rem">Suggested data exports for common research questions:</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1rem">
+    <div>
+      <strong style="color:var(--accent2)">Motif Genealogy</strong>
+      <p style="font-size:.85rem;margin-top:.3rem;color:var(--muted)">Download gallery_catalog.json + concept_index.json. Extract entries tagged with a motif (lion, serpent, dragon). Trace occurrence across corpora and time.</p>
+    </div>
+    <div>
+      <strong style="color:var(--accent2)">Textual Context</strong>
+      <p style="font-size:.85rem;margin-top:.3rem;color:var(--muted)">Download text_chapters.json + emblem_text_links.json. For a given emblem, pull all chapters mentioning its motifs. Compare linguistic treatment.</p>
+    </div>
+    <div>
+      <strong style="color:var(--accent2)">Concept Networks</strong>
+      <p style="font-size:.85rem;margin-top:.3rem;color:var(--muted)">Download concept_index.json. Analyze co-occurrence graph. Which concepts cluster? How do relationships differ by corpus?</p>
+    </div>
+    <div>
+      <strong style="color:var(--accent2)">Corpus Comparison</strong>
+      <p style="font-size:.85rem;margin-top:.3rem;color:var(--muted)">Download gallery_catalog.json. Group by project_key. Compare distribution of motifs, categories, and confidence scores across sources.</p>
+    </div>
+  </div>
+</div>
+
+<div class="status pending" style="margin-top:2rem">
+  <strong>⏳ Extraction in Progress:</strong> Hall (23/254), Fludd (0/311), HP (1/162). New data will be available after extraction completes and catalogs rebuild (~20-40 hours). Bookmarks this page to check for updates.
+</div>
+
+</main>
+
+<script>
+function downloadJSON(filename, label) {
+  const link = document.createElement('a');
+  link.href = filename + '?_=' + Date.now();
+  link.download = label + '_' + new Date().toISOString().split('T')[0] + '.json';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+function downloadMarkdownSet(bookSlug) {
+  alert(`To download ${bookSlug}, please:\n\n1. Open your file explorer\n2. Navigate to Markdown/${bookSlug}/\n3. Select all chapters and compress to ZIP\n\nOr: visit the /Markdown/ folder directly in your browser.`);
+}
+
+function exportFiltered() {
+  const concept = document.getElementById('concept-filter').value;
+  const format = document.getElementById('export-format').value;
+
+  fetch('gallery_catalog.json')
+    .then(r => r.json())
+    .then(data => {
+      let filtered = data.records || [];
+      if (concept) {
+        filtered = filtered.filter(r => r.tags && r.tags.includes(concept));
+      }
+
+      if (format === 'json') {
+        const blob = new Blob([JSON.stringify(filtered, null, 2)], { type: 'application/json' });
+        downloadBlob(blob, `gallery-export-${concept || 'all'}.json`);
+      } else if (format === 'csv') {
+        let csv = 'emblem_id,label,project,category,tags,image_url\n';
+        filtered.forEach(r => {
+          csv += `"${r.emblem_id}","${r.object_label}","${r.project}","${r.category}","${(r.tags || []).join(';')}","${r.transparent_png_web}"\n`;
+        });
+        const blob = new Blob([csv], { type: 'text/csv' });
+        downloadBlob(blob, `gallery-export-${concept || 'all'}.csv`);
+      }
+    })
+    .catch(e => alert('Error: ' + e.message));
+}
+
+function downloadBlob(blob, filename) {
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+</script>
+
+</body>
+</html>
