@@ -1,466 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emblem Print Shop — Workbench</title>
-  <style>
-    /* ── Reset & base ── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #1a1710;
-      --surface: #231f14;
-      --surface2: #2d2818;
-      --border: #4a4228;
-      --border-light: #5c5438;
-      --gold: #c9a84c;
-      --gold-dim: #8a7030;
-      --text: #e8dfc0;
-      --text-dim: #9a9070;
-      --text-muted: #5a5440;
-      --red: #c04030;
-      --green: #4a8060;
-      --tag-af: #3a2e10;
-      --tag-hp: #102030;
-      --tag-af-text: #c9a84c;
-      --tag-hp-text: #5ab0d8;
-      --panel-w: 380px;
-    }
-    html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(--text); font-family: 'Georgia', serif; font-size: 13px; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emblem Print Shop — Alchemical Visual Research Platform</title>
+<style>
+:root {
+  --ink: #1a1208;
+  --paper: #f5edd8;
+  --paper2: #ede0c4;
+  --accent: #8b3a1c;
+  --accent2: #5c6b2e;
+  --muted: #6b5d48;
+  --border: #c8b89a;
+  --sans: 'Georgia', serif;
+  --mono: 'Courier New', monospace;
+}
 
-    /* ── Layout ── */
-    #app { display: flex; flex-direction: column; height: 100%; }
-    #toolbar { display: flex; align-items: center; gap: 10px; padding: 8px 14px; background: var(--surface); border-bottom: 1px solid var(--border); flex-shrink: 0; flex-wrap: wrap; }
-    #main { display: flex; flex: 1; overflow: hidden; }
-    #grid-panel { flex: 1; overflow-y: auto; padding: 12px; }
-    #detail-panel { width: var(--panel-w); flex-shrink: 0; border-left: 1px solid var(--border); overflow-y: auto; background: var(--surface); display: none; }
-    #detail-panel.open { display: flex; flex-direction: column; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.6; }
 
-    /* ── Toolbar ── */
-    #toolbar h1 { font-size: 14px; font-weight: normal; color: var(--gold); letter-spacing: 0.05em; margin-right: 8px; white-space: nowrap; }
-    .sep { width: 1px; height: 20px; background: var(--border); flex-shrink: 0; }
-    label.filter-group { display: flex; align-items: center; gap: 5px; color: var(--text-dim); font-size: 11px; }
-    select, input[type=text] {
-      background: var(--surface2); border: 1px solid var(--border); color: var(--text);
-      padding: 3px 7px; font-size: 11px; font-family: inherit; border-radius: 2px;
-    }
-    select:focus, input:focus { outline: none; border-color: var(--gold-dim); }
-    #search { width: 160px; }
-    #count-badge { margin-left: auto; font-size: 11px; color: var(--text-muted); white-space: nowrap; }
-    .tb-btn {
-      background: var(--surface2); border: 1px solid var(--border); color: var(--text-dim);
-      padding: 3px 10px; font-size: 11px; cursor: pointer; border-radius: 2px;
-    }
-    .tb-btn:hover { border-color: var(--gold-dim); color: var(--text); }
-    .tb-btn.active { background: var(--tag-af); border-color: var(--gold-dim); color: var(--gold); }
+/* Header / Hero */
+header {
+  background: linear-gradient(135deg, var(--ink) 0%, #2a1f1a 100%);
+  color: var(--paper); padding: 4rem 1.5rem 3rem;
+  border-bottom: 3px solid var(--accent);
+}
+header h1 { font-size: 2.4rem; margin-bottom: .3rem; font-weight: normal; }
+header .tagline { font-size: 1.05rem; opacity: .8; margin-bottom: 1.5rem; max-width: 800px; }
+header .stat-row { display: flex; gap: 2rem; flex-wrap: wrap; font-size: .9rem; }
+header .stat { display: flex; flex-direction: column; gap: .15rem; }
+header .stat-num { font-size: 1.3rem; font-weight: 600; color: var(--accent); }
 
-    /* ── Grid ── */
-    #grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 8px; }
-    .card {
-      background: var(--surface2); border: 1px solid var(--border);
-      cursor: pointer; border-radius: 2px; overflow: hidden;
-      transition: border-color 0.1s;
-      display: flex; flex-direction: column;
-    }
-    .card:hover { border-color: var(--gold-dim); }
-    .card.selected { border-color: var(--gold); }
-    .card-img { position: relative; width: 100%; aspect-ratio: 1 / 1; background: #111; overflow: hidden; }
-    .card-img img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.9; }
-    .card-img .no-img { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; color: var(--text-muted); font-size: 10px; text-align: center; padding: 6px; }
-    .card-source { position: absolute; top: 3px; left: 3px; font-size: 9px; padding: 1px 4px; border-radius: 1px; letter-spacing: 0.04em; }
-    .card-source.af { background: var(--tag-af); color: var(--tag-af-text); }
-    .card-source.hp { background: var(--tag-hp); color: var(--tag-hp-text); }
-    .card-body { padding: 5px 7px; flex: 1; }
-    .card-label { font-size: 10px; color: var(--text); line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-    .card-meta { margin-top: 3px; font-size: 9px; color: var(--text-muted); }
-    .card-motifs { margin-top: 3px; display: flex; flex-wrap: wrap; gap: 2px; }
-    .motif-tag { font-size: 9px; background: var(--bg); border: 1px solid var(--border); color: var(--text-muted); padding: 0px 4px; border-radius: 1px; }
-    .review-dot { display: inline-block; width: 5px; height: 5px; border-radius: 50%; margin-right: 3px; }
-    .review-dot.stub { background: var(--text-muted); }
-    .review-dot.reviewed { background: var(--green); }
+/* Nav */
+nav {
+  background: var(--ink); color: var(--paper);
+  padding: .6rem 1.5rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;
+  font-size: .8rem; position: sticky; top: 0; z-index: 50; border-bottom: 1px solid var(--border);
+}
+nav a { color: var(--paper); text-decoration: none; opacity: .7; transition: opacity .15s; }
+nav a:hover { opacity: 1; }
 
-    /* ── Detail panel ── */
-    #detail-inner { padding: 14px; display: flex; flex-direction: column; gap: 12px; }
-    #detail-close { align-self: flex-end; background: none; border: none; color: var(--text-muted); font-size: 16px; cursor: pointer; padding: 0; line-height: 1; }
-    #detail-close:hover { color: var(--text); }
-    #detail-img { width: 100%; aspect-ratio: 1 / 1; background: #111; border: 1px solid var(--border); overflow: hidden; display: flex; align-items: center; justify-content: center; }
-    #detail-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
-    #detail-img .no-img { color: var(--text-muted); font-size: 11px; text-align: center; padding: 10px; }
-    #detail-title { font-size: 14px; line-height: 1.4; color: var(--text); }
-    .detail-row { display: flex; gap: 8px; font-size: 11px; }
-    .detail-key { color: var(--text-muted); min-width: 110px; flex-shrink: 0; }
-    .detail-val { color: var(--text); flex: 1; }
-    .detail-section { border-top: 1px solid var(--border); padding-top: 10px; display: flex; flex-direction: column; gap: 6px; }
-    .detail-section h3 { font-size: 10px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-muted); font-weight: normal; }
-    .tag-list { display: flex; flex-wrap: wrap; gap: 3px; }
-    .tag { font-size: 10px; background: var(--surface2); border: 1px solid var(--border); color: var(--text-dim); padding: 1px 6px; border-radius: 2px; }
-    .tag.motif { border-color: var(--gold-dim); color: var(--gold); }
-    .discourse-text { font-size: 11px; color: var(--text-dim); line-height: 1.6; }
-    a.ext-link { color: var(--gold-dim); font-size: 10px; text-decoration: none; }
-    a.ext-link:hover { color: var(--gold); text-decoration: underline; }
+/* Main content */
+main { max-width: 1200px; margin: 0 auto; padding: 3rem 1.5rem; }
 
-    /* ── Empty state ── */
-    #empty-state { display: none; padding: 60px 20px; text-align: center; color: var(--text-muted); }
-    #empty-state.show { display: block; }
+.intro-block { margin-bottom: 3rem; padding: 1.5rem; background: var(--paper2); border-left: 4px solid var(--accent); border-radius: 4px; }
+.intro-block h2 { font-size: 1.2rem; margin-bottom: .6rem; }
+.intro-block p { margin-bottom: .6rem; line-height: 1.7; }
+.intro-block .subtext { font-size: .85rem; color: var(--muted); }
 
-    /* ── Scrollbar ── */
-    ::-webkit-scrollbar { width: 6px; height: 6px; }
-    ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--border-light); }
-  </style>
+/* Card grid */
+.cards-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;
+  margin: 2rem 0;
+}
+.card {
+  padding: 1.5rem; background: var(--paper2); border: 1px solid var(--border); border-radius: 4px;
+  transition: all .2s;
+}
+.card:hover {
+  transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 4px 12px rgba(139,58,28,.1);
+}
+.card h3 { font-size: 1.1rem; margin-bottom: .4rem; color: var(--accent); }
+.card .desc { font-size: .9rem; margin-bottom: 1rem; line-height: 1.6; }
+.card .meta { font-size: .75rem; color: var(--muted); margin-bottom: .8rem; }
+.card-link { display: inline-block; padding: .4rem .8rem; background: var(--accent); color: var(--paper);
+  text-decoration: none; border-radius: 3px; font-size: .8rem; font-weight: 600; }
+.card-link:hover { opacity: .9; }
+
+/* Feature list */
+.features-list { margin: 2rem 0; padding: 1.5rem; background: var(--paper2); border-radius: 4px; }
+.features-list h3 { margin-bottom: 1rem; }
+.features-list ul { list-style: none; margin-left: 1rem; }
+.features-list li { margin-bottom: .5rem; padding-left: 1.5rem; position: relative; }
+.features-list li:before { content: '→'; position: absolute; left: 0; color: var(--accent); font-weight: 600; }
+
+/* Data section */
+.data-section { margin: 2rem 0; padding: 1.5rem; background: #f5f0e8; border-radius: 4px; }
+.data-table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+.data-table th { background: var(--border); padding: .5rem; text-align: left; font-weight: 600; }
+.data-table td { padding: .5rem; border-bottom: 1px solid var(--border); }
+
+/* Footer */
+footer {
+  background: var(--ink); color: var(--paper); padding: 2rem 1.5rem; text-align: center;
+  margin-top: 3rem; font-size: .8rem;
+}
+footer a { color: var(--paper); opacity: .7; text-decoration: none; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 { font-size: 1.8rem; }
+  header .stat-row { flex-direction: column; gap: 1rem; }
+  .cards-grid { grid-template-columns: 1fr; }
+}
+
+code {
+  background: var(--paper); padding: .1rem .3rem; border-radius: 2px;
+  font-family: var(--mono); font-size: .85rem;
+}
+</style>
 </head>
 <body>
-<div id="app">
-  <div id="toolbar">
-    <h1>⚗ Emblem Print Shop</h1>
-    <div class="sep"></div>
 
-    <label class="filter-group">
-      Source:
-      <select id="filter-work">
-        <option value="">All works</option>
-        <option value="atalanta_fugiens">Atalanta Fugiens (Maier)</option>
-        <option value="hypnerotomachia_poliphili">Hypnerotomachia Poliphili</option>
-      </select>
-    </label>
-
-    <label class="filter-group">
-      Motif:
-      <select id="filter-motif">
-        <option value="">All motifs</option>
-      </select>
-    </label>
-
-    <label class="filter-group">
-      Category:
-      <select id="filter-category">
-        <option value="">All categories</option>
-      </select>
-    </label>
-
-    <label class="filter-group">
-      Stage:
-      <select id="filter-stage">
-        <option value="">All stages</option>
-      </select>
-    </label>
-
-    <label class="filter-group">
-      <input type="text" id="search" placeholder="Search labels, motifs…">
-    </label>
-
-    <button class="tb-btn" id="btn-clear-filters">Clear filters</button>
-
-    <span id="count-badge">— emblems</span>
-  </div>
-
-  <div id="main">
-    <div id="grid-panel">
-      <div id="grid"></div>
-      <div id="empty-state">No emblems match the current filters.</div>
+<header>
+  <h1>Emblem Print Shop</h1>
+  <p class="tagline">A scholarly platform for visual extraction and research in early modern alchemical emblems. Search, browse, and link 7,000+ motifs across 9 source texts.</p>
+  <div class="stat-row">
+    <div class="stat">
+      <span class="stat-num">7,097</span>
+      <span>visual elements</span>
     </div>
-    <div id="detail-panel">
-      <div id="detail-inner">
-        <button id="detail-close" title="Close">✕</button>
-        <div id="detail-img"><span class="no-img">No image</span></div>
-        <div id="detail-title">—</div>
-        <div id="detail-fields"></div>
-        <div id="detail-motifs" class="detail-section" style="display:none">
-          <h3>Motif candidates</h3>
-          <div class="tag-list" id="detail-motif-tags"></div>
-        </div>
-        <div id="detail-concepts" class="detail-section" style="display:none">
-          <h3>Key concepts</h3>
-          <div class="tag-list" id="detail-concept-tags"></div>
-        </div>
-        <div id="detail-discourse" class="detail-section" style="display:none">
-          <h3>Discourse / Context</h3>
-          <p class="discourse-text" id="detail-discourse-text"></p>
-        </div>
-        <div id="detail-links" class="detail-section" style="display:none">
-          <h3>Links</h3>
-          <div id="detail-link-list"></div>
-        </div>
-      </div>
+    <div class="stat">
+      <span class="stat-num">140</span>
+      <span>chapters extracted</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">140</span>
+      <span>concepts indexed</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">13+</span>
+      <span>source corpora</span>
     </div>
   </div>
+</header>
+
+<nav>
+  <strong style="color:var(--accent)">Navigate:</strong>
+  <a href="emblems.html">Emblem Catalog</a>
+  <a href="gallery.html">Visual Gallery</a>
+  <a href="concepts.html">Concept Browser</a>
+  <a href="motifs.html">Motif Atlas</a>
+  <a href="review.html">Review Queue</a>
+</nav>
+
+<main>
+
+<div class="intro-block">
+  <h2>About This Platform</h2>
+  <p>Emblem Print Shop is an extraction and research platform built for scholarly investigation of alchemical emblems. Using machine vision (GroundingDINO + SAM) and Claude-based re-identification, we've extracted 7,097+ visual motifs from 13+ historical sources, aligned them with source texts, and made them discoverable through rich browsing interfaces.</p>
+  <p class="subtext">This work integrates Maier's <em>Atalanta Fugiens</em>, Cramer's <em>Emblemata Sacra</em>, Rosarium Philosophorum, Splendor Solis, Khunrath's <em>Amphitheatrum Sapientiae Aeternae</em>, Fludd's <em>Mosaicall Philosophy</em>, and others.</p>
 </div>
 
-<script>
-// ── Data paths (relative to prototype/) ──
-const DATA_PATH = '../data/';
-const SOURCES_PATH = '../';
+<section>
+  <h2>Get Started</h2>
+  <div class="cards-grid">
 
-let EMBLEMS = [];
-let MOTIFS = [];
-let WORKS = {};
-let selectedId = null;
+    <div class="card">
+      <h3>Emblem Catalog</h3>
+      <p class="desc">Browse the complete catalog of 51 Atalanta Fugiens emblems with full scholarly apparatus: Maier's discourse, alchemical stages, motif tags, and more.</p>
+      <div class="meta">51 emblems • searchable • linked to extractions</div>
+      <a href="emblems.html" class="card-link">Open Catalog →</a>
+    </div>
 
-// ── Load data ──
-async function loadData() {
-  const [emblems, motifs, works] = await Promise.all([
-    fetch(DATA_PATH + 'emblems.json').then(r => r.json()),
-    fetch(DATA_PATH + 'motifs.json').then(r => r.json()),
-    fetch(DATA_PATH + 'works.json').then(r => r.json()),
-  ]);
-  EMBLEMS = emblems;
-  MOTIFS = motifs;
-  WORKS = Object.fromEntries(works.map(w => [w.id, w]));
-  buildFilters();
-  renderGrid();
-}
+    <div class="card">
+      <h3>Visual Gallery</h3>
+      <p class="desc">Browse all 7,097 extracted visual elements. Filter by motif (lions, vessels, stars, etc.), category, source corpus. Edit and review extractions.</p>
+      <div class="meta">7,097 elements • 124 tags • 16 projects</div>
+      <a href="gallery.html" class="card-link">Browse Gallery →</a>
+    </div>
 
-// ── Build filter dropdowns ──
-function buildFilters() {
-  // Motifs
-  const motifSel = document.getElementById('filter-motif');
-  MOTIFS.forEach(m => {
-    const opt = document.createElement('option');
-    opt.value = m.id;
-    opt.textContent = m.label;
-    motifSel.appendChild(opt);
-  });
+    <div class="card">
+      <h3>Concept Browser</h3>
+      <p class="desc">Explore the emblem collection by alchemical concepts. Search "mercury," "distillation," "union" — see which emblems mention them, read related source texts.</p>
+      <div class="meta">140 concepts • 7,097 emblems mapped</div>
+      <a href="concepts.html" class="card-link">Explore Concepts →</a>
+    </div>
 
-  // HP categories
-  const cats = new Set();
-  EMBLEMS.forEach(e => { if (e.subject_category) cats.add(e.subject_category); });
-  const catSel = document.getElementById('filter-category');
-  [...cats].sort().forEach(c => {
-    const opt = document.createElement('option');
-    opt.value = c;
-    opt.textContent = c.charAt(0) + c.slice(1).toLowerCase();
-    catSel.appendChild(opt);
-  });
+    <div class="card">
+      <h3>Motif Atlas</h3>
+      <p class="desc">Cross-corpus motif browser. See how a symbol (lion, serpent, phoenix) appears across different sources and time periods.</p>
+      <div class="meta">All extracted corpora • rich metadata</div>
+      <a href="motifs.html" class="card-link">View Atlas →</a>
+    </div>
 
-  // Alchemical stages
-  const stages = new Set();
-  EMBLEMS.forEach(e => { if (e.alchemical_stage) stages.add(e.alchemical_stage); });
-  const stageSel = document.getElementById('filter-stage');
-  [...stages].sort().forEach(s => {
-    const opt = document.createElement('option');
-    opt.value = s;
-    opt.textContent = s;
-    stageSel.appendChild(opt);
-  });
-}
+  </div>
+</section>
 
-// ── Filter logic ──
-function getFilters() {
-  return {
-    work: document.getElementById('filter-work').value,
-    motif: document.getElementById('filter-motif').value,
-    category: document.getElementById('filter-category').value,
-    stage: document.getElementById('filter-stage').value,
-    search: document.getElementById('search').value.trim().toLowerCase(),
-  };
-}
+<section class="features-list">
+  <h3>Platform Features</h3>
+  <ul>
+    <li><strong>Vision-based re-identification:</strong> Machine-labeled elements verified with Claude Opus + diagnostic rubric. 121 animal crops corrected.</li>
+    <li><strong>Junk filtering:</strong> Heuristic detection of text pages and full-scene crops; automatically excluded from gallery.</li>
+    <li><strong>Text-visual linking:</strong> 56 emblems cross-referenced with related chapters in source texts. Read alongside visual analysis.</li>
+    <li><strong>Concept indexing:</strong> 140 alchemical concepts mapped across emblems and chapters. Discover by theme, not just by image.</li>
+    <li><strong>Rich metadata:</strong> Tags, categories, project affiliations, confidence scores, and scholarly citations.</li>
+    <li><strong>Research tools:</strong> Search, filter, compare, edit. Export-ready JSON catalogs for downstream analysis.</li>
+  </ul>
+</section>
 
-function matchesFilters(e, f) {
-  if (f.work && e.work_id !== f.work) return false;
-  if (f.category && e.subject_category !== f.category) return false;
-  if (f.stage && e.alchemical_stage !== f.stage) return false;
-  if (f.motif) {
-    const motif = MOTIFS.find(m => m.id === f.motif);
-    if (!motif) return false;
-    const allVariants = [motif.id, ...motif.variants];
-    const candidates = (e.motif_candidates || []).join(' ').toLowerCase();
-    if (!allVariants.some(v => candidates.includes(v.toLowerCase()))) return false;
-  }
-  if (f.search) {
-    const haystack = [
-      e.label || '', e.description || '', e.narrative_context || '',
-      (e.motif_candidates || []).join(' '),
-      (e.key_concepts || []).join(' '),
-      e.discourse_excerpt || '',
-      e.latin_motto || '', e.english_motto || '',
-      e.alchemical_stage || '',
-    ].join(' ').toLowerCase();
-    if (!haystack.includes(f.search)) return false;
-  }
-  return true;
-}
+<section class="data-section">
+  <h3>Data Summary</h3>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Source</th>
+        <th>Plates/Pages</th>
+        <th>Elements Extracted</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Atalanta Fugiens (Claudiens)</strong></td>
+        <td>51</td>
+        <td>500+</td>
+        <td>✓ Complete</td>
+      </tr>
+      <tr>
+        <td>Cramer Emblemata Sacra</td>
+        <td>75</td>
+        <td>300+</td>
+        <td>✓ Complete</td>
+      </tr>
+      <tr>
+        <td>Rosarium Philosophorum</td>
+        <td>19</td>
+        <td>80+</td>
+        <td>✓ Complete</td>
+      </tr>
+      <tr>
+        <td>Splendor Solis</td>
+        <td>46</td>
+        <td>250+</td>
+        <td>✓ Complete</td>
+      </tr>
+      <tr>
+        <td>Stolcius Viridarium Chymicum</td>
+        <td>108</td>
+        <td>600+</td>
+        <td>✓ Complete</td>
+      </tr>
+      <tr>
+        <td>Khunrath Amphitheatrum</td>
+        <td>92</td>
+        <td>450+</td>
+        <td>✓ Complete</td>
+      </tr>
+      <tr>
+        <td>Fludd Utriusque Cosmi Historia</td>
+        <td>311</td>
+        <td>1,500+</td>
+        <td>⏳ 0/311 (in progress)</td>
+      </tr>
+      <tr>
+        <td>Hall Alchemical Manuscripts</td>
+        <td>254</td>
+        <td>1,200+</td>
+        <td>⏳ 23/254 (in progress)</td>
+      </tr>
+      <tr>
+        <td colspan="4" style="font-size:.75rem;color:var(--muted)"><strong>Total:</strong> 1,180+ extraction directories; 7,097 elements in current catalog. Hall/Fludd/HP extraction ongoing (~20-40 hrs est.).</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
 
-// ── Render grid ──
-function renderGrid() {
-  const f = getFilters();
-  const filtered = EMBLEMS.filter(e => matchesFilters(e, f));
+<section class="features-list">
+  <h3>For Developers</h3>
+  <ul>
+    <li>Start dev server: <code>python prototype/serve.py</code></li>
+    <li>All pages are static HTML + JSON APIs. Easy to deploy anywhere.</li>
+    <li>Catalog JSONs: <code>gallery_catalog.json</code>, <code>emblem_catalog.json</code>, <code>concept_index.json</code></li>
+    <li>Scripts modular and resumable. See <code>docs/CURRENT_HANDOVER.md</code> for architecture.</li>
+    <li>Extraction still running. Monitor with: <code>python scripts/watch_and_rebuild.py</code></li>
+  </ul>
+</section>
 
-  document.getElementById('count-badge').textContent =
-    `${filtered.length} / ${EMBLEMS.length} emblems`;
+<section class="intro-block" style="margin-top:3rem">
+  <h2>Next Steps</h2>
+  <p><strong>Short-term:</strong> Complete Hall/Fludd/HP extraction, rebuild catalogs with full 8,500+ elements. Test full stack across all pages. Deploy to staging.</p>
+  <p><strong>Medium-term:</strong> Add OCR for image-only sources. Build export tools (CSV/JSON downloads). Mobile optimization. Full-text search.</p>
+  <p><strong>Long-term:</strong> Genealogy/timeline visualization, crowdsourced curation, linked open data exports, federated search with other emblem collections.</p>
+</section>
 
-  const grid = document.getElementById('grid');
-  grid.innerHTML = '';
-  const empty = document.getElementById('empty-state');
+</main>
 
-  if (filtered.length === 0) {
-    empty.classList.add('show');
-    return;
-  }
-  empty.classList.remove('show');
+<footer>
+  <p>Emblem Print Shop — A scholarly extraction platform for alchemical emblems.</p>
+  <p style="margin-top:.5rem;font-size:.75rem">
+    Questions? See <a href="../docs/CURRENT_HANDOVER.md">CURRENT_HANDOVER.md</a> or check script docstrings.
+  </p>
+</footer>
 
-  filtered.forEach(e => {
-    const card = document.createElement('div');
-    card.className = 'card' + (e.id === selectedId ? ' selected' : '');
-    card.dataset.id = e.id;
-
-    const isAF = e.work_id === 'atalanta_fugiens';
-    const imgSrc = SOURCES_PATH + e.image_path;
-    const motifs = (e.motif_candidates || []).slice(0, 3);
-
-    card.innerHTML = `
-      <div class="card-img">
-        <img src="${imgSrc}" alt="${esc(e.label)}" loading="lazy"
-             onerror="this.parentElement.innerHTML='<span class=\'no-img\'>No image<br>${esc(e.id)}</span>'">
-        <span class="card-source ${isAF ? 'af' : 'hp'}">${isAF ? 'AF' : 'HP'}</span>
-      </div>
-      <div class="card-body">
-        <div class="card-label">${esc(e.label)}</div>
-        <div class="card-meta">
-          <span class="review-dot ${e.review_status}"></span>
-          ${isAF ? (e.roman ? 'Emblem ' + esc(e.roman) : 'Frontispiece') : 'p.' + e.page_1499}
-        </div>
-        ${motifs.length ? `<div class="card-motifs">${motifs.map(m => `<span class="motif-tag">${esc(m)}</span>`).join('')}</div>` : ''}
-      </div>
-    `;
-
-    card.addEventListener('click', () => openDetail(e.id));
-    grid.appendChild(card);
-  });
-}
-
-// ── Detail panel ──
-function openDetail(id) {
-  selectedId = id;
-  const e = EMBLEMS.find(x => x.id === id);
-  if (!e) return;
-
-  // Update selected state in grid
-  document.querySelectorAll('.card').forEach(c => {
-    c.classList.toggle('selected', c.dataset.id === id);
-  });
-
-  const panel = document.getElementById('detail-panel');
-  panel.classList.add('open');
-
-  // Image
-  const imgDiv = document.getElementById('detail-img');
-  const imgSrc = SOURCES_PATH + e.image_path;
-  imgDiv.innerHTML = `<img src="${imgSrc}" alt="${esc(e.label)}"
-    onerror="this.parentElement.innerHTML='<span class=\'no-img\'>No image available</span>'">`;
-
-  // Title
-  document.getElementById('detail-title').textContent = e.label || e.id;
-
-  // Fields
-  const fields = document.getElementById('detail-fields');
-  const rows = [];
-  const isAF = e.work_id === 'atalanta_fugiens';
-  const work = WORKS[e.work_id];
-  rows.push(['Work', work ? work.title : e.work_id]);
-  if (isAF) {
-    if (e.roman) rows.push(['Emblem', e.roman]);
-    if (e.latin_motto) rows.push(['Latin motto', e.latin_motto]);
-    if (e.english_motto) rows.push(['English motto', e.english_motto]);
-    if (e.alchemical_stage) rows.push(['Alch. stage', e.alchemical_stage]);
-    if (e.color_association) rows.push(['Color', e.color_association]);
-    if (e.planetary_association) rows.push(['Planetary', e.planetary_association]);
-    if (e.de_jong_pages) rows.push(['De Jong pp.', e.de_jong_pages]);
-    if (e.stage) rows.push(['Stage (site)', e.stage]);
-  } else {
-    rows.push(['Page (1499)', 'p.' + e.page_1499]);
-    rows.push(['Signature', e.signature_1499]);
-    if (e.subject_category) rows.push(['Category', e.subject_category]);
-    rows.push(['Tradition', e.tradition]);
-    rows.push(['IA page', 'n' + e.ia_page]);
-  }
-  rows.push(['Review', e.review_status]);
-  fields.innerHTML = rows.map(([k, v]) =>
-    `<div class="detail-row"><span class="detail-key">${esc(k)}</span><span class="detail-val">${esc(String(v))}</span></div>`
-  ).join('');
-
-  // Motifs
-  const motifSection = document.getElementById('detail-motifs');
-  const motifTags = document.getElementById('detail-motif-tags');
-  const candidates = e.motif_candidates || [];
-  if (candidates.length) {
-    motifTags.innerHTML = candidates.map(m => `<span class="tag motif">${esc(m)}</span>`).join('');
-    motifSection.style.display = '';
-  } else {
-    motifSection.style.display = 'none';
-  }
-
-  // Key concepts
-  const conceptSection = document.getElementById('detail-concepts');
-  const conceptTags = document.getElementById('detail-concept-tags');
-  const concepts = e.key_concepts || [];
-  if (concepts.length) {
-    conceptTags.innerHTML = concepts.map(c => `<span class="tag">${esc(c)}</span>`).join('');
-    conceptSection.style.display = '';
-  } else {
-    conceptSection.style.display = 'none';
-  }
-
-  // Discourse / narrative context
-  const discourseSection = document.getElementById('detail-discourse');
-  const discourseText = document.getElementById('detail-discourse-text');
-  const text = e.discourse_excerpt || e.narrative_context || e.description || '';
-  if (text) {
-    discourseText.textContent = text;
-    discourseSection.style.display = '';
-  } else {
-    discourseSection.style.display = 'none';
-  }
-
-  // Links
-  const linkSection = document.getElementById('detail-links');
-  const linkList = document.getElementById('detail-link-list');
-  const links = [];
-  if (e.furnace_fugue_url) links.push([e.furnace_fugue_url, 'Furnace & Fugue']);
-  if (e.furnace_fugue_image_url) links.push([e.furnace_fugue_image_url, 'Hi-res image (F&F)']);
-  if (e.provenance_url) links.push([e.provenance_url, isAF ? 'Science History Institute' : 'Internet Archive']);
-  if (links.length) {
-    linkList.innerHTML = links.map(([href, label]) =>
-      `<div><a class="ext-link" href="${esc(href)}" target="_blank" rel="noopener">↗ ${esc(label)}</a></div>`
-    ).join('');
-    linkSection.style.display = '';
-  } else {
-    linkSection.style.display = 'none';
-  }
-}
-
-function closeDetail() {
-  selectedId = null;
-  document.getElementById('detail-panel').classList.remove('open');
-  document.querySelectorAll('.card.selected').forEach(c => c.classList.remove('selected'));
-}
-
-// ── Utilities ──
-function esc(s) {
-  if (s == null) return '';
-  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-
-// ── Event wiring ──
-['filter-work','filter-motif','filter-category','filter-stage'].forEach(id => {
-  document.getElementById(id).addEventListener('change', renderGrid);
-});
-document.getElementById('search').addEventListener('input', renderGrid);
-document.getElementById('btn-clear-filters').addEventListener('click', () => {
-  document.getElementById('filter-work').value = '';
-  document.getElementById('filter-motif').value = '';
-  document.getElementById('filter-category').value = '';
-  document.getElementById('filter-stage').value = '';
-  document.getElementById('search').value = '';
-  renderGrid();
-});
-document.getElementById('detail-close').addEventListener('click', closeDetail);
-
-// ── Boot ──
-loadData().catch(err => {
-  document.getElementById('grid').innerHTML =
-    `<p style="color:#c04030;padding:20px;">Error loading data: ${err.message}</p>`;
-});
-</script>
 </body>
 </html>
