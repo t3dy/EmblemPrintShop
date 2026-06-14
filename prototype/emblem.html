@@ -276,6 +276,12 @@ nav.topnav a:hover { opacity: 1; }
     <!-- ── Essay column ── -->
     <article class="essay-col">
 
+      <!-- Related source text chapters -->
+      <section class="essay-section" id="text-links-section" style="display:none">
+        <h2><span class="section-icon">📖</span>Related Source Texts</h2>
+        <div id="text-links-list"></div>
+      </section>
+
       <!-- Maier's Discourse -->
       <section class="essay-section" id="discourse-section" style="display:none">
         <h2><span class="section-icon">✦</span>Maier's Discourse</h2>
@@ -383,6 +389,60 @@ const STAGE_DESC = {
   CITRINITAS: 'The third stage (sometimes subsumed into Rubedo in later alchemists): the yellowing that signals the approach of perfection. The reddening Sol asserts itself.',
   RUBEDO: 'The final stage: the red Stone achieved. Fixation, multiplication, projection. The philosophers\'s gold emerges from the perfected matter.',
 };
+
+// ── Text-visual linkage ───────────────────────────────────────
+let TEXT_LINKS = {};
+let TEXT_CHAPTERS = [];
+
+async function loadTextLinks(emblem) {
+  try {
+    // Load text links on first call
+    if (Object.keys(TEXT_LINKS).length === 0) {
+      const r1 = await fetch('emblem_text_links.json?_=' + Date.now());
+      const r2 = await fetch('text_chapters.json?_=' + Date.now());
+      if (r1.ok && r2.ok) {
+        TEXT_LINKS = await r1.json();
+        TEXT_CHAPTERS = await r2.json();
+      }
+    }
+
+    // Find chapters linked to this emblem
+    const links = TEXT_LINKS[emblem.id] || [];
+    if (!links.length) return;
+
+    const chapters = links.map(link => {
+      return TEXT_CHAPTERS.find(ch => ch.stem === link.chapter);
+    }).filter(Boolean);
+
+    if (chapters.length) {
+      const list = document.getElementById('text-links-list');
+      chapters.forEach(ch => {
+        const item = document.createElement('div');
+        item.style.cssText = 'margin-bottom:1rem;padding:.6rem;background:var(--paper2);border-left:3px solid var(--accent);border-radius:2px';
+        item.innerHTML = `
+          <div style="font-weight:600;color:var(--accent);font-size:.9rem;margin-bottom:.2rem">
+            ${ch.title}
+          </div>
+          <div style="font-size:.75rem;color:var(--muted);margin-bottom:.4rem">
+            <em>${ch.book_slug.replace(/_/g, ' ').toUpperCase()}</em>
+            ${ch.pages.length ? ' · pp. ' + ch.pages.join(', ') : ''}
+            ${ch.word_count ? ' · ' + ch.word_count + ' words' : ''}
+          </div>
+          <div style="font-size:.82rem;line-height:1.5;color:var(--ink);margin-bottom:.4rem;font-style:italic;opacity:.85">
+            ${ch.excerpt.split('\n').slice(0,3).join(' ').substring(0, 250)}...
+          </div>
+          <a href="Markdown/${ch.book_slug}/${ch.stem}.md" style="font-size:.72rem;color:var(--accent);text-decoration:none;font-weight:600">
+            Read full chapter →
+          </a>
+        `;
+        list.appendChild(item);
+      });
+      document.getElementById('text-links-section').style.display = '';
+    }
+  } catch(e) {
+    // Silent fail — text links are optional
+  }
+}
 
 // ── Load catalog + render ─────────────────────────────────────
 let ALL_EMBLEMS = [];
@@ -529,6 +589,9 @@ function render(e) {
     });
     document.getElementById('related-section').style.display = '';
   }
+
+  // Text links (load asynchronously)
+  loadTextLinks(e);
 
   // Discourse
   if (e.discourse) {
