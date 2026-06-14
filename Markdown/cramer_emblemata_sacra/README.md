@@ -1,0 +1,64 @@
+# Daniel Cramer — Emblemata Sacra (Decades Quinque Emblematum)
+
+Source PDF: `sources/cramer/emblematasacraho00cram.pdf` — 448 pages.
+
+## Chapters
+
+- [01 — Front matter](01-01-front-matter.md) — pp. 1-20
+- [02 — EMBLEMAI.](02-02-emblemai.md) — pp. 21-32
+- [03 — EMBLEMAIV.](03-03-emblemaiv.md) — pp. 33-40
+- [04 — EMBLEMA](04-04-emblema.md) — pp. 41-44
+- [05 — EMBLEMA](05-05-emblema.md) — pp. 45-48
+- [06 — EMBLEMA](06-06-emblema.md) — pp. 49-64
+- [07 — EMBLEMA](07-07-emblema.md) — pp. 65-76
+- [08 — EMBLEMAXV.](08-08-emblemaxv.md) — pp. 77-84
+- [09 — EMBLEMA](09-09-emblema.md) — pp. 85-92
+- [10 — EMBLEMA](10-10-emblema.md) — pp. 93-104
+- [11 — EMBLEMA](11-11-emblema.md) — pp. 105-112
+- [12 — EMBLEMAXXIV.](12-12-emblemaxxiv.md) — pp. 113-116
+- [13 — EMBLEMA](13-13-emblema.md) — pp. 117-124
+- [14 — EMBLEMA](14-14-emblema.md) — pp. 125-128
+- [15 — EMBLEMA](15-15-emblema.md) — pp. 129-132
+- [16 — EMBLEMA](16-16-emblema.md) — pp. 133-136
+- [17 — EMBLEMA](17-17-emblema.md) — pp. 137-140
+- [18 — EMBLEMAXXXI.](18-18-emblemaxxxi.md) — pp. 141-152
+- [19 — EMBLEMA](19-19-emblema.md) — pp. 153-156
+- [20 — EMBLEMA](20-20-emblema.md) — pp. 157-164
+- [21 — EMBLEMA](21-21-emblema.md) — pp. 165-172
+- [22 — EMBLEMA](22-22-emblema.md) — pp. 173-180
+- [23 — EMBLEMA](23-23-emblema.md) — pp. 181-188
+- [24 — EMBLEMA](24-24-emblema.md) — pp. 189-192
+- [25 — EMBLEMA](25-25-emblema.md) — pp. 193-196
+- [26 — EMBLEMA](26-26-emblema.md) — pp. 197-200
+- [27 — EMBLEMA](27-27-emblema.md) — pp. 201-204
+- [28 — EMBLEMA](28-28-emblema.md) — pp. 205-208
+- [29 — EMBLEMA](29-29-emblema.md) — pp. 209-212
+- [30 — EMBLEMA](30-30-emblema.md) — pp. 213-216
+- [31 — EMBLEMA](31-31-emblema.md) — pp. 217-233
+- [32 — EMBLEMATITM.](32-32-emblematitm.md) — pp. 234-240
+- [33 — EMBLEMA](33-33-emblema.md) — pp. 241-252
+- [34 — EMBLEMA](34-34-emblema.md) — pp. 253-256
+- [35 — EMBLEMA](35-35-emblema.md) — pp. 257-260
+- [36 — EMBLEMA](36-36-emblema.md) — pp. 261-264
+- [37 — EMBLEMA](37-37-emblema.md) — pp. 265-272
+- [38 — EMBLEMA](38-38-emblema.md) — pp. 273-276
+- [39 — EMBLEMA](39-39-emblema.md) — pp. 277-300
+- [40 — EMBLEMA](40-40-emblema.md) — pp. 301-320
+- [41 — EMBLEMA](41-41-emblema.md) — pp. 321-324
+- [42 — EMBLEMA](42-42-emblema.md) — pp. 325-328
+- [43 — EMBLEMA](43-43-emblema.md) — pp. 329-336
+- [44 — EMBLEMA](44-44-emblema.md) — pp. 337-348
+- [45 — EMBLEMA](45-45-emblema.md) — pp. 349-352
+- [46 — EMBLEMA](46-46-emblema.md) — pp. 353-356
+- [47 — EMBLEMA](47-47-emblema.md) — pp. 357-380
+- [48 — EMBLEMA](48-48-emblema.md) — pp. 381-384
+- [49 — EMBLEMA](49-49-emblema.md) — pp. 385-388
+- [50 — EMBLEMA](50-50-emblema.md) — pp. 389-392
+- [51 — EMBLEMA](51-51-emblema.md) — pp. 393-396
+- [52 — EMBLEMA](52-52-emblema.md) — pp. 397-400
+- [53 — EMBLEMA](53-53-emblema.md) — pp. 401-404
+- [54 — EMBLEMA](54-54-emblema.md) — pp. 405-408
+- [55 — EMBLEMA](55-55-emblema.md) — pp. 409-412
+- [56 — EMBLEMA](56-56-emblema.md) — pp. 413-432
+- [57 — EMBLEMA](57-57-emblema.md) — pp. 433-439
+- [58 — EMBLEMATLXM](58-58-emblematlxm.md) — pp. 440-448

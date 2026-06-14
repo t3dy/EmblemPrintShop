@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emblem Gallery — Atalanta Fugiens</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1><em>Atalanta Fugiens</em></h1>
+            <div class="subtitle">The Scholarship of H.M.E. De Jong on Michael Maier's Alchemical Emblems</div>
+            <nav class="site-nav">
+                <a href="index.html" class="active">Home</a>
+            <a href="emblems/index.html">Emblems</a>
+            <a href="stage/index.html">Stages</a>
+            <a href="galleries/index.html">Galleries</a>
+            <a href="visual.html">Visual</a>
+            <a href="scholars.html">Scholars</a>
+            <a href="dictionary/index.html">Dictionary</a>
+            <a href="timeline.html">Timeline</a>
+            <a href="sources.html">Sources</a>
+            <a href="maier.html">Maier</a>
+            <a href="creatures.html">Creatures</a>
+            <a href="music.html">Music</a>
+            <a href="works.html">Works</a>
+            <a href="modern-scholarship.html">21st Century</a>
+            <a href="szulakowska.html">Szulakowska</a>
+            <a href="essays/index.html">Essays</a>
+            <a href="bibliography.html">Bibliography</a>
+            <a href="biography.html">Biography</a>
+            <a href="search.html">Search</a>
+            <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div style="max-width:700px;margin:2rem auto;padding:0 2rem;text-align:center">
+        <p style="font-size:1.05rem;line-height:1.8;color:var(--text)">In 1617, the physician and alchemist Michael Maier published fifty emblems combining engraved plates, Latin mottos, poetic epigrams, philosophical discourses, and three-voice musical fugues &mdash; a work without parallel in the history of the emblem book. In 1969, the Dutch art historian H.M.E. De Jong unlocked these emblems by tracing each one to its ancient and medieval sources. This site presents her findings.</p>
+        <div style="margin-top:1.5rem;display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap">
+            <a href="emblems/frontispiece.html" style="display:inline-block;padding:0.6rem 1.5rem;background:var(--accent);color:white;text-decoration:none;border-radius:4px;font-family:var(--font-sans);font-size:0.9rem">Start with the Frontispiece &rarr;</a>
+            <a href="visual.html" style="display:inline-block;padding:0.6rem 1.5rem;background:#16a085;color:white;text-decoration:none;border-radius:4px;font-family:var(--font-sans);font-size:0.9rem">Browse by visual element &rarr;</a>
+            <button type="button" id="random-emblem" style="display:inline-block;padding:0.6rem 1.5rem;background:#7f8c8d;color:white;border:none;border-radius:4px;font-family:var(--font-sans);font-size:0.9rem;cursor:pointer">Surprise me &darr;</button>
+        </div>
+    </div>
+    <div class="stats" id="stats"></div>
+    <div class="filter-bar" id="filter-bar">
+        <input type="search" id="gallery-search" class="filter-search" placeholder="Search emblems by motto, label, or text&hellip;" autocomplete="off">
+        <div class="filter-row">
+            <span class="filter-label">Stage:</span>
+            <button class="filter-chip filter-chip-all active" data-filter-type="stage" data-filter-value="" type="button">All</button>
+            <button class="filter-chip filter-chip-stage" data-filter-type="stage" data-filter-value="NIGREDO" type="button" style="background:#2c2418;color:#f5f0e8">Nigredo</button>
+            <button class="filter-chip filter-chip-stage" data-filter-type="stage" data-filter-value="ALBEDO" type="button" style="background:#a89880;color:#2c2418">Albedo</button>
+            <button class="filter-chip filter-chip-stage" data-filter-type="stage" data-filter-value="CITRINITAS" type="button" style="background:#b8860b;color:#2c2418">Citrinitas</button>
+            <button class="filter-chip filter-chip-stage" data-filter-type="stage" data-filter-value="RUBEDO" type="button" style="background:#c0392b;color:#f5f0e8">Rubedo</button>
+        </div>
+        <div class="filter-row">
+            <span class="filter-label">Source:</span>
+            <button class="filter-chip" data-filter-type="source" data-filter-value="AUTH_ROSARIUM" type="button">Rosarium Philosophorum <span class="filter-chip-count">20</span></button><button class="filter-chip" data-filter-type="source" data-filter-value="AUTH_PSEUDO_ARISTOTLE" type="button">Pseudo-Aristotle, Tractatulus de Practica Lapidis <span class="filter-chip-count">16</span></button><button class="filter-chip" data-filter-type="source" data-filter-value="AUTH_SOLOMONIC" type="button">Solomonic / Biblical Wisdom Tradition (Proverbs) <span class="filter-chip-count">14</span></button><button class="filter-chip" data-filter-type="source" data-filter-value="AUTH_OVID" type="button">Ovid, Metamorphoses X.560-704 <span class="filter-chip-count">14</span></button><button class="filter-chip" data-filter-type="source" data-filter-value="AUTH_SENIOR" type="button">Senior Zadith (Muhammad ibn Umail), Tabula Chimica <span class="filter-chip-count">12</span></button><button class="filter-chip" data-filter-type="source" data-filter-value="AUTH_TURBA" type="button">Turba Philosophorum <span class="filter-chip-count">12</span></button>
+        </div>
+        <div class="filter-status" id="filter-status"></div>
+    </div>
+    <div class="gallery" id="gallery"></div>
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">&lsaquo;</button>
+        <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">&rsaquo;</button>
+        <div class="lightbox-content">
+            <div class="lightbox-details"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <footer>
+        <p>AtalantaClaudiens &middot; A digital humanities project &middot;
+        <a href="https://github.com/t3dy/AtalantaClaudiens">GitHub</a></p>
+    </footer>
+</body>
+</html>

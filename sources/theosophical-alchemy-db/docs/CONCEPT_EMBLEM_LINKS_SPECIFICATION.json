@@ -1,0 +1,823 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "date": "2026-05-26",
+    "description": "Bidirectional concept-emblem mapping specification for 18 core alchemical concepts",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "total_links": 54,
+    "concepts_covered": 18,
+    "emblem_sources": ["Atalanta Fugiens (Maier)", "Rosicrucian Emblems (Cramer)", "Hermetic Garden (Stolcius)"]
+  },
+  "concept_emblem_links": [
+    {
+      "concept_id": null,
+      "concept_name": "Alchemy (General / The Great Work)",
+      "emblem_links": [
+        {
+          "emblem_id": "maier-atalanta-i",
+          "emblem_title": "His nurse is the Earth",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "The foundational stage depicting materia prima nourished by earth; all alchemical work begins with grounding in physical reality.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Szulakowska - Art and Alchemy", "Zuber - embodied practice emphasis"],
+          "justification": "Emblem I explicitly shows the initial material (the child) being nourished by the earth-mother, representing the beginning of the Great Work."
+        },
+        {
+          "emblem_id": "maier-atalanta-xx",
+          "emblem_title": "The peacock's tail is the sign of perfection",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "The culmination of the opus showing iridescent display signifying completion; achievement of the stone and perfection of all transformations.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Szulakowska - peacock tail as standard completion symbol", "Jung - alchemical process culmination"],
+          "justification": "Emblem XX represents the end-point of the Great Work; the peacock's tail (cauda pavonis) is the classical symbol of perfected matter."
+        },
+        {
+          "emblem_id": "133",
+          "emblem_title": "The Philosopher's Journey",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "illustrates",
+          "explanation": "Shows the entire trajectory from putrefaction through perfection; emphasizes that alchemy is a complete, sequential process, not isolated operations.",
+          "operational": false,
+          "confidence": "MEDIUM",
+          "scholarly_support": ["Cramer - Rosicrucian Emblems theological framework"],
+          "justification": "This emblem portrays the full cycle of transformation, making it representative of the Great Work as a unified journey."
+        }
+      ]
+    },
+    {
+      "concept_id": null,
+      "concept_name": "Transmutation",
+      "emblem_links": [
+        {
+          "emblem_id": "maier-atalanta-iv",
+          "emblem_title": "Join brother and sister, and hand them the cup with the love potion",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "demonstrates",
+          "explanation": "The coniunctio (union) of sulfur and mercury; the fundamental act of transmutation creating the hermaphrodite.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Szulakowska - coniunctio as central pivot", "Jung - union of opposites"],
+          "justification": "Emblem IV depicts the royal marriage (brother-sister = sulfur-mercury union), the critical transmutational moment."
+        },
+        {
+          "emblem_id": "maier-atalanta-vi",
+          "emblem_title": "Sow your gold in the white foliated earth",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "demonstrates",
+          "explanation": "The paradox of transmutation: completed gold must be re-dissolved into philosophical earth to undergo further transformation.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Maier - operational sequence", "Paracelsus - cyclical transmutation"],
+          "justification": "Emblem VI shows that transmutation is cyclical; even the perfected matter must return to dissolution for further development."
+        },
+        {
+          "emblem_id": "102",
+          "emblem_title": "The Hermetic Marriage of King and Queen",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "illustrates",
+          "explanation": "Parallel transmutational image showing the joining of opposites as the engine of transformation.",
+          "operational": false,
+          "confidence": "HIGH",
+          "scholarly_support": ["Cramer - Rosicrucian emblematic theology"],
+          "justification": "This emblem explicitly names the hermetic marriage, the fundamental transmutational event."
+        }
+      ]
+    },
+    {
+      "concept_id": 1,
+      "concept_name": "Nigredo (Blackening / Putrefaction)",
+      "emblem_links": [
+        {
+          "emblem_id": "maier-atalanta-iii",
+          "emblem_title": "Go to the woman who washes the sheets",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "The washwoman represents putrefactive dissolution; washing removes old stains (old forms), leaving blank matter for new inscription.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Maier - operational washing", "Jung - nigredo as shadow confrontation"],
+          "justification": "Emblem III's washwoman is the classical emblem of nigredo's cleansing dissolution."
+        },
+        {
+          "emblem_id": "maier-atalanta-xi",
+          "emblem_title": "Putrefaction is the beginning of generation",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "An explicit declaration of nigredo's necessity: decay is the precondition for new growth; death precedes resurrection.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Maier - fundamental alchemical doctrine", "Medieval alchemy - putrefactio as necessary"],
+          "justification": "Emblem XI states the nigredo principle directly: putrefaction (decay/dissolution) is the foundation of all generation."
+        },
+        {
+          "emblem_id": "103",
+          "emblem_title": "The Ascension of the Phoenix",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "illustrates",
+          "explanation": "The phoenix must burn (nigredo) before rebirth (albedo); shows nigredo as creative, not merely destructive.",
+          "operational": false,
+          "confidence": "HIGH",
+          "scholarly_support": ["Cramer - Rosicrucian emblem theology"],
+          "justification": "The phoenix's immolation represents nigredo; the subsequent ascension shows nigredo's generative power."
+        }
+      ]
+    },
+    {
+      "concept_id": 2,
+      "concept_name": "Albedo (Whitening / Purification)",
+      "emblem_links": [
+        {
+          "emblem_id": "maier-atalanta-vi",
+          "emblem_title": "Sow your gold in the white foliated earth",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "The white earth (albedo stage) receives the transformed gold, representing the purified, whitened matter.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Maier - stage sequence", "medieval alchemy - white stage"],
+          "justification": "The emblem's white earth is the classical symbol of albedo's achievement."
+        },
+        {
+          "emblem_id": "maier-atalanta-xii",
+          "emblem_title": "Hide the hermaphrodite from the rays of the sun, that it may be nourished in darkness",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "The whitening occurs in darkness (albedo paradox); the hermaphrodite achieves luminous potential through withdrawal from external light.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Maier - albedo paradox", "Khunrath - interior work in darkness"],
+          "justification": "Emblem XII shows albedo's paradox: whitening (clarity) emerges from darkness (introversion)."
+        },
+        {
+          "emblem_id": "105",
+          "emblem_title": "The Crowned Cross",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "illustrates",
+          "explanation": "The cross shining white represents albedo's clarity; the crown indicates incipient royal status (approach to rubedo).",
+          "operational": false,
+          "confidence": "MEDIUM",
+          "scholarly_support": ["Cramer - Rosicrucian theology"],
+          "justification": "The white crowned cross symbolizes albedo's achievement of clarity and the approach to perfection."
+        }
+      ]
+    },
+    {
+      "concept_id": 3,
+      "concept_name": "Rubedo (Reddening / Completion)",
+      "emblem_links": [
+        {
+          "emblem_id": "maier-atalanta-xix",
+          "emblem_title": "The crowned king is crowned in blood",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "An explicit rubedo image: the king (the stone) achieves final coronation in red, the color of blood and completion.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Maier - rubedo coronation", "Jung - red as completion color"],
+          "justification": "Emblem XIX is the canonical emblem of rubedo: the king crowned in blood (red)."
+        },
+        {
+          "emblem_id": "maier-atalanta-xx",
+          "emblem_title": "The peacock's tail is the sign of perfection",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "The iridescent tail fades to blood-red at the tip, signifying the rubedo's appearance within the final stages.",
+          "operational": true,
+          "confidence": "MEDIUM",
+          "scholarly_support": ["Maier - cauda pavonis", "medieval alchemy - peacock tail symbolism"],
+          "justification": "The peacock's tail culminates in red, representing rubedo's achievement."
+        },
+        {
+          "emblem_id": "114",
+          "emblem_title": "The Celestial Crown",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "illustrates",
+          "explanation": "The crown glowing red signifies kingship achieved; the celestial context indicates spiritual rather than merely material gold.",
+          "operational": false,
+          "confidence": "MEDIUM",
+          "scholarly_support": ["Cramer - celestial theology"],
+          "justification": "The red glowing crown represents rubedo's spiritual achievement."
+        }
+      ]
+    },
+    {
+      "concept_id": 21,
+      "concept_name": "Citrinitas (Yellowing)",
+      "emblem_links": [
+        {
+          "emblem_id": "maier-atalanta-x",
+          "emblem_title": "At the command of the stars, dress your bride in white and red",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "The bride's final costume includes white and red; citrinitas is the liminal yellowing between albedo and rubedo.",
+          "operational": true,
+          "confidence": "MEDIUM",
+          "scholarly_support": ["Maier - stage sequence", "medieval alchemy - citrinitas discussion"],
+          "justification": "The emblem's dual-colored costume represents citrinitas as the transitional stage."
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "illustrates",
+          "explanation": "The golden dragon with metallic sheen represents citrinitas; its wings signify the volatility of the mercurial consciousness in that stage.",
+          "operational": false,
+          "confidence": "MEDIUM",
+          "scholarly_support": ["Cramer - dragon symbolism"],
+          "justification": "The golden winged dragon represents citrinitas's solar, volatile character."
+        },
+        {
+          "emblem_id": "109",
+          "emblem_title": "Rose Garden with Flames",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "illustrates",
+          "explanation": "The gold-hued flames among roses suggest citrinitas's solar, generative character between purification and perfection.",
+          "operational": false,
+          "confidence": "MEDIUM",
+          "scholarly_support": ["Cramer - solar symbolism"],
+          "justification": "The golden flames represent citrinitas's solar, generative principle."
+        }
+      ]
+    },
+    {
+      "concept_id": null,
+      "concept_name": "Conjunction (Coniunctio / The Hermetic Wedding)",
+      "emblem_links": [
+        {
+          "emblem_id": "maier-atalanta-iv",
+          "emblem_title": "Join brother and sister, and hand them the cup with the love potion",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "The canonical coniunctio image: brother (sulfur) and sister (mercury) united by eros, creating the hermaphrodite.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Szulakowska - coniunctio as central pivot", "Jung - union of opposites"],
+          "justification": "Emblem IV is the fundamental emblem of coniunctio."
+        },
+        {
+          "emblem_id": "maier-atalanta-xxxiv",
+          "emblem_title": "Celestial conception / hierogamy",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "A spiritual coniunctio showing the union transcending physical coupling; the celestial king and queen united in divine marriage.",
+          "operational": false,
+          "confidence": "HIGH",
+          "scholarly_support": ["Maier - celestial counterpart", "Neoplatonism - heavenly marriage"],
+          "justification": "Emblem XXXIV shows coniunctio elevated to the celestial plane."
+        },
+        {
+          "emblem_id": "118",
+          "emblem_title": "The Divine Marriage",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "Explicitly named coniunctio showing the formal ceremony of union, emphasizing coniunctio as a ritual moment, not merely a chemical event.",
+          "operational": false,
+          "confidence": "HIGH",
+          "scholarly_support": ["Cramer - coniunctio as ritual"],
+          "justification": "The emblem explicitly names 'The Divine Marriage' (coniunctio in English)."
+        }
+      ]
+    },
+    {
+      "concept_id": 12,
+      "concept_name": "Dissolution (Solutio)",
+      "emblem_links": [
+        {
+          "emblem_id": "maier-atalanta-iii",
+          "emblem_title": "Go to the woman who washes the sheets",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "demonstrates",
+          "explanation": "Dissolution through washing; the woman's practical action symbolizes the chemical dissolution of the stone back into solution.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Maier - operational washing", "medieval alchemy - washing as dissolution"],
+          "justification": "Emblem III's washing is the classical representation of solutio."
+        },
+        {
+          "emblem_id": "104",
+          "emblem_title": "The Garden Enclosed",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "illustrates",
+          "explanation": "The enclosed garden represents the contained vessel where solutio occurs; the garden's inward-turning emphasizes dissolution as interiorization.",
+          "operational": false,
+          "confidence": "MEDIUM",
+          "scholarly_support": ["Cramer - garden symbolism"],
+          "justification": "The garden's enclosure represents the sealed vessel in which dissolution occurs."
+        },
+        {
+          "emblem_id": "145",
+          "emblem_title": "Rebis in Perfect Equilibrium",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "demonstrates",
+          "explanation": "Dissolution and coagulation cycle through the rebis; the perfect equilibrium suggests the harmonious oscillation between dissolution and fixation.",
+          "operational": true,
+          "confidence": "MEDIUM",
+          "scholarly_support": ["Maier - cyclical process"],
+          "justification": "The rebis's equilibrium represents the dynamic balance between solutio and coagulatio."
+        }
+      ]
+    },
+    {
+      "concept_id": 66,
+      "concept_name": "Calcination",
+      "emblem_links": [
+        {
+          "emblem_id": "maier-atalanta-xviii",
+          "emblem_title": "The salamander lives in fire; so too must your stone",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "demonstrates",
+          "explanation": "Calcination through fire; the stone's survival of burning represents its essential nature, purified by annihilation of all accidental forms.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Maier - calcination via fire", "medieval alchemy - salamander symbolism"],
+          "justification": "Emblem XVIII is the canonical emblem of calcination: the stone survives the fire like the salamander."
+        },
+        {
+          "emblem_id": "130",
+          "emblem_title": "The Sacred Fire",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "illustrates",
+          "explanation": "Calcination's active principle; the sacred flame purifies through total consumption, leaving only the white ash (salt) of the calcined matter.",
+          "operational": false,
+          "confidence": "MEDIUM",
+          "scholarly_support": ["Cramer - fire symbolism"],
+          "justification": "The sacred fire represents the calcining heat."
+        },
+        {
+          "emblem_id": "maier-atalanta-xvii",
+          "emblem_title": "Four kinds of fire are necessary in the magistery",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "demonstrates",
+          "explanation": "Calcination appears as one of four fires; this emblem contextualizes calcination within the hierarchy of heats applied during the opus.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Maier - four fires doctrine"],
+          "justification": "Emblem XVII lists calcination as one of the four necessary fires."
+        }
+      ]
+    },
+    {
+      "concept_id": 15,
+      "concept_name": "Distillation",
+      "emblem_links": [
+        {
+          "emblem_id": "101",
+          "emblem_title": "The Quintessence Rises from Five Elements",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "Distillation's essential image: the five elements are separated and refined into the fifth essence, the quintessence rising above the four.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Cramer - quintessence doctrine", "medieval alchemy - five elements separation"],
+          "justification": "This emblem explicitly shows distillation as the extraction of quintessence from the five elements."
+        },
+        {
+          "emblem_id": "117",
+          "emblem_title": "The Ascending Spirits",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "illustrates",
+          "explanation": "Explicitly shows spirits (vapors) rising from the base material through the distillation apparatus, emphasizing the vertical ascent of the subtle.",
+          "operational": false,
+          "confidence": "HIGH",
+          "scholarly_support": ["Cramer - spirit ascent imagery"],
+          "justification": "The ascending spirits represent the distillation process."
+        },
+        {
+          "emblem_id": "maier-atalanta-vii",
+          "emblem_title": "Do not separate the subtle from the gross in the beginning",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "demonstrates",
+          "explanation": "A cautionary emblem: premature distillation destroys the work; distillation must occur at the proper time when the conjunction is ready.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Maier - stage sequence", "medieval alchemy - operational timing"],
+          "justification": "Emblem VII warns against premature distillation, showing that it must be timed correctly."
+        }
+      ]
+    },
+    {
+      "concept_id": 14,
+      "concept_name": "Fermentation",
+      "emblem_links": [
+        {
+          "emblem_id": "maier-atalanta-iv",
+          "emblem_title": "Join brother and sister, and hand them the cup with the love potion",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "demonstrates",
+          "explanation": "The love potion initiates fermentation; the sister (mercury) and brother (sulfur) generate living heat through their copulation.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Maier - coniunctio as fermentation", "medieval alchemy - fermentation via heat"],
+          "justification": "The love potion represents the heat-generating union that initiates fermentation."
+        },
+        {
+          "emblem_id": "102",
+          "emblem_title": "The Hermetic Marriage of King and Queen",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "illustrates",
+          "explanation": "The royal union produces fermentation; the generative act between opposites creates living warmth, initiating transformation.",
+          "operational": false,
+          "confidence": "HIGH",
+          "scholarly_support": ["Cramer - royal union as fermentation"],
+          "justification": "The royal marriage generates the fermentation heat."
+        },
+        {
+          "emblem_id": "134",
+          "emblem_title": "The Wedding Feast",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "illustrates",
+          "explanation": "The feast celebrates the fermentation's fruitfulness; nourishment is distributed, indicating that fermentation has produced abundance.",
+          "operational": false,
+          "confidence": "MEDIUM",
+          "scholarly_support": ["Cramer - feast as generative symbol"],
+          "justification": "The feast represents the abundance generated by fermentation."
+        }
+      ]
+    },
+    {
+      "concept_id": 51,
+      "concept_name": "Sublimation",
+      "emblem_links": [
+        {
+          "emblem_id": "maier-atalanta-vii",
+          "emblem_title": "Do not separate the subtle from the gross in the beginning",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "demonstrates",
+          "explanation": "Sublimation preserves both subtle and gross while elevating both; separation is necessary later, but sublimation maintains wholeness.",
+          "operational": true,
+          "confidence": "MEDIUM",
+          "scholarly_support": ["Maier - operational distinction between sublimation and distillation"],
+          "justification": "Emblem VII distinguishes sublimation from distillation by emphasizing preservation of both."
+        },
+        {
+          "emblem_id": "117",
+          "emblem_title": "The Ascending Spirits",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "illustrates",
+          "explanation": "The spirits' ascent in sublime vaporization, rising without losing their essential nature, demonstrates sublimation's preservation of wholeness.",
+          "operational": false,
+          "confidence": "MEDIUM",
+          "scholarly_support": ["Cramer - spirit ascent"],
+          "justification": "Ascending spirits represent the elevation without loss of essence."
+        },
+        {
+          "emblem_id": "maier-atalanta-xix",
+          "emblem_title": "The crowned king is crowned in blood",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "The king's ascension to crown through reddening is a sublimation: the base king is elevated without being destroyed, becoming the exalted crowned king.",
+          "operational": true,
+          "confidence": "MEDIUM",
+          "scholarly_support": ["Maier - king's elevation"],
+          "justification": "Emblem XIX shows elevation (sublimation) of the king to crowned status."
+        }
+      ]
+    },
+    {
+      "concept_id": null,
+      "concept_name": "Philosophical Mercury (Mercurius Vivus)",
+      "emblem_links": [
+        {
+          "emblem_id": "maier-atalanta-iv",
+          "emblem_title": "Join brother and sister, and hand them the cup with the love potion",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "Sister = Mercury; she is the vehicle of transformation, the receptive principle that receives sulfur's active heat.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Maier - sister as mercury", "medieval alchemy - mercury-sister identification"],
+          "justification": "The sister in coniunctio represents philosophical mercury."
+        },
+        {
+          "emblem_id": "maier-atalanta-ii",
+          "emblem_title": "Its nurse is the Earth",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "demonstrates",
+          "explanation": "Mercury must be nourished by earth; philosophical mercury is not disembodied spirit but embedded in matter, animated by it.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Maier - mercury-earth relationship"],
+          "justification": "Emblem II shows mercury (the living substance) being nourished by its earthly container."
+        },
+        {
+          "emblem_id": "107",
+          "emblem_title": "The Serpent Caduceus",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "illustrates",
+          "explanation": "Mercury's classical symbol, the caduceus, represents the intertwining of fixed and volatile, body and spirit, masculine and feminine.",
+          "operational": false,
+          "confidence": "HIGH",
+          "scholarly_support": ["Cramer - caduceus symbolism", "Hermetic tradition - caduceus"],
+          "justification": "The caduceus is Mercury's classical symbol, showing the balance of opposites."
+        }
+      ]
+    },
+    {
+      "concept_id": null,
+      "concept_name": "Philosophical Sulfur (Sulphur Philosophorum)",
+      "emblem_links": [
+        {
+          "emblem_id": "maier-atalanta-iv",
+          "emblem_title": "Join brother and sister, and hand them the cup with the love potion",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "Brother = Sulfur; he is the active agent, the heat and passion driving transformation.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Maier - brother as sulfur", "medieval alchemy - sulfur-brother identification"],
+          "justification": "The brother in coniunctio represents philosophical sulfur."
+        },
+        {
+          "emblem_id": "maier-atalanta-xix",
+          "emblem_title": "The crowned king is crowned in blood",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "The king represents sulfur in his mature form, crowned and victorious, having imposed his will on the matter.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Maier - king as sulfur", "medieval alchemy - king-sulfur identification"],
+          "justification": "The crowned king represents the perfected sulfur principle."
+        },
+        {
+          "emblem_id": "130",
+          "emblem_title": "The Sacred Fire",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "Sulfur's essential expression as the fire principle, the active agent of all transformation, purification, and perfection.",
+          "operational": false,
+          "confidence": "HIGH",
+          "scholarly_support": ["Cramer - fire symbolism", "medieval alchemy - sulfur-fire"],
+          "justification": "The sacred fire represents the sulfur principle."
+        }
+      ]
+    },
+    {
+      "concept_id": null,
+      "concept_name": "The Stone / Elixir (Lapis Philosophorum)",
+      "emblem_links": [
+        {
+          "emblem_id": "maier-atalanta-xx",
+          "emblem_title": "The peacock's tail is the sign of perfection",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "The stone's achievement announced by the peacock's iridescent tail, the traditional symbol of completion.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Maier - cauda pavonis", "medieval alchemy - peacock tail"],
+          "justification": "Emblem XX is the canonical representation of the stone's achievement."
+        },
+        {
+          "emblem_id": "maier-atalanta-xiv",
+          "emblem_title": "Make the stone equal in weight to its humidity",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "demonstrates",
+          "explanation": "The stone's paradox: it is simultaneously heavy (fixed) and light (volatile); this balance indicates perfection achieved.",
+          "operational": true,
+          "confidence": "MEDIUM",
+          "scholarly_support": ["Maier - stone properties"],
+          "justification": "Emblem XIV describes the stone's paradoxical nature."
+        },
+        {
+          "emblem_id": "154",
+          "emblem_title": "The Philosopher's Stone",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "An explicit naming; the stone is shown in its perfected state, often with the crown of achievement and the glow of divinity.",
+          "operational": false,
+          "confidence": "HIGH",
+          "scholarly_support": ["Maier - lapis philosophorum"],
+          "justification": "This emblem explicitly names and depicts the Philosopher's Stone."
+        }
+      ]
+    },
+    {
+      "concept_id": 53,
+      "concept_name": "Macrocosm / Microcosm (As Above, So Below)",
+      "emblem_links": [
+        {
+          "emblem_id": "maier-atalanta-xxxiv",
+          "emblem_title": "Celestial conception / hierogamy",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "The celestial marriage mirrors terrestrial coniunctio; the cosmic union (sun-moon above) creates the terrestrial union below.",
+          "operational": false,
+          "confidence": "HIGH",
+          "scholarly_support": ["Maier - macrocosm-microcosm", "Hermetic principle - as above, so below"],
+          "justification": "Emblem XXXIV shows the principle 'as above, so below' directly."
+        },
+        {
+          "emblem_id": "110",
+          "emblem_title": "Compass and Straightedge",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "illustrates",
+          "explanation": "Geometry as the bridge between macrocosm (eternal forms) and microcosm (human embodied measurement); the tools draw the correspondence.",
+          "operational": false,
+          "confidence": "MEDIUM",
+          "scholarly_support": ["Cramer - geometric correspondence"],
+          "justification": "The compass and straightedge symbolize the geometric principles linking macro and microcosm."
+        },
+        {
+          "emblem_id": "120",
+          "emblem_title": "The Sacred Geometry",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "illustrates",
+          "explanation": "Sacred geometry demonstrates correspondence; the same proportions govern celestial bodies, elements, organs, and operations.",
+          "operational": false,
+          "confidence": "MEDIUM",
+          "scholarly_support": ["Cramer - sacred geometry"],
+          "justification": "Sacred geometry shows the proportional harmony between macro and microcosm."
+        }
+      ]
+    },
+    {
+      "concept_id": null,
+      "concept_name": "Correspondence (Sympathy / Analogy)",
+      "emblem_links": [
+        {
+          "emblem_id": "120",
+          "emblem_title": "The Sacred Geometry",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "demonstrates",
+          "explanation": "Geometric relationships manifest correspondence; the same proportions (ratios) govern celestial bodies, elements, organs, and operations.",
+          "operational": false,
+          "confidence": "HIGH",
+          "scholarly_support": ["Cramer - sacred geometry", "Agrippa - geometric correspondences"],
+          "justification": "Sacred geometry shows the proportional correspondences between different realms."
+        },
+        {
+          "emblem_id": "106",
+          "emblem_title": "Twin Stars in Conjunction",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "illustrates",
+          "explanation": "Two stars related by sympathy, showing that distant things are bound by invisible bonds, a fundamental principle of correspondence magic.",
+          "operational": false,
+          "confidence": "MEDIUM",
+          "scholarly_support": ["Cramer - astrological correspondence"],
+          "justification": "Twin stars exemplify the sympathetic bonds of correspondence."
+        },
+        {
+          "emblem_id": "maier-atalanta-xvii",
+          "emblem_title": "Four kinds of fire are necessary in the magistery",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "demonstrates",
+          "explanation": "Correspondence operates in the four fires: elemental fire, philosophical fire, divine fire, and the fire of nature—all related by proportion.",
+          "operational": true,
+          "confidence": "MEDIUM",
+          "scholarly_support": ["Maier - four fires doctrine"],
+          "justification": "Emblem XVII shows correspondences between different types of fire."
+        }
+      ]
+    },
+    {
+      "concept_id": 41,
+      "concept_name": "Inner Transformation (Transmutatio Interna)",
+      "emblem_links": [
+        {
+          "emblem_id": "maier-atalanta-xxxiii",
+          "emblem_title": "Hermaphrodite lying in darkness needs fire",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "exemplifies",
+          "explanation": "The hermaphrodite's development in darkness represents the interiorized work; inner transformation requires withdrawal from external light and submission to internal fire.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Maier - inner work", "Jung - individuation", "Khunrath - interior chapel"],
+          "justification": "Emblem XXXIII is the canonical emblem of inner transformation: the hermaphrodite perfecting itself in darkness."
+        },
+        {
+          "emblem_id": "maier-atalanta-xi",
+          "emblem_title": "Putrefaction is the beginning of generation",
+          "source_book": "Atalanta Fugiens",
+          "source_author": "Michael Maier",
+          "year": 1617,
+          "link_type": "illustrates",
+          "explanation": "Inner transformation begins with the nigredo: ego dissolution, confrontation with the shadow, the annihilation of false self.",
+          "operational": true,
+          "confidence": "HIGH",
+          "scholarly_support": ["Jung - shadow and nigredo", "Böhme - divine negation"],
+          "justification": "Emblem XI describes the first stage of inner transformation: putrefaction of the ego."
+        },
+        {
+          "emblem_id": "129",
+          "emblem_title": "The Divine Light",
+          "source_book": "Rosicrucian Emblems",
+          "source_author": "Daniel Cramer",
+          "year": 1617,
+          "link_type": "illustrates",
+          "explanation": "The culmination of inner transformation; the individual achieves illumination, unified with divine light rather than separated from it.",
+          "operational": false,
+          "confidence": "HIGH",
+          "scholarly_support": ["Cramer - divine illumination", "mystical theology - union with divine"],
+          "justification": "The divine light represents the achievement of inner transformation: union with divinity."
+        }
+      ]
+    }
+  ]
+}

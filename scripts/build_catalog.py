@@ -228,6 +228,25 @@ def load_comprehensive_extractions() -> list[dict]:
         if not indiv_dir.exists():
             continue
 
+        # Vision re-identification verdicts (written into summary.json by
+        # scripts/reidentify_objects.py) override the detector label. Keyed by
+        # the object stem (e.g. "bird_02" from "bird_02_crop.jpg").
+        verified = {}
+        summary_path = emblem_dir / "summary.json"
+        if summary_path.exists():
+            try:
+                summ = json.loads(summary_path.read_text(encoding="utf-8"))
+                for o in summ.get("individual", []):
+                    if o.get("verified_label"):
+                        key = Path(o.get("crop_jpg", "")).name
+                        for suf in ("_crop.jpg", "_crop.jpeg", "_crop.png"):
+                            if key.endswith(suf):
+                                key = key[: -len(suf)]
+                                break
+                        verified[key] = o
+            except (json.JSONDecodeError, UnicodeDecodeError):
+                pass
+
         for meta_path in sorted(indiv_dir.glob("*_meta.json")):
             try:
                 raw = json.loads(meta_path.read_text(encoding="utf-8"))
@@ -236,7 +255,22 @@ def load_comprehensive_extractions() -> list[dict]:
 
             src = raw.get("source_image", "")
             project, project_key = _project_from_stem(src_stem, src)
-            raw_label = raw.get("label", meta_path.stem)
+
+            # Prefer a human/vision-verified label over the detector's guess.
+            obj_stem = meta_path.stem[:-5] if meta_path.stem.endswith("_meta") else meta_path.stem
+            v = verified.get(obj_stem)
+            if v:
+                vlabel = v.get("verified_label", "")
+                # Drop crops re-identified as junk / category errors from the
+                # gallery's object stream (non-animals, text pages from source
+                # PDFs, whole-scene crops, unidentifiable fragments, and explicit
+                # not-an-X verdicts).
+                _DROP = {"not_an_animal", "unidentifiable", "text_page", "scene"}
+                if vlabel in _DROP or vlabel.startswith("not_an_"):
+                    continue
+                raw_label = vlabel
+            else:
+                raw_label = raw.get("label", meta_path.stem)
             # Strip WordPiece ## sub-token markers left by older detector builds
             label = " ".join(tok.lstrip("#") for tok in str(raw_label).split()).strip()
 

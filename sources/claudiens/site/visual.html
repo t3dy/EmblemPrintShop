@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Browser — Atalanta Fugiens</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1><em>Atalanta Fugiens</em></h1>
+            <div class="subtitle">The Scholarship of H.M.E. De Jong on Michael Maier's Alchemical Emblems</div>
+            <nav class="site-nav">
+                <a href="index.html">Home</a>
+            <a href="emblems/index.html">Emblems</a>
+            <a href="stage/index.html">Stages</a>
+            <a href="galleries/index.html">Galleries</a>
+            <a href="visual.html" class="active">Visual</a>
+            <a href="scholars.html">Scholars</a>
+            <a href="dictionary/index.html">Dictionary</a>
+            <a href="timeline.html">Timeline</a>
+            <a href="sources.html">Sources</a>
+            <a href="maier.html">Maier</a>
+            <a href="creatures.html">Creatures</a>
+            <a href="music.html">Music</a>
+            <a href="works.html">Works</a>
+            <a href="modern-scholarship.html">21st Century</a>
+            <a href="szulakowska.html">Szulakowska</a>
+            <a href="essays/index.html">Essays</a>
+            <a href="bibliography.html">Bibliography</a>
+            <a href="biography.html">Biography</a>
+            <a href="search.html">Search</a>
+            <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="page-content" style="max-width:1300px">
+        <h2>Visual Element Browser</h2>
+        <p style="font-size:0.95rem">A cross-corpus index of visual elements depicted in alchemical emblem books. Click a tag to see every image (across <span id="vis-work-count">…</span> source works) that depicts it. Atalanta Fugiens emblems link directly into this site's analysis pages.</p>
+
+        <div class="stats" id="vis-stats" style="max-width:900px"></div>
+
+        <div class="filter-bar">
+            <input type="search" id="vis-search" class="filter-search" placeholder="Search tags or images (e.g. dragon, athanor, calcination)&hellip;" autocomplete="off">
+            <div class="filter-row" id="vis-cat-row">
+                <span class="filter-label">Category:</span>
+                <button class="filter-chip filter-chip-all active" data-vis-cat="" type="button">All</button>
+            </div>
+            <div class="filter-row" id="vis-work-row">
+                <span class="filter-label">Source:</span>
+                <button class="filter-chip filter-chip-all active" data-vis-work="" type="button">All</button>
+            </div>
+            <div class="filter-status" id="vis-status"></div>
+        </div>
+
+        <h3 style="font-size:1.05rem;color:var(--accent);font-family:var(--font-sans);margin:1.4rem 0 0.4rem">Tags <span style="font-size:0.78rem;color:var(--text-muted)">click to filter the gallery below</span></h3>
+        <div id="vis-tag-cloud"></div>
+
+        <h3 style="font-size:1.05rem;color:var(--accent);font-family:var(--font-sans);margin:1.5rem 0 0.4rem">Images</h3>
+        <div id="vis-images" class="gallery" style="grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));padding:0"></div>
+    </div>
+
+    <script>
+    (async function() {
+        const resp = await fetch('visual-data.json');
+        const data = await resp.json();
+        const tagBySlug = {};
+        for (const t of data.tags) tagBySlug[t.slug] = t;
+
+        const CATEGORY_COLORS = {
+            'FIGURE': '#8b4513', 'MONSTER': '#c0392b', 'PROCESS': '#16a085',
+            'SUBSTANCE': '#2980b9', 'FURNITURE': '#7f8c8d', 'TOOL': '#8e44ad',
+            'ACCIDENT': '#e67e22', 'BODY_STATE': '#a89880', 'SCENERY': '#27ae60'
+        };
+
+        let activeTag = '';
+        let activeCat = '';
+        let activeWork = '';
+        let activeQuery = '';
+
+        // Stats
+        const statsEl = document.getElementById('vis-stats');
+        statsEl.innerHTML = [
+            ['total_images', 'Images'],
+            ['total_works', 'Source works'],
+            ['total_tags', 'Tags'],
+            ['total_tag_links', 'Tag links'],
+        ].map(([k, label]) => '<div class="stat-card"><span class="stat-number">' + (data.stats[k] || 0) + '</span><span class="stat-label">' + label + '</span></div>').join('');
+        document.getElementById('vis-work-count').textContent = data.stats.total_works;
+
+        // Build category chips
+        const cats = [...new Set(data.tags.map(t => t.category))].sort();
+        const catRow = document.getElementById('vis-cat-row');
+        for (const c of cats) {
+            const btn = document.createElement('button');
+            btn.className = 'filter-chip';
+            btn.type = 'button';
+            btn.dataset.visCat = c;
+            btn.style.background = CATEGORY_COLORS[c] || '#7f8c8d';
+            btn.style.color = 'white';
+            btn.style.border = '1px solid ' + (CATEGORY_COLORS[c] || '#7f8c8d');
+            btn.textContent = c.replace('_', ' ');
+            catRow.appendChild(btn);
+        }
+
+        // Build source-work chips (top 8 by image count)
+        const workRow = document.getElementById('vis-work-row');
+        for (const w of data.works.slice(0, 8)) {
+            if (!w.image_count) continue;
+            const btn = document.createElement('button');
+            btn.className = 'filter-chip';
+            btn.type = 'button';
+            btn.dataset.visWork = w.slug;
+            btn.title = (w.author || '') + (w.date ? ' · ' + w.date : '');
+            btn.innerHTML = (w.title || w.slug) + ' <span class="filter-chip-count">' + w.image_count + '</span>';
+            workRow.appendChild(btn);
+        }
+        // "Open as page" jump-link for the active source filter
+        const workOpen = document.createElement('a');
+        workOpen.id = 'vis-work-open';
+        workOpen.style.cssText = 'margin-left:0.5rem;font-size:0.78rem;font-family:var(--font-sans);color:var(--accent);display:none';
+        workRow.appendChild(workOpen);
+
+        function escapeHtml(s) { return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+        function renderTagCloud() {
+            const cloud = document.getElementById('vis-tag-cloud');
+            const filtered = data.tags.filter(t => {
+                if (activeCat && t.category !== activeCat) return false;
+                if (activeQuery && !(t.slug + ' ' + t.label).toLowerCase().includes(activeQuery)) return false;
+                return true;
+            });
+            // Sort: items with images first, by count desc, then alpha
+            filtered.sort((a, b) => (b.count - a.count) || a.label.localeCompare(b.label));
+            cloud.innerHTML = filtered.map(t => {
+                const color = CATEGORY_COLORS[t.category] || '#7f8c8d';
+                const isActive = activeTag === t.slug;
+                const dim = !t.count ? 'opacity:0.45' : '';
+                const dictLink = t.dict_link ? '<a href="dictionary/' + t.dict_link + '.html" class="vis-tag-dict-link" title="Open ' + escapeHtml(t.label) + ' in the dictionary">↗</a>' : '';
+                return '<button class="vis-tag-chip ' + (isActive ? 'active' : '') + '" data-vis-tag="' + t.slug + '" type="button" style="border-color:' + color + (isActive ? ';background:' + color + ';color:white' : ';color:' + color) + ';' + dim + '">' +
+                    escapeHtml(t.label) + ' <span class="vis-tag-count">' + t.count + '</span>' + dictLink +
+                    '</button>';
+            }).join('');
+        }
+
+        function renderImages() {
+            const container = document.getElementById('vis-images');
+            const status = document.getElementById('vis-status');
+            const filtered = data.images.filter(im => {
+                if (activeTag && !im.tags.includes(activeTag)) return false;
+                if (activeWork && im.work !== activeWork) return false;
+                if (activeCat && !im.tags.some(tg => tagBySlug[tg] && tagBySlug[tg].category === activeCat)) return false;
+                if (activeQuery) {
+                    const hay = (im.title + ' ' + im.snippet + ' ' + im.tags.join(' ')).toLowerCase();
+                    if (!hay.includes(activeQuery)) return false;
+                }
+                return true;
+            });
+            const parts = [];
+            if (activeTag) parts.push('tag <strong>' + activeTag + '</strong>');
+            if (activeCat) parts.push('category <strong>' + activeCat + '</strong>');
+            if (activeWork) parts.push('source <strong>' + activeWork + '</strong>');
+            if (activeQuery) parts.push('text <strong>"' + escapeHtml(activeQuery) + '"</strong>');
+            if (parts.length || filtered.length !== data.images.length) {
+                status.innerHTML = 'Showing <strong>' + filtered.length + '</strong> of ' + data.images.length + ' images' +
+                    (parts.length ? ' — filtered by ' + parts.join(', ') + ' <a href="#" id="vis-clear" class="filter-clear">clear</a>' : '');
+                const clearLink = document.getElementById('vis-clear');
+                if (clearLink) clearLink.addEventListener('click', e => { e.preventDefault(); clearAll(); });
+            } else {
+                status.innerHTML = '';
+            }
+            const top = filtered.slice(0, 200);
+            container.innerHTML = top.map(im => {
+                const linkOpen = im.link_url
+                    ? '<a href="' + im.link_url + '"' + (im.is_external ? ' target="_blank" rel="noopener"' : '') + ' class="card" style="text-decoration:none;color:inherit">'
+                    : '<div class="card" style="cursor:default">';
+                const linkClose = im.link_url ? '</a>' : '</div>';
+                const img = im.local_url
+                    ? '<img src="' + im.local_url + '" alt="' + escapeHtml(im.title) + '" style="width:100%;display:block;aspect-ratio:auto">'
+                    : '<div class="card-placeholder">' + escapeHtml((im.folio || '').replace('plate ', '').toUpperCase() || '?') + '</div>';
+                const tagBadges = im.tags.slice(0, 6).map(tg => {
+                    const meta = tagBySlug[tg] || { label: tg, category: '' };
+                    const color = CATEGORY_COLORS[meta.category] || '#7f8c8d';
+                    return '<span class="vis-img-tag" data-vis-tag="' + tg + '" style="background:' + color + '">' + escapeHtml(meta.label) + '</span>';
+                }).join('');
+                return linkOpen +
+                    img +
+                    '<div class="card-body">' +
+                        '<div class="card-sig" style="font-size:0.8rem">' + escapeHtml(im.work_title || '') + '</div>' +
+                        '<div class="card-label" style="font-size:0.78rem;color:var(--text-muted)">' + escapeHtml(im.folio || '') + '</div>' +
+                        (im.snippet ? '<div class="card-desc" style="font-size:0.78rem">' + escapeHtml(im.snippet) + '</div>' : '') +
+                        (tagBadges ? '<div class="vis-img-tags">' + tagBadges + '</div>' : '') +
+                    '</div>' +
+                    linkClose;
+            }).join('') + (filtered.length > top.length ? '<p style="grid-column:1/-1;color:var(--text-muted);font-style:italic;padding:1rem">…and ' + (filtered.length - top.length) + ' more (refine the filters to narrow).</p>' : '');
+        }
+
+        function syncChips() {
+            document.querySelectorAll('[data-vis-cat]').forEach(b => {
+                const v = b.dataset.visCat;
+                const isAll = b.classList.contains('filter-chip-all');
+                b.classList.toggle('active', isAll ? !activeCat : activeCat === v);
+            });
+            document.querySelectorAll('[data-vis-work]').forEach(b => {
+                const v = b.dataset.visWork;
+                const isAll = b.classList.contains('filter-chip-all');
+                b.classList.toggle('active', isAll ? !activeWork : activeWork === v);
+            });
+            const openLink = document.getElementById('vis-work-open');
+            if (openLink) {
+                if (activeWork) {
+                    const w = data.works.find(x => x.slug === activeWork);
+                    if (w && w.page_slug) {
+                        openLink.href = 'work/' + w.page_slug + '.html';
+                        openLink.textContent = 'Open ' + (w.title || activeWork) + ' page →';
+                        openLink.style.display = '';
+                    } else {
+                        openLink.style.display = 'none';
+                    }
+                } else {
+                    openLink.style.display = 'none';
+                }
+            }
+        }
+
+        function readHash() {
+            if (!window.location.hash) return;
+            const h = window.location.hash.slice(1);
+            h.split('&').forEach(p => {
+                const [k, v] = p.split('=');
+                if (k === 'tag' && v) activeTag = decodeURIComponent(v);
+                if (k === 'cat' && v) activeCat = decodeURIComponent(v);
+                if (k === 'work' && v) activeWork = decodeURIComponent(v);
+                if (k === 'q' && v) {
+                    activeQuery = decodeURIComponent(v).toLowerCase();
+                    document.getElementById('vis-search').value = decodeURIComponent(v);
+                }
+            });
+        }
+
+        function clearAll() {
+            activeTag = ''; activeCat = ''; activeWork = ''; activeQuery = '';
+            document.getElementById('vis-search').value = '';
+            if (window.history && window.history.replaceState) {
+                window.history.replaceState(null, '', window.location.pathname);
+            }
+            renderAll();
+        }
+
+        function renderAll() {
+            syncChips();
+            renderTagCloud();
+            renderImages();
+        }
+
+        // Wire up interactions
+        document.getElementById('vis-search').addEventListener('input', e => {
+            activeQuery = e.target.value.trim().toLowerCase();
+            renderAll();
+        });
+        document.body.addEventListener('click', e => {
+            const catBtn = e.target.closest('[data-vis-cat]');
+            if (catBtn) {
+                const v = catBtn.dataset.visCat;
+                activeCat = (activeCat === v) ? '' : v;
+                if (activeTag && tagBySlug[activeTag] && activeCat && tagBySlug[activeTag].category !== activeCat) activeTag = '';
+                renderAll();
+                return;
+            }
+            const workBtn = e.target.closest('[data-vis-work]');
+            if (workBtn) {
+                const v = workBtn.dataset.visWork;
+                activeWork = (activeWork === v) ? '' : v;
+                renderAll();
+                return;
+            }
+            const tagBtn = e.target.closest('[data-vis-tag]');
+            if (tagBtn && !e.target.closest('.vis-tag-dict-link')) {
+                e.preventDefault();
+                const v = tagBtn.dataset.visTag;
+                activeTag = (activeTag === v) ? '' : v;
+                renderAll();
+                return;
+            }
+        });
+        window.addEventListener('hashchange', () => {
+            activeTag = ''; activeCat = ''; activeWork = ''; activeQuery = '';
+            document.getElementById('vis-search').value = '';
+            readHash();
+            renderAll();
+        });
+        readHash();
+        renderAll();
+    })();
+    </script>
+    <footer>
+        <p>AtalantaClaudiens &middot; A digital humanities project &middot;
+        <a href="https://github.com/t3dy/AtalantaClaudiens">GitHub</a></p>
+    </footer>
+</body>
+</html>

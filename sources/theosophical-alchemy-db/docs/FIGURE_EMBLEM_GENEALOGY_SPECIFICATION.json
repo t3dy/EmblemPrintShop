@@ -1,0 +1,1132 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "date": "2026-05-26",
+    "description": "Figure-emblem genealogy specification for 10 key figures in emblem tradition (Renaissance to Enlightenment)",
+    "status": "READY_FOR_IMPLEMENTATION",
+    "total_figures": 10,
+    "genealogical_structure": "Renaissance → Early Modern I (Emblem-Book Generation) → Early Modern II (Transmission) → Enlightenment"
+  },
+  "figures_genealogy": [
+    {
+      "figure_id": 10,
+      "figure_name": "Michael Maier",
+      "birth_year": 1568,
+      "death_year": 1622,
+      "nationality": "German",
+      "discipline": "Alchemist, Physician, Court Alchemist",
+      "primary_location": "Prague, Kassel, Frankfurt",
+      "role": "CREATOR",
+      "transmission_period": "Early Modern I",
+      "genealogical_position": "Primary emblem-book creator; foundational figure in systematized emblem tradition",
+      "emblem_books_created": [
+        {
+          "title": "Atalanta Fugiens",
+          "year": 1617,
+          "location": "Frankfurt",
+          "total_emblems": 50,
+          "description": "50 emblems + 50 epigrams + 50 fugues; the most comprehensive integration of visual, textual, and musical symbolism",
+          "innovation": "Integration of music (fugues) with alchemical operations; harmonic cosmology"
+        },
+        {
+          "title": "Symbola Aureae Mensae",
+          "year": 1617,
+          "location": "Frankfurt",
+          "total_emblems": 40,
+          "description": "40+ emblems on philosophers and the golden table of wisdom",
+          "innovation": "Philosophical hierarchy; integration of classical and hermetic traditions"
+        },
+        {
+          "title": "Arcana Arcanissima",
+          "year": 1623,
+          "location": "Frankfurt (posthumous)",
+          "total_emblems": null,
+          "description": "Further hermetic emblematic work",
+          "innovation": "Advanced hermetic systematics"
+        }
+      ],
+      "key_innovations": [
+        "Integration of music with alchemy (musica universalis principle)",
+        "Explicit operational sequence (50 numbered emblems as stages of opus)",
+        "Marriage of visual-textual-musical symbolism",
+        "Harmonic cosmology as basis for transmutation",
+        "Systematic emblem-book as complete curriculum"
+      ],
+      "influenced_by": [
+        {
+          "figure_id": null,
+          "figure_name": "Paracelsus",
+          "influence_type": "medical-alchemical framework",
+          "how": "Maier adopted Paracelsus's iatrochemistry and three-principles doctrine (salt-sulfur-mercury)"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Heinrich Cornelius Agrippa",
+          "influence_type": "correspondence theory",
+          "how": "Maier systematized Agrippa's correspondences into harmonic proportions"
+        },
+        {
+          "figure_id": 2,
+          "figure_name": "John Dee",
+          "influence_type": "harmonic philosophy",
+          "how": "Maier adapted Dee's mathematical mysticism into musical cosmology"
+        }
+      ],
+      "influenced_figures": [
+        {
+          "figure_id": null,
+          "figure_name": "Daniel Cramer",
+          "influence_type": "direct structural imitation",
+          "how": "Cramer's Rosicrucian Emblems borrows Maier's emblem-book structure and many motifs"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Daniel Stolcius",
+          "influence_type": "comprehensive systematization",
+          "how": "Stolcius synthesized Maier's approach in Hermetic Garden (160 emblems)"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Thomas Vaughan",
+          "influence_type": "direct transmission",
+          "how": "Vaughan studied and reinterpreted Maier's harmonic alchemy for English audiences"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Emanuel Swedenborg",
+          "influence_type": "cosmological model",
+          "how": "Swedenborg's correspondence system derives from Maier's harmonic framework"
+        }
+      ],
+      "scholarly_support": [
+        "Yates - Maier as key figure bridging Renaissance and Enlightenment",
+        "Godwin - Maier's role in connecting court culture to esotericism",
+        "Szulakowska - Maier's harmonic integration of alchemical symbolism"
+      ],
+      "scholarly_debates": [
+        "Whether Maier was primarily a natural philosopher or an emblem theorist",
+        "The extent to which Maier was a practicing alchemist versus a synthesizer of existing doctrine"
+      ],
+      "key_works": [
+        "Atalanta Fugiens (1617)",
+        "Symbola Aureae Mensae (1617)",
+        "Arcana Arcanissima (1623)"
+      ],
+      "connection_summary": "Maier is the primary creator of the systematized emblem-book tradition. His integration of visual, textual, and musical symbolism into a complete harmonic cosmology became the template for all subsequent emblematists. The Atalanta Fugiens (1617) remains the most influential emblem work."
+    },
+    {
+      "figure_id": null,
+      "figure_name": "Daniel Cramer",
+      "birth_year": 1568,
+      "death_year": 1637,
+      "nationality": "German",
+      "discipline": "Theologian, Rosicrucian Apologist, Lutheran Minister",
+      "primary_location": "Frankfurt am Main, Wittenberg",
+      "role": "CREATOR",
+      "transmission_period": "Early Modern I",
+      "genealogical_position": "Secondary emblem-book creator; Rosicrucian theologian systematizing the movement through emblems",
+      "emblem_books_created": [
+        {
+          "title": "Rosicrucian Emblems",
+          "year": 1617,
+          "location": "Frankfurt",
+          "total_emblems": 40,
+          "description": "40 emblems integrating Lutheran theology with alchemical Rosicrucian symbolism",
+          "innovation": "Fusion of theological doctrine with alchemical symbolism; emblems as initiatory lessons"
+        },
+        {
+          "title": "Two Books of the Rosicrucian Brotherhood",
+          "year": null,
+          "location": null,
+          "total_emblems": null,
+          "description": "Theoretical elaboration accompanying the emblems",
+          "innovation": "Explicit connection between emblem and initiation"
+        }
+      ],
+      "key_innovations": [
+        "Fusion of theological doctrine with alchemical symbolism",
+        "Explicit connection between emblem and initiation (each emblem as a lesson for the adept)",
+        "Rosicrucian legitimization through emblem theory",
+        "Integration of Lutheran theology with hermetic philosophy"
+      ],
+      "influenced_by": [
+        {
+          "figure_id": 10,
+          "figure_name": "Michael Maier",
+          "influence_type": "structural and methodological",
+          "how": "Cramer directly imitated Maier's emblem-book structure and many specific emblems"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Rosicrucian Manifestos (Fama, Confessio, Chymische Hochzeit)",
+          "influence_type": "textual content",
+          "how": "Cramer's emblems illustrate and elaborate the Rosicrucian manifestos"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Heinrich Cornelius Agrippa",
+          "influence_type": "correspondence theory",
+          "how": "Cramer systematized Agrippa's theological correspondences"
+        }
+      ],
+      "influenced_figures": [
+        {
+          "figure_id": null,
+          "figure_name": "German Pietism",
+          "influence_type": "theological framework",
+          "how": "Cramer's emblem theology influenced later Pietist visual symbolism"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Thomas Vaughan",
+          "influence_type": "direct transmission",
+          "how": "Vaughan studied and adapted Cramer's Rosicrucian emblems for English audiences"
+        }
+      ],
+      "scholarly_support": [
+        "Godwin - Cramer as Rosicrucian systematizer",
+        "Yates - Cramer's role in translating Rosicrucian fiction into intellectual substance"
+      ],
+      "scholarly_debates": [
+        "The extent to which Cramer's theology represents authentic Rosicrucian doctrine versus Protestant reformation"
+      ],
+      "key_works": [
+        "Rosicrucian Emblems (1617)",
+        "Two Books of the Rosicrucian Brotherhood"
+      ],
+      "connection_summary": "Cramer is the secondary creator of the emblem-book tradition, explicitly connecting Rosicrucian manifestos to alchemical practice and theology. His emblems were designed to make abstract Rosicrucian claims concrete through visual allegory, emphasizing spiritual initiation over cosmological integration."
+    },
+    {
+      "figure_id": null,
+      "figure_name": "Heinrich Khunrath",
+      "birth_year": 1560,
+      "death_year": 1605,
+      "nationality": "German",
+      "discipline": "Alchemist, Physician, Mystic",
+      "primary_location": "Prague, Dresden, Leipzig",
+      "role": "CREATOR",
+      "transmission_period": "Renaissance-Early Modern Transition",
+      "genealogical_position": "Chronological bridge connecting Renaissance alchemy to early Rosicrucian systematization; most mystical of major emblematists",
+      "emblem_books_created": [
+        {
+          "title": "Amphitheatrum Sapientiae Aeternae",
+          "year": 1595,
+          "location": "Hamburg",
+          "total_emblems": 10,
+          "description": "Foundational work containing elaborate cosmological diagrams (labyrinthus, macrocosmic theater, divine emanation hierarchy)",
+          "innovation": "Cosmological diagram as emblem; macrocosm-microcosm correspondence; integration of mystical theology with practical alchemy"
+        }
+      ],
+      "key_innovations": [
+        "The cosmological diagram as emblem (not just illustrated emblem books but diagrams as complete symbolic maps)",
+        "Integration of mystical theology with practical alchemy",
+        "Emphasis on interior chapel (oratorium) where meditation joins laboratory work",
+        "Model of spiritual alchemy combining prayer, meditation, and laboratory operations"
+      ],
+      "influenced_by": [
+        {
+          "figure_id": null,
+          "figure_name": "Paracelsus",
+          "influence_type": "medical-alchemical framework",
+          "how": "Khunrath adopted Paracelsus's operative alchemy and three-principles doctrine"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Renaissance Neoplatonists",
+          "influence_type": "cosmological hierarchy",
+          "how": "Khunrath systematized Neoplatonic emanation in alchemical diagrams"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Jewish Kabbalah",
+          "influence_type": "mystical theology",
+          "how": "Khunrath incorporated Kabbalistic emanation and mystical correspondences (via Prague Kabbalah circles)"
+        }
+      ],
+      "influenced_figures": [
+        {
+          "figure_id": 3,
+          "figure_name": "Robert Fludd",
+          "influence_type": "direct structural imitation",
+          "how": "Fludd's cosmological diagrams directly imitate and elaborate Khunrath's structure"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Rosicrucian mystical theology",
+          "influence_type": "theological framework",
+          "how": "Khunrath's work influenced later Rosicrucian emblem theology"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "German Pietism",
+          "influence_type": "spiritual practice model",
+          "how": "Khunrath's integration of interior and exterior work influenced Pietist practice"
+        }
+      ],
+      "scholarly_support": [
+        "Yates - Khunrath as bridge between Renaissance alchemy and Rosicrucian movement",
+        "Szulakowska - Khunrath's cosmological diagrams as central to emblem tradition",
+        "Jung - Khunrath's psychological integration"
+      ],
+      "scholarly_debates": [
+        "The extent to which Khunrath's work is mystical rather than operative"
+      ],
+      "key_works": [
+        "Amphitheatrum Sapientiae Aeternae (1595)"
+      ],
+      "connection_summary": "Khunrath is the most mystical of the major emblematists. His cosmological diagrams established the template for representing the universe as a theater of alchemical principles, where laboratory work mirrors celestial operations. His integration of prayer, meditation, and laboratory work became the model for spiritual alchemy."
+    },
+    {
+      "figure_id": null,
+      "figure_name": "Daniel Stolcius",
+      "birth_year": 1597,
+      "death_year": null,
+      "nationality": "German/Bohemian",
+      "discipline": "Alchemist, Natural Philosopher, Court Alchemist",
+      "primary_location": "Prague",
+      "role": "CREATOR",
+      "transmission_period": "Early Modern I",
+      "genealogical_position": "Final major emblem-book compiler; created the most comprehensive visual lexicon of alchemical symbolism",
+      "emblem_books_created": [
+        {
+          "title": "Hermetic Garden (Viridarium Chymicum)",
+          "year": 1624,
+          "location": "Frankfurt",
+          "total_emblems": 160,
+          "description": "Largest emblem collection; systematic visual encyclopedia of alchemical processes, symbols, and hierarchies",
+          "innovation": "Emblem as lexical entry in a visual dictionary; comprehensive systematization enabling student transmission without oral teaching"
+        }
+      ],
+      "key_innovations": [
+        "The emblem as lexical entry in a visual dictionary",
+        "Comprehensive systematization enabling student transmission without oral teaching",
+        "Most extensive visual encyclopedia of alchemical symbolism (160 emblems)",
+        "Template for later emblem handbooks and curricula"
+      ],
+      "influenced_by": [
+        {
+          "figure_id": 10,
+          "figure_name": "Michael Maier",
+          "influence_type": "structural systematization",
+          "how": "Stolcius synthesized Maier's harmonic approach into comprehensive encyclopedia"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Heinrich Khunrath",
+          "influence_type": "cosmological diagrams",
+          "how": "Stolcius incorporated Khunrath's cosmological approach"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Daniel Cramer",
+          "influence_type": "theological systematization",
+          "how": "Stolcius synthesized Cramer's theological approach"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Paracelsus",
+          "influence_type": "medical-alchemical framework",
+          "how": "Stolcius incorporated Paracelsian medical alchemy"
+        }
+      ],
+      "influenced_figures": [
+        {
+          "figure_id": null,
+          "figure_name": "Mutus Liber tradition",
+          "influence_type": "structural template",
+          "how": "Later 'silent books' (80+ emblems each) followed Stolcius's comprehensive encyclopedic model"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "17th-18th century emblem handbooks",
+          "influence_type": "curriculum design",
+          "how": "Stolcius's work became the reference model for emblem-based alchemical curricula"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Emanuel Swedenborg",
+          "influence_type": "comprehensive symbolism",
+          "how": "Swedenborg studied and systematized emblem tradition, building on Stolcius's encyclopedic approach"
+        }
+      ],
+      "scholarly_support": [
+        "Szulakowska - Stolcius as synthesizer of emblem tradition",
+        "Godwin - Hermetic Garden as reference work for emblem study"
+      ],
+      "scholarly_debates": [
+        "The extent to which Stolcius was original versus compilatory"
+      ],
+      "key_works": [
+        "Hermetic Garden / Viridarium Chymicum (1624, 1626)"
+      ],
+      "connection_summary": "Stolcius represents the culmination of the first emblem-book phase. His Hermetic Garden is the largest and most comprehensive emblem collection, functioning as a visual dictionary where every alchemical concept has a corresponding emblem. His encyclopedic approach became the template for all subsequent emblem transmission and study."
+    },
+    {
+      "figure_id": 20,
+      "figure_name": "Paracelsus",
+      "birth_year": 1493,
+      "death_year": 1541,
+      "nationality": "Swiss",
+      "discipline": "Physician, Alchemist, Reformer, Mystic",
+      "primary_location": "Salzburg (birthplace), Tyrol, Basel, Strasbourg, wandering",
+      "role": "INFLUENCED-BY",
+      "transmission_period": "Renaissance",
+      "genealogical_position": "Foundational genius; originating figure of early modern alchemy; did not create emblems but provided the framework for all emblematists",
+      "emblem_books_created": [],
+      "theoretical_contributions_to_emblem_tradition": [
+        {
+          "principle": "Operative Alchemy",
+          "description": "Alchemy is real laboratory work, not allegory; emblems must represent actual operations",
+          "influence_on_emblems": "Emblems by Maier, Khunrath, Stolcius all emphasize operational sequences rather than pure allegory"
+        },
+        {
+          "principle": "Medical Framework (Iatrochemistry)",
+          "description": "Alchemy is the foundation of medicine; the philosopher's stone is the universal medicine",
+          "influence_on_emblems": "Many emblems depict alchemical operations as healing processes; medical apparatus and remedies feature prominently"
+        },
+        {
+          "principle": "Three Principles",
+          "description": "Salt (body, fixity), Sulfur (spirit, activity), Mercury (soul, mediation)—the fundamental classification of all matter",
+          "influence_on_emblems": "These three appear in almost every emblem system as the basic symbolic vocabulary"
+        },
+        {
+          "principle": "Christian Integration",
+          "description": "Alchemical transformation mirrors Christian salvation and the resurrection; Christ is the exemplary alchemist",
+          "influence_on_emblems": "Many emblems explicitly connect alchemical stages to Christian theological stages (crucifixion, resurrection, ascension)"
+        },
+        {
+          "principle": "Empiricism",
+          "description": "Knowledge derives from direct experience (experientia docet); emblems are tools for embodied learning, not abstract theory",
+          "influence_on_emblems": "Emblems are designed as practical pedagogical tools for embodied learning, not merely intellectual symbols"
+        }
+      ],
+      "key_innovations_foundational_to_emblem_tradition": [
+        "Medical alchemy as the primary goal of transmutation",
+        "Operational emphasis: alchemy as real laboratory work",
+        "Three-principles framework: salt-sulfur-mercury as universal symbolic language",
+        "Christian reinterpretation of hermetic tradition",
+        "Empiricism: knowledge through direct experience"
+      ],
+      "influenced_by": [
+        {
+          "figure_id": null,
+          "figure_name": "Medieval alchemy",
+          "influence_type": "operational tradition",
+          "how": "Paracelsus inherited medieval laboratory traditions (Roger Bacon, Jabir)"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Renaissance Neoplatonism",
+          "influence_type": "cosmological framework",
+          "how": "Paracelsus incorporated Neoplatonic emanation and cosmic hierarchy"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Christian theology",
+          "influence_type": "theological integration",
+          "how": "Paracelsus reinterpreted hermetic tradition through Christian salvation history"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Ancient medicine",
+          "influence_type": "medical tradition",
+          "how": "Paracelsus reformed Galenic and Hippocratic medicine through alchemy"
+        }
+      ],
+      "influenced_figures": [
+        {
+          "figure_id": 10,
+          "figure_name": "Michael Maier",
+          "influence_type": "foundational philosophy",
+          "how": "Maier adopted Paracelsus's medical-alchemical framework and three-principles doctrine"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Heinrich Khunrath",
+          "influence_type": "foundational philosophy",
+          "how": "Khunrath adopted Paracelsus's operative alchemy and three-principles doctrine"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Jacob Böhme",
+          "influence_type": "mystical theology",
+          "how": "Böhme synthesized Paracelsian alchemy with mystical theology"
+        },
+        {
+          "figure_id": 3,
+          "figure_name": "Robert Fludd",
+          "influence_type": "medical-alchemical framework",
+          "how": "Fludd developed Paracelsus's iatrochemistry in cosmological context"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Thomas Vaughan",
+          "influence_type": "foundational philosophy",
+          "how": "Vaughan studied and reinterpreted Paracelsus through English esotericism"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Emanuel Swedenborg",
+          "influence_type": "foundational philosophy",
+          "how": "Swedenborg incorporated Paracelsian alchemy into mystical theology"
+        },
+        {
+          "description": "All later emblematists derived their foundational framework from Paracelsus"
+        }
+      ],
+      "scholarly_support": [
+        "Weeks - Paracelsus as reformer (religious, medical, philosophical)",
+        "Webster - Paracelsus's empiricism and challenge to Galenic medicine",
+        "Godwin - Paracelsus as bridge between Renaissance and early modern alchemy"
+      ],
+      "scholarly_debates": [
+        "Whether Paracelsus was a practical alchemist or primarily a theorist",
+        "The extent to which Paracelsus's alchemy was mystical versus materialist"
+      ],
+      "key_works": [
+        "Paragranum (foundational medical-alchemical treatise)",
+        "Archidoxies (medical remedies)",
+        "Various mystical and theological writings"
+      ],
+      "connection_summary": "Paracelsus is the originating genius of early modern alchemy. Though he did not create emblem books, his medical-alchemical synthesis, his three-principles framework, his emphasis on operative work, and his Christian reinterpretation of hermetic tradition became the foundational framework for all later emblematists. Every emblem-book creator (Maier, Khunrath, Cramer, Stolcius) derived their basic vocabulary and conceptual structure from Paracelsus."
+    },
+    {
+      "figure_id": null,
+      "figure_name": "Jacob Böhme",
+      "birth_year": 1575,
+      "death_year": 1624,
+      "nationality": "German",
+      "discipline": "Mystic, Theologian, Theosophist",
+      "primary_location": "Görlitz, Saxony",
+      "role": "INFLUENCED-BY",
+      "transmission_period": "Early Modern I",
+      "genealogical_position": "Mystical theologian providing hermeneutical framework for reading emblems as spiritual transformation rather than material magic",
+      "emblem_books_created": [],
+      "theoretical_contributions_to_emblem_interpretation": [
+        {
+          "principle": "Divine Alchemy",
+          "description": "God's creative act is alchemical; creation is the eternal coniunctio of divine opposites",
+          "influence_on_emblem_interpretation": "Later emblems are read as cosmic-divine processes, not merely material operations"
+        },
+        {
+          "principle": "Sophia Principle",
+          "description": "Divine wisdom (Sophia) is feminine, active in creation, the mediation between God and creation—paralleling philosophical Mercury",
+          "influence_on_emblem_interpretation": "Feminine principle in emblems (sister, queen, bride) interpreted as divine wisdom animating matter"
+        },
+        {
+          "principle": "Mystical Transformation",
+          "description": "The individual soul undergoes the same alchemical transformation as the universal cosmos; inner and outer are one process",
+          "influence_on_emblem_interpretation": "Emblems read as maps of spiritual transformation, not merely natural philosophy or material magic"
+        },
+        {
+          "principle": "Dark and Light",
+          "description": "Divine creativity requires both the divine 'No' (negation, darkness, nigredo) and the divine 'Yes' (manifestation, light, rubedo)",
+          "influence_on_emblem_interpretation": "Nigredo and darkness in emblems interpreted as creative negation, not mere destruction"
+        }
+      ],
+      "key_innovations_to_emblem_interpretation": [
+        "Framework for reading emblems as spiritual transformation, not material magic",
+        "Integration of mystical theology with practical alchemy",
+        "Emphasis on divine creativity as the model for human transformation",
+        "Reinterpretation of alchemical symbolism through theosophical lens"
+      ],
+      "influenced_by": [
+        {
+          "figure_id": null,
+          "figure_name": "Paracelsus",
+          "influence_type": "medical-alchemical framework",
+          "how": "Böhme adopted Paracelsus's operative alchemy and three-principles doctrine"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Renaissance Neoplatonism",
+          "influence_type": "cosmological hierarchy",
+          "how": "Böhme synthesized Neoplatonic emanation with mystical theology"
+        },
+        {
+          "figure_id": 3,
+          "figure_name": "Robert Fludd",
+          "influence_type": "cosmological diagrams",
+          "how": "Böhme was contemporary with and influenced by Fludd's cosmological work"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Christian mysticism",
+          "influence_type": "theological tradition",
+          "how": "Böhme developed Luther and Schwenckfeld's mystical theology"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Jewish Kabbalah",
+          "influence_type": "mystical theology",
+          "how": "Böhme incorporated Kabbalistic emanation and divine names"
+        }
+      ],
+      "influenced_figures": [
+        {
+          "figure_id": null,
+          "figure_name": "German Pietism",
+          "influence_type": "theological framework",
+          "how": "Böhme's mystical theology profoundly influenced Pietist spirituality"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Emanuel Swedenborg",
+          "influence_type": "mystical theology",
+          "how": "Swedenborg inherited Böhme's theosophical framework and incorporated it into his visionary theology"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "German Idealism and Romanticism",
+          "influence_type": "philosophical framework",
+          "how": "Böhme's mystical philosophy influenced Schelling, Hegel, and Romantic Naturphilosophie"
+        },
+        {
+          "description": "Böhme's theological interpretation of alchemy influenced how all later emblems were read"
+        }
+      ],
+      "scholarly_support": [
+        "Godwin - Böhme as mystical synthesizer of alchemy and theology",
+        "Jung - Böhme's psychology of creativity and individuation",
+        "Weeks - Böhme as heir to Paracelsian tradition"
+      ],
+      "scholarly_debates": [
+        "The extent to which Böhme was influenced by Kabbalah versus his own visionary experience",
+        "Whether Böhme should be understood as an alchemist or primarily as a mystic"
+      ],
+      "key_works": [
+        "Aurora (first mystical vision, 1612)",
+        "The Way to Christ (mystical theology)",
+        "Mysterium Magnum (comprehensive theosophical synthesis)"
+      ],
+      "connection_summary": "Böhme is not an emblem creator but a mystical theologian who provided the spiritual framework for reading emblems as maps of inner transformation. His integration of divine alchemy with Christian mysticism influenced how later emblems were interpreted. Böhme represents the mystical-theological pole of emblem interpretation, complementing Maier's harmonic-cosmological pole."
+    },
+    {
+      "figure_id": 3,
+      "figure_name": "Robert Fludd",
+      "birth_year": 1574,
+      "death_year": 1637,
+      "nationality": "English",
+      "discipline": "Physician, Rosicrucian Apologist, Cosmologist",
+      "primary_location": "London",
+      "role": "INFLUENCED-BY",
+      "transmission_period": "Early Modern I",
+      "genealogical_position": "Cosmological diagrammatist creating elaborate visionary maps influenced by Khunrath; English synthesizer of Continental esotericism",
+      "emblem_books_created": [],
+      "cosmological_diagrams_functioning_as_emblems": [
+        {
+          "work": "Utriusque Cosmi Historia (History of the Two Worlds)",
+          "year": 1614,
+          "location": "Oppenheim",
+          "description": "Elaborate cosmological diagrams integrating macrocosm and microcosm; volumes on both worlds with complex symbolic engravings",
+          "innovation": "Cosmological diagram as complete emblem; reduction of cosmic complexity to single visual whole"
+        }
+      ],
+      "key_innovations_to_emblem_tradition": [
+        "Cosmological diagrams as emblems (not just illustrated emblem books but diagrams as complete symbolic universes)",
+        "Elaborate integration of macrocosm and microcosm in single diagram",
+        "Harmonic proportions as visible structure underlying alchemical symbolism",
+        "Mathematical mysticism (Platonic solids, proportions) as foundation of cosmological emblems"
+      ],
+      "influenced_by": [
+        {
+          "figure_id": null,
+          "figure_name": "Heinrich Khunrath",
+          "influence_type": "direct structural imitation",
+          "how": "Fludd's diagrams directly imitate and elaborate Khunrath's cosmological theater"
+        },
+        {
+          "figure_id": 10,
+          "figure_name": "Michael Maier",
+          "influence_type": "harmonic philosophy",
+          "how": "Fludd adopted Maier's harmonic cosmology and integrated it with cosmological diagrams"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Paracelsus",
+          "influence_type": "medical-alchemical framework",
+          "how": "Fludd developed Paracelsus's iatrochemistry within cosmological context"
+        },
+        {
+          "figure_id": 2,
+          "figure_name": "John Dee",
+          "influence_type": "mathematical mysticism",
+          "how": "Fludd inherited Dee's Monas Hieroglyphica and extended its cosmological implications"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Jewish Kabbalah",
+          "influence_type": "mystical theology",
+          "how": "Fludd incorporated Kabbalistic emanation and cosmological hierarchy"
+        }
+      ],
+      "influenced_figures": [
+        {
+          "figure_id": null,
+          "figure_name": "Later cosmological emblems",
+          "influence_type": "visual template",
+          "how": "Fludd's diagrams became the model for all subsequent cosmological emblem traditions"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Swedenborgianism",
+          "influence_type": "cosmological system",
+          "how": "Swedenborg inherited Fludd's cosmological framework"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Romanticism and Naturphilosophie",
+          "influence_type": "cosmological imagery",
+          "how": "Fludd's cosmological diagrams influenced Romantic nature philosophy"
+        }
+      ],
+      "scholarly_support": [
+        "Yates - Fludd as English synthesizer of Continental esotericism",
+        "Godwin - Fludd as most systematic cosmologist of 17th century",
+        "Szulakowska - Fludd's cosmological diagrams as central to emblem tradition"
+      ],
+      "scholarly_debates": [
+        "The extent to which Fludd was an original thinker versus synthesizer",
+        "Whether Fludd's cosmological diagrams represent actual mystical visions or theoretical constructs"
+      ],
+      "key_works": [
+        "Utriusque Cosmi Historia (1614–1621)",
+        "Apologia Compendaria (Rosicrucian apology)",
+        "Medicina Catholica (universal medicine)"
+      ],
+      "connection_summary": "Fludd is not an emblem-book creator in the classical sense, but his Utriusque Cosmi Historia contains elaborate cosmological diagrams that function as emblems. These diagrams directly imitate Khunrath's structure and extend Maier's harmonic cosmology, creating the most systematic visual representation of the entire cosmos. Fludd represents the English synthesis of Continental emblem tradition and the most visually influential figure after Stolcius."
+    },
+    {
+      "figure_id": 1,
+      "figure_name": "Johann Valentin Andreae",
+      "birth_year": 1586,
+      "death_year": 1654,
+      "nationality": "German",
+      "discipline": "Theologian, Rosicrucian Theorist, Reformer",
+      "primary_location": "Tübingen, Württemberg",
+      "role": "INFLUENCED-BY",
+      "transmission_period": "Early Modern I",
+      "genealogical_position": "Rosicrucian theorist whose texts provided narrative frameworks for emblem interpretation; primary legitimizer of Rosicrucian claims",
+      "emblem_books_created": [],
+      "textual_contributions_to_emblem_tradition": [
+        {
+          "work": "Chymische Hochzeit (Chemical Wedding)",
+          "year": 1616,
+          "description": "Allegorical account of alchemical marriage and transformation; became archetypal narrative for emblem interpretation",
+          "influence_on_emblems": "Cramer and other emblematists used the Chymische Hochzeit as source for emblem narratives"
+        },
+        {
+          "work": "Fama Fraternitatis (Confession of the Brotherhood)",
+          "year": 1614,
+          "description": "Probable authorship; primary Rosicrucian manifesto; legitimizes Rosicrucian claims and provides framework for understanding emblems as initiatory teaching tools",
+          "influence_on_emblems": "Emblems are read as Rosicrucian initiatory lessons"
+        },
+        {
+          "work": "Confessio Fraternitatis (Reply of the Brotherhood)",
+          "year": 1615,
+          "description": "Secondary manifesto elaborating on Fama; further legitimization of Rosicrucian claims",
+          "influence_on_emblems": "Emblems represent stages of Rosicrucian initiation and reformation"
+        }
+      ],
+      "key_contributions_to_emblem_interpretation": [
+        "Allegorical narrative framework: the alchemical opus as a narrative journey (Chymische Hochzeit's seven days of transformation)",
+        "Rosicrucian legitimacy: Andreae's texts legitimized Rosicrucian claims and provided framework for understanding emblems as Rosicrucian teaching tools",
+        "Spiritual versus material alchemy: Andreae emphasized that true alchemy is inner transformation, not laboratory transmutation",
+        "Reformation emphasis: Emblems represent spiritual and intellectual reform, not merely natural philosophy"
+      ],
+      "influenced_by": [
+        {
+          "figure_id": null,
+          "figure_name": "Paracelsus",
+          "influence_type": "alchemical framework",
+          "how": "Andreae adopted Paracelsus's alchemical philosophy and medical-spiritual framework"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Renaissance Hermeticists",
+          "influence_type": "philosophical tradition",
+          "how": "Andreae synthesized Renaissance hermetic philosophy with Protestant theology"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Christian mysticism",
+          "influence_type": "theological tradition",
+          "how": "Andreae integrated Christian salvation history with alchemical symbolism"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Social reformism",
+          "influence_type": "political philosophy",
+          "how": "Andreae's Chymische Hochzeit represents an utopian reformed society"
+        }
+      ],
+      "influenced_figures": [
+        {
+          "figure_id": null,
+          "figure_name": "Daniel Cramer",
+          "influence_type": "direct source material",
+          "how": "Cramer's Rosicrucian Emblems are based directly on Andreae's narrative frameworks"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Rosicrucian emblem traditions",
+          "influence_type": "legitimization framework",
+          "how": "All later Rosicrucian emblems interpret Andreae's texts"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Mystical interpretation of alchemy",
+          "influence_type": "hermeneutical framework",
+          "how": "Andreae's emphasis on spiritual transformation influenced how emblems are read"
+        }
+      ],
+      "scholarly_support": [
+        "Yates - Andreae as creator of Rosicrucian fiction inspiring real mystical movements",
+        "Vickers - Andreae as critic of Rosicrucian claims and distancer from the movement",
+        "Godwin - Andreae as pedagogical reformer using Rosicrucianism as tool for reformation"
+      ],
+      "scholarly_debates": [
+        "Whether Andreae was creator or critic of Rosicrucian movement (Yates vs. Vickers debate)",
+        "The authenticity of Andreae's claimed authorship of Fama and Confessio",
+        "The extent to which Andreae's later distancing from Rosicrucianism represents genuine change of mind"
+      ],
+      "key_works": [
+        "Chymische Hochzeit (1616)",
+        "Fama Fraternitatis (1614, probable authorship)",
+        "Confessio Fraternitatis (1615, probable authorship)"
+      ],
+      "connection_summary": "Andreae is not an emblem-book creator, but his Chymische Hochzeit and probable authorship of the Rosicrucian Manifestos provided textual sources for emblem creation and interpretation. His allegorical account of alchemical marriage became the archetypal narrative behind emblem symbolism. Andreae's emphasis on spiritual transformation rather than material magic shaped how emblems were read as initiatory and reformatory teaching tools."
+    },
+    {
+      "figure_id": null,
+      "figure_name": "Thomas Vaughan",
+      "birth_year": 1622,
+      "death_year": 1666,
+      "nationality": "Welsh",
+      "discipline": "Alchemist, Mystic, Rosicrucian Apologist, Clergyman",
+      "primary_location": "Llansantffraed, Wales",
+      "role": "INFLUENCED-BY",
+      "transmission_period": "Early Modern II",
+      "genealogical_position": "English heir to Continental emblem tradition; secondary transmitter adapting Continental esotericism to English metaphysical culture",
+      "emblem_books_created": [],
+      "emblematic_and_interpretive_works": [
+        {
+          "work": "Anthroposophia Theomagica",
+          "year": 1650,
+          "description": "Emblematic interpretations integrating Maier's harmonic alchemy with English metaphysical theology",
+          "innovation": "Adaptation of Continental emblematic tradition to English verse and metaphysical theology"
+        },
+        {
+          "work": "Magia Adamica",
+          "year": 1650,
+          "description": "Further emblematic interpretations of alchemical symbolism",
+          "innovation": "Integration of Adamic theology with alchemical cosmology"
+        },
+        {
+          "work": "Euphrates (translation of hermetic works)",
+          "year": 1655,
+          "description": "English translation and interpretation of hermetic texts",
+          "innovation": "Making Continental esotericism accessible to English readers"
+        }
+      ],
+      "key_innovations_to_emblem_tradition": [
+        "Harmonic cosmology in English: bringing Maier's musical-alchemical philosophy to English esotericism",
+        "Rosicrucian apologetics: defending Rosicrucian claims and integrating them with alchemical practice",
+        "Metaphysical alchemy: synthesizing Maier's cosmology with English Metaphysical poetry traditions",
+        "Vernacular transmission: making Continental emblem tradition accessible in English"
+      ],
+      "influenced_by": [
+        {
+          "figure_id": 10,
+          "figure_name": "Michael Maier",
+          "influence_type": "direct study and elaboration",
+          "how": "Vaughan directly studied and reinterpreted Maier's Atalanta Fugiens and harmonic cosmology"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Daniel Cramer",
+          "influence_type": "Rosicrucian theology",
+          "how": "Vaughan inherited Cramer's integration of theological doctrine with alchemical symbolism"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Paracelsus",
+          "influence_type": "medical-alchemical framework",
+          "how": "Vaughan incorporated Paracelsian medical alchemy"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Jacob Böhme",
+          "influence_type": "mystical theology",
+          "how": "Vaughan inherited Böhme's theosophical interpretation of alchemy"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "English Metaphysical poets",
+          "influence_type": "poetic tradition",
+          "how": "Vaughan adapted Continental esotericism to English metaphysical verse"
+        }
+      ],
+      "influenced_figures": [
+        {
+          "figure_id": null,
+          "figure_name": "English metaphysical mysticism",
+          "influence_type": "theological framework",
+          "how": "Vaughan established alchemy as a serious intellectual pursuit in English circles"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Emanuel Swedenborg",
+          "influence_type": "English transmission",
+          "how": "Vaughan influenced English reception of later Swedenborgianism"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "English esotericism",
+          "influence_type": "tradition establishment",
+          "how": "Vaughan established English esotericism as distinct from Continental traditions"
+        }
+      ],
+      "scholarly_support": [
+        "Godwin - Vaughan as English representative of Continental emblem tradition",
+        "Weeks - Vaughan as heir to Paracelsian tradition"
+      ],
+      "scholarly_debates": [
+        "The extent to which Vaughan was original versus secondary-order transmitter",
+        "Whether Vaughan's alchemy was practical or purely theological"
+      ],
+      "key_works": [
+        "Anthroposophia Theomagica (1650)",
+        "Magia Adamica (1650)",
+        "Euphrates (1655)",
+        "The Fame and Confession of the Fraternity of R.C. (English translation)"
+      ],
+      "connection_summary": "Vaughan is the English heir to Continental emblem tradition. His work shows how Maier's and Cramer's emblems were received, reinterpreted, and adapted to English metaphysical culture. Though less original than the primary creators, Vaughan was influential in establishing alchemy as a serious intellectual pursuit in English esotericism and in extending Continental emblem tradition into English-speaking circles."
+    },
+    {
+      "figure_id": null,
+      "figure_name": "Emanuel Swedenborg",
+      "birth_year": 1688,
+      "death_year": 1772,
+      "nationality": "Swedish",
+      "discipline": "Scientist, Mystic, Theosophist, Revelatory Theologian",
+      "primary_location": "Stockholm, Sweden",
+      "role": "INFLUENCED-BY",
+      "transmission_period": "Enlightenment-Early Romanticism",
+      "genealogical_position": "Late synthesizer transforming emblem tradition through visionary experience; bridge between Baroque emblems and modern esotericism",
+      "emblem_books_created": [],
+      "cosmological_theological_diagrams_functioning_as_emblems": [
+        {
+          "work": "Arcana Coelestia (Heavenly Secrets)",
+          "year": 1749,
+          "description": "Elaborate symbolic-allegorical interpretation of Scripture with detailed cosmological theology",
+          "innovation": "Reinterpretation of emblem-alchemical symbolism through visionary experience"
+        },
+        {
+          "work": "Spiritual Diary",
+          "year": 1748,
+          "description": "Record of inner visions with detailed symbolic interpretations",
+          "innovation": "Grounding emblem theory in visionary experience"
+        }
+      ],
+      "key_innovations_to_emblem_tradition": [
+        "Heaven and hell as internal states: Swedenborg reinterprets alchemical transformation as the perfection of internal consciousness",
+        "Divine alchemy: following Böhme, Swedenborg emphasizes that all transformation is divine alchemy",
+        "Correspondence systematized: Swedenborg created the most elaborate system of symbolic correspondence, extending Agrippa and Fludd",
+        "Vision and alchemy: Swedenborg claims direct mystical vision of inner correspondences, grounding emblem theory in visionary experience"
+      ],
+      "influenced_by": [
+        {
+          "figure_id": 10,
+          "figure_name": "Michael Maier",
+          "influence_type": "harmonic cosmology",
+          "how": "Swedenborg inherited Maier's harmonic cosmology and integrated it with mystical theology"
+        },
+        {
+          "figure_id": 3,
+          "figure_name": "Robert Fludd",
+          "influence_type": "cosmological diagrams",
+          "how": "Swedenborg studied Fludd's cosmological diagrams and extended them into visionary theology"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Heinrich Khunrath",
+          "influence_type": "cosmological theater",
+          "how": "Swedenborg inherited Khunrath's cosmological theater and transformed it into spiritual anatomy"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Jacob Böhme",
+          "influence_type": "mystical theology",
+          "how": "Swedenborg inherited Böhme's theosophical interpretation of alchemy and extended it"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Paracelsus",
+          "influence_type": "medical-alchemical framework",
+          "how": "Swedenborg inherited Paracelsus's medical alchemy (though transformed it)"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Entire emblem-alchemical tradition",
+          "influence_type": "comprehensive synthesis",
+          "how": "Swedenborg studied all major emblematists and synthesized their work"
+        }
+      ],
+      "influenced_figures": [
+        {
+          "figure_id": null,
+          "figure_name": "German Idealism",
+          "influence_type": "philosophical tradition",
+          "how": "Swedenborg influenced Schelling and Hegel's Naturphilosophie"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Romanticism",
+          "influence_type": "aesthetic and philosophical",
+          "how": "Swedenborg's visionary cosmology influenced Romantic literature and philosophy"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Spiritualism",
+          "influence_type": "movement foundation",
+          "how": "Swedenborg's visionary theology became foundation for 19th-century Spiritualist movement"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Theosophy",
+          "influence_type": "foundational texts",
+          "how": "Blavatsky and Theosophical Society drew heavily on Swedenborg"
+        },
+        {
+          "figure_id": null,
+          "figure_name": "Modern esotericism",
+          "influence_type": "continuous influence",
+          "how": "Swedenborg remains foundational to modern esoteric traditions"
+        }
+      ],
+      "scholarly_support": [
+        "Godwin - Swedenborg as culmination and transformation of emblem tradition",
+        "Weeks - Swedenborg as heir to Paracelsian tradition",
+        "Jung - Swedenborg's psychology and individuation"
+      ],
+      "scholarly_debates": [
+        "Whether Swedenborg's visions were mystical experiences or psychological phenomena",
+        "The extent to which Swedenborg was influenced by emblem tradition versus original visionary",
+        "How to interpret Swedenborg's claim to direct communication with angels"
+      ],
+      "key_works": [
+        "Arcana Coelestia (1749–1756)",
+        "Heaven and Hell (1758)",
+        "The True Christian Religion (1771)",
+        "Spiritual Diary (1748–1765)"
+      ],
+      "connection_summary": "Swedenborg represents the culmination and transformation of the emblem tradition. He preserves emblem-alchemical symbolism while reframing it through mystical theology and visionary experience. Swedenborg claims direct mystical vision of inner correspondences, grounding emblem theory in visionary experience rather than merely conceptual systematization. His influence on Romanticism, Spiritualism, and modern esotericism is profound. Swedenborg bridges the Baroque emblem tradition with later modernity, demonstrating that emblem-alchemical symbolism remains vital for understanding human consciousness and spiritual transformation."
+    }
+  ],
+  "genealogical_timeline": {
+    "Renaissance": [
+      {
+        "period": "1493–1541",
+        "figure": "Paracelsus",
+        "role": "INFLUENCED-BY (foundational genius)",
+        "contribution": "Originating philosophy; did not create emblems but provided framework"
+      }
+    ],
+    "Renaissance-Early Modern Transition": [
+      {
+        "period": "1560–1605",
+        "figure": "Heinrich Khunrath",
+        "role": "CREATOR",
+        "contribution": "Cosmological diagrams; bridge between Renaissance and Rosicrucian"
+      },
+      {
+        "period": "1527–1608",
+        "figure": "John Dee",
+        "role": "INFLUENCED-BY",
+        "contribution": "Harmonic mathematics; precursor to emblem tradition"
+      }
+    ],
+    "Early Modern I: Emblem-Book Generation (1590–1630)": [
+      {
+        "period": "1568–1622",
+        "figure": "Michael Maier",
+        "role": "CREATOR (Primary)",
+        "contribution": "Atalanta Fugiens (1617); harmonic cosmology; foundational emblem tradition"
+      },
+      {
+        "period": "1568–1637",
+        "figure": "Daniel Cramer",
+        "role": "CREATOR (Secondary)",
+        "contribution": "Rosicrucian Emblems (1617); theological systematization"
+      },
+      {
+        "period": "1574–1637",
+        "figure": "Robert Fludd",
+        "role": "INFLUENCED-BY (Cosmological diagrammatist)",
+        "contribution": "Utriusque Cosmi Historia (1614–1621); English synthesis"
+      },
+      {
+        "period": "1575–1624",
+        "figure": "Jacob Böhme",
+        "role": "INFLUENCED-BY (Mystical theologian)",
+        "contribution": "Theosophical framework; hermeneutics of emblem interpretation"
+      },
+      {
+        "period": "1586–1654",
+        "figure": "Johann Valentin Andreae",
+        "role": "INFLUENCED-BY (Rosicrucian theorist)",
+        "contribution": "Chymische Hochzeit (1616); narrative framework for emblems"
+      },
+      {
+        "period": "1597–after 1650",
+        "figure": "Daniel Stolcius",
+        "role": "CREATOR (Compiler)",
+        "contribution": "Hermetic Garden (1624); comprehensive emblem encyclopedia (160 emblems)"
+      }
+    ],
+    "Early Modern II: Secondary Transmission (1620–1680)": [
+      {
+        "period": "1622–1666",
+        "figure": "Thomas Vaughan",
+        "role": "INFLUENCED-BY (English transmitter)",
+        "contribution": "English adaptation of Continental tradition; metaphysical synthesis"
+      }
+    ],
+    "Enlightenment-Early Romanticism (1680–1800)": [
+      {
+        "period": "1688–1772",
+        "figure": "Emanuel Swedenborg",
+        "role": "INFLUENCED-BY (Late synthesizer)",
+        "contribution": "Visionary-theological reinterpretation; bridge to modern esotericism"
+      }
+    ]
+  },
+  "genealogical_structure_summary": {
+    "foundational_philosophy": [
+      "Paracelsus (Renaissance genius; framework for all later emblematists)"
+    ],
+    "primary_emblem_creators": [
+      "Michael Maier (harmonic cosmology; Atalanta Fugiens 1617)",
+      "Heinrich Khunrath (cosmological diagrams; Amphitheatrum 1595)",
+      "Daniel Cramer (Rosicrucian theology; Rosicrucian Emblems 1617)",
+      "Daniel Stolcius (comprehensive encyclopedia; Hermetic Garden 1624)"
+    ],
+    "theoretical_influencers": [
+      "Jacob Böhme (mystical theology)",
+      "Robert Fludd (cosmological synthesis)",
+      "Johann Valentin Andreae (Rosicrucian narrative)",
+      "John Dee (harmonic mathematics)"
+    ],
+    "secondary_transmitters": [
+      "Thomas Vaughan (English adaptation 1650s)",
+      "Emanuel Swedenborg (visionary reinterpretation 1740s–1770s)"
+    ]
+  },
+  "implementation_notes": {
+    "database_schema": "Each figure_emblem_genealogy entry should include: figure_id, figure_name, role, transmission_period, genealogical_position, emblem_books_created (array), emblem_books_studied (array), key_innovations (array), influenced_by (array with figure_id and explanation), influenced_figures (array), scholarly_support (array), scholarly_debates (array), connection_summary (text)",
+    "relational_integrity": "Create bidirectional links: if figure A influenced figure B, record in both A's influenced_figures and B's influenced_by",
+    "genealogical_visualization": "Timeline can be rendered as: Renaissance → Early Modern I → Early Modern II → Enlightenment, showing each figure's position, their primary/secondary status, and their influence flow",
+    "next_steps": "Create Python script to insert figure_emblem_genealogy entries; update figure pages to show genealogical position and influence network"
+  }
+}

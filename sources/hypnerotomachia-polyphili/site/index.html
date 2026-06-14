@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Alchemical hands in the marginalia of the Hypnerotomachia Poliphili (Venice, 1499). A digital scholarship platform based on James Russell's PhD thesis.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alchemical Hands in the Hypnerotomachia Poliphili</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scholars.css">
+    <link rel="stylesheet" href="components.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Alchemical Hands in the <em>Hypnerotomachia Poliphili</em></h1>
+            <p class="subtitle">Marginalia, Scholarship &amp; Reception</p>
+            <p class="attribution">Based on the doctoral research of James Russell (Durham, 2014)</p>
+            <nav class="site-nav"><a href="index.html" class="active">Home</a><a href="marginalia/index.html">Marginalia</a><a href="scholars.html">Scholars</a><a href="bibliography.html">Bibliography</a><a href="dictionary/index.html">Dictionary</a><a href="docs/index.html">Docs</a><a href="code/index.html">Code</a><a href="the-book.html">The Book</a><a href="timeline.html">Timeline</a><a href="woodcuts/index.html">Woodcuts</a><a href="manuscripts/index.html">Manuscripts</a><a href="digital-edition.html">Editions</a><a href="russell-alchemical-hands.html">Alchemical Hands</a><a href="concordance/index.html">Concordance</a><a href="jonson/index.html">Ben Jonson</a><a href="digby/index.html">Digby</a><a href="about.html">About</a></nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="intro-content">
+                <p>Two anonymous readers, working independently in different copies of the same Renaissance book, both decided it was secretly about alchemy. They were wrong about the book &mdash; but what they wrote in its margins is extraordinary. One followed the mercury-centered framework of Jean d'Espagnet, declaring the book's "true sense" to be the operations of <a href="russell-alchemical-hands.html">"Master Mercury."</a> The other followed the pseudo-Geber tradition, reading a human chess match as <a href="russell-alchemical-hands.html#buffalo-alchemist">three rounds of chemical distillation</a>. This site was built to show you what they saw.</p>
+                <p>The <a href="the-book.html"><em>Hypnerotomachia Poliphili</em></a> is a 500-page illustrated dream narrative published in Venice in 1499 &mdash; the most ambitious illustrated book of the fifteenth century. James Russell's 2014 PhD thesis documented the marginal annotations in six copies, identifying eleven distinct readers spanning two centuries: humanists, a playwright, a pope, and the two alchemists whose competing readings are the starting point for this project. <a href="the-book.html">Read about the book &rarr;</a></p>
+                <p>Browse the <a href="marginalia/index.html">marginalia gallery</a> to see annotated manuscript pages with alchemical symbol tables. Explore <a href="dictionary/index.html">94 terms</a> mapping the book's intellectual world. Read the <a href="russell-alchemical-hands.html">Alchemical Hands essay</a> for Russell's analysis of how two readers decoded the same love story through incompatible chemical frameworks. Or trace the <a href="timeline.html">timeline</a> of five centuries of readers, scholars, and artists drawn to this enigmatic book.</p>
+            </div>
+        </section>
+
+        <section class="stats" id="stats">
+            <div class="stat-card">
+                <span class="stat-number" id="stat-refs">--</span>
+                <span class="stat-label">Folio References</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="stat-sigs">--</span>
+                <span class="stat-label">Unique Signatures</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="stat-matches">--</span>
+                <span class="stat-label">Image Matches</span>
+            </div>
+        </section>
+
+        <section class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="C.60.o.12">British Library</button>
+            <button class="filter-btn" data-filter="O.III.38">Siena</button>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <!-- Populated by JavaScript -->
+        </section>
+    </main>
+
+    <!-- Lightbox overlay -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev">&lsaquo;</button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next">&rsaquo;</button>
+        <div class="lightbox-content">
+            <div class="lightbox-image-wrap">
+                <img id="lightbox-img" src="" alt="">
+            </div>
+            <div class="lightbox-details" id="lightbox-details">
+                <h3 id="lightbox-sig"></h3>
+                <p class="lightbox-ms" id="lightbox-ms"></p>
+                <div class="lightbox-marginal" id="lightbox-marginal"></div>
+                <div class="lightbox-context" id="lightbox-context"></div>
+                <p class="lightbox-page" id="lightbox-page"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Manuscripts</h4>
+                <p><strong>BL C.60.o.12</strong> &mdash; British Library, London</p>
+                <p><strong>O.III.38</strong> &mdash; Biblioteca degli Intronati, Siena</p>
+            </div>
+            <div class="footer-section">
+                <h4>Source</h4>
+                <p>James Russell, PhD Thesis: <em>Hypnerotomachia Poliphili</em></p>
+                <p>Images referenced from digital facsimiles and photographs of the original manuscripts.</p>
+            </div>
+            <div class="footer-section">
+                <h4>About This Project</h4>
+                <p>A digital humanities project cataloging the marginalia and readership history of the 1499 Aldine <em>Hypnerotomachia Poliphili</em>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

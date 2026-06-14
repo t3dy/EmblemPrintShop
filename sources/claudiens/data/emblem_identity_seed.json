@@ -1,0 +1,512 @@
+[
+  {
+    "emblem_number": 0,
+    "roman_label": "F",
+    "canonical_order": 0,
+    "image_filename": "emblem-00.jpg",
+    "image_source": "science_history_institute",
+    "image_url": "https://digital.sciencehistory.org/works/pc289j53n",
+    "alignment_confidence": "HIGH",
+    "notes": "Engraved title page. SHI file_set 5x21tg09w, confirmed via catalog title."
+  },
+  {
+    "emblem_number": 1,
+    "roman_label": "I",
+    "canonical_order": 1,
+    "image_filename": "emblem-01.jpg",
+    "image_source": "science_history_institute",
+    "image_url": "https://digital.sciencehistory.org/works/pc289j53n",
+    "alignment_confidence": "HIGH",
+    "notes": "SHI parent work confirmed as Emblema I via catalog title and Latin motto."
+  },
+  {
+    "emblem_number": 2,
+    "roman_label": "II",
+    "canonical_order": 2,
+    "image_filename": "emblem-02.jpg",
+    "image_source": "science_history_institute",
+    "image_url": "https://digital.sciencehistory.org/works/pc289j53n",
+    "alignment_confidence": "HIGH",
+    "notes": "SHI parent work confirmed as Emblema II via catalog title and Latin motto."
+  },
+  {
+    "emblem_number": 3,
+    "roman_label": "III",
+    "canonical_order": 3,
+    "image_filename": "emblem-03.jpg",
+    "image_source": "science_history_institute",
+    "image_url": "https://digital.sciencehistory.org/works/pc289j53n",
+    "alignment_confidence": "HIGH",
+    "notes": "SHI parent work confirmed as Emblema III via catalog title and Latin motto."
+  },
+  {
+    "emblem_number": 4,
+    "roman_label": "IV",
+    "canonical_order": 4,
+    "image_filename": "emblem-04.jpg",
+    "image_source": "science_history_institute",
+    "image_url": "https://digital.sciencehistory.org/works/pc289j53n",
+    "alignment_confidence": "HIGH",
+    "notes": "SHI parent work confirmed as Emblema IV via catalog title and Latin motto."
+  },
+  {
+    "emblem_number": 5,
+    "roman_label": "V",
+    "canonical_order": 5,
+    "image_filename": "emblem-05.jpg",
+    "image_source": "science_history_institute",
+    "image_url": "https://digital.sciencehistory.org/works/pc289j53n",
+    "alignment_confidence": "HIGH",
+    "notes": "SHI parent work confirmed as Emblema V via catalog title and Latin motto."
+  },
+  {
+    "emblem_number": 6,
+    "roman_label": "VI",
+    "canonical_order": 6,
+    "image_filename": "emblem-06.jpg",
+    "image_source": "science_history_institute",
+    "image_url": "https://digital.sciencehistory.org/works/pc289j53n",
+    "alignment_confidence": "HIGH",
+    "notes": "SHI parent work confirmed as Emblema VI via catalog title and Latin motto."
+  },
+  {
+    "emblem_number": 7,
+    "roman_label": "VII",
+    "canonical_order": 7,
+    "image_filename": "emblem-07.jpg",
+    "image_source": "science_history_institute",
+    "image_url": "https://digital.sciencehistory.org/works/pc289j53n",
+    "alignment_confidence": "HIGH",
+    "notes": "SHI parent work confirmed as Emblema VII via catalog title and Latin motto."
+  },
+  {
+    "emblem_number": 8,
+    "roman_label": "VIII",
+    "canonical_order": 8,
+    "image_filename": "emblem-08.jpg",
+    "image_source": "science_history_institute",
+    "image_url": "https://digital.sciencehistory.org/works/pc289j53n",
+    "alignment_confidence": "HIGH",
+    "notes": "SHI parent work confirmed as Emblema VIII via catalog title and Latin motto."
+  },
+  {
+    "emblem_number": 9,
+    "roman_label": "IX",
+    "canonical_order": 9,
+    "image_filename": "emblem-09.jpg",
+    "image_source": "science_history_institute",
+    "image_url": "https://digital.sciencehistory.org/works/pc289j53n",
+    "alignment_confidence": "HIGH",
+    "notes": "SHI parent work confirmed as Emblema IX via catalog title and Latin motto."
+  },
+  {
+    "emblem_number": 10,
+    "roman_label": "X",
+    "canonical_order": 10,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 11,
+    "roman_label": "XI",
+    "canonical_order": 11,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 12,
+    "roman_label": "XII",
+    "canonical_order": 12,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 13,
+    "roman_label": "XIII",
+    "canonical_order": 13,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 14,
+    "roman_label": "XIV",
+    "canonical_order": 14,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 15,
+    "roman_label": "XV",
+    "canonical_order": 15,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 16,
+    "roman_label": "XVI",
+    "canonical_order": 16,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 17,
+    "roman_label": "XVII",
+    "canonical_order": 17,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 18,
+    "roman_label": "XVIII",
+    "canonical_order": 18,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 19,
+    "roman_label": "XIX",
+    "canonical_order": 19,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 20,
+    "roman_label": "XX",
+    "canonical_order": 20,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 21,
+    "roman_label": "XXI",
+    "canonical_order": 21,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 22,
+    "roman_label": "XXII",
+    "canonical_order": 22,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 23,
+    "roman_label": "XXIII",
+    "canonical_order": 23,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 24,
+    "roman_label": "XXIV",
+    "canonical_order": 24,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 25,
+    "roman_label": "XXV",
+    "canonical_order": 25,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 26,
+    "roman_label": "XXVI",
+    "canonical_order": 26,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 27,
+    "roman_label": "XXVII",
+    "canonical_order": 27,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 28,
+    "roman_label": "XXVIII",
+    "canonical_order": 28,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 29,
+    "roman_label": "XXIX",
+    "canonical_order": 29,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 30,
+    "roman_label": "XXX",
+    "canonical_order": 30,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 31,
+    "roman_label": "XXXI",
+    "canonical_order": 31,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 32,
+    "roman_label": "XXXII",
+    "canonical_order": 32,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 33,
+    "roman_label": "XXXIII",
+    "canonical_order": 33,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 34,
+    "roman_label": "XXXIV",
+    "canonical_order": 34,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 35,
+    "roman_label": "XXXV",
+    "canonical_order": 35,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 36,
+    "roman_label": "XXXVI",
+    "canonical_order": 36,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 37,
+    "roman_label": "XXXVII",
+    "canonical_order": 37,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 38,
+    "roman_label": "XXXVIII",
+    "canonical_order": 38,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 39,
+    "roman_label": "XXXIX",
+    "canonical_order": 39,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 40,
+    "roman_label": "XL",
+    "canonical_order": 40,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 41,
+    "roman_label": "XLI",
+    "canonical_order": 41,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 42,
+    "roman_label": "XLII",
+    "canonical_order": 42,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 43,
+    "roman_label": "XLIII",
+    "canonical_order": 43,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 44,
+    "roman_label": "XLIV",
+    "canonical_order": 44,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 45,
+    "roman_label": "XLV",
+    "canonical_order": 45,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 46,
+    "roman_label": "XLVI",
+    "canonical_order": 46,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 47,
+    "roman_label": "XLVII",
+    "canonical_order": 47,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 48,
+    "roman_label": "XLVIII",
+    "canonical_order": 48,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 49,
+    "roman_label": "XLIX",
+    "canonical_order": 49,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  },
+  {
+    "emblem_number": 50,
+    "roman_label": "L",
+    "canonical_order": 50,
+    "image_filename": null,
+    "image_source": null,
+    "image_url": null,
+    "alignment_confidence": null,
+    "notes": "Image not yet sourced. Awaiting labeled source with confirmed emblem number."
+  }
+]

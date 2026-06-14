@@ -1,0 +1,89 @@
+{
+  "tier_1_maier_atalanta_fugiens": {
+    "source_book": "Atalanta Fugiens",
+    "author": "Michael Maier",
+    "date_published": 1618,
+    "location": "E:/pdf/alchemy/atalanta_fugiens/Michael Maier Atalanta fugiens libgen li.pdf",
+    "total_emblems": 51,
+    "emblems_planned": 51,
+    "extraction_status": "PENDING",
+    "sourcing_strategy": [
+      "Primary: PDF image extraction from edition",
+      "Secondary: De Jong scholarly analysis for interpretations",
+      "Fallback: Text-only descriptions based on scholarship"
+    ],
+    "key_concepts": [
+      "Philosophical Transformation",
+      "Duality and Opposites",
+      "Sublimation",
+      "Distillation",
+      "The Philosophical Mercury",
+      "King and Queen symbolism",
+      "Conjunction (Coniunctio)"
+    ],
+    "sample_emblems": [
+      {
+        "emblem_id": "maier-atalanta-001",
+        "number": 1,
+        "title": "[To Be Extracted]",
+        "visual_description": "[To be created from image extraction]",
+        "philosophical_essay": "[To be written with De Jong guidance]",
+        "key_concepts": [
+          "Transformation",
+          "Beginnings"
+        ],
+        "epigrammatic_text": "[Latin/English to be extracted]",
+        "sourcing": {
+          "source_book": "Atalanta Fugiens",
+          "edition": "Johann Theodor de Bry, 1618",
+          "page_range": "[TBD]",
+          "image_source": "PDF extraction",
+          "scholarly_basis": "De Jong, Helena Maria Elisabeth. *Michael Maier's Atalanta Fugiens: Sources of an Alchemical Book of Emblems*"
+        }
+      }
+    ]
+  },
+  "tier_1_khunrath_amphitheatrum": {
+    "source_book": "Amphitheatrum Sapientiae Aeternae",
+    "author": "Heinrich Khunrath",
+    "date_published": 1595,
+    "location": "E:/pdf/alchemy/Peter J Forshaw The Mage s Images_ Heinrich Khunrath...",
+    "total_emblems": 30,
+    "emblems_planned": 25,
+    "extraction_status": "PENDING",
+    "sourcing_strategy": [
+      "Primary: Forshaw scholarship with image references",
+      "Secondary: Scholarly interpretation of cosmological diagrams",
+      "Fallback: Text descriptions based on Forshaw analysis"
+    ],
+    "key_concepts": [
+      "Cosmological Hierarchy",
+      "Laboratory-Oratory Integration",
+      "Esoteric Cosmology",
+      "Spiritual Alchemy",
+      "Divine Order in Nature"
+    ]
+  },
+  "tier_2_mutus_liber": {
+    "source_book": "Mutus Liber (The Silent Book)",
+    "author": "Anonymous (attributed to unknown author, French)",
+    "date_published": 1677,
+    "location": "E:/pdf/alchemy/Adam McLean A Commentary on the Mutus Liber.pdf",
+    "total_emblems": 15,
+    "emblems_planned": 15,
+    "extraction_status": "PENDING",
+    "sourcing_strategy": [
+      "Primary: McLean scholarly commentary with analysis",
+      "Secondary: Visual symbolism interpretation",
+      "Fallback: Text descriptions based on McLean's detailed analysis"
+    ],
+    "key_concepts": [
+      "Silent Knowledge",
+      "Visual Philosophy",
+      "Transmutation",
+      "Lunar and Solar Operations",
+      "Wholeness and Completion"
+    ],
+    "note": "Mutus Liber is a wordless emblem book; all knowledge conveyed through image and symbol alone"
+  }
+}

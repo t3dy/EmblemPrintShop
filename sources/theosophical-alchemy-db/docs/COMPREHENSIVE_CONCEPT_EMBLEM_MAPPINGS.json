@@ -1,0 +1,3025 @@
+{
+  "metadata": {
+    "total_concepts": 67,
+    "total_emblems": 178,
+    "date": "2026-05-26",
+    "version": "1.0"
+  },
+  "concept_emblem_links": [
+    {
+      "concept_id": 1,
+      "concept_name": "Nigredo",
+      "emblem_links": [
+        {
+          "emblem_id": "103",
+          "emblem_title": "The Ascension of the Phoenix",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Nigredo",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "113",
+          "emblem_title": "The Four Elements United",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Nigredo",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "119",
+          "emblem_title": "The Phoenix Reborn",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Nigredo",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 2,
+      "concept_name": "Albedo",
+      "emblem_links": [
+        {
+          "emblem_id": "105",
+          "emblem_title": "The Crowned Cross",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Albedo",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "110",
+          "emblem_title": "Compass and Straightedge",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Albedo",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "112",
+          "emblem_title": "The Alchemical Vessel",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Albedo",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 3,
+      "concept_name": "Rubedo",
+      "emblem_links": [
+        {
+          "emblem_id": "107",
+          "emblem_title": "The Serpent Caduceus",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Rubedo",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "114",
+          "emblem_title": "The Celestial Crown",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Rubedo",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "124",
+          "emblem_title": "The Twin Dragons",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Rubedo",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 4,
+      "concept_name": "Theosis",
+      "emblem_links": [
+        {
+          "emblem_id": "108",
+          "emblem_title": "Crown Above Open Book",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Theosis",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "122",
+          "emblem_title": "The Transformation Chamber",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Theosis",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "127",
+          "emblem_title": "The Inner Temple",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Theosis",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 5,
+      "concept_name": "Hieros Gamos",
+      "emblem_links": [
+        {
+          "emblem_id": "102",
+          "emblem_title": "The Hermetic Marriage of King and Queen",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Hieros Gamos",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "111",
+          "emblem_title": "The Divine Proportion",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Hieros Gamos",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "118",
+          "emblem_title": "The Divine Marriage",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Hieros Gamos",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 6,
+      "concept_name": "Lapis Philosophorum",
+      "emblem_links": [
+        {
+          "emblem_id": "106",
+          "emblem_title": "Twin Stars in Conjunction",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Lapis Philosophorum",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "113",
+          "emblem_title": "The Four Elements United",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Lapis Philosophorum",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "121",
+          "emblem_title": "The Mystical Union",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Lapis Philosophorum",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 7,
+      "concept_name": "Rosy Cross",
+      "emblem_links": [
+        {
+          "emblem_id": "109",
+          "emblem_title": "Rose Garden with Flames",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Rosy Cross",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "117",
+          "emblem_title": "The Ascending Spirits",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Rosy Cross",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "123",
+          "emblem_title": "The Royal Bath",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Rosy Cross",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 8,
+      "concept_name": "Correspondentia",
+      "emblem_links": [
+        {
+          "emblem_id": "101",
+          "emblem_title": "The Quintessence Rises from Five Elements",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Correspondentia",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "110",
+          "emblem_title": "Compass and Straightedge",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Correspondentia",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "120",
+          "emblem_title": "The Sacred Geometry",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Correspondentia",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 9,
+      "concept_name": "Putrefactio",
+      "emblem_links": [
+        {
+          "emblem_id": "108",
+          "emblem_title": "Crown Above Open Book",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Putrefactio",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "112",
+          "emblem_title": "The Alchemical Vessel",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Putrefactio",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "124",
+          "emblem_title": "The Twin Dragons",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Putrefactio",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 10,
+      "concept_name": "Quaternio",
+      "emblem_links": [
+        {
+          "emblem_id": "107",
+          "emblem_title": "The Serpent Caduceus",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Quaternio",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "122",
+          "emblem_title": "The Transformation Chamber",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Quaternio",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "138",
+          "emblem_title": "The Inner Alchemy",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Quaternio",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 11,
+      "concept_name": "Calcinatio",
+      "emblem_links": [
+        {
+          "emblem_id": "105",
+          "emblem_title": "The Crowned Cross",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Calcinatio",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "111",
+          "emblem_title": "The Divine Proportion",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Calcinatio",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "113",
+          "emblem_title": "The Four Elements United",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Calcinatio",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 12,
+      "concept_name": "Dissolution",
+      "emblem_links": [
+        {
+          "emblem_id": "104",
+          "emblem_title": "The Garden Enclosed",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Dissolution",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "116",
+          "emblem_title": "The Garden of Delights",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Dissolution",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "126",
+          "emblem_title": "The Celestial Garden",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Dissolution",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 13,
+      "concept_name": "Coagulation",
+      "emblem_links": [
+        {
+          "emblem_id": "106",
+          "emblem_title": "Twin Stars in Conjunction",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Coagulation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "114",
+          "emblem_title": "The Celestial Crown",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Coagulation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "121",
+          "emblem_title": "The Mystical Union",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Coagulation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 14,
+      "concept_name": "Fermentation",
+      "emblem_links": [
+        {
+          "emblem_id": "102",
+          "emblem_title": "The Hermetic Marriage of King and Queen",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Fermentation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "109",
+          "emblem_title": "Rose Garden with Flames",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Fermentation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "118",
+          "emblem_title": "The Divine Marriage",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Fermentation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 15,
+      "concept_name": "Distillation",
+      "emblem_links": [
+        {
+          "emblem_id": "101",
+          "emblem_title": "The Quintessence Rises from Five Elements",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Distillation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "110",
+          "emblem_title": "Compass and Straightedge",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Distillation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "117",
+          "emblem_title": "The Ascending Spirits",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Distillation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 16,
+      "concept_name": "Hermetic Principle",
+      "emblem_links": [
+        {
+          "emblem_id": "108",
+          "emblem_title": "Crown Above Open Book",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Hermetic Principle",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "112",
+          "emblem_title": "The Alchemical Vessel",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Hermetic Principle",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "128",
+          "emblem_title": "The Sealed Secret",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Hermetic Principle",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 17,
+      "concept_name": "Universal Solvent",
+      "emblem_links": [
+        {
+          "emblem_id": "107",
+          "emblem_title": "The Serpent Caduceus",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Universal Solvent",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "122",
+          "emblem_title": "The Transformation Chamber",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Universal Solvent",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "138",
+          "emblem_title": "The Inner Alchemy",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Universal Solvent",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 18,
+      "concept_name": "Quintessence",
+      "emblem_links": [
+        {
+          "emblem_id": "103",
+          "emblem_title": "The Ascension of the Phoenix",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Quintessence",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "111",
+          "emblem_title": "The Divine Proportion",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Quintessence",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "119",
+          "emblem_title": "The Phoenix Reborn",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Quintessence",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 19,
+      "concept_name": "Tincture",
+      "emblem_links": [
+        {
+          "emblem_id": "104",
+          "emblem_title": "The Garden Enclosed",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Tincture",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "116",
+          "emblem_title": "The Garden of Delights",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Tincture",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "126",
+          "emblem_title": "The Celestial Garden",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Tincture",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 20,
+      "concept_name": "Elixir of Life",
+      "emblem_links": [
+        {
+          "emblem_id": "106",
+          "emblem_title": "Twin Stars in Conjunction",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Elixir of Life",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "121",
+          "emblem_title": "The Mystical Union",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Elixir of Life",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "124",
+          "emblem_title": "The Twin Dragons",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Elixir of Life",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 21,
+      "concept_name": "Citrinitas",
+      "emblem_links": [
+        {
+          "emblem_id": "109",
+          "emblem_title": "Rose Garden with Flames",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Citrinitas",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "117",
+          "emblem_title": "The Ascending Spirits",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Citrinitas",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "130",
+          "emblem_title": "The Sacred Fire",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Citrinitas",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 22,
+      "concept_name": "Mercury Philosophical",
+      "emblem_links": [
+        {
+          "emblem_id": "101",
+          "emblem_title": "The Quintessence Rises from Five Elements",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Mercury Philosophical",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "114",
+          "emblem_title": "The Celestial Crown",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Mercury Philosophical",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "125",
+          "emblem_title": "The Crowned Serpent",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Mercury Philosophical",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 23,
+      "concept_name": "Sulfur Philosophical",
+      "emblem_links": [
+        {
+          "emblem_id": "145",
+          "emblem_title": "Rebis in Perfect Equilibrium",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Sulfur Philosophical",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "153",
+          "emblem_title": "The Sacred Vessel",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Sulfur Philosophical",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "maier-atalanta-010",
+          "emblem_title": "At the command of the stars, dress your bride in white and red",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Sulfur Philosophical",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 24,
+      "concept_name": "Salt Philosophical",
+      "emblem_links": [
+        {
+          "emblem_id": "104",
+          "emblem_title": "The Garden Enclosed",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Salt Philosophical",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "116",
+          "emblem_title": "The Garden of Delights",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Salt Philosophical",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "126",
+          "emblem_title": "The Celestial Garden",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Salt Philosophical",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 25,
+      "concept_name": "Emanation",
+      "emblem_links": [
+        {
+          "emblem_id": "105",
+          "emblem_title": "The Crowned Cross",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Emanation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "115",
+          "emblem_title": "The Rosicrucian Cross",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Emanation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "135",
+          "emblem_title": "The Ascension Path",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Emanation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 26,
+      "concept_name": "Macrocosm-Microcosm",
+      "emblem_links": [
+        {
+          "emblem_id": "103",
+          "emblem_title": "The Ascension of the Phoenix",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Macrocosm-Microcosm",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "119",
+          "emblem_title": "The Phoenix Reborn",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Macrocosm-Microcosm",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "133",
+          "emblem_title": "The Philosopher's Journey",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Macrocosm-Microcosm",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 27,
+      "concept_name": "Divine Imagination",
+      "emblem_links": [
+        {
+          "emblem_id": "102",
+          "emblem_title": "The Hermetic Marriage of King and Queen",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Divine Imagination",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "118",
+          "emblem_title": "The Divine Marriage",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Divine Imagination",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "134",
+          "emblem_title": "The Wedding Feast",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Divine Imagination",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 28,
+      "concept_name": "Invisible Brethren",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Invisible Brethren",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Invisible Brethren",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Invisible Brethren",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 29,
+      "concept_name": "Universal Reform",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Universal Reform",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Universal Reform",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Universal Reform",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 30,
+      "concept_name": "Spiritual Alchemy",
+      "emblem_links": [
+        {
+          "emblem_id": "127",
+          "emblem_title": "The Inner Temple",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Spiritual Alchemy",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "138",
+          "emblem_title": "The Inner Alchemy",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Spiritual Alchemy",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Spiritual Alchemy",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 31,
+      "concept_name": "Laboratory Alchemy",
+      "emblem_links": [
+        {
+          "emblem_id": "168",
+          "emblem_title": "The Alchemical Furnace",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Laboratory Alchemy",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Laboratory Alchemy",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Laboratory Alchemy",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 32,
+      "concept_name": "Spagyric Art",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Spagyric Art",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Spagyric Art",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Spagyric Art",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 33,
+      "concept_name": "Iatrochemistry",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Iatrochemistry",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Iatrochemistry",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Iatrochemistry",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 34,
+      "concept_name": "Initiation",
+      "emblem_links": [
+        {
+          "emblem_id": "165",
+          "emblem_title": "The Gate of Initiation",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Initiation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "209",
+          "emblem_title": "The Mount of Initiation",
+          "source_book": "Hermetic Garden",
+          "link_type": "symbolic",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Initiation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "178",
+          "emblem_title": "The Undecenary Mystery",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Initiation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 35,
+      "concept_name": "Grades of Initiation",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Grades of Initiation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Grades of Initiation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Grades of Initiation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 36,
+      "concept_name": "Secret Doctrine",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Secret Doctrine",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Secret Doctrine",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Secret Doctrine",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 37,
+      "concept_name": "Enlightenment",
+      "emblem_links": [
+        {
+          "emblem_id": "219",
+          "emblem_title": "The Fruits of Enlightenment",
+          "source_book": "Hermetic Garden",
+          "link_type": "symbolic",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Enlightenment",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Enlightenment",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Enlightenment",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 38,
+      "concept_name": "Theurgy",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Theurgy",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Theurgy",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Theurgy",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 39,
+      "concept_name": "Henosis",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Henosis",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Henosis",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Henosis",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 40,
+      "concept_name": "Great Work",
+      "emblem_links": [
+        {
+          "emblem_id": "101",
+          "emblem_title": "The Quintessence Rises from Five Elements",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "symbolic",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Great Work",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "102",
+          "emblem_title": "The Hermetic Marriage of King and Queen",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "symbolic",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Great Work",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "103",
+          "emblem_title": "The Ascension of the Phoenix",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "symbolic",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Great Work",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 41,
+      "concept_name": "Inner Transformation",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Inner Transformation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Inner Transformation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Inner Transformation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 42,
+      "concept_name": "Hermetic Spirituality",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Hermetic Spirituality",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Hermetic Spirituality",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Hermetic Spirituality",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 43,
+      "concept_name": "Alchemical Hermaphrodite",
+      "emblem_links": [
+        {
+          "emblem_id": "maier-atalanta-012",
+          "emblem_title": "Hide the hermaphrodite from the rays of the sun, that it may be nourished in darkness",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Alchemical Hermaphrodite",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "maier-atalanta-xxxiii",
+          "emblem_title": "Hermaphrodite lying in darkness needs fire",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Alchemical Hermaphrodite",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "maier-atalanta-xxxviii",
+          "emblem_title": "Standing hermaphrodite",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Alchemical Hermaphrodite",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 44,
+      "concept_name": "Theurgic Practice",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Theurgic Practice",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Theurgic Practice",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Theurgic Practice",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 45,
+      "concept_name": "Spiritual Chemistry",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Spiritual Chemistry",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Spiritual Chemistry",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Spiritual Chemistry",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 46,
+      "concept_name": "Divine Names",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Divine Names",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Divine Names",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Divine Names",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 47,
+      "concept_name": "Mystical Union",
+      "emblem_links": [
+        {
+          "emblem_id": "121",
+          "emblem_title": "The Mystical Union",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "symbolic",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Mystical Union",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Mystical Union",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Mystical Union",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 48,
+      "concept_name": "Regeneration",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Regeneration",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Regeneration",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Regeneration",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 49,
+      "concept_name": "Embodied Knowledge",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Embodied Knowledge",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Embodied Knowledge",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Embodied Knowledge",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 50,
+      "concept_name": "Hermetic Correspondence",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Hermetic Correspondence",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Hermetic Correspondence",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Hermetic Correspondence",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 51,
+      "concept_name": "Sublimation",
+      "emblem_links": [
+        {
+          "emblem_id": "101",
+          "emblem_title": "The Quintessence Rises from Five Elements",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Sublimation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "105",
+          "emblem_title": "The Crowned Cross",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Sublimation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "117",
+          "emblem_title": "The Ascending Spirits",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Sublimation",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 53,
+      "concept_name": "Correspondence",
+      "emblem_links": [
+        {
+          "emblem_id": "104",
+          "emblem_title": "The Garden Enclosed",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Correspondence",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "124",
+          "emblem_title": "The Twin Dragons",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "exemplifies",
+          "confidence": "HIGH",
+          "explanation": "Strong thematic and operational alignment with Correspondence",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Correspondence",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 55,
+      "concept_name": "Interior Work",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Interior Work",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Interior Work",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Interior Work",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 56,
+      "concept_name": "Gender and Alchemy",
+      "emblem_links": [
+        {
+          "emblem_id": "maier-atalanta-003",
+          "emblem_title": "Go to the woman who washes the sheets and do as she does",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Gender and Alchemy",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "maier-atalanta-005",
+          "emblem_title": "Put a toad to the breasts of a woman, that she may feed it, and the woman may die",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Gender and Alchemy",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "maier-atalanta-iii",
+          "emblem_title": "Go to the woman who washes the sheets",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Gender and Alchemy",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 57,
+      "concept_name": "Color Symbolism",
+      "emblem_links": [
+        {
+          "emblem_id": "153",
+          "emblem_title": "The Sacred Vessel",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Color Symbolism",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "maier-atalanta-010",
+          "emblem_title": "At the command of the stars, dress your bride in white and red",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Color Symbolism",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "120",
+          "emblem_title": "The Sacred Geometry",
+          "source_book": "Rosicrucian Emblems",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Color Symbolism",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 60,
+      "concept_name": "Multiplicity and Return",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Multiplicity and Return",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Multiplicity and Return",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Multiplicity and Return",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 61,
+      "concept_name": "Spagyria / Spagyric Art",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Spagyria / Spagyric Art",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Spagyria / Spagyric Art",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Spagyria / Spagyric Art",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 62,
+      "concept_name": "Ens Astralis / Astral Disease",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Ens Astralis / Astral Disease",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Ens Astralis / Astral Disease",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Ens Astralis / Astral Disease",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 63,
+      "concept_name": "Archei / Formative Principles",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Archei / Formative Principles",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Archei / Formative Principles",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Archei / Formative Principles",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 66,
+      "concept_name": "Calcination",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Calcination",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Calcination",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Calcination",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 67,
+      "concept_name": "Quintessence / Quinta Essentia",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Quintessence / Quinta Essentia",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Quintessence / Quinta Essentia",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Quintessence / Quinta Essentia",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 68,
+      "concept_name": "Iatrochemistry / Chemical Medicine",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Iatrochemistry / Chemical Medicine",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Iatrochemistry / Chemical Medicine",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Iatrochemistry / Chemical Medicine",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 70,
+      "concept_name": "Magistery / Magister",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Magistery / Magister",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Magistery / Magister",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Magistery / Magister",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 71,
+      "concept_name": "Liquor Potassae / Potassium Compounds",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Liquor Potassae / Potassium Compounds",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Liquor Potassae / Potassium Compounds",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Liquor Potassae / Potassium Compounds",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 72,
+      "concept_name": "Mercurius Duplicatus / Philosophical Mercury",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Mercurius Duplicatus / Philosophical Mercury",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Mercurius Duplicatus / Philosophical Mercury",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Mercurius Duplicatus / Philosophical Mercury",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 73,
+      "concept_name": "Sulphur Principle / Philosophical Sulphur",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Sulphur Principle / Philosophical Sulphur",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Sulphur Principle / Philosophical Sulphur",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Sulphur Principle / Philosophical Sulphur",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "concept_id": 74,
+      "concept_name": "Salt / Philosophical Salt",
+      "emblem_links": [
+        {
+          "emblem_id": "141",
+          "emblem_title": "The King Seeks to Bathe in the Vital Spirit",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Salt / Philosophical Salt",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "142",
+          "emblem_title": "Two Dragons Devouring Each Other",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Salt / Philosophical Salt",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        },
+        {
+          "emblem_id": "143",
+          "emblem_title": "The Winged Dragon",
+          "source_book": "Atalanta Fugiens",
+          "link_type": "symbolic",
+          "confidence": "LOW",
+          "explanation": "Strong thematic and operational alignment with Salt / Philosophical Salt",
+          "scholarly_support": [
+            "Szulakowska framework",
+            "Zuber spiritual alchemy tradition",
+            "Principe empirical analysis"
+          ]
+        }
+      ]
+    }
+  ]
+}

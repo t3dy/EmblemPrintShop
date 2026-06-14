@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cupid Shoots Arrow at Bust of Polia - Alchemical Hands in the Hypnerotomachia Poliphili</title>
+    <meta name="description" content="Alchemical hands in the marginalia of the Hypnerotomachia Poliphili (Venice, 1499). A digital scholarship platform based on James Russell's PhD thesis.">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../scholars.css">
+    <link rel="stylesheet" href="../components.css">
+    <style>
+        .woodcuts-page { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; }
+        .woodcuts-page h1 { color: var(--accent); font-size: 1.8rem; margin-bottom: 0.3rem; }
+        .woodcuts-page .intro { max-width: 800px; line-height: 1.8; margin-bottom: 1.5rem; color: var(--text-muted); }
+        .wc-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
+        .wc-filter-btn { padding: 0.3rem 0.7rem; border: 1px solid var(--border); border-radius: 3px;
+                         font-size: 0.75rem; font-weight: 600; text-transform: uppercase; cursor: pointer;
+                         background: var(--bg); color: var(--text-muted); transition: all 0.15s; }
+        .wc-filter-btn:hover, .wc-filter-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
+        .woodcut-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+        .woodcut-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px;
+                        overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; }
+        .woodcut-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); transform: translateY(-2px); }
+        .woodcut-card img { width: 100%; height: 320px; object-fit: cover; object-position: top;
+                            border-bottom: 1px solid var(--border); background: #f5f0e8; }
+        .woodcut-card .wc-info { padding: 0.75rem 1rem; }
+        .woodcut-card h4 { margin: 0 0 0.3rem; font-size: 0.95rem; }
+        .woodcut-card h4 a { color: var(--text); text-decoration: none; }
+        .woodcut-card h4 a:hover { color: var(--accent); }
+        .woodcut-card .wc-meta { font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-sans); }
+        .woodcut-card .wc-desc { font-size: 0.82rem; color: var(--text-muted); margin: 0.3rem 0 0; line-height: 1.5; }
+        .wc-cat-badge { display: inline-block; padding: 0.15rem 0.45rem; border-radius: 2px;
+                        font-size: 0.65rem; font-weight: 600; text-transform: uppercase; color: white; margin-right: 0.3rem; }
+        .woodcut-detail { max-width: 900px; margin: 2rem auto; padding: 0 2rem; }
+        .woodcut-detail h2 { color: var(--accent); margin-bottom: 0.5rem; }
+        .woodcut-detail h3 { margin-top: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.2rem; }
+        .woodcut-detail p { line-height: 1.8; }
+        .woodcut-detail .wc-image-frame { text-align: center; margin: 1.5rem 0; }
+        .woodcut-detail .wc-image-frame img { max-width: 100%; max-height: 700px; border: 1px solid var(--border);
+                                               box-shadow: 0 2px 8px rgba(0,0,0,0.1); background: #f5f0e8; }
+        .woodcut-detail .wc-image-caption { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem; font-style: italic; }
+        .woodcut-detail .cross-links { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+        .woodcut-detail .cross-links a { display: inline-block; margin: 0.2rem 0.3rem; padding: 0.2rem 0.6rem;
+                                          background: var(--bg); border: 1px solid var(--border); border-radius: 3px;
+                                          font-size: 0.85rem; color: var(--text); text-decoration: none; }
+        .woodcut-detail .cross-links a:hover { border-color: var(--accent); color: var(--accent); }
+        .wc-nav-strip { display: flex; justify-content: space-between; margin: 1.5rem 0; font-size: 0.85rem; }
+        .wc-nav-strip a { color: var(--accent); text-decoration: none; }
+        .wc-annotation-note { background: var(--bg-card); border-left: 3px solid var(--accent);
+                               padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.9rem; }
+        @media (max-width: 768px) {
+            .woodcut-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+            .woodcut-card img { height: 240px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1><a href="../index.html" style="color:inherit;text-decoration:none">Alchemical Hands in the <em>Hypnerotomachia Poliphili</em></a></h1>
+            <p class="subtitle">Marginalia, Scholarship &amp; Reception</p>
+            <nav class="site-nav"><a href="../index.html">Home</a><a href="../marginalia/index.html">Marginalia</a><a href="../scholars.html">Scholars</a><a href="../bibliography.html">Bibliography</a><a href="../dictionary/index.html">Dictionary</a><a href="../docs/index.html">Docs</a><a href="../code/index.html">Code</a><a href="../the-book.html">The Book</a><a href="../timeline.html">Timeline</a><a href="../woodcuts/index.html" class="active">Woodcuts</a><a href="../manuscripts/index.html">Manuscripts</a><a href="../digital-edition.html">Editions</a><a href="../russell-alchemical-hands.html">Alchemical Hands</a><a href="../concordance/index.html">Concordance</a><a href="../jonson/index.html">Ben Jonson</a><a href="../digby/index.html">Digby</a><a href="../about.html">About</a></nav>
+        </div>
+    </header>
+    <main>
+
+        <div class="woodcut-detail">
+            <p><a href="index.html">&larr; All Woodcuts</a></p>
+            <h2>Cupid Shoots Arrow at Bust of Polia</h2>
+            <div style="margin-bottom:1rem"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> G4v &middot; p.448</div>
+            
+            <div class="wc-image-frame">
+                <img src="../images/woodcuts_1499/hp1499_p448.jpg" alt="Cupid Shoots Arrow at Bust of Polia">
+                <div class="wc-image-caption">From the 1499 Aldine first edition (University of Seville copy, via Internet Archive)</div>
+            </div>
+            <p>Cupid with bow shoots arrow at bust/figure. Venus seated on clouds at right. The very last woodcut in the HP.</p>
+            <h3>In the Narrative</h3><p>The final image of the HP: Cupid looses his arrow at Polia&#x27;s image as the dream dissolves. Venus watches from her celestial throne. The reader is returned to waking life.</p>
+            
+            
+            
+            
+            <div class="wc-nav-strip"><a href="poliphilus-before-venus-in-clouds.html">&larr; Poliphilus Before Venus in Clo</a><span></span></div>
+            <p style="font-size:0.8rem; color:var(--text-muted); border-top:1px solid var(--border); padding-top:0.5rem; margin-top:1rem">
+                Source: LLM_ASSISTED &middot; HIGH</p>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About This Project</h4>
+                <p>A digital scholarship platform exploring the alchemical
+                annotations and wider marginalia of the 1499 <em>Hypnerotomachia
+                Poliphili</em>, based on James Russell's PhD thesis (Durham, 2014).</p>
+            </div>
+            <div class="footer-section">
+                <h4>Data Provenance</h4>
+                <p>Content marked with <span class="review-badge" style="font-size:0.7rem">Unreviewed</span>
+                has been generated with LLM assistance and has not been
+                verified by a human expert.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

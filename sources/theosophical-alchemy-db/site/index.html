@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheosophicalAlchemyDB - Rosicrucian & Spiritual Alchemy Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <h1>TheosophicalAlchemyDB</h1>
+            <p class="subtitle">Interactive Knowledge Portal: Rosicrucian & Spiritual Alchemy Traditions (16th–19th c.)</p>
+            <div class="portal-stats">
+                <span class="stat-box">
+                    <span class="stat-number" id="stat-figures">100</span>
+                    <span class="stat-label">Historical Figures</span>
+                </span>
+                <span class="stat-box">
+                    <span class="stat-number" id="stat-concepts">67</span>
+                    <span class="stat-label">Concepts & Principles</span>
+                </span>
+                <span class="stat-box">
+                    <span class="stat-number" id="stat-texts">83</span>
+                    <span class="stat-label">Scholarly Texts</span>
+                </span>
+                <span class="stat-box">
+                    <span class="stat-number" id="stat-emblems">135</span>
+                    <span class="stat-label">Emblems</span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <button class="nav-btn active" data-section="figures">Figures</button>
+        <button class="nav-btn" data-section="concepts">Concepts</button>
+        <button class="nav-btn" data-section="texts">Texts</button>
+        <button class="nav-btn" data-section="map">Map</button>
+        <button class="nav-btn" data-section="timeline">Timeline</button>
+        <button class="nav-btn" data-section="about">About</button>
+    </nav>
+
+    <main class="portal-container">
+        <!-- Figures Section -->
+        <section id="figures" class="section active">
+            <div class="section-header">
+                <h2>Historical Figures</h2>
+                <p>Explore 100 key figures in Rosicrucian and spiritual alchemy traditions</p>
+            </div>
+            <div id="figures-gallery" class="gallery"></div>
+        </section>
+
+        <!-- Concepts Section -->
+        <section id="concepts" class="section">
+            <div class="section-header">
+                <h2>Concepts & Principles</h2>
+                <p>Understand 67 central philosophical and alchemical concepts</p>
+            </div>
+            <div id="concepts-gallery" class="gallery"></div>
+        </section>
+
+        <!-- Texts Section -->
+        <section id="texts" class="section">
+            <div class="section-header">
+                <h2>Scholarly Texts</h2>
+                <p>Study 83 foundational and contemporary texts</p>
+            </div>
+            <div id="texts-gallery" class="gallery"></div>
+        </section>
+
+        <!-- Map Section -->
+        <section id="map" class="section">
+            <div class="section-header">
+                <h2>Geographic Distribution</h2>
+                <p>Explore the historical geography of Rosicrucian figures, texts, and intellectual centers</p>
+            </div>
+            <div class="map-controls">
+                <div class="map-legend">
+                    <label><input type="checkbox" id="layer-figures" checked> <span class="legend-dot figures"></span> Figures</label>
+                    <label><input type="checkbox" id="layer-texts" checked> <span class="legend-dot texts"></span> Texts</label>
+                    <label><input type="checkbox" id="layer-emblems" checked> <span class="legend-dot emblems"></span> Emblem Centers</label>
+                    <label><input type="checkbox" id="layer-centers" checked> <span class="legend-dot centers"></span> Learning Centers</label>
+                </div>
+            </div>
+            <div class="map-wrapper">
+                <div id="map-container" class="map-container"></div>
+                <div id="map-side-panel" class="map-side-panel">
+                    <div class="map-side-header">
+                        <h3 id="map-side-title"></h3>
+                        <button id="map-side-close" class="map-side-close">&times;</button>
+                    </div>
+                    <div id="map-side-content" class="map-side-content"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="section">
+            <div class="section-header">
+                <h2>Historical Timeline</h2>
+                <p>63 key events from 1317 to 1850 in the Rosicrucian and alchemical traditions</p>
+            </div>
+            <div class="timeline-controls">
+                <button class="tl-filter active" data-category="all">All Events</button>
+                <button class="tl-filter" data-category="historical">Historical</button>
+                <button class="tl-filter" data-category="text">Publications</button>
+                <button class="tl-filter" data-category="figure">Figures</button>
+                <button class="tl-filter" data-category="discovery">Discoveries</button>
+            </div>
+            <div id="timeline-container" class="timeline-container"></div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="section-header">
+                <h2>About This Portal</h2>
+            </div>
+            <div class="about-content">
+                <h3>Project Overview</h3>
+                <p>TheosophicalAlchemyDB is a comprehensive digital humanities resource documenting the history and significance of Rosicrucian and spiritual alchemy traditions from the 16th to 19th centuries.</p>
+
+                <h3>Scholarly Framework</h3>
+                <p>This portal integrates scholarship from key historians including Frances Yates, Joscelyn Godwin, Tobias Churton, Urszula Szulakowska, and Mike Zuber's definitive work on spiritual alchemy from Jacob Böhme to Mary Anne Atwood. The revisionist historiography of Lawrence Principe and William Newman on laboratory alchemy grounds all entries in current scholarship.</p>
+
+                <h3>Data Sources</h3>
+                <p>The portal covers 100 historical figures, 67 concepts, 83 scholarly texts, and 135 alchemical emblems, with 63 chronological events and 15 geographic learning centers fully documented.</p>
+
+                <h3>Technology</h3>
+                <p>Built with vanilla JavaScript, Leaflet.js for mapping, and a comprehensive JSON database supporting both historical scholarship and interactive exploration. Deployed via GitHub Pages.</p>
+
+                <h3>Citation</h3>
+                <p><strong>TheosophicalAlchemyDB</strong> (2026). Interactive Portal of Rosicrucian and Theosophical Alchemy. <a href="https://github.com/t3dy/TheosophicalAlchemyDB">github.com/t3dy/TheosophicalAlchemyDB</a></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for full essays -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-toolbar">
+                <button id="modal-back" class="modal-back" style="display:none">&#8592; Back</button>
+                <button id="modal-close" class="modal-close">&times;</button>
+            </div>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 TheosophicalAlchemyDB. Digital Humanities Research Portal.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

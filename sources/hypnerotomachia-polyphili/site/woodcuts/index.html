@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woodcuts &amp;mdash; Hypnerotomachia Poliphili - Alchemical Hands in the Hypnerotomachia Poliphili</title>
+    <meta name="description" content="Alchemical hands in the marginalia of the Hypnerotomachia Poliphili (Venice, 1499). A digital scholarship platform based on James Russell's PhD thesis.">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../scholars.css">
+    <link rel="stylesheet" href="../components.css">
+    <style>
+        .woodcuts-page { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; }
+        .woodcuts-page h1 { color: var(--accent); font-size: 1.8rem; margin-bottom: 0.3rem; }
+        .woodcuts-page .intro { max-width: 800px; line-height: 1.8; margin-bottom: 1.5rem; color: var(--text-muted); }
+        .wc-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
+        .wc-filter-btn { padding: 0.3rem 0.7rem; border: 1px solid var(--border); border-radius: 3px;
+                         font-size: 0.75rem; font-weight: 600; text-transform: uppercase; cursor: pointer;
+                         background: var(--bg); color: var(--text-muted); transition: all 0.15s; }
+        .wc-filter-btn:hover, .wc-filter-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
+        .woodcut-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+        .woodcut-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px;
+                        overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; }
+        .woodcut-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); transform: translateY(-2px); }
+        .woodcut-card img { width: 100%; height: 320px; object-fit: cover; object-position: top;
+                            border-bottom: 1px solid var(--border); background: #f5f0e8; }
+        .woodcut-card .wc-info { padding: 0.75rem 1rem; }
+        .woodcut-card h4 { margin: 0 0 0.3rem; font-size: 0.95rem; }
+        .woodcut-card h4 a { color: var(--text); text-decoration: none; }
+        .woodcut-card h4 a:hover { color: var(--accent); }
+        .woodcut-card .wc-meta { font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-sans); }
+        .woodcut-card .wc-desc { font-size: 0.82rem; color: var(--text-muted); margin: 0.3rem 0 0; line-height: 1.5; }
+        .wc-cat-badge { display: inline-block; padding: 0.15rem 0.45rem; border-radius: 2px;
+                        font-size: 0.65rem; font-weight: 600; text-transform: uppercase; color: white; margin-right: 0.3rem; }
+        .woodcut-detail { max-width: 900px; margin: 2rem auto; padding: 0 2rem; }
+        .woodcut-detail h2 { color: var(--accent); margin-bottom: 0.5rem; }
+        .woodcut-detail h3 { margin-top: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.2rem; }
+        .woodcut-detail p { line-height: 1.8; }
+        .woodcut-detail .wc-image-frame { text-align: center; margin: 1.5rem 0; }
+        .woodcut-detail .wc-image-frame img { max-width: 100%; max-height: 700px; border: 1px solid var(--border);
+                                               box-shadow: 0 2px 8px rgba(0,0,0,0.1); background: #f5f0e8; }
+        .woodcut-detail .wc-image-caption { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem; font-style: italic; }
+        .woodcut-detail .cross-links { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+        .woodcut-detail .cross-links a { display: inline-block; margin: 0.2rem 0.3rem; padding: 0.2rem 0.6rem;
+                                          background: var(--bg); border: 1px solid var(--border); border-radius: 3px;
+                                          font-size: 0.85rem; color: var(--text); text-decoration: none; }
+        .woodcut-detail .cross-links a:hover { border-color: var(--accent); color: var(--accent); }
+        .wc-nav-strip { display: flex; justify-content: space-between; margin: 1.5rem 0; font-size: 0.85rem; }
+        .wc-nav-strip a { color: var(--accent); text-decoration: none; }
+        .wc-annotation-note { background: var(--bg-card); border-left: 3px solid var(--accent);
+                               padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.9rem; }
+        @media (max-width: 768px) {
+            .woodcut-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+            .woodcut-card img { height: 240px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1><a href="../index.html" style="color:inherit;text-decoration:none">Alchemical Hands in the <em>Hypnerotomachia Poliphili</em></a></h1>
+            <p class="subtitle">Marginalia, Scholarship &amp; Reception</p>
+            <nav class="site-nav"><a href="../index.html">Home</a><a href="../marginalia/index.html">Marginalia</a><a href="../scholars.html">Scholars</a><a href="../bibliography.html">Bibliography</a><a href="../dictionary/index.html">Dictionary</a><a href="../docs/index.html">Docs</a><a href="../code/index.html">Code</a><a href="../the-book.html">The Book</a><a href="../timeline.html">Timeline</a><a href="../woodcuts/index.html" class="active">Woodcuts</a><a href="../manuscripts/index.html">Manuscripts</a><a href="../digital-edition.html">Editions</a><a href="../russell-alchemical-hands.html">Alchemical Hands</a><a href="../concordance/index.html">Concordance</a><a href="../jonson/index.html">Ben Jonson</a><a href="../digby/index.html">Digby</a><a href="../about.html">About</a></nav>
+        </div>
+    </header>
+    <main>
+
+    <div class="woodcuts-page">
+        <h1>Woodcuts of the <em>Hypnerotomachia Poliphili</em></h1>
+        <p class="intro">The 1499 Aldine first edition contains approximately 172 woodcut illustrations &mdash;
+        the most ambitious visual program of any incunabulum. Their designer remains unidentified,
+        though Benedetto Bordon is the most widely proposed candidate. The woodcuts integrate text and
+        image with unprecedented sophistication, each composition calibrated to its surrounding typography.
+        Images are from the 1499 first edition (University of Seville copy, via Internet Archive).</p>
+
+        <div class="wc-filters"><button class="wc-filter-btn active" onclick="filterWoodcuts('ALL')">All</button><button class="wc-filter-btn" onclick="filterWoodcuts('ARCHITECTURAL')" style="border-color:#8b5cf6">ARCHITECTURAL (25)</button><button class="wc-filter-btn" onclick="filterWoodcuts('DECORATIVE')" style="border-color:#6366f1">DECORATIVE (18)</button><button class="wc-filter-btn" onclick="filterWoodcuts('DIAGRAM')" style="border-color:#14b8a6">DIAGRAM (3)</button><button class="wc-filter-btn" onclick="filterWoodcuts('HIEROGLYPHIC')" style="border-color:#f59e0b">HIEROGLYPHIC (8)</button><button class="wc-filter-btn" onclick="filterWoodcuts('LANDSCAPE')" style="border-color:#10b981">LANDSCAPE (1)</button><button class="wc-filter-btn" onclick="filterWoodcuts('NARRATIVE')" style="border-color:#3b82f6">NARRATIVE (38)</button><button class="wc-filter-btn" onclick="filterWoodcuts('PORTRAIT')" style="border-color:#ec4899">PORTRAIT (1)</button><button class="wc-filter-btn" onclick="filterWoodcuts('PROCESSION')" style="border-color:#ef4444">PROCESSION (17)</button></div>
+
+        <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:1rem">
+            Showing 111 woodcuts &middot; 111 with facsimile images</p>
+
+        <div class="woodcut-grid">
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="the-great-pyramid.html"><img src="../images/woodcuts_1499/hp1499_p016.jpg" alt="The Great Pyramid" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="the-great-pyramid.html">The Great Pyramid</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.16</div>
+                <p class="wc-desc">Full-page woodcut of a massive stepped pyramid topped by a tall obelisk surmounted by a figure. Colonnaded portico at th...</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="figures-with-tempvs.html"><img src="../images/woodcuts_1499/hp1499_p024.jpg" alt="Figures with TEMPVS" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="figures-with-tempvs.html">Figures with TEMPVS</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.24</div>
+                <p class="wc-desc">Group of classical figures, one labeled TEMPVS (Time). Allegorical scene with personified abstractions.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="classical-figures-in-a-garden.html"><img src="../images/woodcuts_1499/hp1499_p025.jpg" alt="Classical Figures in a Garden" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="classical-figures-in-a-garden.html">Classical Figures in a Garden</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.25</div>
+                <p class="wc-desc">Group of figures in classical dress gathered in a garden or outdoor scene.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="HIEROGLYPHIC">
+            <a href="monument-with-female-figure-lamp-and-trilingual-inscriptions.html"><img src="../images/woodcuts_1499/hp1499_p030.jpg" alt="Monument with Female Figure, Lamp, and Trilingual Inscriptions" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="monument-with-female-figure-lamp-and-trilingual-inscriptions.html">Monument with Female Figure, Lamp, and Trilingual Inscriptions</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#f59e0b">HIEROGLYPHIC</span> p.30</div>
+                <p class="wc-desc">Tall monument with standing female figure holding a lamp. Below: three tiers of inscriptions in Hebrew, Greek, and Latin...</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="HIEROGLYPHIC">
+            <a href="hieroglyphic-frieze.html"><img src="../images/woodcuts_1499/hp1499_p031.jpg" alt="Hieroglyphic Frieze" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="hieroglyphic-frieze.html">Hieroglyphic Frieze</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#f59e0b">HIEROGLYPHIC</span> p.31</div>
+                <p class="wc-desc">Two-register frieze with emblematic figures: chariots, winged beings, dolphins, anchors, vessels. Below: Latin majuscule...</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="architectural-portal.html"><img src="../images/woodcuts_1499/hp1499_p038.jpg" alt="Architectural Portal" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="architectural-portal.html">Architectural Portal</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.38</div>
+                <p class="wc-desc">Grand classical portal with pediment, columns, and medallion busts. Monumental entrance architecture.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="ruins-of-the-temple.html"><img src="../images/woodcuts_1499/hp1499_p045.jpg" alt="Ruins of the Temple" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="ruins-of-the-temple.html">Ruins of the Temple</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.45</div>
+                <p class="wc-desc">Ruined classical temple with broken columns and fragments. Poliphilo contemplates ancient remains.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="HIEROGLYPHIC">
+            <a href="emblematic-medallions-patientia-anchor-dolphin.html"><img src="../images/woodcuts_1499/hp1499_p059.jpg" alt="Emblematic Medallions (PATIENTIA / Anchor-Dolphin)" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="emblematic-medallions-patientia-anchor-dolphin.html">Emblematic Medallions (PATIENTIA / Anchor-Dolphin)</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#f59e0b">HIEROGLYPHIC</span> p.59</div>
+                <p class="wc-desc">Two circular medallion emblems. Top: PATIENTIA EST ORNAMENTVM CVSTO/DIA ET PROTECTIO VITAE. Bottom: anchor-and-dolphin w...</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="sleeping-nymph.html"><img src="../images/woodcuts_1499/hp1499_p063.jpg" alt="Sleeping Nymph" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="sleeping-nymph.html">Sleeping Nymph</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.63</div>
+                <p class="wc-desc">A sleeping nymph reclining in a classical aedicule with water flowing from the stone. One of the HP&#x27;s most copied compos...</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="five-nymphs-meeting-poliphilo.html"><img src="../images/woodcuts_1499/hp1499_p066.jpg" alt="Five Nymphs Meeting Poliphilo" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="five-nymphs-meeting-poliphilo.html">Five Nymphs Meeting Poliphilo</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.66</div>
+                <p class="wc-desc">Five nymphs in classical dress approach Poliphilo in a garden. One extends a hand in greeting.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="cupid-on-a-sphere.html"><img src="../images/woodcuts_1499/hp1499_p071.jpg" alt="Cupid on a Sphere" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="cupid-on-a-sphere.html">Cupid on a Sphere</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.71</div>
+                <p class="wc-desc">Winged putto (Cupid) standing on a sphere atop a fountain. Water arcs from the base.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="three-figures-in-aedicule.html"><img src="../images/woodcuts_1499/hp1499_p075.jpg" alt="Three Figures in Aedicule" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="three-figures-in-aedicule.html">Three Figures in Aedicule</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.75</div>
+                <p class="wc-desc">Three figures in an architectural niche with pediment. Interior architectural scene.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="the-great-fountain.html"><img src="../images/woodcuts_1499/hp1499_p080.jpg" alt="The Great Fountain" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="the-great-fountain.html">The Great Fountain</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.80</div>
+                <p class="wc-desc">Full-page woodcut of an elaborate tiered fountain. Three levels: sea-horses at base, grotesque masks and sphinxes at mid...</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="queen-eleuterylidas-palace.html"><img src="../images/woodcuts_1499/hp1499_p084.jpg" alt="Queen Eleuterylida&#x27;s Palace" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="queen-eleuterylidas-palace.html">Queen Eleuterylida&#x27;s Palace</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.84</div>
+                <p class="wc-desc">Interior of ornate palace hall with columned arcade. Seven compartments labeled with planetary names: MERCVRIVS, VENVS, ...</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="palace-interior-with-planetary-compartments.html"><img src="../images/woodcuts_1499/hp1499_p088.jpg" alt="Palace Interior with Planetary Compartments" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="palace-interior-with-planetary-compartments.html">Palace Interior with Planetary Compartments</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.88</div>
+                <p class="wc-desc">Detailed view of the planetary palace interior showing ornate facades with arabesque panels.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="court-scene-with-queen-enthroned.html"><img src="../images/woodcuts_1499/hp1499_p090.jpg" alt="Court Scene with Queen Enthroned" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="court-scene-with-queen-enthroned.html">Court Scene with Queen Enthroned</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.90</div>
+                <p class="wc-desc">Queen seated on throne under canopy, attended by courtiers and nymphs. Formal court reception scene.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DECORATIVE">
+            <a href="ornamental-tripod-table.html"><img src="../images/woodcuts_1499/hp1499_p093.jpg" alt="Ornamental Tripod Table" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="ornamental-tripod-table.html">Ornamental Tripod Table</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#6366f1">DECORATIVE</span> p.93</div>
+                <p class="wc-desc">Ornate classical tripod with decorative scrollwork and dolphin-form legs.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DECORATIVE">
+            <a href="covered-vessel-on-wheeled-chariot.html"><img src="../images/woodcuts_1499/hp1499_p094.jpg" alt="Covered Vessel on Wheeled Chariot" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="covered-vessel-on-wheeled-chariot.html">Covered Vessel on Wheeled Chariot</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#6366f1">DECORATIVE</span> p.94</div>
+                <p class="wc-desc">Small ornamental urn or covered vessel mounted on a wheeled chariot or cart.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="caryatid-figures-supporting-basin.html"><img src="../images/woodcuts_1499/hp1499_p095.jpg" alt="Caryatid Figures Supporting Basin" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="caryatid-figures-supporting-basin.html">Caryatid Figures Supporting Basin</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.95</div>
+                <p class="wc-desc">Three female caryatid figures supporting a basin or table with harp-like decorative elements.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="nymph-at-fountain-vessel.html"><img src="../images/woodcuts_1499/hp1499_p105.jpg" alt="Nymph at Fountain Vessel" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="nymph-at-fountain-vessel.html">Nymph at Fountain Vessel</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.105</div>
+                <p class="wc-desc">Woman standing beside an elaborate fountain vessel on a wheeled platform.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="obelisk-with-three-figures.html"><img src="../images/woodcuts_1499/hp1499_p119.jpg" alt="Obelisk with Three Figures" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="obelisk-with-three-figures.html">Obelisk with Three Figures</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.119</div>
+                <p class="wc-desc">Tall obelisk with three standing figures in niches at its base. Greek and Latin inscriptions. DIVINAE AENINITATI inscrip...</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="seated-scholar-at-monument.html"><img src="../images/woodcuts_1499/hp1499_p123.jpg" alt="Seated Scholar at Monument" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="seated-scholar-at-monument.html">Seated Scholar at Monument</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.123</div>
+                <p class="wc-desc">Seated figure at a desk or lectern within a classical architectural frame with pediment and columns.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="two-seated-figures-at-pedestal-with-medallion.html"><img src="../images/woodcuts_1499/hp1499_p124.jpg" alt="Two Seated Figures at Pedestal with Medallion" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="two-seated-figures-at-pedestal-with-medallion.html">Two Seated Figures at Pedestal with Medallion</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.124</div>
+                <p class="wc-desc">Two seated figures on either side of a pedestal, with a circular medallion portrait above. Classical architectural frame...</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="the-three-doors.html"><img src="../images/woodcuts_1499/hp1499_p125.jpg" alt="The Three Doors" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="the-three-doors.html">The Three Doors</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.125</div>
+                <p class="wc-desc">Cave or grotto scene: figures before three inscribed doorways in a rocky mountainside. Inscriptions: THEODOXIA, COSMODOX...</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="poliphilo-at-the-temple-entrance.html"><img src="../images/woodcuts_1499/hp1499_p126.jpg" alt="Poliphilo at the Temple Entrance" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="poliphilo-at-the-temple-entrance.html">Poliphilo at the Temple Entrance</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.126</div>
+                <p class="wc-desc">Group of figures approaching a small classical building or temple. Landscape with trees.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="nymphs-and-figures-among-trees.html"><img src="../images/woodcuts_1499/hp1499_p129.jpg" alt="Nymphs and Figures Among Trees" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="nymphs-and-figures-among-trees.html">Nymphs and Figures Among Trees</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.129</div>
+                <p class="wc-desc">Group of nymphs and figures standing among trees near a building or monument.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="nymphs-walking-through-a-grove.html"><img src="../images/woodcuts_1499/hp1499_p130.jpg" alt="Nymphs Walking Through a Grove" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="nymphs-walking-through-a-grove.html">Nymphs Walking Through a Grove</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.130</div>
+                <p class="wc-desc">Group of nymphs and a central figure walking through a grove of trees.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="LANDSCAPE">
+            <a href="garden-with-pergola.html"><img src="../images/woodcuts_1499/hp1499_p139.jpg" alt="Garden with Pergola" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="garden-with-pergola.html">Garden with Pergola</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#10b981">LANDSCAPE</span> p.139</div>
+                <p class="wc-desc">Two figures standing in a garden with an arched pergola and trees.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="PROCESSION">
+            <a href="first-triumphal-chariot-prima-tabella.html"><img src="../images/woodcuts_1499/hp1499_p149.jpg" alt="First Triumphal Chariot (PRIMA TABELLA)" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="first-triumphal-chariot-prima-tabella.html">First Triumphal Chariot (PRIMA TABELLA)</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#ef4444">PROCESSION</span> p.149</div>
+                <p class="wc-desc">Two woodcut panels: PRIMA TABELLA showing a chariot with bulls and figures. Beginning of the triumphal procession sequen...</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="PROCESSION">
+            <a href="second-triumphal-panel.html"><img src="../images/woodcuts_1499/hp1499_p150.jpg" alt="Second Triumphal Panel" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="second-triumphal-panel.html">Second Triumphal Panel</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#ef4444">PROCESSION</span> p.150</div>
+                <p class="wc-desc">Two woodcut panels showing front and rear views of a triumphal chariot with classical figures.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="PROCESSION">
+            <a href="triumphal-chariot-trivmphvs-tertivs.html"><img src="../images/woodcuts_1499/hp1499_p151.jpg" alt="Triumphal Chariot (TRIVMPHVS TERTIVS)" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="triumphal-chariot-trivmphvs-tertivs.html">Triumphal Chariot (TRIVMPHVS TERTIVS)</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#ef4444">PROCESSION</span> p.151</div>
+                <p class="wc-desc">Large triumphal chariot drawn by centaurs with nymphs and musicians.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="PROCESSION">
+            <a href="triumphal-chariot-with-soldiers.html"><img src="../images/woodcuts_1499/hp1499_p152.jpg" alt="Triumphal Chariot with Soldiers" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="triumphal-chariot-with-soldiers.html">Triumphal Chariot with Soldiers</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#ef4444">PROCESSION</span> p.152</div>
+                <p class="wc-desc">Large triumphal chariot drawn by horses with soldiers, musicians, and banner-bearers.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="PROCESSION">
+            <a href="muses-and-apollo-chariot.html"><img src="../images/woodcuts_1499/hp1499_p153.jpg" alt="Muses and Apollo Chariot" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="muses-and-apollo-chariot.html">Muses and Apollo Chariot</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#ef4444">PROCESSION</span> p.153</div>
+                <p class="wc-desc">Triumphal chariot with the Muses and Apollo, drawn by horses. Musical instruments and laurel wreaths visible.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="PROCESSION">
+            <a href="tabella-dextra-panels.html"><img src="../images/woodcuts_1499/hp1499_p154.jpg" alt="TABELLA DEXTRA Panels" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="tabella-dextra-panels.html">TABELLA DEXTRA Panels</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#ef4444">PROCESSION</span> p.154</div>
+                <p class="wc-desc">Two stacked panel woodcuts: TABELLA DEXTRA showing figures at a doorway and TABELLA SINISTRA showing an outdoor scene.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="PROCESSION">
+            <a href="pars-anterior-et-posterior.html"><img src="../images/woodcuts_1499/hp1499_p155.jpg" alt="PARS ANTERIOR ET POSTERIOR" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="pars-anterior-et-posterior.html">PARS ANTERIOR ET POSTERIOR</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#ef4444">PROCESSION</span> p.155</div>
+                <p class="wc-desc">Two-panel woodcut showing front and rear views of figures in processional arrangement.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="PROCESSION">
+            <a href="trivmphvs-lovers-chariot.html"><img src="../images/woodcuts_1499/hp1499_p156.jpg" alt="TRIVMPHVS: Lovers&#x27; Chariot" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="trivmphvs-lovers-chariot.html">TRIVMPHVS: Lovers&#x27; Chariot</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#ef4444">PROCESSION</span> p.156</div>
+                <p class="wc-desc">Large triumphal chariot bearing reclining lovers embraced among garlands and putti. The emotional climax of the processi...</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="PROCESSION">
+            <a href="tabella-dextra-second-set.html"><img src="../images/woodcuts_1499/hp1499_p158.jpg" alt="TABELLA DEXTRA (Second Set)" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="tabella-dextra-second-set.html">TABELLA DEXTRA (Second Set)</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#ef4444">PROCESSION</span> p.158</div>
+                <p class="wc-desc">Two stacked panels showing processional scenes with figures at doorways and in landscapes.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="PROCESSION">
+            <a href="pars-anterior-et-posterior-second.html"><img src="../images/woodcuts_1499/hp1499_p159.jpg" alt="PARS ANTERIOR ET POSTERIOR (Second)" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="pars-anterior-et-posterior-second.html">PARS ANTERIOR ET POSTERIOR (Second)</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#ef4444">PROCESSION</span> p.159</div>
+                <p class="wc-desc">Small woodcut showing front and rear views of processional figures.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="PROCESSION">
+            <a href="trivmphvs-with-triple-panels.html"><img src="../images/woodcuts_1499/hp1499_p160.jpg" alt="TRIVMPHVS with Triple Panels" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="trivmphvs-with-triple-panels.html">TRIVMPHVS with Triple Panels</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#ef4444">PROCESSION</span> p.160</div>
+                <p class="wc-desc">Large chariot woodcut at top plus two TABELLA DEXTRA/SINISTRA panels below. Dense woodcut-text integration.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="PROCESSION">
+            <a href="tertivs-ox-procession.html"><img src="../images/woodcuts_1499/hp1499_p161.jpg" alt="TERTIVS: Ox Procession" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="tertivs-ox-procession.html">TERTIVS: Ox Procession</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#ef4444">PROCESSION</span> p.161</div>
+                <p class="wc-desc">Two stacked panels showing a procession with oxen and figures carrying implements.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="PROCESSION">
+            <a href="nymphs-approaching-altar.html"><img src="../images/woodcuts_1499/hp1499_p164.jpg" alt="Nymphs Approaching Altar" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="nymphs-approaching-altar.html">Nymphs Approaching Altar</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#ef4444">PROCESSION</span> p.164</div>
+                <p class="wc-desc">Procession of nymphs approaching an altar or sacrificial table with trees and architecture.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="PROCESSION">
+            <a href="festive-scene-at-fountain.html"><img src="../images/woodcuts_1499/hp1499_p165.jpg" alt="Festive Scene at Fountain" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="festive-scene-at-fountain.html">Festive Scene at Fountain</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#ef4444">PROCESSION</span> p.165</div>
+                <p class="wc-desc">Festive scene with figures gathered around a fountain or basin in a garden setting.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="PROCESSION">
+            <a href="bacchic-triumphal-chariot.html"><img src="../images/woodcuts_1499/hp1499_p166.jpg" alt="Bacchic Triumphal Chariot" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="bacchic-triumphal-chariot.html">Bacchic Triumphal Chariot</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#ef4444">PROCESSION</span> p.166</div>
+                <p class="wc-desc">Large Bacchic triumphal chariot with Maenads, Satyrs, and Dionysiac figures. The most explicitly pagan image in the proc...</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="PROCESSION">
+            <a href="qvartvs-feasting-chariot.html"><img src="../images/woodcuts_1499/hp1499_p167.jpg" alt="QVARTVS: Feasting Chariot" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="qvartvs-feasting-chariot.html">QVARTVS: Feasting Chariot</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#ef4444">PROCESSION</span> p.167</div>
+                <p class="wc-desc">Chariot with reclining figures feasting among garlands, fruit, and flowing drapery.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="worship-of-priapus.html"><img src="../images/woodcuts_1499/hp1499_p185.jpg" alt="Worship of Priapus" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="worship-of-priapus.html">Worship of Priapus</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.185</div>
+                <p class="wc-desc">Full-page woodcut: nineteen female and five male figures worshipping at a shrine of Priapus. Densely populated ritual sc...</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DIAGRAM">
+            <a href="section-and-ground-plan-of-rotunda-temple.html"><img src="../images/woodcuts_1499/hp1499_p195.jpg" alt="Section and Ground-plan of Rotunda Temple" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="section-and-ground-plan-of-rotunda-temple.html">Section and Ground-plan of Rotunda Temple</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#14b8a6">DIAGRAM</span> p.195</div>
+                <p class="wc-desc">Full-page architectural diagram: cross-section and floor plan of the circular Temple of Venus Physizoa. Detailed measure...</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DECORATIVE">
+            <a href="winged-female-half-figure-ornament.html"><img src="../images/woodcuts_1499/hp1499_p197.jpg" alt="Winged Female Half-figure Ornament" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="winged-female-half-figure-ornament.html">Winged Female Half-figure Ornament</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#6366f1">DECORATIVE</span> p.197</div>
+                <p class="wc-desc">Nude winged female half-figure emerging from acanthus foliage. Decorative architectural element.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DECORATIVE">
+            <a href="globular-lamp-hung-in-chains.html"><img src="../images/woodcuts_1499/hp1499_p198.jpg" alt="Globular Lamp Hung in Chains" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="globular-lamp-hung-in-chains.html">Globular Lamp Hung in Chains</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#6366f1">DECORATIVE</span> p.198</div>
+                <p class="wc-desc">Ornate spherical lamp suspended by chains. Detailed metalwork design.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DECORATIVE">
+            <a href="crowning-of-lantern-in-cupola.html"><img src="../images/woodcuts_1499/hp1499_p201.jpg" alt="Crowning of Lantern in Cupola" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="crowning-of-lantern-in-cupola.html">Crowning of Lantern in Cupola</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#6366f1">DECORATIVE</span> p.201</div>
+                <p class="wc-desc">Architectural ornament: the lantern crowning the temple cupola, with bells and decorative finial.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="HIEROGLYPHIC">
+            <a href="inscribed-tablets-in-temple.html"><img src="../images/woodcuts_1499/hp1499_p204.jpg" alt="Inscribed Tablets in Temple" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="inscribed-tablets-in-temple.html">Inscribed Tablets in Temple</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#f59e0b">HIEROGLYPHIC</span> p.204</div>
+                <p class="wc-desc">Two inscribed cartouches/tablets with Greek and Latin text. Hieroglyphic devices in the Temple of Venus.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="procession-of-seven-virgins-to-altar.html"><img src="../images/woodcuts_1499/hp1499_p205.jpg" alt="Procession of Seven Virgins to Altar" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="procession-of-seven-virgins-to-altar.html">Procession of Seven Virgins to Altar</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.205</div>
+                <p class="wc-desc">Seven virgins in procession approaching the altar in the Temple of Venus. Ritual scene with priestess.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="polias-torch-extinguished-in-altar-fountain.html"><img src="../images/woodcuts_1499/hp1499_p207.jpg" alt="Polia&#x27;s Torch Extinguished in Altar-fountain" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="polias-torch-extinguished-in-altar-fountain.html">Polia&#x27;s Torch Extinguished in Altar-fountain</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.207</div>
+                <p class="wc-desc">Ceremony scene: Polia extinguishes a torch in the fountain at the altar. Priestess and attendants present.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="temple-ceremony-at-altar.html"><img src="../images/woodcuts_1499/hp1499_p208.jpg" alt="Temple Ceremony at Altar" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="temple-ceremony-at-altar.html">Temple Ceremony at Altar</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.208</div>
+                <p class="wc-desc">Figures gathered around the altar in the Temple of Venus. Ritual scene under classical portico.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="two-virgins-offering-swans-and-doves.html"><img src="../images/woodcuts_1499/hp1499_p210.jpg" alt="Two Virgins Offering Swans and Doves" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="two-virgins-offering-swans-and-doves.html">Two Virgins Offering Swans and Doves</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.210</div>
+                <p class="wc-desc">Two virgins offering swans and doves for sacrifice at the temple altar. Priestess officiates.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="the-altar-in-the-temple-of-venus.html"><img src="../images/woodcuts_1499/hp1499_p212.jpg" alt="The Altar in the Temple of Venus" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="the-altar-in-the-temple-of-venus.html">The Altar in the Temple of Venus</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.212</div>
+                <p class="wc-desc">Detailed view of the altar/vessel on its pedestal in the Temple of Venus.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="temple-ceremony-miracle-of-the-roses.html"><img src="../images/woodcuts_1499/hp1499_p213.jpg" alt="Temple Ceremony: Miracle of the Roses" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="temple-ceremony-miracle-of-the-roses.html">Temple Ceremony: Miracle of the Roses</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.213</div>
+                <p class="wc-desc">Ceremony scene in the temple. Figures gathered around altar as roses appear.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="poliphilus-and-polia-receive-fruits.html"><img src="../images/woodcuts_1499/hp1499_p221.jpg" alt="Poliphilus and Polia Receive Fruits" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="poliphilus-and-polia-receive-fruits.html">Poliphilus and Polia Receive Fruits</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.221</div>
+                <p class="wc-desc">Poliphilus and Polia receive fruits from the priestess at the altar. Completion of the temple ceremony.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="HIEROGLYPHIC">
+            <a href="obelisk-with-hieroglyphic-devices.html"><img src="../images/woodcuts_1499/hp1499_p233.jpg" alt="Obelisk with Hieroglyphic Devices" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="obelisk-with-hieroglyphic-devices.html">Obelisk with Hieroglyphic Devices</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#f59e0b">HIEROGLYPHIC</span> p.233</div>
+                <p class="wc-desc">Obelisk with hieroglyphic inscriptions plus circular medallion with Latin text. Two woodcuts on one page.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="HIEROGLYPHIC">
+            <a href="hieroglyphic-devices-julius-caesar-medallion.html"><img src="../images/woodcuts_1499/hp1499_p234.jpg" alt="Hieroglyphic Devices and Julius Caesar Medallion" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="hieroglyphic-devices-julius-caesar-medallion.html">Hieroglyphic Devices and Julius Caesar Medallion</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#f59e0b">HIEROGLYPHIC</span> p.234</div>
+                <p class="wc-desc">Strip of hieroglyphic emblems (torch, temple, scales, helmet, caduceus) with inscription DIVO IVLIO CAESARI SEMP. AVG. B...</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="HIEROGLYPHIC">
+            <a href="two-hieroglyphic-medallion-reliefs.html"><img src="../images/woodcuts_1499/hp1499_p235.jpg" alt="Two Hieroglyphic Medallion Reliefs" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="two-hieroglyphic-medallion-reliefs.html">Two Hieroglyphic Medallion Reliefs</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#f59e0b">HIEROGLYPHIC</span> p.235</div>
+                <p class="wc-desc">Two circular medallions with figural scenes and Latin inscriptions: MILITARIS PRVDENTIA and DIVVLII VICTORIAR.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="polyandrion-architrave-fragment.html"><img src="../images/woodcuts_1499/hp1499_p236.jpg" alt="Polyandrion Architrave Fragment" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="polyandrion-architrave-fragment.html">Polyandrion Architrave Fragment</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.236</div>
+                <p class="wc-desc">Architrave fragment with inscription CADAVERIS AMORE FVRENTIVM MISERABVNDIS POLYANDRION.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="cupola-above-entrance-to-the-crypt.html"><img src="../images/woodcuts_1499/hp1499_p237.jpg" alt="Cupola Above Entrance to the Crypt" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="cupola-above-entrance-to-the-crypt.html">Cupola Above Entrance to the Crypt</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.237</div>
+                <p class="wc-desc">Domed cupola structure with columns marking the entrance to the underground crypt.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="sarcophagus-interno-plotoni.html"><img src="../images/woodcuts_1499/hp1499_p238.jpg" alt="Sarcophagus: Interno Plotoni" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="sarcophagus-interno-plotoni.html">Sarcophagus: Interno Plotoni</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.238</div>
+                <p class="wc-desc">Sarcophagus with inscription INTERNO PLOTONI TRICORPORI. Classical funerary monument.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="mosaic-of-hell-on-crypt-ceiling.html"><img src="../images/woodcuts_1499/hp1499_p241.jpg" alt="Mosaic of Hell on Crypt Ceiling" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="mosaic-of-hell-on-crypt-ceiling.html">Mosaic of Hell on Crypt Ceiling</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.241</div>
+                <p class="wc-desc">Large arched scene: mosaic depicting Hell on the ceiling of the crypt. Figures in torment among flames and darkness.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="sepulchral-monument-dm-annirae.html"><img src="../images/woodcuts_1499/hp1499_p243.jpg" alt="Sepulchral Monument: D.M. Annirae" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="sepulchral-monument-dm-annirae.html">Sepulchral Monument: D.M. Annirae</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.243</div>
+                <p class="wc-desc">Architectural monument with urn and inscription D.M. ANNIRAE PVCILLAE. Cherub faces on pedestal.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="sacrifice-relief-polyandrion.html"><img src="../images/woodcuts_1499/hp1499_p245.jpg" alt="Sacrifice Relief: HAVE SERIA ORINTVM" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="sacrifice-relief-polyandrion.html">Sacrifice Relief: HAVE SERIA ORINTVM</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.245</div>
+                <p class="wc-desc">Relief panel depicting figures in a sacrifice scene: old man, youth, faun, and dancers. Inscription reads HAVE SERIA ORI...</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="epitaph-fragments-with-urn.html"><img src="../images/woodcuts_1499/hp1499_p247.jpg" alt="Epitaph Fragments with Urn" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="epitaph-fragments-with-urn.html">Epitaph Fragments with Urn</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.247</div>
+                <p class="wc-desc">Two epitaph fragments on one page: HEVS INSPECTO FACIO inscription and Greek inscription urn.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="epitaphs-greek-urn-and-dm-lyndia.html"><img src="../images/woodcuts_1499/hp1499_p250.jpg" alt="Epitaphs: Greek Urn and D.M. Lyndia" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="epitaphs-greek-urn-and-dm-lyndia.html">Epitaphs: Greek Urn and D.M. Lyndia</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.250</div>
+                <p class="wc-desc">Two woodcuts: sepulchral urn with Greek inscription AND tombstone with epitaph D.M. LYNDIA.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="sarcophagus-p-cornelia-annia.html"><img src="../images/woodcuts_1499/hp1499_p251.jpg" alt="Sarcophagus: P. Cornelia Annia" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="sarcophagus-p-cornelia-annia.html">Sarcophagus: P. Cornelia Annia</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.251</div>
+                <p class="wc-desc">Elaborate sarcophagus with inscription D.M. P.CORNELIA ANNIA NE INDESOLATA. Tiled roof detail.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="HIEROGLYPHIC">
+            <a href="sarcophagus-with-hieroglyphic-devices.html"><img src="../images/woodcuts_1499/hp1499_p252.jpg" alt="Sarcophagus with Hieroglyphic Devices" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="sarcophagus-with-hieroglyphic-devices.html">Sarcophagus with Hieroglyphic Devices</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#f59e0b">HIEROGLYPHIC</span> p.252</div>
+                <p class="wc-desc">Sarcophagus decorated with hieroglyphic symbols and devices.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="sepulchral-monument-with-laurel-wreath.html"><img src="../images/woodcuts_1499/hp1499_p254.jpg" alt="Sepulchral Monument with Laurel Wreath" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="sepulchral-monument-with-laurel-wreath.html">Sepulchral Monument with Laurel Wreath</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.254</div>
+                <p class="wc-desc">Large sepulchral monument crowned with laurel wreath. Elaborate Renaissance architectural frame.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="sepulchral-monument-with-putti.html"><img src="../images/woodcuts_1499/hp1499_p258.jpg" alt="Sepulchral Monument with Putti" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="sepulchral-monument-with-putti.html">Sepulchral Monument with Putti</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.258</div>
+                <p class="wc-desc">Elaborate sepulchral monument with two putti holding curtain. Arched niche with figure. Relief panels below.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="sepulchral-portal-gates-of-life-and-death.html"><img src="../images/woodcuts_1499/hp1499_p260.jpg" alt="Sepulchral Portal: Gates of Life and Death" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="sepulchral-portal-gates-of-life-and-death.html">Sepulchral Portal: Gates of Life and Death</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.260</div>
+                <p class="wc-desc">Full-page monument: architectural portal with eagle pediment, inscription D.DITI ET PROSER. Two gates below.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DECORATIVE">
+            <a href="standard-of-cupids-bark.html"><img src="../images/woodcuts_1499/hp1499_p275.jpg" alt="Standard of Cupid&#x27;s Bark" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="standard-of-cupids-bark.html">Standard of Cupid&#x27;s Bark</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#6366f1">DECORATIVE</span> p.275</div>
+                <p class="wc-desc">Decorative banner/standard with AMOR VINCIT OMNIA inscription, plus ornamental initial below.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="the-bark-of-the-god-of-love.html"><img src="../images/woodcuts_1499/hp1499_p281.jpg" alt="The Bark of the God of Love" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="the-bark-of-the-god-of-love.html">The Bark of the God of Love</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.281</div>
+                <p class="wc-desc">Small boat on waves with ornamental prow and stern. Cupid&#x27;s vessel for the voyage to Cythera.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DECORATIVE">
+            <a href="tree-clipped-in-ring-shape.html"><img src="../images/woodcuts_1499/hp1499_p295.jpg" alt="Tree Clipped in Ring-shape" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="tree-clipped-in-ring-shape.html">Tree Clipped in Ring-shape</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#6366f1">DECORATIVE</span> p.295</div>
+                <p class="wc-desc">Topiary: tree shaped into a ring or circular form on ornamental base with pedestal.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DECORATIVE">
+            <a href="box-tree-clipped-as-mushroom.html"><img src="../images/woodcuts_1499/hp1499_p297.jpg" alt="Box-tree Clipped as Mushroom" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="box-tree-clipped-as-mushroom.html">Box-tree Clipped as Mushroom</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#6366f1">DECORATIVE</span> p.297</div>
+                <p class="wc-desc">Topiary: box-tree clipped into mushroom shape on stepped circular pedestal.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="peristyle-colonnade-with-trellis.html"><img src="../images/woodcuts_1499/hp1499_p298.jpg" alt="Peristyle Colonnade with Trellis" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="peristyle-colonnade-with-trellis.html">Peristyle Colonnade with Trellis</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.298</div>
+                <p class="wc-desc">Classical peristyle structure with trellis and garden setting. Columns support an ornamental roof.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DIAGRAM">
+            <a href="plan-of-the-island-of-venus.html"><img src="../images/woodcuts_1499/hp1499_p301.jpg" alt="Plan of the Island of Venus" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="plan-of-the-island-of-venus.html">Plan of the Island of Venus</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#14b8a6">DIAGRAM</span> p.301</div>
+                <p class="wc-desc">Full-page diagram: circular plan of Venus&#x27;s island showing concentric garden zones and central temple.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DECORATIVE">
+            <a href="ornamental-flower-bed-pattern-circular.html"><img src="../images/woodcuts_1499/hp1499_p309.jpg" alt="Ornamental Flower-bed Pattern (Circular)" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="ornamental-flower-bed-pattern-circular.html">Ornamental Flower-bed Pattern (Circular)</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#6366f1">DECORATIVE</span> p.309</div>
+                <p class="wc-desc">Circular ornamental flower-bed design with concentric rings of geometric patterns.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DECORATIVE">
+            <a href="ornamental-flower-bed-pattern-square.html"><img src="../images/woodcuts_1499/hp1499_p311.jpg" alt="Ornamental Flower-bed Pattern (Square)" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="ornamental-flower-bed-pattern-square.html">Ornamental Flower-bed Pattern (Square)</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#6366f1">DECORATIVE</span> p.311</div>
+                <p class="wc-desc">Square flower-bed design with geometric interlocking patterns and border elements.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DECORATIVE">
+            <a href="flower-bed-in-shape-of-eagle.html"><img src="../images/woodcuts_1499/hp1499_p313.jpg" alt="Flower-bed in Shape of Eagle" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="flower-bed-in-shape-of-eagle.html">Flower-bed in Shape of Eagle</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#6366f1">DECORATIVE</span> p.313</div>
+                <p class="wc-desc">Flower-bed pattern shaped as an eagle with spread wings, inscribed within a rectangular border.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DECORATIVE">
+            <a href="two-trophy-standards.html"><img src="../images/woodcuts_1499/hp1499_p317.jpg" alt="Two Trophy Standards" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="two-trophy-standards.html">Two Trophy Standards</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#6366f1">DECORATIVE</span> p.317</div>
+                <p class="wc-desc">Two vertical trophy standards side by side: Roman arms trophies with ornamental designs.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DECORATIVE">
+            <a href="trophy-standards-with-nemo-tablet.html"><img src="../images/woodcuts_1499/hp1499_p319.jpg" alt="Trophy Standards with NEMO Tablet" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="trophy-standards-with-nemo-tablet.html">Trophy Standards with NEMO Tablet</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#6366f1">DECORATIVE</span> p.319</div>
+                <p class="wc-desc">Two more trophy standards with tablets inscribed NEMO and ornamental winged designs.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DECORATIVE">
+            <a href="trophy-laurel-wreath-with-cupid.html"><img src="../images/woodcuts_1499/hp1499_p321.jpg" alt="Trophy: Laurel Wreath with Cupid" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="trophy-laurel-wreath-with-cupid.html">Trophy: Laurel Wreath with Cupid</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#6366f1">DECORATIVE</span> p.321</div>
+                <p class="wc-desc">Trophy standard bearing a laurel wreath with a small Cupid figure and tablet inscribed &#x27;Gained by spear&#x27;.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="PORTRAIT">
+            <a href="nymph-figure-with-javelin.html"><img src="../images/woodcuts_1499/hp1499_p327.jpg" alt="Superb Nymph Figure with Javelin" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="nymph-figure-with-javelin.html">Superb Nymph Figure with Javelin</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#ec4899">PORTRAIT</span> p.327</div>
+                <p class="wc-desc">Full-length portrait of a beautiful nymph holding a javelin, standing in a classical pose.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DECORATIVE">
+            <a href="earthenware-amphora-with-fumes.html"><img src="../images/woodcuts_1499/hp1499_p330.jpg" alt="Earthenware Amphora with Fumes" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="earthenware-amphora-with-fumes.html">Earthenware Amphora with Fumes</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#6366f1">DECORATIVE</span> p.330</div>
+                <p class="wc-desc">Amphora with odoriferous fumes emerging from orifice. Greek inscription PANTA BAIA BIOY.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DECORATIVE">
+            <a href="precious-stone-vase-with-fiery-sparks.html"><img src="../images/woodcuts_1499/hp1499_p331.jpg" alt="Precious Stone Vase with Fiery Sparks" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="precious-stone-vase-with-fiery-sparks.html">Precious Stone Vase with Fiery Sparks</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#6366f1">DECORATIVE</span> p.331</div>
+                <p class="wc-desc">Small ornate vase of precious stone emitting fiery sparks or fumes. Detailed metalwork.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DECORATIVE">
+            <a href="terminal-figure-with-three-male-heads.html"><img src="../images/woodcuts_1499/hp1499_p334.jpg" alt="Terminal Figure with Three Male Heads" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="terminal-figure-with-three-male-heads.html">Terminal Figure with Three Male Heads</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#6366f1">DECORATIVE</span> p.334</div>
+                <p class="wc-desc">Classical herm/terminal figure on pedestal. Three male heads facing different directions. Decorative garden element.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="PROCESSION">
+            <a href="triumph-of-cupid.html"><img src="../images/woodcuts_1499/hp1499_p337.jpg" alt="Triumph of Cupid" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="triumph-of-cupid.html">Triumph of Cupid</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#ef4444">PROCESSION</span> p.337</div>
+                <p class="wc-desc">Large procession: nymphs, satyrs, dragons, and captives in Cupid&#x27;s triumphal procession.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DECORATIVE">
+            <a href="column-base-with-rams-heads.html"><img src="../images/woodcuts_1499/hp1499_p339.jpg" alt="Column Base with Rams&#x27; Heads" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="column-base-with-rams-heads.html">Column Base with Rams&#x27; Heads</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#6366f1">DECORATIVE</span> p.339</div>
+                <p class="wc-desc">Architectural detail: column base with rams&#x27; heads and sacrifice medallion relief.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="the-amphitheatre-in-island-of-venus.html"><img src="../images/woodcuts_1499/hp1499_p341.jpg" alt="The Amphitheatre in Island of Venus" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="the-amphitheatre-in-island-of-venus.html">The Amphitheatre in Island of Venus</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.341</div>
+                <p class="wc-desc">Large architectural section: amphitheater structure with tiered seating, arches, and columns.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="DIAGRAM">
+            <a href="ground-plan-of-fountain-of-venus.html"><img src="../images/woodcuts_1499/hp1499_p349.jpg" alt="Ground-plan of Fountain of Venus" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="ground-plan-of-fountain-of-venus.html">Ground-plan of Fountain of Venus</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#14b8a6">DIAGRAM</span> p.349</div>
+                <p class="wc-desc">Geometric diagram: heptagonal/octagonal ground-plan of the fountain of Venus. Detailed measurements.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="ARCHITECTURAL">
+            <a href="fountain-of-venus-sarcophagus-of-adonis.html"><img src="../images/woodcuts_1499/hp1499_p363.jpg" alt="Fountain of Venus: Sarcophagus of Adonis" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="fountain-of-venus-sarcophagus-of-adonis.html">Fountain of Venus: Sarcophagus of Adonis</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#8b5cf6">ARCHITECTURAL</span> p.363</div>
+                <p class="wc-desc">Garden scene with the Fountain of Venus. Water flows from the sarcophagus of Adonis through a trellis garden with a serp...</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="poliphilus-and-polia-at-fountain-of-venus.html"><img src="../images/woodcuts_1499/hp1499_p365.jpg" alt="Poliphilus and Polia at Fountain of Venus" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="poliphilus-and-polia-at-fountain-of-venus.html">Poliphilus and Polia at Fountain of Venus</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.365</div>
+                <p class="wc-desc">Garden scene: Poliphilus and Polia with nymphs at the Fountain of Venus, trellis and columns visible.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="polia-in-temple-of-diana-poliphilus-prostrate.html"><img src="../images/woodcuts_1499/hp1499_p387.jpg" alt="Polia in Temple of Diana; Poliphilus Prostrate" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="polia-in-temple-of-diana-poliphilus-prostrate.html">Polia in Temple of Diana; Poliphilus Prostrate</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.387</div>
+                <p class="wc-desc">Temple interior: Poliphilus lies prostrate on the floor while Polia stands in the Temple of Diana.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="polia-drags-poliphilus-from-sanctuary.html"><img src="../images/woodcuts_1499/hp1499_p389.jpg" alt="Polia Drags Prostrate Poliphilus from Sanctuary" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="polia-drags-poliphilus-from-sanctuary.html">Polia Drags Prostrate Poliphilus from Sanctuary</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.389</div>
+                <p class="wc-desc">Polia drags the unconscious body of Poliphilus away from the temple sanctuary. Interior architectural setting.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="lion-dog-dragon-devour-victims.html"><img src="../images/woodcuts_1499/hp1499_p391.jpg" alt="Lion, Dog, Dragon Devour Victims" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="lion-dog-dragon-devour-victims.html">Lion, Dog, Dragon Devour Victims</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.391</div>
+                <p class="wc-desc">Woodland scene: lion, dog, and dragon devour victims while Cupid flies above with torch and arrows.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="cupid-brandishes-sword-over-victims.html"><img src="../images/woodcuts_1499/hp1499_p392.jpg" alt="Cupid Brandishes Sword over Victims" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="cupid-brandishes-sword-over-victims.html">Cupid Brandishes Sword over Victims</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.392</div>
+                <p class="wc-desc">Cupid brandishes a sword over kneeling women bound to trees. Chariot visible at right.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="dream-of-polia-cupid-punishes-two-women.html"><img src="../images/woodcuts_1499/hp1499_p393.jpg" alt="Dream of Polia: Cupid Punishes Two Women" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="dream-of-polia-cupid-punishes-two-women.html">Dream of Polia: Cupid Punishes Two Women</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.393</div>
+                <p class="wc-desc">Two women punished by Cupid in a woodland setting. Figures tied to trees with beasts approaching.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="poliphilus-dead-polia-kneels-in-grief.html"><img src="../images/woodcuts_1499/hp1499_p411.jpg" alt="Poliphilus Dead; Polia Kneels in Grief" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="poliphilus-dead-polia-kneels-in-grief.html">Poliphilus Dead; Polia Kneels in Grief</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.411</div>
+                <p class="wc-desc">Interior scene: Poliphilus lies dead on tiled floor while Polia kneels beside him in grief.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="poliphilus-revived-in-polias-lap.html"><img src="../images/woodcuts_1499/hp1499_p412.jpg" alt="Poliphilus Revived in Polia&#x27;s Lap" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="poliphilus-revived-in-polias-lap.html">Poliphilus Revived in Polia&#x27;s Lap</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.412</div>
+                <p class="wc-desc">Interior scene: Polia cradles the revived Poliphilus in her lap. The lovers embrace on tiled floor.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="priestesses-drive-lovers-from-temple.html"><img src="../images/woodcuts_1499/hp1499_p413.jpg" alt="Priestesses Drive Lovers from Temple" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="priestesses-drive-lovers-from-temple.html">Priestesses Drive Lovers from Temple</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.413</div>
+                <p class="wc-desc">Figures being driven from a classical temple entrance. Priestesses expel the lovers from Diana&#x27;s sanctuary.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="polias-bed-chamber-vision.html"><img src="../images/woodcuts_1499/hp1499_p415.jpg" alt="Polia&#x27;s Bed-chamber Vision" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="polias-bed-chamber-vision.html">Polia&#x27;s Bed-chamber Vision</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.415</div>
+                <p class="wc-desc">Two-scene woodcut: landscape with figures above, Polia in bed-chamber below. Diana vs Venus contest in sky.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="polia-kneels-before-venus-priestess.html"><img src="../images/woodcuts_1499/hp1499_p419.jpg" alt="Polia Kneels Before Venus Priestess" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="polia-kneels-before-venus-priestess.html">Polia Kneels Before Venus Priestess</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.419</div>
+                <p class="wc-desc">Temple scene: Polia kneels before the Venus priestess with Poliphilus beside her. Altar with flame visible.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="enamoured-couple-before-priestess.html"><img src="../images/woodcuts_1499/hp1499_p421.jpg" alt="Enamoured Couple Before Priestess" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="enamoured-couple-before-priestess.html">Enamoured Couple Before Priestess</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.421</div>
+                <p class="wc-desc">Interior scene with columns: the couple kneels before the enthroned priestess at altar.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="priestess-enthroned-lovers-kissing.html"><img src="../images/woodcuts_1499/hp1499_p425.jpg" alt="Priestess Enthroned; Lovers Kissing" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="priestess-enthroned-lovers-kissing.html">Priestess Enthroned; Lovers Kissing</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.425</div>
+                <p class="wc-desc">Interior scene: priestess enthroned above while the lovers kiss in her presence. Witnesses at sides.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="poliphilus-writing-at-carved-desk.html"><img src="../images/woodcuts_1499/hp1499_p433.jpg" alt="Poliphilus Writing at Carved Desk" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="poliphilus-writing-at-carved-desk.html">Poliphilus Writing at Carved Desk</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.433</div>
+                <p class="wc-desc">Interior scene: Poliphilus seated at an ornately carved desk, writing. Bookshelves and architectural details.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="polia-reading-letter-in-bed-chamber.html"><img src="../images/woodcuts_1499/hp1499_p435.jpg" alt="Polia Reading Letter in Bed-chamber" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="polia-reading-letter-in-bed-chamber.html">Polia Reading Letter in Bed-chamber</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.435</div>
+                <p class="wc-desc">Interior scene: Polia reads Poliphilus&#x27;s letter while seated in her bed-chamber. Small dog at feet.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="poliphilus-before-venus-in-clouds.html"><img src="../images/woodcuts_1499/hp1499_p447.jpg" alt="Poliphilus Before Venus in Clouds" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="poliphilus-before-venus-in-clouds.html">Poliphilus Before Venus in Clouds</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.447</div>
+                <p class="wc-desc">Poliphilus before Venus enthroned on clouds. Cupid at left, figure at right. Divine epiphany scene.</p>
+            </div>
+        </div>
+        <div class="woodcut-card" data-category="NARRATIVE">
+            <a href="cupid-shoots-arrow-at-bust-of-polia.html"><img src="../images/woodcuts_1499/hp1499_p448.jpg" alt="Cupid Shoots Arrow at Bust of Polia" loading="lazy"></a>
+            <div class="wc-info">
+                <h4><a href="cupid-shoots-arrow-at-bust-of-polia.html">Cupid Shoots Arrow at Bust of Polia</a></h4>
+                <div class="wc-meta"><span class="wc-cat-badge" style="background:#3b82f6">NARRATIVE</span> p.448</div>
+                <p class="wc-desc">Cupid with bow shoots arrow at bust/figure. Venus seated on clouds at right. The very last woodcut in the HP.</p>
+            </div>
+        </div></div>
+    </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About This Project</h4>
+                <p>A digital scholarship platform exploring the alchemical
+                annotations and wider marginalia of the 1499 <em>Hypnerotomachia
+                Poliphili</em>, based on James Russell's PhD thesis (Durham, 2014).</p>
+            </div>
+            <div class="footer-section">
+                <h4>Data Provenance</h4>
+                <p>Content marked with <span class="review-badge" style="font-size:0.7rem">Unreviewed</span>
+                has been generated with LLM assistance and has not been
+                verified by a human expert.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+    function filterWoodcuts(cat) {
+        document.querySelectorAll('.wc-filter-btn').forEach(b => b.classList.remove('active'));
+        event.target.classList.add('active');
+        document.querySelectorAll('.woodcut-card').forEach(card => {
+            if (cat === 'ALL' || card.dataset.category === cat) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+    </script>
+</body>
+</html>

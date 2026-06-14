@@ -1,0 +1,113 @@
+{
+  "session": "Workstream 1 - Emblem Sourcing Phase 1",
+  "date": "2026-05-26T00:02:33.352159",
+  "goal": "Extract 70+ emblem images from Tier 1 sources",
+  "estimated_duration": "6-8 hours (Phase 1)",
+  "phase_1_extraction": {
+    "tier_1_sources": {
+      "Maier Atalanta Fugiens": {
+        "file": "E:/pdf/alchemy/atalanta_fugiens/Michael Maier Atalanta fugiens libgen li.pdf",
+        "emblems": 51,
+        "priority": "HIGH",
+        "extraction_method": "PDF image extraction + De Jong scholarly mapping",
+        "scholarly_basis": "De Jong, Helena Maria Elisabeth. *Michael Maier's Atalanta Fugiens: Sources of an Alchemical Book of Emblems* (Nicolas Hays, 1969)",
+        "output_count": 51
+      },
+      "Khunrath Amphitheatrum": {
+        "file": "E:/pdf/alchemy/Peter J Forshaw The Mage s Images_ Heinrich Khunrath in His Oratory and Laboratory",
+        "emblems": 25,
+        "priority": "MEDIUM",
+        "extraction_method": "Forshaw scholarship + textual description",
+        "scholarly_basis": "Forshaw, Peter J. *The Mage's Images: Heinrich Khunrath in His Oratory and Laboratory* (Brill, 2009)",
+        "output_count": 25
+      },
+      "Mutus Liber": {
+        "file": "E:/pdf/alchemy/Adam McLean A Commentary on the Mutus Liber.pdf",
+        "emblems": 15,
+        "priority": "MEDIUM",
+        "extraction_method": "McLean commentary analysis",
+        "scholarly_basis": "McLean, Adam. *A Commentary on the Mutus Liber* (Phanes Press, 1991)",
+        "output_count": 15
+      }
+    },
+    "total_phase_1": 91,
+    "stretch_goal": 100
+  },
+  "processing_steps": [
+    "1. Locate PDF files for Tier 1 sources",
+    "2. Extract images using pdfplumber/PIL (where available)",
+    "3. For each emblem: create visual description (300-500 words)",
+    "4. Write philosophical essay (500-800 words) using scholarly sources",
+    "5. Identify key concepts and create concept links",
+    "6. Document sourcing metadata (book, edition, page, scholar reference)",
+    "7. Create emblem JSON entries with all fields",
+    "8. Save images to staging/emblem_images/ with source tracking",
+    "9. Create staging PR with sourcing documentation"
+  ],
+  "database_schema": {
+    "id": "emblem_id (e.g., 'maier-atalanta-001')",
+    "title": "Emblem title or number",
+    "emblem_number": "Position in source book",
+    "source_book": "Name of emblem collection",
+    "author": "Creator of emblem book",
+    "date_published": "Year of publication",
+    "visual_description": "300-500 words describing visual elements",
+    "essay": "500-800 word philosophical/historical essay",
+    "key_concepts": [
+      "Array of concept IDs/names"
+    ],
+    "epigrammatic_text": "Latin or vernacular text accompanying emblem",
+    "scholarly_sources": [
+      {
+        "scholar": "Scholar name",
+        "reference": "Full citation",
+        "quote": "Relevant passage (under 50 words)",
+        "relevance": "interpretation/context/source"
+      }
+    ],
+    "image_source": {
+      "type": "photograph|text_description|scholarly_analysis",
+      "basis": "Original PDF|De Jong analysis|McLean commentary",
+      "sourcing": "Citation to source book and page"
+    },
+    "related_figures": [
+      "Figure IDs who created/were influenced by this"
+    ],
+    "related_emblems": [
+      "Other emblem IDs with similar themes"
+    ],
+    "review_status": "DRAFT",
+    "confidence": "HIGH|MEDIUM|LOW"
+  },
+  "quality_standards": {
+    "visual_description": [
+      "Clear, concrete description of visual elements",
+      "Mention of colors, symbols, figures, composition",
+      "No interpretive speculation in description section",
+      "300-500 words"
+    ],
+    "philosophical_essay": [
+      "Ground in historical scholarship (cite sources)",
+      "Explain alchemical/philosophical meaning",
+      "Connect to broader traditions and concepts",
+      "Document scholarly disagreements fairly",
+      "500-800 words"
+    ],
+    "concept_links": [
+      "Each emblem linked to 2-3+ concepts minimum",
+      "Each concept will eventually link to 2-3+ emblems",
+      "Bidirectional links maintained"
+    ],
+    "sourcing_metadata": [
+      "Book title, author, date",
+      "Edition information",
+      "Page number or section",
+      "Scholarly reference (if based on analysis)"
+    ]
+  },
+  "next_phases": {
+    "phase_2": "Concept-emblem mapping (60 concepts × 2-3 emblems each)",
+    "phase_3": "Figure-emblem genealogy (who created/influenced emblems)",
+    "phase_4": "Scholarly apparatus enrichment (direct quotes, page citations, debates)"
+  }
+}

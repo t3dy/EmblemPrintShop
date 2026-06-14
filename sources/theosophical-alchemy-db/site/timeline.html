@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline — Rosicrucian & Alchemy Traditions (1500–1800)</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .timeline-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .timeline-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            border-bottom: 2px solid var(--tan-gold);
+            padding-bottom: 2rem;
+        }
+
+        .timeline-header h2 {
+            font-size: 2rem;
+            color: var(--burnt-sienna);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-header p {
+            font-size: 1.1rem;
+            color: var(--deep-brown);
+        }
+
+        .timeline-controls {
+            background: var(--light-parchment);
+            border: 2px solid var(--tan-gold);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--burnt-sienna);
+        }
+
+        .control-group {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .control-label {
+            font-weight: bold;
+            color: var(--burnt-sienna);
+            min-width: 120px;
+        }
+
+        .timeline-filter {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .timeline-filter select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--tan-gold);
+            background: var(--parchment);
+            color: var(--dark-text);
+            font-family: 'Georgia', serif;
+        }
+
+        .timeline-view {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Horizontal Timeline View */
+        .timeline-horizontal {
+            flex: 1;
+            overflow-x: auto;
+            border: 2px solid var(--tan-gold);
+            padding: 2rem;
+            background: var(--light-parchment);
+            min-height: 400px;
+            position: relative;
+        }
+
+        .timeline-axis {
+            position: relative;
+            height: 60px;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--burnt-sienna);
+        }
+
+        .timeline-tick {
+            position: absolute;
+            top: -10px;
+            width: 2px;
+            height: 20px;
+            background: var(--burnt-sienna);
+        }
+
+        .timeline-label {
+            position: absolute;
+            top: 25px;
+            font-size: 0.85rem;
+            color: var(--deep-brown);
+        }
+
+        .timeline-events-horizontal {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .timeline-event {
+            flex: 0 1 220px;
+            background: var(--parchment);
+            border: 1px solid var(--tan-gold);
+            border-left: 3px solid var(--burnt-sienna);
+            padding: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-height: 150px;
+        }
+
+        .timeline-event:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(139, 69, 19, 0.2);
+            border-left-width: 5px;
+        }
+
+        .event-date {
+            font-weight: bold;
+            color: var(--burnt-sienna);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-title {
+            font-size: 0.95rem;
+            color: var(--dark-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .event-category {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            background: var(--tan-gold);
+            color: var(--dark-text);
+            border-radius: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-significance {
+            font-size: 0.85rem;
+            color: var(--deep-brown);
+            line-height: 1.4;
+        }
+
+        /* Event Details Sidebar */
+        .timeline-details {
+            width: 350px;
+            background: var(--light-parchment);
+            border: 2px solid var(--tan-gold);
+            padding: 1.5rem;
+            border-left: 4px solid var(--burnt-sienna);
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .details-header {
+            color: var(--burnt-sienna);
+            border-bottom: 2px solid var(--tan-gold);
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .detail-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .detail-label {
+            font-weight: bold;
+            color: var(--burnt-sienna);
+            font-size: 0.9rem;
+        }
+
+        .detail-value {
+            color: var(--dark-text);
+            margin-top: 0.3rem;
+            line-height: 1.5;
+        }
+
+        /* Statistics */
+        .timeline-stats {
+            background: var(--light-parchment);
+            border: 2px solid var(--tan-gold);
+            padding: 2rem;
+            margin-top: 2rem;
+            border-left: 4px solid var(--burnt-sienna);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--burnt-sienna);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--deep-brown);
+            font-size: 0.95rem;
+        }
+
+        .no-event-selected {
+            color: var(--deep-brown);
+            font-style: italic;
+            text-align: center;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-header">
+        <h1>TheosophicalAlchemyDB</h1>
+        <p>Interactive Knowledge Portal: Rosicrucian & Spiritual Alchemy Traditions (16th–19th c.)</p>
+    </div>
+
+    <div class="timeline-container">
+        <div class="timeline-header">
+            <h2>Timeline of Events</h2>
+            <p>500 key events in Rosicrucian, alchemical, and theosophical traditions (1500–1800)</p>
+        </div>
+
+        <div class="timeline-controls">
+            <div class="control-group">
+                <div class="timeline-filter">
+                    <label class="control-label">Category:</label>
+                    <select id="categoryFilter">
+                        <option value="">All Events</option>
+                        <option value="figure_birth">Figure Births</option>
+                        <option value="figure_death">Figure Deaths</option>
+                        <option value="text_publication">Text Publications</option>
+                        <option value="movement">Movements</option>
+                        <option value="event">Key Events</option>
+                    </select>
+                </div>
+
+                <div class="timeline-filter">
+                    <label class="control-label">Century:</label>
+                    <select id="centuryFilter">
+                        <option value="">All Centuries</option>
+                        <option value="1500">1500s</option>
+                        <option value="1600">1600s</option>
+                        <option value="1700">1700s</option>
+                        <option value="1800">1800s</option>
+                    </select>
+                </div>
+
+                <div class="timeline-filter">
+                    <input type="text" id="searchInput" placeholder="Search events..." style="width: 100%; padding: 0.5rem; border: 1px solid var(--tan-gold);">
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-view">
+            <div class="timeline-horizontal" id="timelineHorizontal">
+                <div class="timeline-axis"></div>
+                <div class="timeline-events-horizontal" id="eventsContainer"></div>
+            </div>
+
+            <div class="timeline-details" id="detailsPanel">
+                <div class="no-event-selected">Select an event to view details</div>
+            </div>
+        </div>
+
+        <div class="timeline-stats" id="statsContainer"></div>
+    </div>
+
+    <script src="timeline.js"></script>
+</body>
+</html>
