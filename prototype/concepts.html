@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concept Browser — Emblem Print Shop</title>
+<style>
+:root {
+  --ink: #1a1208;
+  --paper: #f5edd8;
+  --paper2: #ede0c4;
+  --accent: #8b3a1c;
+  --accent2: #5c6b2e;
+  --muted: #6b5d48;
+  --border: #c8b89a;
+  --sans: 'Georgia', serif;
+  --mono: 'Courier New', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.65; }
+
+nav { background: var(--ink); color: var(--paper); padding: .6rem 1.5rem; display: flex; gap: 1.2rem; align-items: center; font-size: .8rem; position: sticky; top: 0; z-index: 50; }
+nav a { color: var(--paper); text-decoration: none; opacity: .7; } nav a:hover { opacity: 1; }
+nav strong { font-size: .95rem; margin-right: .5rem; }
+
+header { background: var(--ink); color: var(--paper); padding: 2rem 1.5rem; text-align: center; border-bottom: 3px solid var(--accent); }
+header h1 { font-size: 1.6rem; margin-bottom: .4rem; font-weight: normal; }
+header p { font-size: .85rem; opacity: .8; max-width: 800px; margin: 0 auto; }
+
+main { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+/* Search bar */
+.search-bar { margin-bottom: 2rem; display: flex; gap: .5rem; }
+#concept-search { flex: 1; padding: .6rem .8rem; border: 1px solid var(--border); border-radius: 4px; font-family: var(--sans); font-size: 1rem; }
+#concept-search:focus { outline: none; border-color: var(--accent); }
+
+/* Concepts list */
+.concepts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+.concept-card {
+  padding: 1rem; background: var(--paper2); border: 1px solid var(--border); border-radius: 4px;
+  cursor: pointer; transition: all .15s;
+}
+.concept-card:hover { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+.concept-card .name { font-weight: 600; margin-bottom: .3rem; }
+.concept-card .meta { font-size: .75rem; opacity: .7; }
+
+/* Detail panel */
+#detail-panel { display: none; margin: 2rem 0; padding: 1.5rem; background: var(--paper2); border-left: 4px solid var(--accent); border-radius: 4px; }
+#detail-panel.open { display: block; }
+.detail-head { margin-bottom: 1rem; }
+.detail-head h2 { font-size: 1.4rem; margin-bottom: .3rem; }
+.detail-stats { display: flex; gap: 1.5rem; font-size: .85rem; color: var(--muted); }
+
+/* Related emblems */
+.emblems-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: .8rem; margin: 1rem 0; }
+.emblem-thumb { aspect-ratio: 1; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; background: var(--paper); }
+.emblem-thumb img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; }
+.emblem-thumb img:hover { opacity: .7; }
+
+/* Related chapters */
+.chapters-list { margin: 1rem 0; }
+.chapter-item { padding: .6rem; background: var(--paper); border-left: 2px solid var(--accent2); margin-bottom: .5rem; font-size: .85rem; }
+.chapter-item .title { font-weight: 600; }
+.chapter-item .meta { color: var(--muted); font-size: .75rem; }
+
+/* Empty state */
+.empty { padding: 2rem; text-align: center; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<nav>
+  <strong>Emblem Print Shop</strong>
+  <a href="emblems.html">Emblem Catalog</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="concepts.html">Concepts</a>
+</nav>
+
+<header>
+  <h1>Alchemical Concept Browser</h1>
+  <p>Explore the emblem collection by motifs, operations, and philosophical concepts. Discover connections across 140 concepts and 7,000+ elements.</p>
+</header>
+
+<main>
+  <div class="search-bar">
+    <input type="text" id="concept-search" placeholder="Search concepts (mercury, distillation, union...)">
+  </div>
+
+  <div class="concepts-grid" id="concepts-list"></div>
+
+  <div id="detail-panel">
+    <div class="detail-head">
+      <h2 id="detail-name"></h2>
+      <div class="detail-stats">
+        <span><strong id="record-count">0</strong> emblems</span>
+        <span><strong id="chapter-count">0</strong> chapters</span>
+      </div>
+    </div>
+
+    <div>
+      <h3 style="font-size:.85rem;color:var(--muted);margin:.8rem 0 .4rem;text-transform:uppercase;letter-spacing:.08em">Sample Emblems</h3>
+      <div class="emblems-grid" id="detail-emblems"></div>
+    </div>
+
+    <div id="related-section" style="display:none">
+      <h3 style="font-size:.85rem;color:var(--muted);margin:.8rem 0 .4rem;text-transform:uppercase;letter-spacing:.08em">Related Concepts</h3>
+      <div id="related-concepts" style="display:flex;flex-wrap:wrap;gap:.5rem"></div>
+    </div>
+
+    <div id="chapters-section" style="display:none">
+      <h3 style="font-size:.85rem;color:var(--muted);margin:.8rem 0 .4rem;text-transform:uppercase;letter-spacing:.08em">Source Text Mentions</h3>
+      <div class="chapters-list" id="detail-chapters"></div>
+    </div>
+  </div>
+
+  <div id="no-data" class="empty">Loading concept index...</div>
+</main>
+
+<script>
+let CONCEPT_INDEX = {};
+let EMBLEMS_BY_ID = {};
+
+async function init() {
+  try {
+    const [r1, r2] = await Promise.all([
+      fetch('concept_index.json?_=' + Date.now()),
+      fetch('gallery_catalog.json?_=' + Date.now()),
+    ]);
+
+    if (!r1.ok || !r2.ok) throw new Error('Failed to load data');
+
+    CONCEPT_INDEX = await r1.json();
+    const catalog = await r2.json();
+
+    // Index emblems by ID
+    catalog.records.forEach(r => {
+      EMBLEMS_BY_ID[r.emblem_id] = r;
+    });
+
+    renderConceptsList();
+  } catch (e) {
+    document.getElementById('no-data').textContent = 'Failed to load concept index: ' + e.message;
+  }
+}
+
+function renderConceptsList() {
+  const grid = document.getElementById('concepts-list');
+  grid.innerHTML = '';
+  const nodata = document.getElementById('no-data');
+
+  if (!CONCEPT_INDEX.concepts) {
+    nodata.textContent = 'No concept data available';
+    return;
+  }
+
+  const concepts = Object.entries(CONCEPT_INDEX.concepts);
+  if (concepts.length === 0) {
+    nodata.textContent = 'No concepts found';
+    return;
+  }
+
+  nodata.style.display = 'none';
+
+  concepts.forEach(([name, data]) => {
+    const card = document.createElement('div');
+    card.className = 'concept-card';
+    card.innerHTML = `
+      <div class="name">${name}</div>
+      <div class="meta">
+        <div>${data.records_count} emblems</div>
+        ${data.chapters_count ? `<div>${data.chapters_count} chapters</div>` : ''}
+      </div>
+    `;
+    card.addEventListener('click', () => showDetail(name, data));
+    grid.appendChild(card);
+  });
+}
+
+function showDetail(name, data) {
+  const panel = document.getElementById('detail-panel');
+  document.getElementById('detail-name').textContent = name;
+  document.getElementById('record-count').textContent = data.records_count;
+  document.getElementById('chapter-count').textContent = data.chapters_count;
+
+  // Show emblems
+  const emblems = document.getElementById('detail-emblems');
+  emblems.innerHTML = '';
+  (data.records || []).slice(0, 12).forEach(rec => {
+    const thumb = document.createElement('div');
+    thumb.className = 'emblem-thumb';
+    if (rec.image) {
+      const img = document.createElement('img');
+      img.src = rec.image;
+      img.alt = rec.label;
+      img.title = rec.label;
+      thumb.appendChild(img);
+    }
+    thumb.style.cursor = 'pointer';
+    thumb.addEventListener('click', () => {
+      window.open('gallery.html?emblem=' + encodeURIComponent(rec.emblem_id), '_blank');
+    });
+    emblems.appendChild(thumb);
+  });
+
+  // Show related concepts
+  const related = data.related || [];
+  const relSection = document.getElementById('related-section');
+  if (related.length > 0) {
+    const relDiv = document.getElementById('related-concepts');
+    relDiv.innerHTML = '';
+    related.slice(0, 8).forEach(rel => {
+      const chip = document.createElement('button');
+      chip.style.cssText = 'padding:.3rem .6rem;background:var(--paper);border:1px solid var(--border);border-radius:3px;cursor:pointer;font-family:var(--sans);font-size:.75rem';
+      chip.textContent = rel.concept + ` (${rel.count})`;
+      chip.addEventListener('click', () => {
+        const relData = CONCEPT_INDEX.concepts[rel.concept];
+        if (relData) showDetail(rel.concept, relData);
+      });
+      relDiv.appendChild(chip);
+    });
+    relSection.style.display = 'block';
+  } else {
+    relSection.style.display = 'none';
+  }
+
+  // Show chapters
+  const chapters = data.chapters || [];
+  const chapSection = document.getElementById('chapters-section');
+  if (chapters.length > 0) {
+    const chapDiv = document.getElementById('detail-chapters');
+    chapDiv.innerHTML = '';
+    chapters.slice(0, 5).forEach(ch => {
+      const item = document.createElement('div');
+      item.className = 'chapter-item';
+      item.innerHTML = `
+        <div class="title">${ch.title}</div>
+        <div class="meta">${ch.book.replace(/_/g, ' ').toUpperCase()}</div>
+      `;
+      item.style.cursor = 'pointer';
+      item.addEventListener('click', () => {
+        window.open(`Markdown/${ch.book}/${ch.chapter}.md`, '_blank');
+      });
+      chapDiv.appendChild(item);
+    });
+    chapSection.style.display = 'block';
+  } else {
+    chapSection.style.display = 'none';
+  }
+
+  panel.classList.add('open');
+  panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+document.getElementById('concept-search').addEventListener('input', (e) => {
+  const query = e.target.value.toLowerCase();
+  document.querySelectorAll('.concept-card').forEach(card => {
+    const name = card.querySelector('.name').textContent.toLowerCase();
+    card.style.display = name.includes(query) ? 'block' : 'none';
+  });
+});
+
+init();
+</script>
+</body>
+</html>
