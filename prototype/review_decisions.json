@@ -291,5 +291,80 @@
     "status": "rejected",
     "reviewed_at": "2026-08-29T06:30:32.796370+00:00",
     "note": "Composite bundling nearly every detection on the plate (window, vessel/boat, all four spheres, river) into one region -- not a coherent single element."
+  },
+  "emblem-08__furnace": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:33:10.648825+00:00",
+    "note": "Already found during WO-012 (docs/EXTRACTION_PROTOTYPE_REPORT.md): a cross-hatched barrel-vaulted passage in perspective. Confirmed again here -- no furnace apparatus is depicted, though the plate does show a real fire, which is thematically central (the discourse: the egg must be 'pierced -- opened to the action of fire').",
+    "corrected_label": "Vaulted receding corridor with a fire burning at its far/near mouth (architecture + fire, not a furnace structure)"
+  },
+  "emblem-08__athanor_retort": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:33:10.648825+00:00",
+    "note": "A human figure, not apparatus of any kind.",
+    "corrected_label": "The warrior/operator figure raising the sword over the egg"
+  },
+  "emblem-08__person": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-29T06:33:10.648825+00:00",
+    "note": "Same figure/near-identical bbox as 'athanor_retort' -- duplicate detection."
+  },
+  "emblem-08__woman_hermaphrodite": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:33:10.648825+00:00",
+    "note": "The flowing, hair-like linework of the flames was matched to a 'woman'/'hermaphrodite' category prompt. This is the fire itself, not a figure -- and per the discourse, the fire is one of the two central symbolic elements here (with the egg), not decorative background, so this correction matters more than a typical background mislabel.",
+    "corrected_label": "Flames/fire (the burning pile at the corridor's mouth)"
+  },
+  "emblem-08__philosophical_egg_ca": {
+    "status": "approved",
+    "reviewed_at": "2026-08-29T06:33:10.648825+00:00",
+    "note": "Correct subject (the egg); cleaned the compound label -- no cauldron is present.",
+    "corrected_label": "Philosophical egg (on the table)"
+  },
+  "emblem-08__shield_cauldron": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-29T06:33:10.648825+00:00",
+    "note": "Same bbox as 'philosophical_egg_ca' -- duplicate detection of the egg, wrong label."
+  },
+  "emblem-08__altar": {
+    "status": "approved",
+    "reviewed_at": "2026-08-29T06:33:10.648825+00:00",
+    "note": "A plain wooden table/bench holding the egg -- 'altar' is a loose but defensible read given the ceremonial framing (sword raised over the egg); not a religious altar specifically."
+  },
+  "emblem-08__sword_axe": {
+    "status": "approved",
+    "reviewed_at": "2026-08-29T06:33:10.648825+00:00",
+    "note": "Correct: the sword's hilt/cross-guard."
+  },
+  "emblem-08__sword_axe_torch": {
+    "status": "approved",
+    "reviewed_at": "2026-08-29T06:33:10.648825+00:00",
+    "note": "Correct: the sword's raised blade."
+  },
+  "emblem-08__pestle": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-29T06:33:10.648825+00:00",
+    "note": "Identical crop to 'sword_axe_torch' (the sword blade) -- duplicate detection, wrong label. No pestle is present."
+  },
+  "emblem-08__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-29T06:33:10.648825+00:00",
+    "note": "Bbox spans the fire, the table+egg, and the figure's legs together as one region (width 1537 of ~1600px) -- not a single coherent element; each of those is already its own catalog entry."
+  },
+  "emblem-08__bridge": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:33:10.648825+00:00",
+    "note": "No bridge is depicted at this location -- it's the arcaded top of the courtyard's boundary wall, matching the walled-town background.",
+    "corrected_label": "Town wall battlements (crenellated/arcaded parapet, background architecture)"
+  },
+  "emblem-08__palm": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:33:10.648825+00:00",
+    "note": "No palm tree is visible in this crop -- looks like a carved architectural ornament (building facade detail, possibly a shield or molding). Flagging as unsupported rather than asserting a specific replacement I can't fully confirm."
+  },
+  "emblem-08__lamp": {
+    "status": "approved",
+    "reviewed_at": "2026-08-29T06:33:10.648825+00:00",
+    "note": "Plausible: a small hanging object (lamp or shop sign) on the building facade. Low confidence given crop size, but not contesting -- 'lamp' is a reasonable read."
   }
 }
