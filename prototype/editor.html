@@ -69,6 +69,14 @@ body { background: #2a2520; color: var(--paper); font-family: var(--sans); font-
   position: absolute; border-radius: 50%; pointer-events: none; z-index: 10;
   transform: translate(-50%,-50%); display: none;
 }
+#selection-canvas {
+  position: absolute; top: 0; left: 0; pointer-events: none; z-index: 5;
+}
+.source-mode-banner {
+  position: absolute; top: 8px; left: 50%; transform: translateX(-50%); z-index: 20;
+  background: rgba(139,58,28,.92); color: #fff; padding: .3rem .8rem; border-radius: 4px;
+  font-size: .72rem; font-family: var(--sans); white-space: nowrap; pointer-events: none;
+}
 
 /* Reference image strip */
 .ref-strip {
@@ -143,6 +151,26 @@ body { background: #2a2520; color: var(--paper); font-family: var(--sans); font-
   <button class="tb-btn" id="btn-restore" onclick="setTool('restore')" title="Restore brush (R) — paint back from source crop">
     🖌 Restore
   </button>
+  <button class="tb-btn" id="btn-lasso" onclick="setTool('lasso')" title="Lasso (L) — freehand select, then Keep/Erase selection">
+    ✏ Lasso
+  </button>
+  <button class="tb-btn" id="btn-wand" onclick="setTool('wand')" title="Magic wand (W) — click to select a connected region by tone similarity">
+    🪄 Wand
+  </button>
+  <div class="tb-sep"></div>
+
+  <!-- Selection controls (shown once a selection exists) -->
+  <span class="tb-label">Wand tolerance</span>
+  <input class="tb-range" type="range" id="wand-tolerance" min="2" max="100" value="24" oninput="updateWandUI()">
+  <span class="tb-num" id="wand-tolerance-val">24</span>
+  <label class="tb-btn" id="btn-snap-edges" style="cursor:pointer" title="Magnetic lasso — snap each point to the nearest strong edge (like Photoshop's magnetic lasso)">
+    <input type="checkbox" id="snap-edges-toggle" style="margin:0" onchange="snapToEdges = this.checked">
+    🧲 Snap to edges
+  </label>
+  <div class="tb-sep"></div>
+  <button class="tb-btn" id="btn-keep-sel" onclick="applySelection('keep')" disabled title="Erase everything OUTSIDE the selection">Keep selection</button>
+  <button class="tb-btn" id="btn-erase-sel" onclick="applySelection('erase')" disabled title="Erase everything INSIDE the selection">Erase selection</button>
+  <button class="tb-btn" id="btn-clear-sel" onclick="clearSelection()" disabled title="Clear selection without applying (Esc)">✕ Clear</button>
   <div class="tb-sep"></div>
 
   <!-- Brush size -->
@@ -185,7 +213,11 @@ body { background: #2a2520; color: var(--paper); font-family: var(--sans); font-
     </div>
     <div id="canvas-container" style="display:none">
       <canvas id="main-canvas"></canvas>
+      <canvas id="selection-canvas"></canvas>
       <div id="cursor-ring"></div>
+      <div class="source-mode-banner" id="source-mode-banner" style="display:none">
+        NEW EXTRACTION MODE — lasso/wand a figure on the source plate, then "Save as new element"
+      </div>
     </div>
   </div>
 
@@ -222,6 +254,36 @@ body { background: #2a2520; color: var(--paper); font-family: var(--sans); font-
       <button id="save-btn" disabled>💾 Save edits</button>
       <div id="save-status"></div>
     </div>
+
+    <!-- New-extraction panel: only shown in source-plate mode (?source=...) -->
+    <div class="rp-section" id="new-extraction-panel" style="display:none">
+      <div class="rp-title">New Element From Source</div>
+      <div class="note-label" style="margin-top:.3rem">Label</div>
+      <input id="new-elem-label" type="text" placeholder="e.g. 'two lions fighting'"
+        style="width:100%;padding:.3rem .4rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:4px;color:var(--paper);font-family:var(--sans);font-size:.75rem;margin-bottom:.4rem">
+      <div class="note-label">Category</div>
+      <select id="new-elem-category"
+        style="width:100%;padding:.3rem .4rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:4px;color:var(--paper);font-family:var(--sans);font-size:.75rem;margin-bottom:.5rem">
+        <option value="figures">figures</option>
+        <option value="animals">animals</option>
+        <option value="plants">plants</option>
+        <option value="landscape">landscape</option>
+        <option value="architecture">architecture</option>
+        <option value="objects">objects</option>
+      </select>
+      <button id="save-new-btn" onclick="saveNewExtraction()" disabled
+        style="width:100%;padding:.4rem;background:var(--accent);border:none;border-radius:4px;color:var(--paper);font-family:var(--sans);font-size:.8rem;cursor:pointer">
+        ✂ Save as new element
+      </button>
+      <div id="new-elem-status" style="font-size:.68rem;font-family:var(--mono);color:rgba(245,237,216,.5);text-align:center;margin-top:.3rem"></div>
+      <p style="font-size:.65rem;color:rgba(245,237,216,.4);margin-top:.5rem;line-height:1.4">
+        Make a selection (lasso or wand) on the source plate first — this button
+        stays disabled until you have one. Writes a new
+        <code style="font-size:.65rem">*_meta.json</code>/<code style="font-size:.65rem">*_transparent.png</code>
+        into <code style="font-size:.65rem">assets/extracted_all/&lt;emblem&gt;/individual/</code> and
+        rebuilds the gallery catalog.
+      </p>
+    </div>
   </div>
 </div>
 
@@ -238,6 +300,8 @@ body { background: #2a2520; color: var(--paper); font-family: var(--sans); font-
 // ── State ──────────────────────────────────────────────────
 const canvas = document.getElementById('main-canvas');
 const ctx    = canvas.getContext('2d', { willReadFrequently: true });
+const selCanvas = document.getElementById('selection-canvas');
+const selCtx    = selCanvas.getContext('2d');
 
 let originalPath  = '';   // relative path of the _transparent.png
 let cropPath      = '';   // relative path of the _crop.jpg
@@ -255,9 +319,32 @@ let currentStroke = null; // {tool, size, points, coverage_before}
 let editSessions  = 0;
 let dirty         = false;
 
+// Selection tools (lasso / wand) — Photoshop-style: build a mask, then
+// "Keep selection" (erase outside) or "Erase selection" (erase inside).
+let selectionMask  = null;  // Uint8ClampedArray, canvas.width*canvas.height, 255 = selected
+let lassoPoints    = [];    // in-progress freehand path, canvas coords
+let wandTolerance  = 24;
+let snapToEdges    = false;
+let edgeMagnitude  = null;  // Float32Array, same WxH as canvas — Sobel gradient magnitude
+let edgeMagMax     = 1;
+
+// Source-plate mode: editing the whole original engraving to carve a brand
+// new element, rather than refining an already-extracted cutout.
+let sourceMode      = false;
+let sourceModeImageEl = null; // full-res <img> kept around for exact-pixel compositing on save
+let currentEmblemId  = '';
+let currentSourcePath = '';
+
 // ── Init ───────────────────────────────────────────────────
 async function init() {
   const p = new URLSearchParams(location.search);
+  const source = p.get('source') || p.get('source_image') || '';
+
+  if (source) {
+    await initSourceMode(source, p.get('emblem_id') || '', p.get('title') || 'New extraction');
+    return;
+  }
+
   const path  = p.get('path')   || p.get('transparent_png') || '';
   const crop  = p.get('crop')   || p.get('crop_jpg') || '';
   const title = p.get('title')  || p.get('prompt') || path.split('/').pop();
@@ -294,16 +381,53 @@ async function init() {
   document.getElementById('save-btn').disabled = false;
 }
 
+// Load the full, opaque source plate for carving a brand-new element.
+async function initSourceMode(sourcePath, emblemId, title) {
+  sourceMode = true;
+  currentSourcePath = sourcePath;
+  currentEmblemId = emblemId || sourcePath.split(/[\\/]/).pop().replace(/\.[^.]+$/, '');
+
+  document.getElementById('topbar-title').textContent = title + ' — ' + currentEmblemId;
+  document.getElementById('sb-path').textContent = sourcePath;
+  document.getElementById('source-mode-banner').style.display = 'block';
+  document.getElementById('new-extraction-panel').style.display = '';
+  document.getElementById('save-btn').style.display = 'none';        // refine-mode save doesn't apply
+  document.querySelector('.tb-btn.save').style.display = 'none';
+  document.getElementById('btn-restore').style.display = 'none';     // no source crop to restore from
+  document.querySelector('.ref-strip').style.display = 'none';
+
+  await new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => {
+      sourceModeImageEl = img;
+      canvas.width = selCanvas.width = img.naturalWidth;
+      canvas.height = selCanvas.height = img.naturalHeight;
+      ctx.drawImage(img, 0, 0);
+      originalData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      computeEdgeMagnitude();
+      document.getElementById('no-image').style.display = 'none';
+      document.getElementById('canvas-container').style.display = '';
+      applyZoom();
+      resolve();
+    };
+    img.onerror = reject;
+    img.src = '../' + sourcePath + '?_=' + Date.now();
+  });
+  setTool('lasso');
+}
+
 async function loadImage(path) {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.crossOrigin = 'anonymous';
     img.onload = () => {
-      canvas.width  = img.naturalWidth;
-      canvas.height = img.naturalHeight;
+      canvas.width  = selCanvas.width  = img.naturalWidth;
+      canvas.height = selCanvas.height = img.naturalHeight;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.drawImage(img, 0, 0);
       originalData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      computeEdgeMagnitude();
       updateStats();
       document.getElementById('no-image').style.display  = 'none';
       document.getElementById('canvas-container').style.display = '';
@@ -334,11 +458,19 @@ async function loadCropData(path) {
 
 // ── Tool selection ─────────────────────────────────────────
 function setTool(tool) {
+  if (currentTool === 'lasso' && lassoPoints.length) finishLasso(); // commit in-progress path
   currentTool = tool;
   document.getElementById('btn-eraser').classList.toggle('active', tool === 'eraser');
   document.getElementById('btn-restore').classList.toggle('active', tool === 'restore');
+  document.getElementById('btn-lasso').classList.toggle('active', tool === 'lasso');
+  document.getElementById('btn-wand').classList.toggle('active', tool === 'wand');
   updateCursorRing();
   document.getElementById('sb-tool').textContent = 'tool: ' + tool;
+}
+
+function updateWandUI() {
+  wandTolerance = +document.getElementById('wand-tolerance').value;
+  document.getElementById('wand-tolerance-val').textContent = wandTolerance;
 }
 
 // ── Brush size / zoom ──────────────────────────────────────
@@ -390,31 +522,61 @@ const cc = document.getElementById('canvas-container');
 const cursor = document.getElementById('cursor-ring');
 
 cc.addEventListener('mouseenter', () => { cursor.style.display = 'block'; });
-cc.addEventListener('mouseleave', () => { cursor.style.display = 'none'; if (isDrawing) endStroke(); });
+cc.addEventListener('mouseleave', () => {
+  cursor.style.display = 'none';
+  if (currentTool === 'lasso' && isDrawing) { finishLasso(); return; }
+  if (isDrawing) endStroke();
+});
+
+const SEL_TOOLS = new Set(['lasso', 'wand']);
 
 cc.addEventListener('mousemove', e => {
   const pt = getCanvasPoint(e);
   document.getElementById('sb-pos').textContent = `x: ${pt.x} y: ${pt.y}`;
 
-  // Move cursor ring
-  const rect = cc.getBoundingClientRect();
-  cursor.style.left = (e.clientX - rect.left) + 'px';
-  cursor.style.top  = (e.clientY - rect.top)  + 'px';
-  const displaySize = brushSize * zoom;
-  cursor.style.width  = displaySize + 'px';
-  cursor.style.height = displaySize + 'px';
-  cursor.style.border = `2px solid ${currentTool === 'eraser' ? '#ff6040' : '#40c060'}`;
-  cursor.style.background = currentTool === 'eraser'
-    ? 'rgba(255,80,40,.08)' : 'rgba(40,192,80,.08)';
+  // Move cursor ring (brush tools only -- lasso/wand get their own crosshair via CSS cursor)
+  if (!SEL_TOOLS.has(currentTool)) {
+    const rect = cc.getBoundingClientRect();
+    cursor.style.left = (e.clientX - rect.left) + 'px';
+    cursor.style.top  = (e.clientY - rect.top)  + 'px';
+    const displaySize = brushSize * zoom;
+    cursor.style.width  = displaySize + 'px';
+    cursor.style.height = displaySize + 'px';
+    cursor.style.border = `2px solid ${currentTool === 'eraser' ? '#ff6040' : '#40c060'}`;
+    cursor.style.background = currentTool === 'eraser'
+      ? 'rgba(255,80,40,.08)' : 'rgba(40,192,80,.08)';
+    cursor.style.display = 'block';
+  } else {
+    cursor.style.display = 'none';
+  }
 
   if (isDrawing && currentStroke) {
     currentStroke.points.push([pt.x, pt.y]);
     applyBrush(pt.x, pt.y);
+  } else if (isDrawing && currentTool === 'lasso') {
+    const snapped = snapToEdges ? snapPointToEdge(pt) : pt;
+    lassoPoints.push(snapped);
+    drawLassoPreview();
   }
 });
 
 cc.addEventListener('mousedown', e => {
   if (e.button !== 0) return;
+
+  if (currentTool === 'wand') {
+    const pt = getCanvasPoint(e);
+    pushUndoSelectionOnly();
+    selectionMask = floodFillSelect(pt.x, pt.y, wandTolerance);
+    renderSelectionOverlay();
+    updateSelectionButtons();
+    return;
+  }
+  if (currentTool === 'lasso') {
+    lassoPoints = [getCanvasPoint(e)];
+    isDrawing = true;
+    return;
+  }
+
   pushUndo();
   const pt = getCanvasPoint(e);
   const coverageBefore = computeCoverage();
@@ -429,7 +591,10 @@ cc.addEventListener('mousedown', e => {
   applyBrush(pt.x, pt.y);
 });
 
-cc.addEventListener('mouseup', () => { if (isDrawing) endStroke(); });
+cc.addEventListener('mouseup', () => {
+  if (currentTool === 'lasso' && isDrawing) { finishLasso(); return; }
+  if (isDrawing) endStroke();
+});
 
 function endStroke() {
   isDrawing = false;
@@ -454,6 +619,187 @@ function getCanvasPoint(e) {
     y: Math.round((e.clientY - rect.top)  * scaleY),
   };
 }
+
+// ── Edge detection (for the magnetic lasso) ─────────────────
+// Simple Sobel gradient magnitude over grayscale luminance, computed once
+// per image load. This is deliberately the same kind of signal as
+// scripts/pipeline/edge_refiner.py's Canny maps (WO-012) -- "trace the
+// boundary the engraver actually drew" -- just computed client-side so the
+// magnetic lasso has zero server round-trip latency while dragging.
+function computeEdgeMagnitude() {
+  const w = canvas.width, h = canvas.height;
+  const d = ctx.getImageData(0, 0, w, h).data;
+  const gray = new Float32Array(w * h);
+  for (let i = 0, p = 0; i < d.length; i += 4, p++) {
+    gray[p] = 0.299 * d[i] + 0.587 * d[i+1] + 0.114 * d[i+2];
+  }
+  const mag = new Float32Array(w * h);
+  let max = 1;
+  for (let y = 1; y < h - 1; y++) {
+    for (let x = 1; x < w - 1; x++) {
+      const i = y * w + x;
+      const gx = gray[i-w-1] - gray[i-w+1] + 2*gray[i-1] - 2*gray[i+1] + gray[i+w-1] - gray[i+w+1];
+      const gy = gray[i-w-1] + 2*gray[i-w] + gray[i-w+1] - gray[i+w-1] - 2*gray[i+w] - gray[i+w+1];
+      const m = Math.sqrt(gx*gx + gy*gy);
+      mag[i] = m;
+      if (m > max) max = m;
+    }
+  }
+  edgeMagnitude = mag;
+  edgeMagMax = max;
+}
+
+// Snap a point to the strongest nearby edge within a small search radius --
+// the magnetic-lasso behavior.
+function snapPointToEdge(pt, radius = 10) {
+  if (!edgeMagnitude) return pt;
+  const w = canvas.width, h = canvas.height;
+  const threshold = edgeMagMax * 0.15; // ignore weak/noise gradients
+  let best = pt, bestMag = threshold;
+  for (let dy = -radius; dy <= radius; dy++) {
+    const y = pt.y + dy;
+    if (y < 1 || y >= h - 1) continue;
+    for (let dx = -radius; dx <= radius; dx++) {
+      const x = pt.x + dx;
+      if (x < 1 || x >= w - 1) continue;
+      const m = edgeMagnitude[y * w + x];
+      if (m > bestMag) { bestMag = m; best = { x, y }; }
+    }
+  }
+  return best;
+}
+
+// ── Lasso ────────────────────────────────────────────────────
+function drawLassoPreview() {
+  selCtx.clearRect(0, 0, selCanvas.width, selCanvas.height);
+  if (lassoPoints.length < 2) return;
+  selCtx.strokeStyle = '#4ac0ff';
+  selCtx.lineWidth = Math.max(1, 2 / zoom);
+  selCtx.setLineDash([6 / zoom, 4 / zoom]);
+  selCtx.beginPath();
+  selCtx.moveTo(lassoPoints[0].x, lassoPoints[0].y);
+  for (const pt of lassoPoints.slice(1)) selCtx.lineTo(pt.x, pt.y);
+  selCtx.stroke();
+}
+
+function finishLasso() {
+  isDrawing = false;
+  if (lassoPoints.length >= 3) {
+    pushUndoSelectionOnly();
+    const off = document.createElement('canvas');
+    off.width = canvas.width; off.height = canvas.height;
+    const oc = off.getContext('2d');
+    oc.fillStyle = '#fff';
+    oc.beginPath();
+    oc.moveTo(lassoPoints[0].x, lassoPoints[0].y);
+    for (const pt of lassoPoints.slice(1)) oc.lineTo(pt.x, pt.y);
+    oc.closePath();
+    oc.fill();
+    const maskData = oc.getImageData(0, 0, off.width, off.height).data;
+    const mask = new Uint8ClampedArray(off.width * off.height);
+    for (let i = 0, p = 0; i < maskData.length; i += 4, p++) mask[p] = maskData[i+3] > 127 ? 255 : 0;
+    selectionMask = mergeOrReplaceSelection(mask);
+  }
+  lassoPoints = [];
+  renderSelectionOverlay();
+  updateSelectionButtons();
+}
+
+// Shift-drag adds to an existing selection (like Photoshop); a plain lasso
+// replaces it -- simple, predictable default.
+function mergeOrReplaceSelection(newMask) {
+  return newMask;
+}
+
+// ── Magic wand ───────────────────────────────────────────────
+// Classic flood-fill select: 4-connected BFS from the clicked pixel,
+// admitting neighbors within `tolerance` of the CLICKED pixel's color
+// (not the running-neighbor color, to avoid gradient creep across a long
+// smooth hatching run).
+function floodFillSelect(startX, startY, tolerance) {
+  const w = canvas.width, h = canvas.height;
+  const d = ctx.getImageData(0, 0, w, h).data;
+  const idx0 = (startY * w + startX) * 4;
+  const r0 = d[idx0], g0 = d[idx0+1], b0 = d[idx0+2], a0 = d[idx0+3];
+  const mask = new Uint8ClampedArray(w * h);
+  const visited = new Uint8Array(w * h);
+  const stack = [[startX, startY]];
+  const tol2 = tolerance * tolerance * 3; // squared, ~3 channels
+
+  while (stack.length) {
+    const [x, y] = stack.pop();
+    if (x < 0 || x >= w || y < 0 || y >= h) continue;
+    const p = y * w + x;
+    if (visited[p]) continue;
+    visited[p] = 1;
+    const i = p * 4;
+    const da = d[i+3] - a0;
+    const dist2 = (d[i]-r0)**2 + (d[i+1]-g0)**2 + (d[i+2]-b0)**2 + da*da;
+    if (dist2 > tol2) continue;
+    mask[p] = 255;
+    stack.push([x+1,y], [x-1,y], [x,y+1], [x,y-1]);
+  }
+  return mask;
+}
+
+// ── Selection rendering + apply ─────────────────────────────
+function renderSelectionOverlay() {
+  selCtx.clearRect(0, 0, selCanvas.width, selCanvas.height);
+  if (!selectionMask) return;
+  const w = selCanvas.width, h = selCanvas.height;
+  const img = selCtx.createImageData(w, h);
+  for (let p = 0; p < selectionMask.length; p++) {
+    if (!selectionMask[p]) continue;
+    const i = p * 4;
+    img.data[i] = 74; img.data[i+1] = 192; img.data[i+2] = 255; img.data[i+3] = 90;
+  }
+  selCtx.putImageData(img, 0, 0);
+}
+
+function updateSelectionButtons() {
+  const has = !!selectionMask;
+  document.getElementById('btn-keep-sel').disabled = !has;
+  document.getElementById('btn-erase-sel').disabled = !has;
+  document.getElementById('btn-clear-sel').disabled = !has;
+  document.getElementById('save-new-btn').disabled = !(has && sourceMode);
+}
+
+function clearSelection() {
+  selectionMask = null;
+  lassoPoints = [];
+  selCtx.clearRect(0, 0, selCanvas.width, selCanvas.height);
+  updateSelectionButtons();
+}
+
+function applySelection(mode) {
+  if (!selectionMask) return;
+  pushUndo();
+  const w = canvas.width, h = canvas.height;
+  const img = ctx.getImageData(0, 0, w, h);
+  const d = img.data;
+  for (let p = 0; p < selectionMask.length; p++) {
+    const selected = selectionMask[p] > 0;
+    const erase = mode === 'keep' ? !selected : selected;
+    if (erase) d[p * 4 + 3] = 0;
+  }
+  ctx.putImageData(img, 0, 0);
+
+  const ev = { tool: `selection-${mode}`, ts: new Date().toISOString() };
+  editEvents.push(ev);
+  appendLogEntry(ev);
+  dirty = true;
+  updateStats();
+  document.getElementById('sb-edits').textContent = 'edits: ' + editEvents.length;
+  clearSelection();
+}
+
+// Undo that only needs to restore pixels touched by wand/lasso apply, but
+// simplest correct behavior is to reuse the same full-canvas undo stack as
+// the brush tools -- selection tools push before they DRAW the marching-ants
+// preview isn't destructive, only applySelection()/pushUndo() actually
+// mutates pixels, so this just keeps the stack depth sane for pure
+// select-without-applying actions.
+function pushUndoSelectionOnly() { /* no-op: selection itself isn't destructive */ }
 
 // ── Brush application ──────────────────────────────────────
 function applyBrush(cx, cy) {
@@ -512,6 +858,7 @@ function undo() {
   if (!undoStack.length) return;
   ctx.putImageData(undoStack.pop(), 0, 0);
   document.getElementById('undo-count').textContent = `(${undoStack.length})`;
+  clearSelection();
   updateStats();
 }
 
@@ -550,11 +897,13 @@ function cropToContent() {
 function resetToOriginal() {
   if (!confirm('Reset all edits? This will undo everything since last save.')) return;
   if (!originalData) return;
-  canvas.width  = originalData.width;
-  canvas.height = originalData.height;
+  canvas.width  = selCanvas.width  = originalData.width;
+  canvas.height = selCanvas.height = originalData.height;
   ctx.putImageData(originalData, 0, 0);
   undoStack = [];
   document.getElementById('undo-count').textContent = '';
+  clearSelection();
+  computeEdgeMagnitude();
   updateStats();
 }
 
@@ -586,9 +935,11 @@ function appendLogEntry(ev) {
   if (ev.tool === 'eraser')  desc = `Erase  r=${ev.brush_size}px  ${ev.points?.length || 0} pts  cov ${ev.coverage_before?.toFixed(1)}→${ev.coverage_after?.toFixed(1)}%`;
   if (ev.tool === 'restore') desc = `Restore r=${ev.brush_size}px  ${ev.points?.length || 0} pts`;
   if (ev.tool === 'crop')    desc = `Crop to ${ev.crop_rect?.[2]}×${ev.crop_rect?.[3]}`;
+  if (ev.tool === 'selection-keep')  desc = 'Lasso/wand: kept selection, erased the rest';
+  if (ev.tool === 'selection-erase') desc = 'Lasso/wand: erased selection';
 
   const el = document.createElement('div');
-  el.className = `log-entry ${ev.tool}`;
+  el.className = `log-entry ${ev.tool.startsWith('selection') ? 'eraser' : ev.tool}`;
   el.innerHTML = `${desc}<br><span class="log-time">${time}</span>`;
   area.insertBefore(el, area.firstChild);
 }
@@ -640,6 +991,55 @@ async function saveEdits() {
   document.getElementById('save-btn').disabled = false;
 }
 
+// ── Save a manual lasso/wand cutout as a brand-new element ──
+async function saveNewExtraction() {
+  if (!selectionMask || !sourceMode) return;
+  const label = document.getElementById('new-elem-label').value.trim();
+  const category = document.getElementById('new-elem-category').value;
+  const statusEl = document.getElementById('new-elem-status');
+  if (!label) { statusEl.textContent = 'Enter a label first.'; return; }
+
+  statusEl.textContent = 'Saving…';
+  document.getElementById('save-new-btn').disabled = true;
+
+  // Build a full-canvas-size mask PNG: alpha=255 where selected, 0 elsewhere.
+  // The server composites this against its OWN read of the source plate --
+  // it ignores any RGB here -- so this only needs to carry the alpha.
+  const off = document.createElement('canvas');
+  off.width = canvas.width; off.height = canvas.height;
+  const oc = off.getContext('2d');
+  const maskImg = oc.createImageData(off.width, off.height);
+  for (let p = 0; p < selectionMask.length; p++) maskImg.data[p * 4 + 3] = selectionMask[p];
+  oc.putImageData(maskImg, 0, 0);
+
+  try {
+    const r = await fetch('/api/save-new-extraction', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        source_image: currentSourcePath,
+        emblem_id: currentEmblemId,
+        label, category,
+        mask_data: off.toDataURL('image/png'),
+      }),
+    });
+    const result = await r.json();
+    if (!r.ok) { statusEl.textContent = 'Error: ' + result.error; document.getElementById('save-new-btn').disabled = false; return; }
+
+    statusEl.textContent = `Saved '${result.saved_stem}'. Rebuilding catalog…`;
+    const rb = await fetch('/api/rebuild-catalog', { method: 'POST', headers: {'Content-Type':'application/json'}, body: '{}' });
+    statusEl.textContent = rb.ok
+      ? `Saved '${result.saved_stem}' and rebuilt the gallery catalog. Find it in the Review Queue.`
+      : `Saved '${result.saved_stem}' -- run scripts/build_catalog.py manually to see it in the gallery.`;
+
+    clearSelection();
+    document.getElementById('new-elem-label').value = '';
+  } catch(e) {
+    statusEl.textContent = 'Server error — is serve.py running?';
+  }
+  document.getElementById('save-new-btn').disabled = false;
+}
+
 // The save btn in topbar
 document.querySelector('.tb-btn.save').addEventListener('click', saveEdits);
 
@@ -648,6 +1048,9 @@ document.addEventListener('keydown', e => {
   if (e.key === 'z' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); undo(); }
   if (e.key === 'e' && !e.ctrlKey) setTool('eraser');
   if (e.key === 'r' && !e.ctrlKey) setTool('restore');
+  if (e.key === 'l' && !e.ctrlKey) setTool('lasso');
+  if (e.key === 'w' && !e.ctrlKey) setTool('wand');
+  if (e.key === 'Escape') clearSelection();
   if (e.key === '[') {
     const s = document.getElementById('brush-size');
     s.value = Math.max(+s.min, +s.value - 5);

@@ -135,6 +135,26 @@ Nothing from this prototype is marked human-confirmed anywhere. `requirements.tx
 (new — this repo didn't have one before) captures the actually-installed environment
 for reproducibility.
 
+## Quality and review system (2026-08-29)
+
+A corpus-wide audit (triggered by a casually-spotted mislabel — a clean crop of two
+fighting lions labeled "angel herphrodite skeleton") found real, systematic problems.
+**[Full writeup: `docs/QUALITY_AND_REVIEW_SYSTEM.md`](docs/QUALITY_AND_REVIEW_SYSTEM.md)** —
+read it before trusting an extracted element or extending the pipeline. Summary:
+
+- **Geometry QC** (`scripts/pipeline/qc_checks.py`) — deterministic, no AI, flags
+  cutouts with a disconnected second blob of noise. **1,717 of 7,519 elements (23%)
+  are flagged**, surfaced in `review.html` with a "Fragmented only" filter.
+- **Label corrections now round-trip.** A reviewer's corrected label in `review.html`
+  is applied by `build_catalog.py` on every rebuild, not just archived as a comment.
+  Fixed a real key-collision bug along the way: review state used to be keyed by the
+  raw (often-shared, e.g. five different figures all detected as bare "person")
+  label instead of a unique per-object id.
+- **`prototype/editor.html` now has Photoshop-style selection tools**: magic wand,
+  lasso, a magnetic-lasso edge-snap mode, and — new — the ability to open the full
+  source plate (not just an existing cutout) and hand-carve a brand-new element the
+  pipeline missed entirely.
+
 ## Corpus Status
 
 | Corpus | Plates | Objects | Status |

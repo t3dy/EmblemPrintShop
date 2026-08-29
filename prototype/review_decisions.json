@@ -1,0 +1,103 @@
+{
+  "emblem-00__angel_herphrodite_sk": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T03:19:21.648848+00:00",
+    "note": "Clean, correctly isolated crop (single connected mask) but the detector's composite 'figures' category prompt hallucinated 'angel herphrodite skeleton' onto it -- no such figure is present. Geometry is fine; only the label was wrong.",
+    "corrected_label": "Two lions fighting/rampant (heraldic pair, bottom border near the tholos)"
+  },
+  "emblem-00__distillation_vessel": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-29T03:19:21.648848+00:00",
+    "note": "Same bbox/region as angel_herphrodite_sk (the two lions) -- a second, differently-mislabeled detection of the identical area. Duplicate; see angel_herphrodite_sk for the corrected label."
+  },
+  "emblem-00__building_temple_hous": {
+    "status": "approved",
+    "reviewed_at": "2026-08-29T03:19:21.648848+00:00",
+    "note": "Correct: the domed tholos/rotunda with two small figures inside, bottom-right of the plate."
+  },
+  "emblem-00__sti_mortar": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-29T03:19:21.648848+00:00",
+    "note": "Same bbox/region as building_temple_hous (the tholos) -- a duplicate detection mislabeled 'mortar'; no mortar/pestle is present."
+  },
+  "emblem-00__branch": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T03:19:21.648848+00:00",
+    "note": "Crop is too visually tangled to confidently name a single subject; low value as a standalone catalog element. Not literally 'a branch' in any specific sense.",
+    "corrected_label": "Tangled foliage / tree branches (indistinct -- overlaps the coiled dragon's body)"
+  },
+  "emblem-00__gate_bridge": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T03:19:21.648848+00:00",
+    "note": "It's a wooden lattice fence/trellis, not a bridge or gate.",
+    "corrected_label": "Garden fence/trellis (in the Hippomenes/Atalanta footrace scene)"
+  },
+  "emblem-00__man_old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T03:19:21.648848+00:00",
+    "note": "Labeled 'Hippomenes' directly in the plate at this figure's feet. He is young, mid-throw of a golden apple during the footrace -- not an old man.",
+    "corrected_label": "Hippomenes throwing a golden apple"
+  },
+  "emblem-00__old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T03:19:21.648848+00:00",
+    "note": "Labeled 'Atal[anta]' directly in the plate beside this figure. A young woman kneeling to pick up the apple -- not an old man.",
+    "corrected_label": "Atalanta reaching/kneeling for the golden apple"
+  },
+  "emblem-00__person_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T03:19:21.648848+00:00",
+    "note": "Labeled 'Hippomenus' in the plate's right border (a companion vignette to the Venus figure beside him, distinct from the Hippomenes of the footrace scene at bottom -- Maier's engraver spells them slightly differently). Generic 'person' label is technically not wrong but loses the identification.",
+    "corrected_label": "Hippomenus (clothed male figure, right-border vignette, holding two apples/orbs)"
+  },
+  "emblem-00__person_03": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T03:19:21.648848+00:00",
+    "note": "Labeled 'Venus' directly in the plate at this figure's feet.",
+    "corrected_label": "Venus (nude female figure, right-border vignette, holding an apple/orb)"
+  },
+  "emblem-00__person_04": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T03:19:21.648848+00:00",
+    "note": "Labeled directly in the plate. One of the mythological nymphs framing the title.",
+    "corrected_label": "Hesperusa (nude female figure, top-right border, labeled 'Hespertusa' in the plate)"
+  },
+  "emblem-00__person_05": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T03:19:21.648848+00:00",
+    "note": "Part of a labeled pair of two nymphs; this crop is the rear/right figure of the two. Cannot confidently distinguish which of the two specific names applies to which figure from the image alone -- recording both candidates rather than guessing a specific one (SCHOLARLY_VALUES: no silent invention).",
+    "corrected_label": "Aegle or Arethusa (nude female figure, top-left border pair, labeled 'Aegle. Arethusa.' in the plate)"
+  },
+  "emblem-00__person": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T03:19:21.648848+00:00",
+    "note": "The other of the two labeled nymphs (companion to person_05's figure). Same caveat: cannot confidently assign the specific individual name from the image alone.",
+    "corrected_label": "Aegle or Arethusa (nude female figure, top-left border pair, labeled 'Aegle. Arethusa.' in the plate)"
+  },
+  "emblem-00__skeleton": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T03:19:21.648848+00:00",
+    "note": "Labeled 'Hercules' directly in the plate at this figure's feet -- clearly visible even within this crop. Not a skeleton; the mislabel is likely from the hatched ribcage-like shading on the torso.",
+    "corrected_label": "Hercules (goat-legged satyr figure with club and apples, left border)"
+  },
+  "emblem-00__tree_02": {
+    "status": "approved",
+    "reviewed_at": "2026-08-29T03:19:21.648848+00:00",
+    "note": "Correct: border tree."
+  },
+  "emblem-00__tree_03": {
+    "status": "approved",
+    "reviewed_at": "2026-08-29T03:19:21.648848+00:00",
+    "note": "Correct: border tree(s); crop has minor bleed from the coiled dragon's tail at the bottom edge but the dominant subject is the trees."
+  },
+  "emblem-00__tree": {
+    "status": "approved",
+    "reviewed_at": "2026-08-29T03:19:21.648848+00:00",
+    "note": "Correct: border tree."
+  },
+  "emblem-00__window": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-29T03:19:21.648848+00:00",
+    "note": "Bounding box covers ~98% of the entire plate (a whole-scene detection, not a real object) and is labeled 'window', which does not describe any single element on this plate. Not a usable extraction -- should be dropped, not relabeled to something else."
+  }
+}

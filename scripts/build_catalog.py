@@ -13,7 +13,30 @@ PROJECT_ROOT  = Path(__file__).parent.parent
 EXTRACTED_DIR = PROJECT_ROOT / "assets" / "extracted"
 PROTOTYPE_DIR = PROJECT_ROOT / "prototype"
 SOURCES_ROOT  = PROJECT_ROOT / "sources"
+REVIEW_DECISIONS_PATH = PROTOTYPE_DIR / "review_decisions.json"
 PROTOTYPE_DIR.mkdir(exist_ok=True)
+
+
+def load_human_corrections() -> dict:
+    """
+    Load reviewer-entered corrected_label values from
+    prototype/review_decisions.json (written by review.html's "Corrected
+    label" field via serve.py's /api/save-review).
+
+    Keyed the same way review.html keys its own state: f"{emblem_id}__
+    {object_stem}" -- the unique per-object filename stem, not the label
+    (multiple distinct objects routinely share the same generic detector
+    label within one emblem). A human's correction is the highest-priority
+    label source -- it overrides both the raw detector label and any AI
+    vision verified_label.
+    """
+    if not REVIEW_DECISIONS_PATH.exists():
+        return {}
+    try:
+        decisions = json.loads(REVIEW_DECISIONS_PATH.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, UnicodeDecodeError):
+        return {}
+    return {k: v["corrected_label"] for k, v in decisions.items() if v.get("corrected_label")}
 
 
 def resolve_path(path_str: str) -> Path:
@@ -220,6 +243,8 @@ def load_comprehensive_extractions() -> list[dict]:
     if not EXTRACTED_ALL_DIR.exists():
         return records
 
+    corrections = load_human_corrections()
+
     for emblem_dir in sorted(EXTRACTED_ALL_DIR.iterdir()):
         if not emblem_dir.is_dir():
             continue
@@ -274,6 +299,25 @@ def load_comprehensive_extractions() -> list[dict]:
             # Strip WordPiece ## sub-token markers left by older detector builds
             label = " ".join(tok.lstrip("#") for tok in str(raw_label).split()).strip()
 
+            # A human reviewer's correction (review.html) outranks the detector
+            # and any AI vision verified_label.
+            #
+            # Keyed by object_stem (the unique per-object filename stem, e.g.
+            # "person_02"), NOT by label/prompt: comprehensive extraction
+            # routinely gives several distinct objects in the same emblem the
+            # identical generic prompt ("person" x5 on emblem-00 alone --
+            # Aegle, Arethusa, Hesperusa, Venus, and Hippomenus all share the
+            # literal string "person"). Keying by label would silently
+            # collapse all of them onto one review decision and one
+            # correction. object_stem is unique by construction (it's the
+            # actual filename each extraction wrote).
+            label_source = "vision-verified" if v else "detector"
+            correction_key = f"{src_stem}__{obj_stem}"
+            display_label = label
+            if correction_key in corrections:
+                display_label = corrections[correction_key]
+                label_source = "human-corrected"
+
             rec = {
                 "source_image":    src,
                 "prompt":          label,
@@ -289,15 +333,19 @@ def load_comprehensive_extractions() -> list[dict]:
                 "project":         project,
                 "project_key":     project_key,
                 "emblem_id":       src_stem,
-                "object_label":    label,
-                "tags":            normalize_label_tags(label),
+                "object_stem":     obj_stem,
+                "object_label":    display_label,
+                "tags":            normalize_label_tags(display_label),
                 "coverage_pct":    None,
+                "label_source":    label_source,
             }
+            if label_source == "human-corrected":
+                rec["original_label"] = label  # audit trail; never silently dropped
             rec["transparent_png_web"] = relative_to_gallery(rec["transparent_png"])
             rec["crop_jpg_web"]        = relative_to_gallery(rec["crop_jpg"])
             rec["source_image_web"]    = relative_to_gallery(src)
             rec["review_overlay_web"]  = relative_to_gallery(rec["review_overlay"])
-            rec["display_label"]       = f"{src_stem} — {label}"
+            rec["display_label"]       = f"{src_stem} — {display_label}"
 
             # Canonical ID for Claudiens
             import re as _re

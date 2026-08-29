@@ -68,6 +68,13 @@ aside h3:first-child { margin-top: 0; }
 }
 .filter-btn:hover { background: var(--paper); border-color: var(--border); }
 .filter-btn.active { background: var(--accent); color: var(--paper); border-color: var(--accent); }
+.qc-toggle { display: flex; align-items: center; gap: .4rem; font-size: .85rem; margin: .3rem 0; cursor: pointer; }
+.qc-count { font-size: .75rem; color: var(--muted); font-weight: normal; }
+.qc-warn-badge {
+  display: inline-block; font-size: .68rem; padding: .1rem .4rem; border-radius: 8px;
+  background: #7c3010; color: #fff; margin-left: .3rem; cursor: help;
+}
+.rcard.qc-fragmented { border-color: #b5551a; box-shadow: 0 0 0 1px #b5551a inset; }
 #search-box {
   width: 100%; padding: .32rem .45rem;
   border: 1px solid var(--border); border-radius: var(--r);
@@ -182,12 +189,14 @@ main { flex: 1; padding: 1rem 1.2rem; }
 
 /* note field */
 .note-row { margin-top: .35rem; }
-.note-input {
+.note-input, .corrected-label-input {
   width: 100%; padding: .22rem .4rem; font-family: var(--sans); font-size: .7rem;
   border: 1px solid var(--border); border-radius: var(--r); background: var(--paper);
   color: var(--ink); resize: none;
 }
-.note-input:focus { outline: 1px solid var(--accent); }
+.corrected-label-input { margin-bottom: .25rem; border-color: #b5551a; }
+.corrected-label-input:not(:placeholder-shown) { background: #fff3ea; font-weight: 600; }
+.note-input:focus, .corrected-label-input:focus { outline: 1px solid var(--accent); }
 </style>
 </head>
 <body>
@@ -218,6 +227,17 @@ main { flex: 1; padding: 1rem 1.2rem; }
   <button class="filter-btn" data-filter="rejected" onclick="setFilter('rejected',this)">Rejected</button>
   <button class="filter-btn" data-filter="flagged"  onclick="setFilter('flagged',this)">Flagged</button>
 
+  <h3>Geometry QC <span class="qc-count" id="qc-count"></span></h3>
+  <label class="qc-toggle">
+    <input type="checkbox" id="qc-only-toggle" onchange="setQcOnly(this.checked)">
+    Fragmented only
+  </label>
+  <p class="help-text" style="margin-top:.3rem">
+    Flags cutouts with a disconnected second blob (noise, or an unrelated
+    figure dragged in) — a geometry check, independent of whether the label
+    is right. See <code>scripts/pipeline/qc_checks.py</code>.
+  </p>
+
   <h3>Project</h3>
   <div id="project-filters"></div>
 
@@ -226,8 +246,9 @@ main { flex: 1; padding: 1rem 1.2rem; }
   <button class="clear-btn"  onclick="confirmClearAll()">Clear all decisions</button>
 
   <p class="help-text">
-    Decisions are saved in your browser (localStorage).<br>
-    Export to save them permanently.
+    Decisions save to <code>prototype/review_decisions.json</code> when
+    <code>prototype/serve.py</code> is running (see the sync badge, top
+    right); otherwise they stay in this browser's local storage only.
   </p>
 </aside>
 
@@ -245,9 +266,27 @@ let FILTERED = [];
 let activeFilter = 'all';
 let activeProject = null;
 let searchQ = '';
+let qcOnly = false;
 let REVIEWS = {};  // key → {status, note, reviewed_at}
+let QC = {};        // key → {flag, component_count, largest_component_frac, note}
 
-function reviewKey(r) { return `${r.emblem_id}__${r.prompt}`; }
+// Multiple distinct objects in one emblem routinely share the same generic
+// detector label ("person" x5 on emblem-00 alone) -- keying by label alone
+// collapses them onto one review decision. object_stem (the unique per-
+// object filename stem, added by build_catalog.py) is the real identity;
+// fall back to deriving it from crop_jpg for records built before that
+// field existed, and only fall back to the label itself as a last resort
+// (logged, since that means a real collision risk for that record).
+function objectStem(r) {
+  if (r.object_stem) return r.object_stem;
+  const src = r.crop_jpg || r.transparent_png || '';
+  const name = src.split(/[\\/]/).pop() || '';
+  const stem = name.replace(/_(crop|transparent)\.(jpe?g|png)$/i, '');
+  if (stem) return stem;
+  console.warn('reviewKey: no object_stem or crop path for', r, '-- falling back to prompt, which may collide with other objects sharing the same label.');
+  return r.prompt;
+}
+function reviewKey(r) { return `${r.emblem_id}__${objectStem(r)}`; }
 
 // ── Persistence ───────────────────────────────
 // Server (prototype/review_decisions.json via POST /api/save-review) is
@@ -312,16 +351,48 @@ function setReview(key, status, note) {
   if (status === 'pending') {
     delete REVIEWS[key];
   } else {
-    REVIEWS[key] = { status, note: note||'', reviewed_at: new Date().toISOString() };
+    const existing = REVIEWS[key] || {};
+    REVIEWS[key] = { ...existing, status, note: note || existing.note || '', reviewed_at: new Date().toISOString() };
   }
   saveReviews();
 }
 function getStatus(r) { return (REVIEWS[reviewKey(r)] || {}).status || 'pending'; }
 function getNote(r)   { return (REVIEWS[reviewKey(r)] || {}).note || ''; }
+function getCorrectedLabel(r) { return (REVIEWS[reviewKey(r)] || {}).corrected_label || ''; }
+function getQc(r)     { return QC[reviewKey(r)] || null; }
+
+// A corrected label is a structured, actionable field -- distinct from the
+// free-text note -- so build_object_catalog.py can programmatically apply it
+// on the next rebuild rather than a human having to re-read every note.
+function saveCorrectedLabel(key, val) {
+  const existing = REVIEWS[key] || {};
+  const wasPending = !existing.status || existing.status === 'pending';
+  const status = val && wasPending ? 'flagged' : (existing.status || 'pending');
+  if (!val && wasPending) { return; } // nothing to save, don't create an empty entry
+  REVIEWS[key] = { ...existing, status, corrected_label: val, reviewed_at: new Date().toISOString() };
+  if (val && wasPending) {
+    const badge = document.getElementById(`badge-${CSS.escape(key)}`);
+    if (badge) { badge.className = 'status-badge badge-flagged'; badge.textContent = 'flagged'; }
+    const cardEl = document.getElementById(`card-${CSS.escape(key)}`);
+    if (cardEl) cardEl.className = cardEl.className.replace(/\bstatus-\S+/, 'status-flagged');
+  }
+  saveReviews();
+  updateStats();
+}
+
+function setQcOnly(val) { qcOnly = val; applyFilters(); }
 
 // ── Load ──────────────────────────────────────
 async function loadCatalog() {
   await loadReviews();
+  try {
+    const qcResp = await fetch('geometry_qc.json?_=' + Date.now());
+    QC = qcResp.ok ? await qcResp.json() : {};
+  } catch(e) { QC = {}; }
+  const qcFragCount = Object.values(QC).filter(q => q.flag === 'fragmented').length;
+  const qcCountEl = document.getElementById('qc-count');
+  if (qcCountEl) qcCountEl.textContent = Object.keys(QC).length
+    ? `(${qcFragCount} fragmented / ${Object.keys(QC).length} checked)` : '(not run)';
   try {
     const resp = await fetch('gallery_catalog.json?_=' + Date.now());
     if (!resp.ok) throw new Error(resp.status);
@@ -372,6 +443,7 @@ function applyFilters() {
     if (activeProject && r.project !== activeProject) return false;
     const st = getStatus(r);
     if (activeFilter !== 'all' && st !== activeFilter) return false;
+    if (qcOnly && getQc(r)?.flag !== 'fragmented') return false;
     if (searchQ) {
       const hay = [r.emblem_id, r.prompt, r.project, ...(r.tags||[])].join(' ').toLowerCase();
       if (!hay.includes(searchQ)) return false;
@@ -403,10 +475,13 @@ function makeCard(r) {
   const key = reviewKey(r);
   const status = getStatus(r);
   const note   = getNote(r);
+  const corrected = getCorrectedLabel(r);
   const score  = r.score || 0;
+  const qc = getQc(r);
+  const qcFragged = qc && qc.flag === 'fragmented';
 
   const card = document.createElement('div');
-  card.className = `rcard status-${status}`;
+  card.className = `rcard status-${status}${qcFragged ? ' qc-fragmented' : ''}`;
   card.id = `card-${CSS.escape(key)}`;
 
   card.innerHTML = `
@@ -426,6 +501,7 @@ function makeCard(r) {
     </div>
     <div class="rcard-body">
       <span class="status-badge badge-${status}" id="badge-${CSS.escape(key)}">${status}</span>
+      ${qcFragged ? `<span class="qc-warn-badge" title="${escHtml(qc.note)}">⚠ fragmented (${Math.round((1-qc.largest_component_frac)*100)}% outside main blob)</span>` : ''}
       <div class="rcard-id">${r.emblem_id || '–'} · ${r.project || ''}</div>
       <div class="rcard-prompt">${r.prompt || '–'}</div>
       <div class="rcard-score">score ${(score*100).toFixed(0)}%${r.coverage_pct != null ? ' · coverage '+r.coverage_pct+'%' : ''}</div>
@@ -435,8 +511,12 @@ function makeCard(r) {
         <button class="act-btn act-flag${status==='flagged'?' active':''}"    onclick="review('${escKey(key)}','flagged',this)">⚑ Flag</button>
         <button class="act-btn act-reset" onclick="review('${escKey(key)}','pending',this)" title="Reset to pending">↺</button>
         ${r.transparent_png_web ? `<a class="act-btn act-edit" href="editor.html?path=${encodeURIComponent(r.transparent_png||'')}&crop=${encodeURIComponent(r.crop_jpg||'')}&title=${encodeURIComponent(r.prompt||r.emblem_id||'')}" target="_blank" style="text-decoration:none">✏ Edit</a>` : ''}
+        ${r.source_image ? `<a class="act-btn" href="editor.html?source=${encodeURIComponent(r.source_image||'')}&emblem_id=${encodeURIComponent(r.emblem_id||'')}&title=${encodeURIComponent('New from '+r.emblem_id)}" target="_blank" style="text-decoration:none" title="Open the full source plate to hand-cut a figure the pipeline missed or botched">✂ New from source</a>` : ''}
       </div>
       <div class="note-row">
+        <input class="corrected-label-input" type="text" placeholder="Corrected label (e.g. 'two lions fighting')…"
+          value="${escHtml(corrected)}" title="If the detector's label is wrong, put the right one here. build_object_catalog.py's next rebuild uses this to override the displayed label."
+          onchange="saveCorrectedLabel('${escKey(key)}',this.value)">
         <textarea class="note-input" rows="1" placeholder="Note…" onchange="saveNote('${escKey(key)}',this.value)">${escHtml(note)}</textarea>
       </div>
     </div>`;
@@ -488,6 +568,8 @@ function exportReviews() {
     transparent_png: r.transparent_png,
     status: getStatus(r),
     note: getNote(r),
+    corrected_label: getCorrectedLabel(r) || null,
+    qc_flag: (getQc(r) || {}).flag || null,
     reviewed_at: (REVIEWS[reviewKey(r)] || {}).reviewed_at || null,
   }));
   const blob = new Blob([JSON.stringify(out, null, 2)], {type:'application/json'});
