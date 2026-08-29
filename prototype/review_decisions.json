@@ -180,5 +180,116 @@
     "status": "rejected",
     "reviewed_at": "2026-08-29T06:26:51.113913+00:00",
     "note": "Composite bundling 13 constituent detections (bbox [25,27,1547,1366] -- essentially the whole plate below the top margin). Not a coherent reusable element; the individual objects above are the useful catalog entries."
+  },
+  "emblem-17__moon": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:29:32.567298+00:00",
+    "note": "This plate ('Fourfold fire-ball') depicts four stacked flaming spheres over a river landscape -- no moon, cauldron, vessel, or philosophical egg of any kind is present. The detector's category prompts (moon/cauldron/philosophical-egg/lamp) all superficially match a round flaming sphere. Maier's discourse names four fires (lamp, ash-bath, the substance's own heat, water-bath); which sphere corresponds to which named fire is not confirmed from the image alone (no per-sphere caption), so only position (top to bottom) is recorded, not a specific fire-name assignment.",
+    "corrected_label": "Flaming sphere, 1st (uppermost) of four stacked fireballs"
+  },
+  "emblem-17__cauldron_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:29:32.567298+00:00",
+    "note": "This plate ('Fourfold fire-ball') depicts four stacked flaming spheres over a river landscape -- no moon, cauldron, vessel, or philosophical egg of any kind is present. The detector's category prompts (moon/cauldron/philosophical-egg/lamp) all superficially match a round flaming sphere. Maier's discourse names four fires (lamp, ash-bath, the substance's own heat, water-bath); which sphere corresponds to which named fire is not confirmed from the image alone (no per-sphere caption), so only position (top to bottom) is recorded, not a specific fire-name assignment.",
+    "corrected_label": "Flaming sphere, 2nd of four stacked fireballs"
+  },
+  "emblem-17__cauldron": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:29:32.567298+00:00",
+    "note": "This plate ('Fourfold fire-ball') depicts four stacked flaming spheres over a river landscape -- no moon, cauldron, vessel, or philosophical egg of any kind is present. The detector's category prompts (moon/cauldron/philosophical-egg/lamp) all superficially match a round flaming sphere. Maier's discourse names four fires (lamp, ash-bath, the substance's own heat, water-bath); which sphere corresponds to which named fire is not confirmed from the image alone (no per-sphere caption), so only position (top to bottom) is recorded, not a specific fire-name assignment.",
+    "corrected_label": "Flaming sphere, 3rd of four stacked fireballs"
+  },
+  "emblem-17__philosophical_egg_ca": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:29:32.567298+00:00",
+    "note": "This plate ('Fourfold fire-ball') depicts four stacked flaming spheres over a river landscape -- no moon, cauldron, vessel, or philosophical egg of any kind is present. The detector's category prompts (moon/cauldron/philosophical-egg/lamp) all superficially match a round flaming sphere. Maier's discourse names four fires (lamp, ash-bath, the substance's own heat, water-bath); which sphere corresponds to which named fire is not confirmed from the image alone (no per-sphere caption), so only position (top to bottom) is recorded, not a specific fire-name assignment.",
+    "corrected_label": "Flaming sphere, 4th (lowermost) of four stacked fireballs"
+  },
+  "emblem-17__philosophical_egg_ca_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-29T06:29:32.567298+00:00",
+    "note": "Duplicate detection of the 1st (top) sphere -- see 'moon'."
+  },
+  "emblem-17__philosophical_egg_ca_03": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-29T06:29:32.567298+00:00",
+    "note": "Duplicate detection of the 2nd sphere -- see 'cauldron_02'."
+  },
+  "emblem-17__cauldron_03": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-29T06:29:32.567298+00:00",
+    "note": "Duplicate detection of the 3rd sphere -- see 'cauldron'."
+  },
+  "emblem-17__lamp_globe": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-29T06:29:32.567298+00:00",
+    "note": "Bbox spans all four stacked spheres as one box (height 1155px) -- not a single object. See the four individual sphere entries."
+  },
+  "emblem-17__philosophical_egg": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-29T06:29:32.567298+00:00",
+    "note": "Same whole-stack bbox as 'lamp_globe' -- duplicate."
+  },
+  "emblem-17__distillation_vessel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:29:32.567298+00:00",
+    "note": "No distillation apparatus is present at this location -- it's the sailboat on the right side of the river, correctly cropped, wrong category.",
+    "corrected_label": "Boat with passengers, poled by a ferryman (a river boat, not an alchemical vessel)"
+  },
+  "emblem-17__vessel": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-29T06:29:32.567298+00:00",
+    "note": "Same region/bbox as 'distillation_vessel' -- duplicate."
+  },
+  "emblem-17__building": {
+    "status": "approved",
+    "reviewed_at": "2026-08-29T06:29:32.567298+00:00",
+    "note": "Correct: a cottage roofline among the riverside trees."
+  },
+  "emblem-17__chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:29:32.567298+00:00",
+    "note": "Looks like a small timber shed rather than a chimney specifically.",
+    "corrected_label": "Wooden shed/outbuilding (sloped-roof structure, not clearly a chimney)"
+  },
+  "emblem-17__chimney_02": {
+    "status": "approved",
+    "reviewed_at": "2026-08-29T06:29:32.567298+00:00",
+    "note": "Correct: a chimney stack visible among the trees."
+  },
+  "emblem-17__window": {
+    "status": "approved",
+    "reviewed_at": "2026-08-29T06:29:32.567298+00:00",
+    "note": "Correct: a window on the cottage."
+  },
+  "emblem-17__window_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:29:32.567298+00:00",
+    "note": "No window is visible in this crop -- looks like plank/shed hatching texture. Low confidence; not asserting a specific correction, just flagging the label as unsupported by the pixels."
+  },
+  "emblem-17__gate_door": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:29:32.567298+00:00",
+    "note": "No gate or door is visible in this crop -- looks like hatching texture (tree trunk or shed wall). Low confidence; flagging as unsupported rather than guessing a replacement label."
+  },
+  "emblem-17__man_old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:29:32.567298+00:00",
+    "note": "Crop is tiny and low-resolution -- likely one of the boatmen or the standing figure on the far bank, but too small to confirm which or to call 'old man' specifically."
+  },
+  "emblem-17__book": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-29T06:29:32.567298+00:00",
+    "note": "Bbox [25,22,1551,1468] covers almost the entire plate -- a whole-scene detection, not a real single object. No book is depicted anywhere in this emblem."
+  },
+  "emblem-17__philosophical_egg+philosophical_egg_ca+cauldron+philosophica_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-29T06:30:32.796370+00:00",
+    "note": "Composite bundling several of the mislabeled fireball-sphere detections together -- not a coherent element; see the four individual flaming-sphere entries instead."
+  },
+  "emblem-17__window+vessel+moon+cauldron+lamp_globe+cauldron+cauldron+riv_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-29T06:30:32.796370+00:00",
+    "note": "Composite bundling nearly every detection on the plate (window, vessel/boat, all four spheres, river) into one region -- not a coherent single element."
   }
 }
