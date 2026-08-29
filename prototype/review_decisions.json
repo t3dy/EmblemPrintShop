@@ -99,5 +99,86 @@
     "status": "rejected",
     "reviewed_at": "2026-08-29T03:19:21.648848+00:00",
     "note": "Bounding box covers ~98% of the entire plate (a whole-scene detection, not a real object) and is labeled 'window', which does not describe any single element on this plate. Not a usable extraction -- should be dropped, not relabeled to something else."
+  },
+  "emblem-13__athanor": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:26:51.113913+00:00",
+    "note": "No furnace/athanor of any kind is present in this plate. Clean, correctly isolated crop; only the label was wrong.",
+    "corrected_label": "Bearded man seated by a river, before a walled town and bridge -- likely Naaman washing in the Jordan (inferred from the emblem's own discourse_excerpt: 'Maier draws on the biblical story of Naaman the leper, healed by washing seven times in the Jordan'; the figure carries no caption in the plate itself, unlike emblem-00's labeled figures, so this is a textually-grounded inference, not a certain reading)"
+  },
+  "emblem-13__philosophical_egg": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-29T06:26:51.113913+00:00",
+    "note": "Same region as 'athanor' (bbox differs by 1px) -- a second, differently-mislabeled detection of the identical seated figure. Duplicate; see athanor for the corrected reading."
+  },
+  "emblem-13__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-29T06:26:51.113913+00:00",
+    "note": "Bbox spans nearly the full plate width (1535 of ~1600px) -- a whole-scene detection bundling the seated figure, the town, and the bridge together, not a real single element. No hearth is present anywhere in this plate."
+  },
+  "emblem-13__hourglass": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-29T06:26:51.113913+00:00",
+    "note": "Just the head of the same seated figure as 'athanor' (a small sub-crop, not a separate object). No hourglass is present. Redundant fragment, not a useful standalone catalog entry."
+  },
+  "emblem-13__bridge": {
+    "status": "approved",
+    "reviewed_at": "2026-08-29T06:26:51.113913+00:00",
+    "note": "Correct: a stone multi-arch bridge over the river, with a figure poling a boat underneath."
+  },
+  "emblem-13__castle": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:26:51.113913+00:00",
+    "note": "Bbox covers the whole background cityscape, not one castle building.",
+    "corrected_label": "Walled town skyline with towers and a stone bridge (a townscape, not a single castle)"
+  },
+  "emblem-13__cave": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:26:51.113913+00:00",
+    "note": "Clearly the underside of a bridge arch, not a cave -- no rock opening of any kind at this location in the plate.",
+    "corrected_label": "Bridge arch (one opening of the stone bridge over the river)"
+  },
+  "emblem-13__cave_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:26:51.113913+00:00",
+    "note": "Same misreading as 'cave' -- a different arch of the same bridge.",
+    "corrected_label": "Bridge arch (a second, adjacent opening of the same stone bridge)"
+  },
+  "emblem-13__building_house": {
+    "status": "approved",
+    "reviewed_at": "2026-08-29T06:26:51.113913+00:00",
+    "note": "Correct: a thatched-roof cottage among the riverside buildings."
+  },
+  "emblem-13__palm": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:26:51.113913+00:00",
+    "note": "Crop is small and low-resolution; can't confidently confirm 'palm' specifically vs. generic riverside shrub/foliage at this size. Flagging as low-confidence rather than asserting a label I can't actually verify from the pixels."
+  },
+  "emblem-13__tower_chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:26:51.113913+00:00",
+    "note": "A tower/turret silhouette; not specifically a chimney.",
+    "corrected_label": "Tower (townscape architecture, part of the town skyline)"
+  },
+  "emblem-13__tower_temple_chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-29T06:26:51.113913+00:00",
+    "note": "A second tower silhouette with visible window arches; not a temple or chimney specifically.",
+    "corrected_label": "Tower with window openings (townscape architecture, part of the town skyline)"
+  },
+  "emblem-13__wheel": {
+    "status": "approved",
+    "reviewed_at": "2026-08-29T06:26:51.113913+00:00",
+    "note": "Correct: a mill wheel beside the river/bridge."
+  },
+  "emblem-13__tree": {
+    "status": "approved",
+    "reviewed_at": "2026-08-29T06:26:51.113913+00:00",
+    "note": "Correct: foliage/tree at upper-left border. Already checked during WO-012 (docs/EXTRACTION_PROTOTYPE_REPORT.md)."
+  },
+  "emblem-13__bridge+athanor+tower_chimney+building_house+cave+palm+castle_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-29T06:26:51.113913+00:00",
+    "note": "Composite bundling 13 constituent detections (bbox [25,27,1547,1366] -- essentially the whole plate below the top margin). Not a coherent reusable element; the individual objects above are the useful catalog entries."
   }
 }

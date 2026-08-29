@@ -86,6 +86,17 @@ exists). 11 corrected, 4 approved, 3 rejected (2 duplicate detections of
 regions already correctly labeled elsewhere, 1 whole-scene garbage box). See
 `prototype/review_decisions.json` and rebuild the catalog to see the result.
 
+**Fixed 2026-08-29:** `build_object_catalog.py` (populates `data/emblems.json`'s
+`object_catalog`, used by `emblems.html`) now reads `review_decisions.json` and
+`geometry_qc.json` exactly like `build_catalog.py` does (same `object_stem` key),
+and — the same fix `build_catalog.py` already needed — globs every object's
+`*_meta.json` under `individual/`/`composites/` directly instead of trusting
+`assets/extracted_all/{stem}/summary.json`'s own manifest, which a later
+re-extraction run can overwrite wholesale (emblem-13's `object_catalog` went from
+1 entry to the correct 15 once fixed). Run order: `run_geometry_qc.py` →
+review in `review.html` → `build_catalog.py` **and** `build_object_catalog.py`
+(both, they serve different pages and neither reads the other's output).
+
 **Not yet automated / explicitly out of scope for this pass:**
 - `scripts/reidentify_objects.py` already does exactly this kind of
   vision-grounded relabeling for the `animals` category via the Claude API
@@ -94,20 +105,9 @@ regions already correctly labeled elsewhere, 1 whole-scene garbage box). See
   `key_concepts` as grounding context, is real, valuable, unbuilt work.
   Requires `ANTHROPIC_API_KEY` set in the environment (not set as of this
   writing) to run at corpus scale.
-- `build_object_catalog.py` (populates `data/emblems.json`'s
-  `object_catalog`, used by `emblems.html`) does **not** yet read
-  `review_decisions.json` the way `build_catalog.py` does. It also reads
-  `assets/extracted_all/*/summary.json` directly rather than the union of
-  `*_meta.json` files on disk — and at least one emblem (emblem-13) has a
-  `summary.json` that a later, smaller re-extraction run overwrote wholesale,
-  leaving it describing far fewer objects than actually exist and are shown
-  in `gallery_catalog.json`. `build_catalog.py` already works around this by
-  globbing `*_meta.json` directly; `build_object_catalog.py` should adopt the
-  same pattern before it's trusted as a corrections target.
-- Only emblem-00 has been manually reviewed. 7,501 elements have not been —
-  the corpus-wide "identify every visual element correctly" goal is
-  nowhere near done; this section is the infrastructure for doing it
-  incrementally, not a claim that it's finished.
+- Manual review so far: emblem-00 (18/18 objects). The corpus-wide "identify
+  every visual element correctly" goal is nowhere near done — this section is
+  the infrastructure for doing it incrementally, not a claim that it's finished.
 
 ## 3. Manual cutout tools — `prototype/editor.html`
 
