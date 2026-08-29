@@ -1,15 +1,24 @@
 """
 Build or update the object_catalog field in each emblem record in data/emblems.json.
 
-Reads comprehensive extraction results from assets/extracted_all/{stem}/summary.json
-and adds a structured object_catalog to the matching emblem record. Each catalog entry
-records what was found, which motif it maps to, the extraction file paths, and
-placeholder fields for appearance (specific description in this emblem) and
-iconographic_meaning (what this instance means in context).
+Reads every object's *_meta.json under assets/extracted_all/{stem}/{individual,
+composites}/ directly (NOT assets/extracted_all/{stem}/summary.json -- a
+re-extraction run overwrites summary.json wholesale rather than merging, so it
+can describe far fewer objects than actually exist on disk; see
+docs/QUALITY_AND_REVIEW_SYSTEM.md) and adds a structured object_catalog to the
+matching emblem record. Each catalog entry records what was found, which motif
+it maps to, the extraction file paths, and placeholder fields for appearance
+(specific description in this emblem) and iconographic_meaning (what this
+instance means in context).
 
 The appearance and iconographic_meaning fields are seeded from the motifs.json
 canonical descriptions and should be refined by a human reviewer or a secondary
 AI annotation pass.
+
+Reviewer corrections (prototype/review_decisions.json, written by review.html)
+and geometry QC flags (prototype/geometry_qc.json, scripts/run_geometry_qc.py)
+are applied automatically, keyed by object_stem -- run those first if you want
+their results reflected here.
 
 Usage:
     python -m scripts.build_object_catalog               # process all emblems
@@ -32,6 +41,32 @@ EMBLEMS_JSON     = ROOT / "data" / "emblems.json"
 MOTIFS_JSON      = ROOT / "data" / "motifs.json"
 EXTRACTED_ALL    = ROOT / "assets" / "extracted_all"
 VISUAL_ELEM_JSON = ROOT / "data" / "visual_elements.json"
+REVIEW_DECISIONS_JSON = ROOT / "prototype" / "review_decisions.json"
+GEOMETRY_QC_JSON = ROOT / "prototype" / "geometry_qc.json"
+
+
+def load_review_decisions() -> dict:
+    """
+    Keyed exactly like review.html/build_catalog.py: f"{stem}__{object_stem}".
+    A human decision here outranks the raw detector label -- see
+    docs/QUALITY_AND_REVIEW_SYSTEM.md for why this must be object_stem, not
+    the (often shared) label.
+    """
+    if not REVIEW_DECISIONS_JSON.exists():
+        return {}
+    try:
+        return json.loads(REVIEW_DECISIONS_JSON.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, UnicodeDecodeError):
+        return {}
+
+
+def load_geometry_qc() -> dict:
+    if not GEOMETRY_QC_JSON.exists():
+        return {}
+    try:
+        return json.loads(GEOMETRY_QC_JSON.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, UnicodeDecodeError):
+        return {}
 
 
 def _load_json(path: Path) -> list | dict:
@@ -62,15 +97,25 @@ def _build_catalog_entry(
     motif_db: dict[str, dict],
     extraction_files: dict,
     entry_type: str = "individual",
+    object_stem: str | None = None,
+    correction: dict | None = None,
+    qc: dict | None = None,
 ) -> dict:
     """
     Build a single object_catalog entry from a detection record.
 
     Args:
-        detection: A dict from summary.json (individual or composite).
+        detection: A dict read from one object's *_meta.json.
         motif_db: motif_id -> motif dict from motifs.json.
         extraction_files: Paths to the transparent_png, crop_jpg, etc.
         entry_type: "individual" or "composite".
+        object_stem: unique per-object filename stem (e.g. "philosophical_egg"
+            or "bridge+athanor+..._composite") -- the review-state identity key,
+            per docs/QUALITY_AND_REVIEW_SYSTEM.md. Always set for objects
+            discovered by globbing *_meta.json (the normal path); may be None
+            only for legacy callers that still pass raw summary.json dicts.
+        correction: this object's entry from review_decisions.json, if any.
+        qc: this object's entry from geometry_qc.json, if any.
     """
     # Resolve the detected label to a canonical motif id
     label = detection.get("label", "")
@@ -85,10 +130,23 @@ def _build_catalog_entry(
         motif_ids = [motif_id] if motif_id else []
 
     motif = motif_db.get(motif_id) if motif_id else None
+    original_label = label or " + ".join(detection.get("labels", []))
+
+    # A human reviewer's correction (review.html) outranks the detector and
+    # any motif-vocabulary lookup -- same precedence rule as build_catalog.py.
+    display_label = original_label
+    label_source = "detector"
+    review_status = "auto"
+    if correction:
+        review_status = correction.get("status", "auto")
+        if correction.get("corrected_label"):
+            display_label = correction["corrected_label"]
+            label_source = "human-corrected"
 
     entry = {
         "type":              entry_type,
-        "label":             label or " + ".join(detection.get("labels", [])),
+        "object_stem":       object_stem,
+        "label":             display_label,
         "motif_id":          motif_id,
         "constituent_motif_ids": motif_ids if entry_type == "composite" else None,
         "category":          detection.get("category") or (
@@ -103,12 +161,20 @@ def _build_catalog_entry(
         # refined with emblem-specific interpretation
         "iconographic_meaning": motif["description"] if motif else None,
         "alchemical_valence":motif["alchemical_valence"] if motif else [],
-        "review_status":     "auto",
+        "review_status":     review_status,
+        "label_source":      label_source,
         "transparent_png":   extraction_files.get("transparent_png"),
         "crop_jpg":          extraction_files.get("crop_jpg"),
         "review_overlay":    extraction_files.get("review_overlay"),
         "mask_pixel_count":  detection.get("mask_pixel_count"),
     }
+    if label_source == "human-corrected":
+        entry["original_label"] = original_label  # audit trail, never silently dropped
+    if correction and correction.get("note"):
+        entry["reviewer_note"] = correction["note"]
+    if qc:
+        entry["qc_flag"] = qc.get("flag")
+        entry["qc_note"] = qc.get("note")
 
     # Drop None constituent_motif_ids for individual entries
     if entry_type == "individual":
@@ -121,18 +187,25 @@ def build_object_catalog_for_emblem(
     stem: str,
     emblems: list[dict],
     motif_db: dict[str, dict],
+    corrections: dict,
+    qc_by_key: dict,
 ) -> dict | None:
     """
-    Read assets/extracted_all/{stem}/summary.json and build an object_catalog.
+    Build an object_catalog for one emblem by globbing every *_meta.json file
+    under assets/extracted_all/{stem}/{individual,composites}/ directly.
 
-    Returns the updated emblem dict, or None if no extraction summary found.
+    Deliberately does NOT read summary.json as the object list: a
+    re-extraction run overwrites summary.json wholesale rather than merging,
+    so for at least one emblem (emblem-13) it ends up describing far fewer
+    objects than actually exist on disk. build_catalog.py already works
+    around this by globbing *_meta.json; this does the same, for the same
+    reason -- see docs/QUALITY_AND_REVIEW_SYSTEM.md.
+
+    Returns the updated emblem dict, or None if no extraction directory found.
     """
-    summary_path = EXTRACTED_ALL / stem / "summary.json"
-    if not summary_path.exists():
+    emblem_dir = EXTRACTED_ALL / stem
+    if not emblem_dir.exists():
         return None
-
-    with open(summary_path, encoding="utf-8") as f:
-        summary = json.load(f)
 
     emb = _find_emblem_by_stem(emblems, stem)
     if emb is None:
@@ -140,26 +213,47 @@ def build_object_catalog_for_emblem(
         return None
 
     catalog: list[dict] = []
+    latest_extracted_at = None
+    n_individual = n_composite = 0
 
-    for ind in summary.get("individual", []):
-        entry = _build_catalog_entry(ind, motif_db, ind, entry_type="individual")
-        catalog.append(entry)
-
-    for comp in summary.get("composites", []):
-        entry = _build_catalog_entry(comp, motif_db, comp, entry_type="composite")
-        catalog.append(entry)
+    for entry_type, subdir in (("individual", "individual"), ("composite", "composites")):
+        d = emblem_dir / subdir
+        if not d.exists():
+            continue
+        for meta_path in sorted(d.glob("*_meta.json")):
+            try:
+                detection = json.loads(meta_path.read_text(encoding="utf-8"))
+            except (json.JSONDecodeError, UnicodeDecodeError):
+                continue
+            object_stem = meta_path.stem[:-5] if meta_path.stem.endswith("_meta") else meta_path.stem
+            key = f"{stem}__{object_stem}"
+            entry = _build_catalog_entry(
+                detection, motif_db, detection, entry_type=entry_type,
+                object_stem=object_stem,
+                correction=corrections.get(key),
+                qc=qc_by_key.get(key),
+            )
+            catalog.append(entry)
+            if entry_type == "individual":
+                n_individual += 1
+            else:
+                n_composite += 1
+            ea = detection.get("extracted_at")
+            if ea and (latest_extracted_at is None or ea > latest_extracted_at):
+                latest_extracted_at = ea
 
     emb["object_catalog"] = catalog
-    emb["object_catalog_extracted_at"] = summary.get("extracted_at")
+    emb["object_catalog_extracted_at"] = latest_extracted_at
     emb["object_catalog_count"] = {
-        "individual": len(summary.get("individual", [])),
-        "composite":  len(summary.get("composites", [])),
+        "individual": n_individual,
+        "composite":  n_composite,
         "total":      len(catalog),
     }
 
+    n_corrected = sum(1 for e in catalog if e.get("label_source") == "human-corrected")
     print(f"  {stem}: {len(catalog)} catalog entries "
-          f"({emb['object_catalog_count']['individual']} individual, "
-          f"{emb['object_catalog_count']['composite']} composite)")
+          f"({n_individual} individual, {n_composite} composite"
+          f"{f', {n_corrected} human-corrected' if n_corrected else ''})")
     return emb
 
 
@@ -180,6 +274,12 @@ def main() -> None:
     emblems  = _load_json(EMBLEMS_JSON)
     motifs   = _load_json(MOTIFS_JSON)
     motif_db = _motif_lookup(motifs)
+    corrections = load_review_decisions()
+    qc_by_key   = load_geometry_qc()
+    if corrections:
+        print(f"Loaded {len(corrections)} review decision(s) from {REVIEW_DECISIONS_JSON}")
+    if qc_by_key:
+        print(f"Loaded {len(qc_by_key)} geometry QC result(s) from {GEOMETRY_QC_JSON}")
 
     if not EXTRACTED_ALL.exists():
         print(f"No extracted_all directory at {EXTRACTED_ALL}. "
@@ -193,7 +293,7 @@ def main() -> None:
 
     updated = 0
     for stem in stems:
-        result = build_object_catalog_for_emblem(stem, emblems, motif_db)
+        result = build_object_catalog_for_emblem(stem, emblems, motif_db, corrections, qc_by_key)
         if result is not None:
             updated += 1
 
