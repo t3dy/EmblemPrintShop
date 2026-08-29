@@ -122,21 +122,18 @@ class Handler(http.server.SimpleHTTPRequestHandler):
     def _handle_save_review(self, data):
         """
         Save review decisions to prototype/review_decisions.json.
-        Merges with existing decisions (keyed by emblem_id__prompt).
+
+        The client sends its complete in-memory decisions map on every save
+        (review.html keeps REVIEWS as the single source of truth and this
+        mirrors it verbatim), so this replaces the file rather than merging —
+        a merge-only write can never represent "this key was reset to
+        pending," since a removed key looks identical to an absent one.
         """
         decisions = data.get('decisions', {})
         dest = Path(ROOT) / 'prototype' / 'review_decisions.json'
-        existing = {}
-        if dest.exists():
-            with open(dest, encoding='utf-8') as f:
-                try:
-                    existing = json.load(f)
-                except Exception:
-                    existing = {}
-        existing.update(decisions)
         with open(dest, 'w', encoding='utf-8') as f:
-            json.dump(existing, f, indent=2)
-        self._respond(200, {'saved': len(existing)})
+            json.dump(decisions, f, indent=2)
+        self._respond(200, {'saved': len(decisions)})
 
     def _respond(self, status, body):
         payload = json.dumps(body).encode()

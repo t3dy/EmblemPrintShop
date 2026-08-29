@@ -39,6 +39,9 @@ header h1 span { color: var(--accent); font-style: italic; }
 .stat-approved { background: var(--approved); }
 .stat-rejected { background: var(--rejected); }
 .stat-flagged  { background: var(--flagged); }
+.sync-badge { padding: .15rem .5rem; border-radius: 2px; font-size: .72rem; cursor: help; }
+.sync-ok   { background: rgba(90,150,90,.25); color: #bfe0bf; }
+.sync-warn { background: rgba(200,150,50,.25); color: #f0d090; }
 header nav { display: flex; gap: .8rem; margin-left: auto; align-items: center; }
 header nav a { color: var(--paper); font-size: .78rem; opacity: .7; text-decoration: none; }
 header nav a:hover { opacity: 1; }
@@ -196,6 +199,7 @@ main { flex: 1; padding: 1rem 1.2rem; }
     <span class="stat stat-approved" id="st-approved">0 approved</span>
     <span class="stat stat-rejected" id="st-rejected">0 rejected</span>
     <span class="stat stat-flagged"  id="st-flagged">0 flagged</span>
+    <span class="sync-badge" id="sync-badge" title="Checking...">…</span>
   </div>
   <nav>
     <a href="gallery.html">Gallery</a>
@@ -246,12 +250,63 @@ let REVIEWS = {};  // key → {status, note, reviewed_at}
 function reviewKey(r) { return `${r.emblem_id}__${r.prompt}`; }
 
 // ── Persistence ───────────────────────────────
-function loadReviews() {
-  try { REVIEWS = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); }
-  catch(e) { REVIEWS = {}; }
+// Server (prototype/review_decisions.json via POST /api/save-review) is
+// authoritative when reachable; localStorage is an instant local cache and
+// the fallback when the site is opened without prototype/serve.py running
+// (e.g. the static GitHub Pages copy, or plain file://).
+let SYNC_STATE = 'unknown'; // 'server' | 'local-only' | 'unknown'
+
+async function loadReviews() {
+  let local = {};
+  try { local = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); }
+  catch(e) { local = {}; }
+  REVIEWS = local;
+  try {
+    const resp = await fetch('review_decisions.json?_=' + Date.now());
+    if (resp.ok) {
+      const server = await resp.json();
+      // Server file is authoritative once it exists; local cache only wins
+      // for a key it doesn't know about yet (e.g. a save mid-flight offline).
+      REVIEWS = { ...local, ...server };
+      SYNC_STATE = 'server';
+    } else {
+      SYNC_STATE = 'local-only'; // no file saved yet, but the endpoint exists
+    }
+  } catch(e) {
+    SYNC_STATE = 'local-only'; // no server (static hosting, or file://)
+  }
+  saveReviews(false);
+  updateSyncBadge();
 }
-function saveReviews() {
+
+function saveReviews(pushToServer = true) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(REVIEWS));
+  if (!pushToServer) return;
+  fetch('/api/save-review', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ decisions: REVIEWS }),
+  }).then(resp => {
+    SYNC_STATE = resp.ok ? 'server' : 'local-only';
+    updateSyncBadge();
+  }).catch(() => {
+    SYNC_STATE = 'local-only';
+    updateSyncBadge();
+  });
+}
+
+function updateSyncBadge() {
+  const el = document.getElementById('sync-badge');
+  if (!el) return;
+  if (SYNC_STATE === 'server') {
+    el.textContent = '☁ saved to server';
+    el.title = 'Decisions are written to prototype/review_decisions.json — durable across browsers/machines.';
+    el.className = 'sync-badge sync-ok';
+  } else {
+    el.textContent = '⚠ local browser only';
+    el.title = 'prototype/serve.py isn\'t reachable (static hosting, or opened via file://) — decisions are only in this browser\'s storage until you run the local server.';
+    el.className = 'sync-badge sync-warn';
+  }
 }
 function setReview(key, status, note) {
   if (status === 'pending') {
@@ -266,7 +321,7 @@ function getNote(r)   { return (REVIEWS[reviewKey(r)] || {}).note || ''; }
 
 // ── Load ──────────────────────────────────────
 async function loadCatalog() {
-  loadReviews();
+  await loadReviews();
   try {
     const resp = await fetch('gallery_catalog.json?_=' + Date.now());
     if (!resp.ok) throw new Error(resp.status);

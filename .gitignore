@@ -31,5 +31,11 @@ logs/
 # Pytest cache
 .pytest_cache/
 
+# Live review-queue state (prototype/serve.py's /api/save-review) — per-
+# reviewer working state, not curated data; commit review outcomes via
+# build_object_catalog.py / data/emblems.json instead, once a review pass
+# is done.
+prototype/review_decisions.json
+
 # Memory files (local only)
 .claude/
