@@ -1,0 +1,54 @@
+{
+  "crop_bbox_in_plate": [
+    225,
+    438,
+    1196,
+    1418
+  ],
+  "points_per_side": 16,
+  "raw_proposal_count": 32,
+  "kept_proposal_count": 14,
+  "runtime_seconds": 63.8,
+  "top_proposals_by_area": [
+    {
+      "score": 0.9979246854782104,
+      "area_fraction": 0.0308
+    },
+    {
+      "score": 0.8882730603218079,
+      "area_fraction": 0.0166
+    },
+    {
+      "score": 0.8942506313323975,
+      "area_fraction": 0.0152
+    },
+    {
+      "score": 0.9523219466209412,
+      "area_fraction": 0.014
+    },
+    {
+      "score": 0.9370294809341431,
+      "area_fraction": 0.0112
+    },
+    {
+      "score": 0.9343409538269043,
+      "area_fraction": 0.0098
+    },
+    {
+      "score": 0.9160764217376709,
+      "area_fraction": 0.0086
+    },
+    {
+      "score": 0.9148271083831787,
+      "area_fraction": 0.0066
+    },
+    {
+      "score": 0.8953789472579956,
+      "area_fraction": 0.006
+    },
+    {
+      "score": 0.8993070721626282,
+      "area_fraction": 0.0057
+    }
+  ]
+}

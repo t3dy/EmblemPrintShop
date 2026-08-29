@@ -135,6 +135,7 @@ code {
   <a href="motifs.html">Motif Atlas</a>
   <a href="export.html">Export</a>
   <a href="review.html">Review Queue</a>
+  <a href="wo012-results.html" style="color:#e0a06a">WO-012 Results</a>
 </nav>
 
 <main>
@@ -143,6 +144,12 @@ code {
   <h2>About This Platform</h2>
   <p>Emblem Print Shop is an extraction and research platform built for scholarly investigation of alchemical emblems. Using machine vision (GroundingDINO + SAM) and Claude-based re-identification, we've extracted 7,097+ visual motifs from 13+ historical sources, aligned them with source texts, and made them discoverable through rich browsing interfaces.</p>
   <p class="subtext">This work integrates Maier's <em>Atalanta Fugiens</em>, Cramer's <em>Emblemata Sacra</em>, Rosarium Philosophorum, Splendor Solis, Khunrath's <em>Amphitheatrum Sapientiae Aeternae</em>, Fludd's <em>Mosaicall Philosophy</em>, and others.</p>
+</div>
+
+<div class="intro-block" style="border-left-color:var(--accent2)">
+  <h2>New: WO-012 — Does edge detection improve segmentation?</h2>
+  <p>Two independent prototype runs tested whether Canny edge detection can refine SAM's masks on dense engraved hatching — and found something more important along the way: sampled apparatus-category labels ("athanor," "furnace," "hourglass") were wrong in 4 of 4 checks. Full write-up, comparison images, and an honest agree/disagree synthesis across both runs.</p>
+  <p class="subtext"><a href="wo012-results.html" style="color:var(--accent2);font-weight:600">See the results →</a></p>
 </div>
 
 <section>

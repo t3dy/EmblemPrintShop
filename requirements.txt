@@ -1,0 +1,11 @@
+# Reproducibility snapshot, written 2026-08-28 (WO-012) from the actually-installed
+# environment — this repo had no requirements.txt before. CPU-only; no GPU required.
+# Python 3.14.3 (Windows).
+
+torch==2.10.0
+transformers==5.2.0
+opencv-python==4.13.0.92
+Pillow==12.1.1
+numpy==2.4.2
+PyMuPDF==1.27.2.3
+pytest==9.0.2

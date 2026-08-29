@@ -1,0 +1,14 @@
+{
+  "source_image": "C:\\Dev\\EmblemPrintShop\\sources\\claudiens\\site\\images\\emblems\\emblem-18.jpg",
+  "bbox": [
+    107,
+    171,
+    446,
+    628
+  ],
+  "raw_detector_label": "philosophical egg",
+  "raw_detector_score": 0.36690711975097656,
+  "note": "Detector mislabel -- this bbox visually bounds the furnace/flame opening, not a philosophical egg. Kept as machine-proposed evidence only; label corrected by hand to 'furnace' downstream for review, never by the agent.",
+  "pipeline": "detector.detect_elements (equipment/architecture prompts, unmodified) -> segmenter.segment_from_bbox (unmodified) -> postprocessor.remove_paper_background -> postprocessor.remove_background_bridges -> postprocessor.select_figure_mask (all unmodified)",
+  "mask_pixel_count": 330973
+}

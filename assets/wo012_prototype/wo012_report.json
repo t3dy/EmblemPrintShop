@@ -1,0 +1,29 @@
+{
+  "plate": "emblem-13.jpg (Atalanta Fugiens XIII)",
+  "edge_maps": {
+    "plain_canny_px": 508297,
+    "adaptive_canny_px": 472351
+  },
+  "objects": {
+    "athanor": {
+      "baseline_mask_px": 324375,
+      "test": "boundary_snap",
+      "refined_mask_px": 335474,
+      "iou_vs_baseline": 0.954
+    },
+    "tree": {
+      "baseline_mask_px": 293782,
+      "test": "bridge_sever",
+      "baseline_severed_px": 293782,
+      "contour_severed_px": 293993,
+      "iou_vs_baseline": 0.9993
+    },
+    "hourglass": {
+      "baseline_mask_px": 12172,
+      "test": "erosion_guard",
+      "plain_erosion_px": 12172,
+      "guarded_erosion_px": 13700,
+      "iou_vs_baseline": 0.8885
+    }
+  }
+}

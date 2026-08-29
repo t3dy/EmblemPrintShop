@@ -1,0 +1,12 @@
+{
+  "model": "facebook/sam2-hiera-tiny (via transformers Sam2Model)",
+  "caveat": "checkpoint is tagged model_type=sam2_video; transformers warned it is being force-loaded into the static-image Sam2Model class -- treat this result as exploratory, not a validated SAM2 integration",
+  "iou_scores": [
+    0.8918060660362244,
+    0.9365887641906738,
+    0.9594961404800415
+  ],
+  "chosen_mask_index": 2,
+  "raw_mask_px": 232646,
+  "final_mask_px": 225807
+}

@@ -1,0 +1,33 @@
+{
+  "baseline": {
+    "mask_pixel_count": 330973,
+    "delta_vs_baseline_px": 0,
+    "delta_vs_baseline_pct": 0.0
+  },
+  "boundary_snap_plain": {
+    "mask_pixel_count": 331394,
+    "delta_vs_baseline_px": 421,
+    "delta_vs_baseline_pct": 0.13
+  },
+  "boundary_snap_adaptive": {
+    "mask_pixel_count": 331392,
+    "delta_vs_baseline_px": 419,
+    "delta_vs_baseline_pct": 0.13
+  },
+  "bridge_cut_contour": {
+    "mask_pixel_count": 296330,
+    "delta_vs_baseline_px": -34643,
+    "delta_vs_baseline_pct": -10.47
+  },
+  "erosion_guard": {
+    "mask_pixel_count": 348062,
+    "delta_vs_baseline_px": 17089,
+    "delta_vs_baseline_pct": 5.16
+  },
+  "sam2": {
+    "mask_pixel_count": 225807,
+    "delta_vs_baseline_px": -105166,
+    "delta_vs_baseline_pct": -31.78,
+    "note": "different segmenter (SAM2-hiera-tiny) run through the same shared postprocessing chain as baseline, for comparison -- not a Canny refinement variant"
+  }
+}

@@ -1,0 +1,116 @@
+[
+  {
+    "id": "maier_emblem_25_dragon",
+    "label": "Maier emblem 25 - dragon attacked by sun and moon figures",
+    "source": "C:\\Dev\\EmblemPrintShop\\sources\\claudiens\\site\\images\\emblems\\emblem-25.jpg",
+    "bbox": [
+      460,
+      520,
+      680,
+      720
+    ],
+    "motifs": [
+      "dragon",
+      "serpent",
+      "monster"
+    ],
+    "method": "manual bounding box from local emblem plate; paper background thresholded",
+    "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\cutout-examples\\maier_emblem_25_dragon_crop.jpg",
+    "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\cutout-examples\\maier_emblem_25_dragon_transparent.png"
+  },
+  {
+    "id": "maier_emblem_30_solar_androgyne",
+    "label": "Maier emblem 30 - solar nude / androgyne candidate",
+    "source": "C:\\Dev\\EmblemPrintShop\\sources\\claudiens\\site\\images\\emblems\\emblem-30.jpg",
+    "bbox": [
+      70,
+      110,
+      620,
+      1260
+    ],
+    "motifs": [
+      "solar figure",
+      "androgyne candidate",
+      "coniunctio"
+    ],
+    "method": "manual bounding box; scholarly/metadata review needed for motif label",
+    "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\cutout-examples\\maier_emblem_30_solar_androgyne_crop.jpg",
+    "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\cutout-examples\\maier_emblem_30_solar_androgyne_transparent.png"
+  },
+  {
+    "id": "maier_emblem_37_lion",
+    "label": "Maier emblem 37 - lion",
+    "source": "C:\\Dev\\EmblemPrintShop\\sources\\claudiens\\site\\images\\emblems\\emblem-37.jpg",
+    "bbox": [
+      180,
+      330,
+      1250,
+      760
+    ],
+    "motifs": [
+      "lion",
+      "animal"
+    ],
+    "method": "manual bounding box from local emblem plate; paper background thresholded",
+    "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\cutout-examples\\maier_emblem_37_lion_crop.jpg",
+    "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\cutout-examples\\maier_emblem_37_lion_transparent.png"
+  },
+  {
+    "id": "hp_p393_lion",
+    "label": "Hypnerotomachia p393 - lion devouring victim",
+    "source": "C:\\Dev\\EmblemPrintShop\\sources\\hypnerotomachia-polyphili\\site\\images\\woodcuts_1499\\hp1499_p393.jpg",
+    "bbox": [
+      1320,
+      1880,
+      1320,
+      880
+    ],
+    "motifs": [
+      "lion",
+      "monster",
+      "violent scene"
+    ],
+    "method": "manual bounding box guided by existing woodcut description",
+    "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\cutout-examples\\hp_p393_lion_crop.jpg",
+    "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\cutout-examples\\hp_p393_lion_transparent.png"
+  },
+  {
+    "id": "hp_p393_dragon_serpent",
+    "label": "Hypnerotomachia p393 - dragon/serpent beast",
+    "source": "C:\\Dev\\EmblemPrintShop\\sources\\hypnerotomachia-polyphili\\site\\images\\woodcuts_1499\\hp1499_p393.jpg",
+    "bbox": [
+      520,
+      1900,
+      980,
+      980
+    ],
+    "motifs": [
+      "dragon",
+      "serpent",
+      "monster"
+    ],
+    "method": "manual bounding box guided by existing woodcut description",
+    "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\cutout-examples\\hp_p393_dragon_serpent_crop.jpg",
+    "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\cutout-examples\\hp_p393_dragon_serpent_transparent.png"
+  },
+  {
+    "id": "hp_p330_amphora_fumes",
+    "label": "Hypnerotomachia p330 - amphora with fumes",
+    "source": "C:\\Dev\\EmblemPrintShop\\sources\\hypnerotomachia-polyphili\\site\\images\\woodcuts_1499\\hp1499_p330.jpg",
+    "bbox": [
+      960,
+      1850,
+      1420,
+      2500
+    ],
+    "motifs": [
+      "amphora",
+      "vessel",
+      "fumes",
+      "lab equipment adjacent"
+    ],
+    "method": "manual bounding box guided by existing woodcut description",
+    "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\cutout-examples\\hp_p330_amphora_fumes_crop.jpg",
+    "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\cutout-examples\\hp_p330_amphora_fumes_transparent.png"
+  }
+]

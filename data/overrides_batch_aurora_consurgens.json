@@ -1,0 +1,868 @@
+{
+  "_work": {
+    "key": "aurora_consurgens_zbz",
+    "title": "Aurora Consurgens — Zentralbibliothek Zürich Ms. Rh. 172",
+    "short_title": "Aurora Consurgens (ZBZ)",
+    "short_id": "ACZ",
+    "author": "Pseudo-Thomas Aquinas (attr.)",
+    "date": "c. 1420",
+    "place": "Rhineland or Basel",
+    "root": "LOCAL",
+    "image_dir": "aurora_consurgens",
+    "tier": "illustration",
+    "tradition": "western_alchemy",
+    "era": "medieval",
+    "rights": "Public Domain. Manuscript c. 1420, well outside copyright. Digital images from e-codices Virtual Manuscript Library of Switzerland (e-codices.ch), CC BY-NC 4.0.",
+    "creator": "Pseudo-Thomas Aquinas (attr.); illuminator unknown (Rhineland or Basel workshop, c. 1420)",
+    "century": 15,
+    "region": "Western Europe",
+    "language": "Latin",
+    "provenance_url": "https://www.e-codices.ch/en/list/one/zbz/Ms-Rh-0172",
+    "motifs": [
+      "Aurora Consurgens",
+      "Sapientia",
+      "Sol and Luna",
+      "coniunctio",
+      "nigredo",
+      "albedo",
+      "rubedo",
+      "dragon",
+      "Mercurius",
+      "prima materia",
+      "Philosopher's Stone",
+      "alchemical vessels",
+      "philosophical bird",
+      "lion and eagle",
+      "Song of Songs allegory",
+      "pseudo-Thomas Aquinas",
+      "medieval alchemy",
+      "alchemical miniatures",
+      "Wisdom (Sapientia)",
+      "Zentralbibliothek Zurich"
+    ],
+    "blurb": "One of the most important early alchemical manuscripts in the West, the Aurora Consurgens (c. 1420, ZBZ Ms. Rh. 172) contains 38 color miniatures among the earliest known systematic alchemical illustrations. The text, attributed to Thomas Aquinas though now considered pseudo-Thomist, allegorizes the alchemical process through the imagery of the Song of Songs and Proverbs, identifying the Philosopher's Stone with the divine Sapientia (Wisdom). Its miniatures — depicting the dragon in the vessel, the Sol-Luna coniunctio, the blackened Sapientia with solar radiance, and the lion-eagle combat — are foundational documents in the visual history of Western esotericism, analyzed definitively by Barbara Obrist and Marie-Louise von Franz.",
+    "language_display": "Latin"
+  },
+  "entries": [
+    {
+      "id": "aurora_consurgens_zbz__aurora-1r",
+      "work": "aurora_consurgens_zbz",
+      "file": "aurora_1r.jpg",
+      "folio": "fol. 1r",
+      "canvas": "zbz-Ms-Rh-0172_003.jp2",
+      "title": "Winged Mercurius with Serpent — Frontispiece",
+      "tradition": "western_alchemy",
+      "era": "medieval",
+      "date": "c. 1420",
+      "region": "Western Europe",
+      "citations": [
+        {
+          "author": "Obrist, Barbara",
+          "work": "Les débuts de l'imagerie alchimique (XIVe–XVe siècles)",
+          "year": "1982",
+          "publisher": "Sycomore",
+          "location": "Paris",
+          "notes": "Definitive iconographic analysis of the Aurora Consurgens miniatures; this frontispiece figure is discussed as the mercurial herald of the text."
+        },
+        {
+          "author": "Von Franz, Marie-Louise",
+          "work": "Aurora Consurgens: A Document Attributed to Thomas Aquinas on the Problem of Opposites in Alchemy",
+          "year": "1966",
+          "publisher": "Bollingen/Pantheon",
+          "location": "New York",
+          "series": "Bollingen Series LXXVII",
+          "notes": "Commentary and plates from this manuscript; the frontispiece embodies the Mercurius duplex of the Hermetic tradition."
+        },
+        {
+          "author": "Szulakowska, Urszula",
+          "work": "The Alchemy of Light: Geometry and Optics in Late Renaissance Alchemical Illustration",
+          "year": "2000",
+          "publisher": "Brill",
+          "location": "Leiden",
+          "notes": "The Aurora Consurgens Mercurius figure is an antecedent of the luminous Mercurius in later Renaissance alchemical illustration."
+        },
+        {
+          "author": "Principe, Lawrence M.",
+          "work": "The Secrets of Alchemy",
+          "year": "2013",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago",
+          "notes": "Discusses the Aurora Consurgens in the context of medieval alchemical literature and its pseudonymous attribution to Aquinas."
+        },
+        {
+          "author": "Rampling, Jennifer",
+          "work": "The Experimental Fire: Inventing English Alchemy, 1300–1700",
+          "year": "2020",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago",
+          "notes": "Traces how the Aurora Consurgens tradition shaped English alchemical practice and iconography."
+        }
+      ],
+      "description": "The frontispiece of the Aurora Consurgens, one of the earliest and most remarkable images in the history of Western alchemical illustration. Painted on a deep red ground with a thin green border, the miniature depicts a large central figure standing amid chaotic elements: a golden-haired angelic or divine being with vast black wings spread wide, its nude body intertwined with a coiling blue serpent that wraps from one outstretched hand across the torso. Beneath the figure's feet lies a skull — the memento mori of the nigredo, death as the precondition of transformation. At lower right, a small winged craftsman crouches at an anvil with a hammer, identifying the angelic figure with the divine smith and alchemical laborant. The figure's lower body dissolves into red serpentine coils, blurring the boundary between the herald and the matter he bears.\n\nThis is conventionally identified with MERCURIUS — the divine messenger of Hermes Trismegistus, the volatile spirit of matter, and the paradoxical unifying principle of the alchemical work. The black wings declare his association with the nigredo and the corvus (raven); the golden hair and the serpent identify him with the caduceus-bearing Hermes; the skull under his feet announces the mortificatio that must precede resurrection. The small craftsman at the anvil (lower right) evokes the Vulcan tradition — alchemy as a sacred craft — and may also represent the alchemist-philosopher who will enact the process the text describes.\n\nBarbara Obrist's foundational study of early alchemical imagery (1982) places this frontispiece among the earliest surviving attempts to give the abstract Mercurius of Hermetic philosophy a coherent visual form. Unlike the dragon-forms Mercurius takes later in the manuscript, here he is anthropomorphic and quasi-angelic, a liminal figure straddling the divine and chthonic. Marie-Louise von Franz's Jungian commentary reads the image as a representation of the collective unconscious in its mercurial aspect — the prima materia as psychic energy before differentiation. The blue serpent specifically recalls the Hermetic 'serpens Mercurii' that transforms base metal into gold through its venom and its healing."
+    },
+    {
+      "id": "aurora_consurgens_zbz__aurora-3r",
+      "work": "aurora_consurgens_zbz",
+      "file": "aurora_3r.jpg",
+      "folio": "fol. 3r",
+      "canvas": "zbz-Ms-Rh-0172_007.jp2",
+      "title": "Wisdom's House — Ravens, Philosophers, and the Lamp of Knowledge",
+      "tradition": "western_alchemy",
+      "era": "medieval",
+      "date": "c. 1420",
+      "region": "Western Europe",
+      "citations": [
+        {
+          "author": "Obrist, Barbara",
+          "work": "Les débuts de l'imagerie alchimique (XIVe–XVe siècles)",
+          "year": "1982",
+          "publisher": "Sycomore",
+          "location": "Paris",
+          "notes": "The Sapientia building her house (Prov. 9:1) is the organizing allegory of Aurora Consurgens Part I; Obrist analyzes how the miniature literalizes the text's biblical reading."
+        },
+        {
+          "author": "Von Franz, Marie-Louise",
+          "work": "Aurora Consurgens: A Document Attributed to Thomas Aquinas on the Problem of Opposites in Alchemy",
+          "year": "1966",
+          "publisher": "Bollingen/Pantheon",
+          "location": "New York",
+          "series": "Bollingen Series LXXVII",
+          "notes": "Von Franz's commentary on the Sapientia figure as the anima mundi seeking the alchemical 'house' (vessel); plates from this folio reproduced."
+        },
+        {
+          "author": "Szulakowska, Urszula",
+          "work": "The Sacrificial Body and the Day of Doom: Alchemy and Apocalyptic Discourse in the Protestant Reformation",
+          "year": "2006",
+          "publisher": "Brill",
+          "location": "Leiden",
+          "notes": "The Aurora Consurgens Sapientia allegory and its relationship to apocalyptic symbolism in subsequent Reformed alchemical thought."
+        },
+        {
+          "author": "Principe, Lawrence M.",
+          "work": "The Secrets of Alchemy",
+          "year": "2013",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago",
+          "notes": "Contextualizes the Aurora Consurgens within the broader tradition of allegorical alchemical literature; Wisdom's House as the philosophical vessel."
+        },
+        {
+          "author": "Rampling, Jennifer",
+          "work": "The Experimental Fire: Inventing English Alchemy, 1300–1700",
+          "year": "2020",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago",
+          "notes": "The Aurora Consurgens imagery influenced English alchemical writers; the Sapientia allegory was widely transmitted."
+        }
+      ],
+      "description": "Among the most complex and visually striking miniatures in the Aurora Consurgens, this large illustration illuminates the text's central allegorical conceit: Wisdom (Sapientia) building her house (Proverbs 9:1 — 'Sapientia aedificavit sibi domum'). The scene is crowded with activity across two architectural registers: at left, two or three robed figures — the disciples or apprentice philosophers — stand within a covered arcade, gesturing toward the central action; a tall oil lamp on a stand illuminates the courtyard, representing the 'lucerna' of philosophical knowledge; and at right, a venerable blue-robed bearded sage sits cross-legged on the ground, cradling a large decorative panel or book bearing multiple circular faces or medallions (the 'septem columnas' — Wisdom's seven pillars, here represented as philosophical icons or teacher-faces).\n\nWhat makes the miniature extraordinary is the roof of the building: it is completely covered with DARK BLUE BIRDS — ravens or crows — which flock so densely they obscure the rooftiles and crowd even the pointed steeple topped with a golden cross. More dark birds fly overhead and perch at every architectural edge. The association of ravens with the nigredo (blackening, first phase of the opus) is among the oldest commonplaces of alchemical iconography; here they overwhelm Wisdom's House, signaling that the work begins in darkness, putrefaction, and the dissolution of matter. The lamp in the courtyard burns against this corvine darkness, a sign of persisting intellectual light within the black phase.\n\nThe chapter illustrated ('De domo thamnia quia sapia fidams stiri petum' — On the House of Wisdom) treats the alchemical vessel itself as Wisdom's architectural project. The seated philosopher holding the panel of faces embodies the transmission of alchemical authority through the 'ancients' (Avicenna, Jabir, Aristotle, Plato) whose doctrine the text repeatedly invokes. Von Franz reads this scene as the 'temenos' — the sacred enclosure of the inner work — populated by the dark birds of unconscious contents (the shadow) seeking to enter the illuminated space of the opus."
+    },
+    {
+      "id": "aurora_consurgens_zbz__aurora-5v",
+      "work": "aurora_consurgens_zbz",
+      "file": "aurora_5v.jpg",
+      "folio": "fol. 5v",
+      "canvas": "zbz-Ms-Rh-0172_012.jp2",
+      "title": "Philosopher Walking — The Hidden King in the Vessel",
+      "tradition": "western_alchemy",
+      "era": "medieval",
+      "date": "c. 1420",
+      "region": "Western Europe",
+      "citations": [
+        {
+          "author": "Obrist, Barbara",
+          "work": "Les débuts de l'imagerie alchimique (XIVe–XVe siècles)",
+          "year": "1982",
+          "publisher": "Sycomore",
+          "location": "Paris",
+          "notes": "The concealed or 'hidden' king in the vessel is a key motif traced from the Aurora Consurgens through later alchemical iconography."
+        },
+        {
+          "author": "Von Franz, Marie-Louise",
+          "work": "Aurora Consurgens: A Document Attributed to Thomas Aquinas on the Problem of Opposites in Alchemy",
+          "year": "1966",
+          "publisher": "Bollingen/Pantheon",
+          "location": "New York",
+          "series": "Bollingen Series LXXVII",
+          "notes": "Commentary on the 'rex absconditus' (hidden king) motif in Aurora Consurgens; the king enclosed in the vessel awaiting liberation."
+        },
+        {
+          "author": "Principe, Lawrence M.",
+          "work": "The Secrets of Alchemy",
+          "year": "2013",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago",
+          "notes": "The motif of the enclosure of the royal principle in the heated vessel, common in medieval alchemical literature."
+        },
+        {
+          "author": "Rampling, Jennifer",
+          "work": "The Experimental Fire: Inventing English Alchemy, 1300–1700",
+          "year": "2020",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago"
+        },
+        {
+          "author": "Linden, Stanton J.",
+          "work": "Darke Hierogliphicks: Alchemy in English Literature from Chaucer to the Restoration",
+          "year": "1996",
+          "publisher": "University Press of Kentucky",
+          "location": "Lexington",
+          "notes": "The hidden-king motif in English literary alchemical tradition derived from continental sources including the Aurora Consurgens."
+        }
+      ],
+      "description": "Illuminating chapter 6 ('De celo et modo' — On Heaven and Method), this miniature presents an intimate outdoor scene: a young man in pale grey robes walks through a landscape of green hillocks beneath a vivid blue sky, with trees visible at the edges of the frame. He moves with contemplative purpose, perhaps representing the philosopher-seeker in the early stages of the opus. At the right edge of the miniature, a striking juxtaposition: a small CROWNED FIGURE visible only from the bust upward emerges from a RED VESSEL or POT that sits on a low fire, its flames visible at the base.\n\nThis image activates one of the central paradoxes of the Aurora Consurgens and medieval alchemy generally: the 'rex absconditus' — the hidden king enclosed within the philosophical vessel. The crowned figure in the retort is simultaneously the prima materia in its royal or solar aspect (the 'Regulus,' little king), the Philosopher's Stone gestating within the sealed vessel, and the 'Rex Solis' (King of the Sun) who will emerge after the alchemical process completes. The philosopher walking outside seems unaware of the king's presence — perhaps illustrating the text's theme that only the wise can perceive the concealed divinity within matter.\n\nThe juxtaposition of the open landscape (freedom, nature, macrocosm) with the enclosed vessel (confinement, art, microcosm) reflects the Aurora Consurgens' sustained engagement with the tension between natural process and artificial intervention. Obrist's analysis identifies this motif as foundational for the entire subsequent European tradition of the 'enclosed king' — a motif that would be taken up explicitly in the Rosarium Philosophorum (1550) and countless later printed alchemical treatises."
+    },
+    {
+      "id": "aurora_consurgens_zbz__aurora-7v",
+      "work": "aurora_consurgens_zbz",
+      "file": "aurora_7v.jpg",
+      "folio": "fol. 7v",
+      "canvas": "zbz-Ms-Rh-0172_016.jp2",
+      "title": "Coniunctio — Sol and Luna in the Garden of the Beloved",
+      "tradition": "western_alchemy",
+      "era": "medieval",
+      "date": "c. 1420",
+      "region": "Western Europe",
+      "citations": [
+        {
+          "author": "Obrist, Barbara",
+          "work": "Les débuts de l'imagerie alchimique (XIVe–XVe siècles)",
+          "year": "1982",
+          "publisher": "Sycomore",
+          "location": "Paris",
+          "notes": "The Sol-Luna coniunctio as garden scene in the Aurora Consurgens; Obrist identifies this as among the earliest pictorial representations of the alchemical marriage."
+        },
+        {
+          "author": "Von Franz, Marie-Louise",
+          "work": "Aurora Consurgens: A Document Attributed to Thomas Aquinas on the Problem of Opposites in Alchemy",
+          "year": "1966",
+          "publisher": "Bollingen/Pantheon",
+          "location": "New York",
+          "series": "Bollingen Series LXXVII",
+          "notes": "Detailed commentary on Parabola 7 ('De confabulacione dilecti ad dilectam') and its Song of Songs imagery; the coniunctio as the central transformation."
+        },
+        {
+          "author": "Szulakowska, Urszula",
+          "work": "The Alchemy of Light: Geometry and Optics in Late Renaissance Alchemical Illustration",
+          "year": "2000",
+          "publisher": "Brill",
+          "location": "Leiden",
+          "notes": "The garden coniunctio from the Aurora Consurgens and its legacy in the Rosarium Philosophorum tradition of paired Sol-Luna imagery."
+        },
+        {
+          "author": "Principe, Lawrence M.",
+          "work": "The Secrets of Alchemy",
+          "year": "2013",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago",
+          "notes": "The alchemical marriage of sulfur and mercury as the central operation of the philosophical work."
+        },
+        {
+          "author": "Rampling, Jennifer",
+          "work": "The Experimental Fire: Inventing English Alchemy, 1300–1700",
+          "year": "2020",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago"
+        }
+      ],
+      "description": "Illustrating Parabola 7 ('De confabulacione Ilsti ad dilectam' — On the Discourse of the Beloved with His Love, chapter 12), this miniature presents the alchemical coniunctio as a garden embrace — one of the earliest surviving pictorial representations of the sacred marriage of Sol and Luna in Western alchemy. Two figures recline together on a white cloth or bed laid upon the green earth beneath a vivid blue sky, their bodies entwined in an intimate embrace. Fruit trees bearing orange fruits (the 'golden apples' or the 'arbor philosophica') frame both sides of the scene; at left, a small group of white-robed attendants or disciples watch from a respectful distance, their heads bowed.\n\nThe text illustrated is a direct allegorization of the Song of Songs (Canticum Canticorum): 'Trahe me post te in odorem unguentorum tuorum' (Draw me after you in the scent of your ointments). In the Aurora Consurgens' interpretive framework — analyzed in depth by Von Franz and Obrist — the 'dilectus' (beloved, the male) is Sol, the sulfur principle, the gold; the 'dilecta' (the beloved female) is Luna, the mercury principle, the silver. Their garden union under the fruit trees literalizes the conjunctio oppositorum: the philosophical marriage by which opposites unite to produce the Philosopher's Stone.\n\nThis miniature is a direct visual ancestor of the Rosarium Philosophorum's famous series of ten Sol-Luna images (printed Frankfurt, 1550), where the royal pair's gradual approach, meeting, and union are illustrated through an extended sequence of courtly and erotic scenes. The Aurora Consurgens version is more compact — a single scene of achieved union — but contains all the symbolic elements: garden setting (the philosophers' paradise/vessel), fruit trees (the Arbor Philosophica bearing ripe fruits of the completed work), watching disciples (the community of practice), and the central embrace (the coniunctio itself). Szulakowska traces how this iconographic type influenced the entire tradition of paired Sol-Luna imagery in Renaissance and Baroque alchemy."
+    },
+    {
+      "id": "aurora_consurgens_zbz__aurora-10v",
+      "work": "aurora_consurgens_zbz",
+      "file": "aurora_10v.jpg",
+      "folio": "fol. 10v",
+      "canvas": "zbz-Ms-Rh-0172_022.jp2",
+      "title": "The Battle of Lion and Eagle — Fixed and Volatile Principles",
+      "tradition": "western_alchemy",
+      "era": "medieval",
+      "date": "c. 1420",
+      "region": "Western Europe",
+      "citations": [
+        {
+          "author": "Obrist, Barbara",
+          "work": "Les débuts de l'imagerie alchimique (XIVe–XVe siècles)",
+          "year": "1982",
+          "publisher": "Sycomore",
+          "location": "Paris",
+          "notes": "The lion-eagle combat as the earliest alchemical image type analyzed in depth by Obrist; the Aurora Consurgens version is among the most detailed medieval examples."
+        },
+        {
+          "author": "Von Franz, Marie-Louise",
+          "work": "Aurora Consurgens: A Document Attributed to Thomas Aquinas on the Problem of Opposites in Alchemy",
+          "year": "1966",
+          "publisher": "Bollingen/Pantheon",
+          "location": "New York",
+          "series": "Bollingen Series LXXVII",
+          "notes": "Commentary on the lion (Sol/fixed sulfur) and eagle (Mercury/volatile spirit) as the two primary principles whose conflict drives the alchemical process."
+        },
+        {
+          "author": "Szulakowska, Urszula",
+          "work": "The Alchemy of Light: Geometry and Optics in Late Renaissance Alchemical Illustration",
+          "year": "2000",
+          "publisher": "Brill",
+          "location": "Leiden",
+          "notes": "The lion-eagle motif as a persistent alchemical visual type from medieval illumination through Renaissance engraving."
+        },
+        {
+          "author": "Principe, Lawrence M.",
+          "work": "The Secrets of Alchemy",
+          "year": "2013",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago",
+          "notes": "Fixed versus volatile principles in medieval alchemical theory; the sulfur-mercury theory as background for this iconography."
+        },
+        {
+          "author": "Rampling, Jennifer",
+          "work": "The Experimental Fire: Inventing English Alchemy, 1300–1700",
+          "year": "2020",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago"
+        }
+      ],
+      "description": "A combat scene of rare visual energy, this miniature depicts the fundamental duality of the alchemical work as a battle between animals: at left, a DARK-HEADED RIDER in blue clothing, whose head is entirely black (the nigredo), mounts and struggles with a powerful WHITE LION; at right, a LIGHTER FIGURE rides a BLUE EAGLE whose breast bears a prominent golden solar disk. Between them, lion and eagle are locked in struggle, their bodies pressed together in the center of the pink-red ground.\n\nIn the medieval alchemical theory of sulfur and mercury — foundational to all Latin alchemy from Jabir through Paracelsus — the WHITE LION represents the fixed or sulfurous principle: gold, Sol, the earth element in matter, that which cannot be vaporized by ordinary heat. The BLUE EAGLE represents the volatile or mercurial principle: silver, Luna, the air element, that which rises as vapor during distillation. Their combat is the initial encounter of these two opposed principles within the alchemical vessel — a necessary conflict before unification.\n\nThe dark-headed rider on the lion is the alchemist-king in his nigredo phase: the Sol who has descended into blackness (the eclipse of the sun, mortification of the gold). The sun-medallion on the eagle's breast declares that even the volatile Mercury carries the solar quality — it is not purely lunar. This nuanced point — that Mercurius is both fixed and volatile, solar and lunar — is central to the Aurora Consurgens' teaching and to all subsequent Hermetic alchemy.\n\nObrist identifies this battle type as one of the most ancient alchemical visual conventions, with roots in Arabic alchemy through the Jabiran corpus, transmitted to Latin alchemists via translations and appearing in its most elaborate medieval forms in manuscripts like this one. The combat of fixed and volatile would be taken up directly in Michael Maier's Atalanta Fugiens (1618, Emblems V, VI, XXVII) and in the Mutus Liber (1677), tracing a continuous visual tradition from this c. 1420 miniature."
+    },
+    {
+      "id": "aurora_consurgens_zbz__aurora-13v",
+      "work": "aurora_consurgens_zbz",
+      "file": "aurora_13v.jpg",
+      "folio": "fol. 13v",
+      "canvas": "zbz-Ms-Rh-0172_028.jp2",
+      "title": "Two Philosophers Adoring the Red King — The Crowned Lapis",
+      "tradition": "western_alchemy",
+      "era": "medieval",
+      "date": "c. 1420",
+      "region": "Western Europe",
+      "citations": [
+        {
+          "author": "Obrist, Barbara",
+          "work": "Les débuts de l'imagerie alchimique (XIVe–XVe siècles)",
+          "year": "1982",
+          "publisher": "Sycomore",
+          "location": "Paris",
+          "notes": "The veneration of the completed Lapis by philosophical authorities is a key motif in Aurora Consurgens; Obrist traces it to Hermetic throne-room imagery."
+        },
+        {
+          "author": "Von Franz, Marie-Louise",
+          "work": "Aurora Consurgens: A Document Attributed to Thomas Aquinas on the Problem of Opposites in Alchemy",
+          "year": "1966",
+          "publisher": "Bollingen/Pantheon",
+          "location": "New York",
+          "series": "Bollingen Series LXXVII"
+        },
+        {
+          "author": "Principe, Lawrence M.",
+          "work": "The Secrets of Alchemy",
+          "year": "2013",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago",
+          "notes": "Authorities of alchemy (Jabir, Avicenna, Senior Zadith) as sources cited in Aurora Consurgens; the two flanking sages represent this tradition."
+        },
+        {
+          "author": "Rampling, Jennifer",
+          "work": "The Experimental Fire: Inventing English Alchemy, 1300–1700",
+          "year": "2020",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago"
+        },
+        {
+          "author": "Szulakowska, Urszula",
+          "work": "The Alchemy of Light: Geometry and Optics in Late Renaissance Alchemical Illustration",
+          "year": "2000",
+          "publisher": "Brill",
+          "location": "Leiden"
+        }
+      ],
+      "description": "Against a flat black ground — the darkness of the night of the work, or the nigredo in its absolute form — three figures compose a devotional tableau: at center, a CROWNED FIGURE in blue robes whose head is a vivid, almost luminous RED (representing the rubedo, the reddened completion of the work, or the blood-red tincture of the Philosopher's Stone itself); at left and right, two elderly BEARDED SAGES in pink and green respectively, each bowing forward to kiss or whisper to the central figure, their bodies curved in attitudes of reverence and intellectual submission.\n\nThe chapter below reads 'De processu naturali — C. 16' (On the Natural Process, chapter 16), and the text surrounding invokes the authorities of alchemy: 'Geber et medicorum' (Jabir and the physicians), 'Avicenna,' and the pseudo-Aristotelian 'Senior' (probably a reference to the 'Kitab al-mā' wa-l-ard' attributed to Muhammad ibn Umail / Senior Zadith). These are the two flanking sages: the philosophical tradition, both Arabic (Jabir, Avicenna, Senior) and Greek (Plato, Aristotle), bowing in acknowledgment to the completed work.\n\nThe RED HEAD of the central crowned figure is among the most vivid images in the manuscript: the rubedo (redness) is the final color-phase of the alchemical opus, when the matter has passed through black (nigredo), white (albedo), and yellow (citrinitas) to achieve the perfect red of the Philosopher's Stone or the Red Tincture (tinctura rubra). The crowned figure embodies this completion — not merely a king, but the alchemical medicine itself in its royal, perfected form. The two sages' obeisance declares that all philosophical authorities ultimately bow to the empirical fact of successful transmutation."
+    },
+    {
+      "id": "aurora_consurgens_zbz__aurora-14v",
+      "work": "aurora_consurgens_zbz",
+      "file": "aurora_14v.jpg",
+      "folio": "fol. 14v",
+      "canvas": "zbz-Ms-Rh-0172_030.jp2",
+      "title": "Mother Alchemy Healing the Nigredo King — Viriditas and Mortification",
+      "tradition": "western_alchemy",
+      "era": "medieval",
+      "date": "c. 1420",
+      "region": "Western Europe",
+      "citations": [
+        {
+          "author": "Obrist, Barbara",
+          "work": "Les débuts de l'imagerie alchimique (XIVe–XVe siècles)",
+          "year": "1982",
+          "publisher": "Sycomore",
+          "location": "Paris",
+          "notes": "The mortified Sol as a blackened king and the healing female figure (Sapientia/Luna) is a key scene type in the Aurora Consurgens; Obrist traces its visual genealogy."
+        },
+        {
+          "author": "Von Franz, Marie-Louise",
+          "work": "Aurora Consurgens: A Document Attributed to Thomas Aquinas on the Problem of Opposites in Alchemy",
+          "year": "1966",
+          "publisher": "Bollingen/Pantheon",
+          "location": "New York",
+          "series": "Bollingen Series LXXVII",
+          "notes": "Commentary on chapter 18 ('De matre Alchimia stilo paboloico') and the motif of Alchemy as mother-healer nursing the dying Sol back to life."
+        },
+        {
+          "author": "Szulakowska, Urszula",
+          "work": "The Sacrificial Body and the Day of Doom: Alchemy and Apocalyptic Discourse in the Protestant Reformation",
+          "year": "2006",
+          "publisher": "Brill",
+          "location": "Leiden",
+          "notes": "The mortified king as a figure of Christ's Passion in alchemical typology; Aurora Consurgens as a source for Protestant alchemical martyrology."
+        },
+        {
+          "author": "Principe, Lawrence M.",
+          "work": "The Secrets of Alchemy",
+          "year": "2013",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago",
+          "notes": "The mortification of metal (blackening, corrosion) as the necessary first operation; the Aurora Consurgens' allegorization of this as the death and resurrection of a king."
+        },
+        {
+          "author": "Rampling, Jennifer",
+          "work": "The Experimental Fire: Inventing English Alchemy, 1300–1700",
+          "year": "2020",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago"
+        }
+      ],
+      "description": "Chapter 18 of the Aurora Consurgens bears the heading 'De matre Alchimia stilo paboloico' — On the Mother Alchemy in Parabolic Style — and its miniature literalizes the chapter's governing conceit with stark visual power. Against a deep pink-red ground, two figures confront each other across the divide of life and death: at left, a CROWNED FIGURE whose body is entirely BLACKENED (the dark of the nigredo, the corpse of the mortified Sol) sits on a green cushion, its golden crown still gleaming above the blackened face and body; at right, a BLUE-ROBED WOMAN kneels and extends toward the dark king a branch of something GREEN — an herb, a plant, the viriditas (greenness) of alchemical renewal.\n\nThe blackened king is the prima materia in its most mortified state: gold that has been dissolved, corrupted, and reduced to a dead black mass through the action of the strong corrosives the text describes. Yet the golden crown persists — a sign that the royal or solar essence is not extinguished but only occluded, awaiting resurrection. The blue-robed woman is Sapientia (Wisdom/Alchemy as mother), who approaches the dying king with the herb of restoration. In the text's parabolic framework, this is 'Mother Alchemy' herself — the art that can resurrect what nature has killed.\n\nThe green herb is the viriditas, the greening life-principle that Hildegard of Bingen would have recognized: the vital force that restores dead matter to life. In practical alchemical terms, the herb may represent the philosophical salt or the 'green lion' — the corrosive vitriolic acid that paradoxically both kills and resurrects. Szulakowska traces how this image of the healing feminine principle nursing the mortified solar king became a template for Protestant alchemical interpretations of Christ's Passion as a chemical transformation: death → nigredo → resurrection → rubedo."
+    },
+    {
+      "id": "aurora_consurgens_zbz__aurora-17v",
+      "work": "aurora_consurgens_zbz",
+      "file": "aurora_17v.jpg",
+      "folio": "fol. 17v",
+      "canvas": "zbz-Ms-Rh-0172_036.jp2",
+      "title": "The Philosopher-King and Associates at the Athanor",
+      "tradition": "western_alchemy",
+      "era": "medieval",
+      "date": "c. 1420",
+      "region": "Western Europe",
+      "citations": [
+        {
+          "author": "Obrist, Barbara",
+          "work": "Les débuts de l'imagerie alchimique (XIVe–XVe siècles)",
+          "year": "1982",
+          "publisher": "Sycomore",
+          "location": "Paris",
+          "notes": "Laboratory scenes with philosopher-king and vessel in Aurora Consurgens; the balneum Mariae as a central alchemical apparatus."
+        },
+        {
+          "author": "Von Franz, Marie-Louise",
+          "work": "Aurora Consurgens: A Document Attributed to Thomas Aquinas on the Problem of Opposites in Alchemy",
+          "year": "1966",
+          "publisher": "Bollingen/Pantheon",
+          "location": "New York",
+          "series": "Bollingen Series LXXVII"
+        },
+        {
+          "author": "Principe, Lawrence M.",
+          "work": "The Secrets of Alchemy",
+          "year": "2013",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago",
+          "notes": "The balneum Mariae (water bath) as a practical heating apparatus; 'lac virginis' (virgin's milk) as an alchemical solvent; the balance of heat and moisture in alchemical practice."
+        },
+        {
+          "author": "Rampling, Jennifer",
+          "work": "The Experimental Fire: Inventing English Alchemy, 1300–1700",
+          "year": "2020",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago"
+        },
+        {
+          "author": "Szulakowska, Urszula",
+          "work": "The Alchemy of Light: Geometry and Optics in Late Renaissance Alchemical Illustration",
+          "year": "2000",
+          "publisher": "Brill",
+          "location": "Leiden"
+        }
+      ],
+      "description": "This miniature presents an intimate laboratory consultation. Against a black background (the darkness of the furnace room and the nigredo phase), three figures cluster around a tall alchemical vessel: at left, a CROWNED FIGURE in blue robes — the philosopher-king, embodying the authority of both royal patronage and philosophical knowledge — gestures toward the center; flanking him, two associates in pink and green robes gesture back, one with a raised hand suggesting explanation or instruction. To the right stands the dominant visual element: a large VESSEL or RETORT of pale grey ceramic, cylindrical with a wide body tapering to a neck, sitting directly on RED FLAMES visible below it.\n\nThe text above discusses operations central to the Aurora Consurgens' chemical teaching: 'lac virginis' (virgin's milk — a common alchemical name for mercury water or nitric acid solution), 'balneum' (the balneum Mariae, the water bath for gentle heating attributed to Mary the Prophetess/Maria Hebraea, one of the legendary founding figures of alchemy), 'aqua rubea' (red water — the fully tinctured mercurial solution), 'aurum' (gold), and 'coagulati' (coagulation, the fixing of the volatile). The conversation between the three figures represents the collaborative, dialogic nature of alchemical inquiry as the Aurora Consurgens presents it: the art is transmitted through consultation between authorities.\n\nThe king's blue robe picks up the color of the philosophical mercury; the pink and green robes of his associates suggest the albedo and viriditas phases. Their collective attention to the vessel — where the transformation is occurring out of sight — mirrors the text's insistence that philosophical understanding must accompany practical operation, that the wise alchemist 'reads' the vessel's contents through signs perceptible only to the trained eye. Principe identifies the balneum Mariae as a key practical innovation attributed to early alchemical tradition."
+    },
+    {
+      "id": "aurora_consurgens_zbz__aurora-21v",
+      "work": "aurora_consurgens_zbz",
+      "file": "aurora_21v.jpg",
+      "folio": "fol. 21v",
+      "canvas": "zbz-Ms-Rh-0172_044.jp2",
+      "title": "The Alchemical Dragon and Bird in the Vessel — Dual Serpents of Mercurius",
+      "tradition": "western_alchemy",
+      "era": "medieval",
+      "date": "c. 1420",
+      "region": "Western Europe",
+      "citations": [
+        {
+          "author": "Obrist, Barbara",
+          "work": "Les débuts de l'imagerie alchimique (XIVe–XVe siècles)",
+          "year": "1982",
+          "publisher": "Sycomore",
+          "location": "Paris",
+          "notes": "The dragon-in-vessel as a defining image of early Latin alchemical illustration; the bird perched on the dragon represents the volatile ascending above the fixed."
+        },
+        {
+          "author": "Von Franz, Marie-Louise",
+          "work": "Aurora Consurgens: A Document Attributed to Thomas Aquinas on the Problem of Opposites in Alchemy",
+          "year": "1966",
+          "publisher": "Bollingen/Pantheon",
+          "location": "New York",
+          "series": "Bollingen Series LXXVII",
+          "notes": "The coiled dragon in the vessel as prima materia; the bird as the 'spirit' of Mercurius ascending from the corrupted body."
+        },
+        {
+          "author": "Principe, Lawrence M.",
+          "work": "The Secrets of Alchemy",
+          "year": "2013",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago",
+          "notes": "Sal, tinctura, and calx metallorum in the alchemical tradition; the vessel as the site of transformation."
+        },
+        {
+          "author": "Szulakowska, Urszula",
+          "work": "The Alchemy of Light: Geometry and Optics in Late Renaissance Alchemical Illustration",
+          "year": "2000",
+          "publisher": "Brill",
+          "location": "Leiden",
+          "notes": "The dragon-vessel composite as a persistent type through Renaissance alchemical illustration."
+        },
+        {
+          "author": "Rampling, Jennifer",
+          "work": "The Experimental Fire: Inventing English Alchemy, 1300–1700",
+          "year": "2020",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago"
+        }
+      ],
+      "description": "A striking laboratory scene in two halves. On the left, an ALCHEMIST in a pink-white shirt and green hose bends over a wooden trestle bench, grinding or processing matter — the practical laborer of the opus, performing the physical operations the text describes. On the right, the philosophical counterpart: a large CERAMIC VESSEL (cucurbit or retort) of pale grey, sitting on a low stand with RED FLAMES visible beneath it, contains a dramatic vignette within its wide body. Inside the vessel, a BLUE DRAGON coils in an ouroboros-adjacent posture — its tail sweeping in an arc behind its haunches — while perched upon the dragon's body, a BLUE BIRD (raven or eagle) stands with wings slightly spread, as if triumphantly occupying the dragon's back.\n\nThe dragon enclosed in a heated vessel is the most fundamental image of Latin alchemical illustration, traceable to Arabic sources (the Jabiran corpus, the 'Book of Crates') and ultimately to Greek proto-alchemical texts. In the Aurora Consurgens' visual program, the dragon represents the prima materia or Mercurius in its most unregenerate form: the venomous, devouring principle of matter before philosophical transformation. The dragon-in-the-vessel shows this chaotic principle being enclosed and subjected to the controlled heat of the philosophical fire — the 'igne sapientiae' (fire of wisdom) that the text repeatedly invokes.\n\nThe BIRD perched on the dragon is equally significant: the bird (here likely a raven, given the blue-black coloring) represents the spirit or 'anima' of the matter — the volatile component that begins to separate and ascend as the dragon/body is heated. In alchemical symbolic logic: body (fixed, dragon) → spirit (volatile, bird) → the bird ascending = sublimation → eventual reintegration of body and spirit in the completed Stone. The text above discusses 'sal' (salt), 'calce metallorum' (metallic calx), and the authorities 'Galenus' (Galen) and 'Avicenna,' linking practical metallurgy to medical-philosophical knowledge."
+    },
+    {
+      "id": "aurora_consurgens_zbz__aurora-22v",
+      "work": "aurora_consurgens_zbz",
+      "file": "aurora_22v.jpg",
+      "folio": "fol. 22v",
+      "canvas": "zbz-Ms-Rh-0172_046.jp2",
+      "title": "Three Spirits Ascending Through Fire — Sublimation of Mercury",
+      "tradition": "western_alchemy",
+      "era": "medieval",
+      "date": "c. 1420",
+      "region": "Western Europe",
+      "citations": [
+        {
+          "author": "Obrist, Barbara",
+          "work": "Les débuts de l'imagerie alchimique (XIVe–XVe siècles)",
+          "year": "1982",
+          "publisher": "Sycomore",
+          "location": "Paris",
+          "notes": "Sublimation scenes in early alchemical manuscripts; rising figures as embodiments of the volatile spirits ascending through distillation."
+        },
+        {
+          "author": "Von Franz, Marie-Louise",
+          "work": "Aurora Consurgens: A Document Attributed to Thomas Aquinas on the Problem of Opposites in Alchemy",
+          "year": "1966",
+          "publisher": "Bollingen/Pantheon",
+          "location": "New York",
+          "series": "Bollingen Series LXXVII",
+          "notes": "The chapter 'De multiplici argento vivo' and the many transformations of quicksilver; the three ascending figures as Mercury in its three volatile forms."
+        },
+        {
+          "author": "Principe, Lawrence M.",
+          "work": "The Secrets of Alchemy",
+          "year": "2013",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago",
+          "notes": "Mercury (quicksilver) in medieval and early modern alchemy: its volatile character, its many names, and its role as the universal solvent and transformer."
+        },
+        {
+          "author": "Rampling, Jennifer",
+          "work": "The Experimental Fire: Inventing English Alchemy, 1300–1700",
+          "year": "2020",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago"
+        },
+        {
+          "author": "Szulakowska, Urszula",
+          "work": "The Alchemy of Light: Geometry and Optics in Late Renaissance Alchemical Illustration",
+          "year": "2000",
+          "publisher": "Brill",
+          "location": "Leiden"
+        }
+      ],
+      "description": "Illustrating chapter 26 ('De multiplici argento vino' — On the Many Forms of Quicksilver/Mercury), this miniature shows a scene of distillation rendered as an ascent of souls: against a vivid BLUE BACKGROUND representing the philosophical heavens or the upper atmosphere of the vessel, THREE SMALL NUDE FIGURES leap upward through orange-red FLAMES that sweep across the bottom of the frame. They appear to be escaping or ascending through fire, their postures animated with movement — stretching, reaching upward. At the right edge of the fire, a CROWNED CREATURE (possibly a crowned serpent or crowned dragon-head) appears amid the flames, still earth-bound.\n\nThe chapter's subject — the 'multiplici argento vivo' (many forms of quicksilver) — is precisely sublimation: mercury's remarkable property of transforming from liquid to vapor and back without apparent loss. The three ascending figures embody this volatility as human form: they are the 'spiritus' or volatile spirits of the matter rising through the flame. The number three invokes the Tria Prima (salt, sulfur, mercury) of the emerging Paracelsian tradition — or alternatively the three sublimations required to purify mercury according to standard alchemical practice.\n\nThe crowned creature remaining in the fire represents the 'fixed' or 'royal' principle — the incombustible solar gold — that does not rise even as the volatile spirits ascend. This contrast between the ascending volatile (symbolized by the three spirits) and the persisting fixed (the crowned creature) is the central tension the Aurora Consurgens tracks through all its parables: the art of alchemy is precisely the reconciliation of these two tendencies in a single perfected substance. The vividness of the blue sky above the ascending figures — clean, cerulean, unbounded — contrasts sharply with the engulfing red-orange fire below, creating a visual metaphor for the philosophical aspiration inherent in alchemical sublimation."
+    },
+    {
+      "id": "aurora_consurgens_zbz__aurora-25v",
+      "work": "aurora_consurgens_zbz",
+      "file": "aurora_25v.jpg",
+      "folio": "fol. 25v",
+      "canvas": "zbz-Ms-Rh-0172_052.jp2",
+      "title": "Three Laborers Kneading the Matter — The Color Stages of the Opus",
+      "tradition": "western_alchemy",
+      "era": "medieval",
+      "date": "c. 1420",
+      "region": "Western Europe",
+      "citations": [
+        {
+          "author": "Obrist, Barbara",
+          "work": "Les débuts de l'imagerie alchimique (XIVe–XVe siècles)",
+          "year": "1982",
+          "publisher": "Sycomore",
+          "location": "Paris",
+          "notes": "Workshop scenes in early alchemical manuscripts; the labor of grinding/kneading as an alchemical operation; the colors of the laborers' clothing as the color stages."
+        },
+        {
+          "author": "Von Franz, Marie-Louise",
+          "work": "Aurora Consurgens: A Document Attributed to Thomas Aquinas on the Problem of Opposites in Alchemy",
+          "year": "1966",
+          "publisher": "Bollingen/Pantheon",
+          "location": "New York",
+          "series": "Bollingen Series LXXVII",
+          "notes": "The four color stages (nigredo, albedo, citrinitas, rubedo) in the Aurora Consurgens text; this miniature visualizes their sequential transformation."
+        },
+        {
+          "author": "Principe, Lawrence M.",
+          "work": "The Secrets of Alchemy",
+          "year": "2013",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago",
+          "notes": "The medieval four-color system (black, white, yellow, red) as the operational framework for tracking the stages of the philosophical work."
+        },
+        {
+          "author": "Rampling, Jennifer",
+          "work": "The Experimental Fire: Inventing English Alchemy, 1300–1700",
+          "year": "2020",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago"
+        },
+        {
+          "author": "Szulakowska, Urszula",
+          "work": "The Alchemy of Light: Geometry and Optics in Late Renaissance Alchemical Illustration",
+          "year": "2000",
+          "publisher": "Brill",
+          "location": "Leiden"
+        }
+      ],
+      "description": "The text immediately above this miniature (in the chapter discussing 'rubeo, albo, citrino, album, rubeum' — red, white, yellow, white, red — i.e., the color stages of the opus) finds its visual counterpart in the colors of the three laborers depicted. Against a SOLID BLUE background and green ground, three figures work at a low wooden table or bench: at left, a FIGURE IN RED/ORANGE TUNIC with yellow hair bends over the surface, kneading, pressing, or grinding a substance with both hands; at center, a FIGURE IN GREEN does the same, their hands joined on the material; and at right, a THIRD FIGURE IN BLUE-GREY is seated or standing back, perhaps observing or processing materials differently.\n\nThe labor depicted is the physical processing of the alchemical matter — grinding, kneading, mixing — operations as fundamental to medieval alchemy as the heating and distilling. Many alchemical operations required extended physical processing: grinding minerals to fine powders, incorporating solvents into pastes, kneading amalgams. The three figures' COLORS (red, green, blue-grey) map directly onto three of the four classical color stages of the opus: rubedo (red), viriditas (green, often intermediate between white and yellow), and albedo (blue-white, lunar phase). The four-color system — nigredo, albedo, citrinitas, rubedo — is the primary organizing framework of medieval alchemical theory, and the Aurora Consurgens text discusses all four extensively.\n\nBy encoding the color stages in the laborers' clothing, the miniature artist performs a sophisticated visual commentary: the workers are not just processing matter, they ARE the matter in its successive transformations, embodying the color changes within their own persons. This technique of embedding the philosophical content in the visual details of apparently mundane scenes is characteristic of the Aurora Consurgens illuminations analyzed by Obrist as a unified program of alchemical pedagogy."
+    },
+    {
+      "id": "aurora_consurgens_zbz__aurora-27v",
+      "work": "aurora_consurgens_zbz",
+      "file": "aurora_27v.jpg",
+      "folio": "fol. 27v",
+      "canvas": "zbz-Ms-Rh-0172_056.jp2",
+      "title": "The Dragon Devouring Sol and Luna — Venenum Philosophorum",
+      "tradition": "western_alchemy",
+      "era": "medieval",
+      "date": "c. 1420",
+      "region": "Western Europe",
+      "citations": [
+        {
+          "author": "Obrist, Barbara",
+          "work": "Les débuts de l'imagerie alchimique (XIVe–XVe siècles)",
+          "year": "1982",
+          "publisher": "Sycomore",
+          "location": "Paris",
+          "notes": "The dragon as venenum — the corrosive poison that dissolves Sol and Luna into prima materia — is among the most analyzed images in early alchemical illustration; Obrist treats the Aurora Consurgens version as a key document."
+        },
+        {
+          "author": "Von Franz, Marie-Louise",
+          "work": "Aurora Consurgens: A Document Attributed to Thomas Aquinas on the Problem of Opposites in Alchemy",
+          "year": "1966",
+          "publisher": "Bollingen/Pantheon",
+          "location": "New York",
+          "series": "Bollingen Series LXXVII",
+          "notes": "Extensive commentary on the dragon as the devouring, dissolving prima materia; Sol and Luna dead or sleeping before the resurrection."
+        },
+        {
+          "author": "Szulakowska, Urszula",
+          "work": "The Alchemy of Light: Geometry and Optics in Late Renaissance Alchemical Illustration",
+          "year": "2000",
+          "publisher": "Brill",
+          "location": "Leiden",
+          "notes": "This dragon-devouring-Sol-Luna image type as an antecedent of the 'Green Lion' motif in Rosarium Philosophorum and later alchemical illustration."
+        },
+        {
+          "author": "Principe, Lawrence M.",
+          "work": "The Secrets of Alchemy",
+          "year": "2013",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago",
+          "notes": "The 'philosophical poison' (venenum philosophorum) as a corrosive agent that dissolves metals to prima materia; alum, vitriol, and philosophical mercury as candidates."
+        },
+        {
+          "author": "Rampling, Jennifer",
+          "work": "The Experimental Fire: Inventing English Alchemy, 1300–1700",
+          "year": "2020",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago"
+        }
+      ],
+      "description": "The largest miniature in the manuscript by file size, this image presents what is arguably the most dramatic scene in the entire Aurora Consurgens visual program: the dragon's assault on the royal pair. Against a pink-red ground in a green-bordered frame, a scene of philosophical catastrophe unfolds: at left, a large BLUE SERPENT-DRAGON with a crested, crowned head and coiling serpentine body rears up, holding what appears to be an axe or weapon, its posture menacing and triumphant; at center, TWO FIGURES lie horizontal and apparently dead or unconscious — one in WHITE (Luna) and one in ORANGE-RED (Sol), stretched out on the ground; to the right, a large ALCHEMICAL VESSEL (wide-necked cucurbit or retort) sits with small dark figures around it, perhaps representing the product of the dissolution.\n\nThis is the 'venenum philosophorum' — the philosophical poison, the corrosive mercury or vitriol that is first released upon Sol (gold) and Luna (silver) to dissolve them into prima materia. The dragon with the weapon represents this venomous, dissolving power in its most aggressive form: it is not merely serpentine but weaponized, an agent of intentional destruction. The dead Sol (orange) and Luna (white) figures are the dissolved metals — their individual natures extinguished, their fixed forms liquefied into the undifferentiated prima materia from which the Stone must be reconstructed.\n\nThe chapter heading visible above — 'De pluntis vocabulorum artis, C. 22' (On the Many Alchemical Terms, chapter 22) — suggests this miniature illustrates a passage cataloguing the many names of the corrosive agent: 'venenum,' 'dragon,' 'serpent,' 'acid,' 'solvent,' 'mercury.' This is precisely the Aurora Consurgens' pedagogical style: to provide multiple names for each substance, connecting Arabic, Greek, and biblical vocabularies. The visual equation of the dragon with the corrosive acid that kills gold and silver is the earliest example of what would become, by the 16th century, the iconic 'Green Lion devouring the Sun' of the Rosarium Philosophorum tradition."
+    },
+    {
+      "id": "aurora_consurgens_zbz__aurora-29v",
+      "work": "aurora_consurgens_zbz",
+      "file": "aurora_29v.jpg",
+      "folio": "fol. 29v",
+      "canvas": "zbz-Ms-Rh-0172_060.jp2",
+      "title": "The Blackened Sapientia — Dark Angel with Solar Radiance and Green Wings",
+      "tradition": "western_alchemy",
+      "era": "medieval",
+      "date": "c. 1420",
+      "region": "Western Europe",
+      "citations": [
+        {
+          "author": "Obrist, Barbara",
+          "work": "Les débuts de l'imagerie alchimique (XIVe–XVe siècles)",
+          "year": "1982",
+          "publisher": "Sycomore",
+          "location": "Paris",
+          "notes": "The blackened Sapientia with solar radiance is one of the defining images of the Aurora Consurgens iconographic program; Obrist's analysis of this image is foundational for all subsequent scholarship on the manuscript."
+        },
+        {
+          "author": "Von Franz, Marie-Louise",
+          "work": "Aurora Consurgens: A Document Attributed to Thomas Aquinas on the Problem of Opposites in Alchemy",
+          "year": "1966",
+          "publisher": "Bollingen/Pantheon",
+          "location": "New York",
+          "series": "Bollingen Series LXXVII",
+          "notes": "The 'nigra sed formosa' (black but beautiful) paradox from Song of Songs 1:5 as the animating text for this image; Sapientia in the nigredo phase as the 'Mulier amicta sole' of Revelation 12."
+        },
+        {
+          "author": "Szulakowska, Urszula",
+          "work": "The Sacrificial Body and the Day of Doom: Alchemy and Apocalyptic Discourse in the Protestant Reformation",
+          "year": "2006",
+          "publisher": "Brill",
+          "location": "Leiden",
+          "notes": "The black sun and the radiant darkness of Sapientia as the paradoxical image of the completed Stone; Szulakowska's treatment of the Aurora Consurgens in apocalyptic contexts is essential."
+        },
+        {
+          "author": "Principe, Lawrence M.",
+          "work": "The Secrets of Alchemy",
+          "year": "2013",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago",
+          "notes": "The Aurora Consurgens Sapientia figure as the most radical allegorization of alchemical process in medieval literature."
+        },
+        {
+          "author": "Rampling, Jennifer",
+          "work": "The Experimental Fire: Inventing English Alchemy, 1300–1700",
+          "year": "2020",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago",
+          "notes": "The influence of the Aurora Consurgens Sapientia imagery on later English alchemical iconography."
+        }
+      ],
+      "description": "Among the most extraordinary images in the history of Western alchemical art, this miniature gives visual form to the central paradox of the Aurora Consurgens: that the highest wisdom appears in its lowest, darkest form. Against a warm pink-red ground fills with GOLDEN RAYS emanating in all directions from behind the central figure — a halo or mandorla of solar light — stands an angelic being in WHITE ROBES whose FACE AND HANDS ARE ENTIRELY DARK/BLACKENED. Vast GREEN WINGS spread from the figure's shoulders. The figure stands on a DARK BLUE SPHERE — the earth or the world-globe — holding something to the chest (a vessel or heart-form). The total effect is one of overwhelming paradox: darkness wearing light, blackness wrapped in solar glory.\n\nThe Aurora Consurgens opens with a reading of Song of Songs 1:5 — 'Nigra sum sed formosa' (I am black but beautiful) — applied to the philosophical stone or to Sapientia (divine Wisdom) in her prima materia phase. The blackened face of the angelic Sapientia here directly illustrates this verse: she is the mulier of Song of Songs who is simultaneously dark and radiant, the lowest matter that contains the highest principle. The solar rays behind her declare that the nigredo does not extinguish the solar principle — it conceals it within the darkness, awaiting the alchemical resurrection.\n\nThe GREEN WINGS are the viriditas — the life-force, the principle of growth and renewal — that persists through and within the darkness. In Hildegardian theology (which the Aurora Consurgens likely knew), viriditas is the greening power of the Holy Spirit in nature; in alchemy, the green stage (viriditas) is the intermediate phase between black and white. The figure stands on the WORLD-SPHERE, evoking the Apocalyptic Woman of Revelation 12 ('the woman clothed with the sun, with the moon under her feet') — an identification that Obrist and Von Franz both explore as central to the Aurora Consurgens' theological ambition: the identification of the Philosopher's Stone with the divine Wisdom of Scripture.\n\nThis image is a touchstone for all subsequent scholarship on the Aurora Consurgens and on medieval alchemical mysticism. Its paradoxical combination of darkness and solar radiance, blackness and green vitality, cosmic scale (world-sphere) and intimate humanity (the robed figure's gentle posture), makes it one of the most conceptually sophisticated images in the medieval alchemical canon."
+    },
+    {
+      "id": "aurora_consurgens_zbz__aurora-34r",
+      "work": "aurora_consurgens_zbz",
+      "file": "aurora_34r.jpg",
+      "folio": "fol. 34r",
+      "canvas": "zbz-Ms-Rh-0172_069.jp2",
+      "title": "Winged Mercurius Wrestling the Serpent — Fixation of the Volatile",
+      "tradition": "western_alchemy",
+      "era": "medieval",
+      "date": "c. 1420",
+      "region": "Western Europe",
+      "citations": [
+        {
+          "author": "Obrist, Barbara",
+          "work": "Les débuts de l'imagerie alchimique (XIVe–XVe siècles)",
+          "year": "1982",
+          "publisher": "Sycomore",
+          "location": "Paris",
+          "notes": "The winged figure wrestling with the serpent as a visualization of fixatio — the alchemical operation of rendering volatile mercury non-volatile."
+        },
+        {
+          "author": "Von Franz, Marie-Louise",
+          "work": "Aurora Consurgens: A Document Attributed to Thomas Aquinas on the Problem of Opposites in Alchemy",
+          "year": "1966",
+          "publisher": "Bollingen/Pantheon",
+          "location": "New York",
+          "series": "Bollingen Series LXXVII"
+        },
+        {
+          "author": "Principe, Lawrence M.",
+          "work": "The Secrets of Alchemy",
+          "year": "2013",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago",
+          "notes": "Fixation as a key alchemical operation; the relationship between Mercurius as volatile spirit and the need to fix him in the vessel."
+        },
+        {
+          "author": "Rampling, Jennifer",
+          "work": "The Experimental Fire: Inventing English Alchemy, 1300–1700",
+          "year": "2020",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago"
+        },
+        {
+          "author": "Szulakowska, Urszula",
+          "work": "The Alchemy of Light: Geometry and Optics in Late Renaissance Alchemical Illustration",
+          "year": "2000",
+          "publisher": "Brill",
+          "location": "Leiden"
+        }
+      ],
+      "description": "A scene of energetic conflict between creature and serpent. In the left half of the frame, on a GREEN GROUND, a BLUE WINGED HUMANOID FIGURE with unusually striking PINK-RED WINGS wrestles with a BLUE SERPENT — the creature clasps the serpent with both hands, bending it into a curve, its posture suggesting controlled force rather than panic. In the right half, the familiar vessel and fire: a large pale ALCHEMICAL RETORT or cucurbit sits on orange-red flames, and within the vessel's body, a BLUE BIRD (raven or eagle) perches, as if waiting or nesting.\n\nThe dual coloring of the wings — blue body but pink-red wings — creates a remarkable chromatic paradox: this figure is BOTH mercurial (blue, volatile) AND solar-fiery (red wings, the phoenix coloring). This may represent Mercurius in his 'duplex' nature — simultaneously volatile and fixed, lunar and solar — which the Aurora Consurgens treats as the fundamental paradox of the philosophical subject. The serpent he wrestles is the 'volatile Mercurius' — the part of mercury that cannot be fixed without the philosophical operation of 'fixation.'\n\nThe operation being illustrated is FIXATIO — the philosophical fixing of the volatile. When mercury (quicksilver) is heated with sulfur and other agents, it becomes increasingly 'fixed' — less prone to evaporation, more stable — until it can no longer be driven off by ordinary fire. This was a central alchemical operation, and visualizing it as a winged figure wrestling a serpent captures perfectly the alchemical logic: the volatile (serpent) must be captured and subdued by the semi-volatile mediator (the winged figure) before it can be fully integrated into the fixed stone. The bird waiting in the vessel represents the 'spirit' that will eventually reconcile the two natures."
+    },
+    {
+      "id": "aurora_consurgens_zbz__aurora-36r",
+      "work": "aurora_consurgens_zbz",
+      "file": "aurora_36r.jpg",
+      "folio": "fol. 36r",
+      "canvas": "zbz-Ms-Rh-0172_073.jp2",
+      "title": "Two Figures Subduing the Green Dragon — Fixation by Conjoint Action",
+      "tradition": "western_alchemy",
+      "era": "medieval",
+      "date": "c. 1420",
+      "region": "Western Europe",
+      "citations": [
+        {
+          "author": "Obrist, Barbara",
+          "work": "Les débuts de l'imagerie alchimique (XIVe–XVe siècles)",
+          "year": "1982",
+          "publisher": "Sycomore",
+          "location": "Paris",
+          "notes": "The two-knight dragon-subduing scene as a variant of the fixation motif; the green dragon as vitriol or unrefined sulfur that must be subdued by both the solar and lunar principles working together."
+        },
+        {
+          "author": "Von Franz, Marie-Louise",
+          "work": "Aurora Consurgens: A Document Attributed to Thomas Aquinas on the Problem of Opposites in Alchemy",
+          "year": "1966",
+          "publisher": "Bollingen/Pantheon",
+          "location": "New York",
+          "series": "Bollingen Series LXXVII",
+          "notes": "The chapter 'De effectibus huius medicine' describes the effects of the completed Stone; the two figures subduing the dragon represent the completed coniunctio in action."
+        },
+        {
+          "author": "Szulakowska, Urszula",
+          "work": "The Alchemy of Light: Geometry and Optics in Late Renaissance Alchemical Illustration",
+          "year": "2000",
+          "publisher": "Brill",
+          "location": "Leiden",
+          "notes": "The dragon-subduing image type as a precursor of later Sol-and-Luna dragon-combat scenes in Renaissance alchemical emblem books."
+        },
+        {
+          "author": "Principe, Lawrence M.",
+          "work": "The Secrets of Alchemy",
+          "year": "2013",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago",
+          "notes": "The 'effects of this medicine' — transmutation of base metals — as the culminating practical claim of the Aurora Consurgens."
+        },
+        {
+          "author": "Rampling, Jennifer",
+          "work": "The Experimental Fire: Inventing English Alchemy, 1300–1700",
+          "year": "2020",
+          "publisher": "University of Chicago Press",
+          "location": "Chicago"
+        }
+      ],
+      "description": "Illustrating the chapter 'De effectibus huius medicine — C. oltinum' (On the Effects of This Medicine — final chapter), this miniature stages one of the most dramatic scenes in the Aurora Consurgens' visual program: the collaborative subduing of the dragon by two opposed figures, representing the climactic achievement of the philosophical work. Against a PINK-RED ground on a GREEN EARTH STRIP, a large GREEN DRAGON writhes at center, its wings partially spread and tail curling — powerful, dangerous, still resistant. At LEFT, a BLUE-CLAD KNIGHT OR SOLDIER grasps the dragon by the neck or head with both hands, pressing it down; at RIGHT, a DARK-SKINNED OR BLACKENED FIGURE in a white shirt attacks from the other side, also gripping the dragon's body.\n\nThe two combatants are the opposites reconciled by the completed philosophical work: the BLUE figure (Sol/King/Fixed Sulfur, the solar principle in its mature blue-robed form) and the DARK/BLACK FIGURE (the Ethiopian of alchemical tradition, embodying the nigredo as persisting element, or Luna/Mercury in the dark phase). Their CONJUNCTION in a single act — both subduing the same dragon together — is the visual realization of the coniunctio oppositorum achieved by the Philosopher's Stone. The Stone (or the philosophical medicine) is defined by its ability to unite what was previously opposed; here that union is shown in its practical effect: joint mastery over the chaotic matter.\n\nThe GREEN DRAGON specifically — not blue or red or black — represents the vitriol or the 'green lion' of alchemical tradition: the corrosive, vitreous sulfuric acid or the volatile mercurial principle in its most dangerous, uncontrolled form. Green is the color of raw matter, unrefined and unregenerated, full of potential but chaotic. That both the solar (blue) and nigredo (black) principles must cooperate to subdue it underlines the Aurora Consurgens' consistent teaching: the opus cannot be accomplished by a single principle alone but requires the reconciliation and collaboration of all opposing powers."
+    }
+  ]
+}

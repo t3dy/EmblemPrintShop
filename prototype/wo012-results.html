@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WO-012 Results — Edge-Assisted Segmentation Prototype | Emblem Print Shop</title>
+<style>
+:root {
+  --ink: #1a1208;
+  --paper: #f5edd8;
+  --paper2: #ede0c4;
+  --paper3: #fffdf8;
+  --accent: #8b3a1c;
+  --accent2: #5c6b2e;
+  --muted: #6b5d48;
+  --border: #c8b89a;
+  --sans: 'Georgia', serif;
+  --mono: 'Courier New', monospace;
+  --ok: #2f6b2f;
+  --bad: #8a1a1a;
+  --unclear: #8a6a1a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.65; }
+
+header {
+  background: linear-gradient(135deg, var(--ink) 0%, #2a1f1a 100%);
+  color: var(--paper); padding: 3.5rem 1.5rem 2.5rem;
+  border-bottom: 3px solid var(--accent);
+}
+header h1 { font-size: 2.1rem; margin-bottom: .4rem; font-weight: normal; }
+header .tagline { font-size: 1.02rem; opacity: .85; max-width: 780px; margin-bottom: 1.4rem; }
+header .stat-row { display: flex; gap: 2rem; flex-wrap: wrap; font-size: .88rem; }
+header .stat { display: flex; flex-direction: column; gap: .15rem; }
+header .stat-num { font-size: 1.25rem; font-weight: 600; color: #e0a06a; }
+
+nav {
+  background: var(--ink); color: var(--paper);
+  padding: .6rem 1.5rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;
+  font-size: .8rem; position: sticky; top: 0; z-index: 50; border-bottom: 1px solid var(--border);
+}
+nav a { color: var(--paper); text-decoration: none; opacity: .75; }
+nav a:hover { opacity: 1; }
+
+main { max-width: 1080px; margin: 0 auto; padding: 2.6rem 1.5rem 4rem; }
+
+.status-banner {
+  background: #fff3cd; border: 1px solid #e0c060; color: #6b4a00;
+  padding: .9rem 1.2rem; border-radius: 4px; margin-bottom: 2rem; font-size: .92rem;
+}
+.status-banner strong { color: #4a3200; }
+
+h2 { font-size: 1.4rem; margin: 2.6rem 0 .9rem; color: var(--accent); border-bottom: 2px solid var(--border); padding-bottom: .35rem; }
+h3 { font-size: 1.1rem; margin: 1.6rem 0 .6rem; }
+p { margin-bottom: .9rem; }
+.lede { font-size: 1.02rem; color: var(--muted); }
+
+.finding-box {
+  background: var(--paper2); border-left: 4px solid var(--accent);
+  padding: 1.1rem 1.3rem; border-radius: 4px; margin: 1rem 0 1.6rem;
+}
+.finding-box h4 { color: var(--accent); margin-bottom: .5rem; font-size: 1rem; }
+
+.run-card {
+  background: var(--paper3); border: 1px solid var(--border); border-radius: 6px;
+  padding: 1.4rem 1.5rem; margin: 1.2rem 0 2rem;
+}
+.run-card .run-label {
+  display: inline-block; font-size: .72rem; text-transform: uppercase; letter-spacing: .04em;
+  background: var(--ink); color: var(--paper); padding: .2rem .55rem; border-radius: 3px; margin-bottom: .6rem;
+}
+
+figure { margin: 1rem 0; }
+figure img { max-width: 100%; display: block; border: 1px solid var(--border); border-radius: 3px; }
+figcaption { font-size: .82rem; color: var(--muted); margin-top: .4rem; }
+
+.thumb-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1rem 0; }
+.thumb-grid figure { margin: 0; background: var(--paper3); border: 1px solid var(--border); border-radius: 4px; padding: .6rem; }
+.thumb-grid img { border: 1px solid var(--border); }
+
+table.verdicts { width: 100%; border-collapse: collapse; margin: 1rem 0 1.8rem; font-size: .9rem; background: var(--paper3); }
+table.verdicts th, table.verdicts td { border: 1px solid var(--border); padding: .55rem .7rem; text-align: left; vertical-align: top; }
+table.verdicts th { background: var(--paper2); }
+.v-helped { color: var(--ok); font-weight: 700; }
+.v-nohelp { color: var(--bad); font-weight: 700; }
+.v-unclear { color: var(--unclear); font-weight: 700; }
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4rem; }
+@media (max-width: 720px) { .two-col { grid-template-columns: 1fr; } }
+
+.mislabel-table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.8rem; font-size: .88rem; background: var(--paper3); }
+.mislabel-table th, .mislabel-table td { border: 1px solid var(--border); padding: .5rem .65rem; text-align: left; }
+.mislabel-table th { background: var(--paper2); }
+.mislabel-table td.wrong { color: var(--bad); }
+
+.chip { display: inline-block; font-size: .75rem; background: var(--paper2); border: 1px solid var(--border); border-radius: 10px; padding: .15rem .6rem; margin: 0 .3rem .3rem 0; }
+
+footer {
+  background: var(--ink); color: var(--paper); padding: 2rem 1.5rem; text-align: center;
+  margin-top: 3rem; font-size: .8rem;
+}
+footer a { color: var(--paper); opacity: .75; text-decoration: none; }
+footer a:hover { opacity: 1; }
+
+code { background: var(--paper2); padding: .1rem .3rem; border-radius: 2px; font-family: var(--mono); font-size: .85rem; }
+a { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>WO-012 — Edge-Assisted Segmentation Prototype</h1>
+  <p class="tagline">Does Canny edge detection improve on the existing GroundingDINO + SAM
+  segmentation pipeline for 17th-century engraved line art? Two independent runs tested it,
+  the same day, on two different Atalanta Fugiens plates — this page reports both, honestly,
+  including where the results disagree.</p>
+  <div class="stat-row">
+    <div class="stat"><span class="stat-num">2</span><span>independent prototype runs</span></div>
+    <div class="stat"><span class="stat-num">2</span><span>real plates tested</span></div>
+    <div class="stat"><span class="stat-num">6</span><span>refinement techniques compared</span></div>
+    <div class="stat"><span class="stat-num">4 of 4</span><span>sampled apparatus labels were wrong</span></div>
+    <div class="stat"><span class="stat-num">0</span><span>results marked human-confirmed</span></div>
+  </div>
+</header>
+
+<nav>
+  <strong style="color:#e0a06a">Navigate:</strong>
+  <a href="index.html">Home</a>
+  <a href="gallery.html">Visual Gallery</a>
+  <a href="emblems.html">Emblem Catalog</a>
+  <a href="motifs.html">Motif Atlas</a>
+  <a href="review.html">Review Queue</a>
+  <a href="wo012-results.html"><strong>WO-012 Results</strong></a>
+</nav>
+
+<main>
+
+<div class="status-banner">
+  <strong>Nothing on this page is human-confirmed.</strong> Every mask, label, and verdict
+  below is a machine proposal (<code>identificationStatus: "machine-proposed"</code>).
+  Nothing has been written into 3dprintlab's <code>app/data/extractions/</code> — that only
+  happens after a person accepts, renames, rejects, or marks a candidate ambiguous
+  (the follow-on work order, WO-013, is still blocked pending that decision).
+</div>
+
+<p class="lede">
+This prototype is the first concrete step in a larger investigation: whether extracted
+figures from these emblem plates — furnaces, vessels, retorts — can become provenanced
+evidence for <a href="https://github.com/t3dy/3dprintlab" target="_blank" rel="noopener">3dprintlab</a>'s
+parametric apparatus reconstructions, ghosted over a 3D model for silhouette comparison the
+same way a full plate already can be. Before any of that, the open technical question was
+narrower: does classical edge detection (Canny) actually improve mask quality on this kind of
+material, where SAM and GroundingDINO are trained overwhelmingly on natural photographs, not
+dense woodcut hatching? Two Claude Code sessions ran this experiment independently and in
+parallel on 2026-08-28, on two different plates, without coordinating — which turned out to be
+useful: where they agree, that's a more solid signal; where they disagree, the disagreement
+itself is informative.
+</p>
+
+<h2>Headline finding: the labels were wrong, not the geometry</h2>
+
+<p>Before either run could test edge detection meaningfully, both had to pick a real
+detection to test it on. Both picked entries already labeled as apparatus in the existing
+catalog. Both found the labels didn't match what the region actually shows.</p>
+
+<table class="mislabel-table">
+<thead><tr><th>Plate</th><th>Detector's raw label</th><th>Score</th><th>What the region actually shows</th></tr></thead>
+<tbody>
+<tr><td>Emblem XIII</td><td>"athanor"</td><td>0.420</td><td class="wrong">A seated nude river-god figure on a riverbank — no furnace in the plate at all</td></tr>
+<tr><td>Emblem XIII</td><td>"hourglass"</td><td>0.263</td><td class="wrong">A bearded human head (part of the same figure)</td></tr>
+<tr><td>Emblem VIII</td><td>"furnace"</td><td>0.387</td><td class="wrong">A cross-hatched vaulted corridor in perspective</td></tr>
+<tr><td>Emblem XVIII</td><td>"philosophical egg"</td><td>0.367</td><td>The furnace/flame opening &mdash; <strong>correct region, wrong name</strong> (this one salvageable by hand-correcting the label)</td></tr>
+<tr><td>Emblem XVIII</td><td>"athanor"</td><td>0.25&ndash;0.29</td><td class="wrong">The standing operator's torso &mdash; not apparatus at all</td></tr>
+<tr><td>Emblem XVIII</td><td>"hearth"</td><td>0.303</td><td class="wrong">Nearly the entire lower half of the plate (floor + vessel + dog) &mdash; too coarse to be a usable region</td></tr>
+</tbody>
+</table>
+
+<div class="finding-box">
+<h4>What this means in practice</h4>
+<p style="margin-bottom:0">Of six apparatus-category detections checked across both runs, only
+one bounded genuine apparatus &mdash; and even that one had the wrong name attached. This is a
+small, informal sample (not a systematic audit of the corpus), but it's a clean, direct
+confirmation that GroundingDINO's raw labels for apparatus categories on this corpus cannot be
+trusted without looking at the actual crop first. No apparatus-labeled entry should be treated
+as evidence until a human (or at minimum, a second look) has actually verified it depicts what
+it claims to.</p>
+</div>
+
+<h2>Run A &mdash; Emblem XIII, three techniques on three real detections</h2>
+
+<div class="run-card">
+<span class="run-label">Session A &middot; scripts/pipeline/edge_refiner.py</span>
+<p>Three existing detections from Atalanta Fugiens Emblem XIII, each tested against the one
+refinement most relevant to its likely failure mode. Baseline is the exact, unmodified
+<code>detector &rarr; segmenter &rarr; postprocessor</code> chain already in production.</p>
+
+<h3>Boundary snapping &mdash; the seated figure (mislabeled "athanor")</h3>
+<figure>
+  <img src="../assets/wo012_prototype/athanor_comparison.png" alt="Boundary snapping comparison on the seated figure detection" loading="lazy">
+  <figcaption>Baseline mask vs. boundary-snapped (adaptive Canny). IoU 0.954 &mdash; the change traces the drawn silhouette rather than fragmenting it.</figcaption>
+</figure>
+
+<h3>Contour-informed bridge severing &mdash; the tree/foliage detection</h3>
+<figure>
+  <img src="../assets/wo012_prototype/tree_comparison.png" alt="Bridge severing comparison on the tree detection" loading="lazy">
+  <figcaption>Baseline (fixed-radius severing) vs. contour-informed severing. IoU 0.999 &mdash; essentially no difference; this detection didn't contain a genuine touching-figure bridge to test the technique against.</figcaption>
+</figure>
+
+<h3>Erosion guard &mdash; the head detection (mislabeled "hourglass")</h3>
+<figure>
+  <img src="../assets/wo012_prototype/hourglass_comparison.png" alt="Erosion guard comparison on the head detection" loading="lazy">
+  <figcaption>Plain erosion vs. edge-guarded. IoU 0.889, the largest change of the three &mdash; but on a densely hatched engraved head, Canny finds edges almost everywhere, so the "protect near an edge" logic loses its selectivity and just broadly undoes the erosion.</figcaption>
+</figure>
+
+<h3>SAM automatic mask generation (unconditional proposals)</h3>
+<figure>
+  <img src="../assets/wo012_prototype/athanor_amg_overlay.png" alt="SAM AMG proposal overlay" loading="lazy">
+  <figcaption>32 raw proposals, 14 kept, 63.8s on CPU (coarse 16&times;16 grid, cropped region). Notably proposed a tight, well-fit region around just the <em>head</em> &mdash; a finer decomposition the prompt-driven baseline never asked for on its own &mdash; plus several individual background towers as separate proposals.</figcaption>
+</figure>
+
+<table class="verdicts">
+<thead><tr><th>Technique</th><th>&Delta; vs. baseline</th><th>Verdict</th></tr></thead>
+<tbody>
+<tr><td>Boundary snapping (plain &amp; adaptive Canny)</td><td>+3.4% / IoU 0.954 &middot; both Canny variants agreed (IoU 0.998 between them)</td><td class="v-helped">Helped, modestly</td></tr>
+<tr><td>Contour-informed bridge severing</td><td>+0.07% / IoU 0.999</td><td class="v-unclear">Inconclusive &mdash; wrong test case</td></tr>
+<tr><td>Erosion guard</td><td>+12.5% / IoU 0.889</td><td class="v-nohelp">Didn't achieve its intended effect</td></tr>
+<tr><td>SAM AMG</td><td>&mdash;</td><td class="v-helped">Complementary, different granularity</td></tr>
+</tbody>
+</table>
+
+<p><a href="../docs/EXTRACTION_PROTOTYPE_REPORT.md">Full report with methodology &rarr;</a></p>
+</div>
+
+<h2>Run B &mdash; Emblem XVIII, the furnace region</h2>
+
+<div class="run-card">
+<span class="run-label">Session B &middot; prototype/wo012_canny_prototype/</span>
+<p>A second, independent run picked Emblem XVIII's furnace/flame opening &mdash; a genuine,
+unambiguous furnace (flames, a blow-pipe, a domed hood) &mdash; after tracing the mislabeled
+"philosophical egg" detection back to the correct region by hand. All six variants segment the
+same bounding box.</p>
+
+<figure>
+  <img src="../prototype/wo012_canny_prototype/comparison_sheet.png" alt="Six-way comparison sheet: baseline, boundary snap (plain/adaptive), contour bridge cut, erosion guard, SAM2" loading="lazy">
+  <figcaption>All six variants on the same furnace-opening detection, Atalanta Fugiens Emblem XVIII.</figcaption>
+</figure>
+
+<table class="verdicts">
+<thead><tr><th>Technique</th><th>&Delta; vs. baseline</th><th>Verdict</th></tr></thead>
+<tbody>
+<tr><td>Boundary snap &mdash; plain Canny</td><td>+0.13%</td><td class="v-nohelp">Didn't help</td></tr>
+<tr><td>Boundary snap &mdash; adaptive Canny</td><td>+0.13%</td><td class="v-nohelp">Didn't help</td></tr>
+<tr><td>Contour-informed bridge cut</td><td>&minus;10.5%</td><td class="v-helped">Helped, partially &mdash; visibly trimmed a leak into the roof above the furnace mouth</td></tr>
+<tr><td>Erosion guard</td><td>+5.16%</td><td class="v-unclear">Unclear &mdash; growth looks like noise-following inflation, not a genuine thin-feature rescue</td></tr>
+<tr><td>SAM2-hiera-tiny (exploratory)</td><td>&minus;31.8%</td><td class="v-helped">Clearly helped, on this one image &mdash; but see caveat below</td></tr>
+</tbody>
+</table>
+
+<div class="finding-box" style="border-color:#e0c060;background:#fff8e6;">
+<h4 style="color:#7a4b00">SAM2 caveat</h4>
+<p style="margin-bottom:0"><code>facebook/sam2-hiera-tiny</code> loaded with a warning: the
+checkpoint is tagged <code>model_type=sam2_video</code> and was force-loaded into the
+static-image <code>Sam2Model</code> class. It produced a plausible, well-bounded mask on this
+one image &mdash; the mask stopped cleanly at the furnace mouth instead of leaking into the
+sloped roof &mdash; but this is exploratory, not a validated SAM2 integration. The correct
+image checkpoint needs confirming before this result can be trusted beyond "worth
+investigating further."</p>
+</div>
+
+<h3>Supporting evidence</h3>
+<figure>
+  <img src="../prototype/wo012_canny_prototype/comparison_sheet_supporting.png" alt="Edge maps and SAM AMG proposals for the furnace region" loading="lazy">
+  <figcaption>Plain and adaptive Canny edge maps, plus an unconditional SAM AMG pass (18 proposals, 24s on CPU) that cleanly outlined the vessel/basin and background architecture &mdash; but, notably, did <em>not</em> find the flame/furnace opening as a coherent region at all. The densest, most textured part of the plate is exactly where the coarse point grid missed.</figcaption>
+</figure>
+
+<p><a href="wo012_canny_prototype/review.html">Full review sheet with detection-by-detection disposition table &rarr;</a></p>
+</div>
+
+<h2>Where the two runs agree, and where they don't</h2>
+
+<div class="two-col">
+<div>
+<h3>Agree</h3>
+<ul style="margin-left:1.3rem">
+<li><strong>Plain vs. adaptive Canny made no real difference</strong> in either run, on either
+plate. The adaptive per-tile thresholding's extra complexity didn't earn its keep on these two
+scans specifically &mdash; both may simply have fairly even illumination. Worth re-testing on
+a plate with visibly uneven paper tone before ruling it out generally.</li>
+<li><strong>Erosion guard was unclear-to-unhelpful in both runs.</strong> Neither run saw it
+selectively rescue a genuine thin feature; both saw it inflate the mask in a way that reads as
+following edge noise rather than recovering real linework.</li>
+<li><strong>SAM AMG is complementary, not a replacement</strong>, in both runs &mdash; it finds
+real structure the prompt-driven pipeline doesn't ask for (a tight head region in Run A; the
+vessel silhouette and individual towers in Run B) but also misses regions the prompt-driven
+approach gets easily (Run B: AMG's coarse grid never found the flame region at all).</li>
+</ul>
+</div>
+<div>
+<h3>Disagree</h3>
+<ul style="margin-left:1.3rem">
+<li><strong>Contour-informed bridge severing</strong> was a clean no-op in Run A (IoU 0.999)
+but a real, visible improvement in Run B (&minus;10.5%, trimmed a genuine leak into
+background). The difference isn't a contradiction &mdash; Run A's test detection (foliage)
+apparently didn't contain the kind of touching-figure bridge the technique targets, while Run
+B's furnace mask genuinely did leak into the roof above it. <strong>The technique's value
+depends entirely on whether the test case exercises its actual failure mode</strong> &mdash;
+a reminder that one negative result on the wrong case says nothing about the technique itself.</li>
+<li><strong>Boundary snapping</strong> read as a modest positive in Run A (IoU 0.954, growth
+traced the drawn silhouette) but essentially flat in Run B (+0.13%). Plausibly because Run B's
+furnace region already had a tight baseline mask with little slack to snap toward.</li>
+</ul>
+</div>
+</div>
+
+<div class="finding-box">
+<h4>See also</h4>
+<p style="margin-bottom:0">3dprintlab has its own writeup of this same investigation, framed
+around its Judge panel and the five-state evidence model (Source / Machine proposal / Human
+confirmed / Reconstructed / Generated):
+<a href="https://t3dy.github.io/3dprinteralchemylab/extraction.html" target="_blank" rel="noopener">t3dy.github.io/3dprinteralchemylab/extraction.html</a>.
+This page is the CV-pipeline side of the same work &mdash; the raw comparison images and the
+per-technique verdicts live here.</p>
+</div>
+
+<h2>What's next</h2>
+<p>Neither run produced a verified apparatus candidate ready for WO-013 (the follow-on work
+order that wires one accepted extraction into 3dprintlab's Judge panel) without a further
+look &mdash; Run A's candidates were mislabeled figures, and Run B's furnace candidate is
+real but its best-performing variant (SAM2) carries an unresolved checkpoint caveat. The next
+concrete step is a human decision: pick a disposition for the Emblem XVIII furnace region
+(keep baseline, adopt the contour-cut variant, or adopt SAM2 pending its caveat), or look for
+a cleaner candidate elsewhere in the corpus.</p>
+
+<p style="margin-top:2rem">
+<span class="chip">GroundingDINO-tiny</span>
+<span class="chip">SAM ViT-Base</span>
+<span class="chip">SAM2-hiera-tiny (exploratory)</span>
+<span class="chip">Canny (plain + adaptive)</span>
+<span class="chip">CPU-only, no paid APIs</span>
+</p>
+
+</main>
+
+<footer>
+  <p>Emblem Print Shop &mdash; WO-012 prototype, run 2026-08-28. Part of a larger investigation
+  into whether extracted emblem figures can become provenanced evidence for
+  <a href="https://github.com/t3dy/3dprintlab" target="_blank" rel="noopener">3dprintlab</a>'s
+  parametric apparatus reconstructions.</p>
+  <p style="margin-top:.5rem;font-size:.75rem">
+    <a href="index.html">&larr; Back to Emblem Print Shop home</a> &middot;
+    <a href="../docs/EXTRACTION_PROTOTYPE_REPORT.md">Run A report</a> &middot;
+    <a href="wo012_canny_prototype/review.html">Run B review sheet</a>
+  </p>
+</footer>
+
+</body>
+</html>

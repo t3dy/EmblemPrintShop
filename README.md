@@ -1,6 +1,8 @@
 # Emblem Print Shop
 
-**→ [Visual Element Gallery](prototype/gallery.html)** &nbsp;|&nbsp; **→ [Complete Alchemical Images](prototype/alchemical-images/index.html)** &nbsp;|&nbsp; **→ [Emblem Catalog](prototype/emblems.html)** &nbsp;|&nbsp; **→ [Motif Atlas](prototype/motifs.html)**
+### ▶ [Open the live site](https://t3dy.github.io/EmblemPrintShop/)
+
+**→ [Visual Element Gallery](prototype/gallery.html)** &nbsp;|&nbsp; **→ [Complete Alchemical Images](prototype/alchemical-images/index.html)** &nbsp;|&nbsp; **→ [Emblem Catalog](prototype/emblems.html)** &nbsp;|&nbsp; **→ [Motif Atlas](prototype/motifs.html)** &nbsp;|&nbsp; **→ [WO-012 Results (new)](prototype/wo012-results.html)**
 
 ---
 
@@ -18,6 +20,7 @@ The practical goal is to turn existing catalog work into a searchable image-part
 | [`prototype/motifs.html`](prototype/motifs.html) | **Motif Atlas** — 65-entry controlled vocabulary with iconographic descriptions and alchemical valences. |
 | [`prototype/emblem.html`](prototype/emblem.html) | Single emblem viewer — object catalog, extracted crops, alchemical stage. |
 | [`prototype/review.html`](prototype/review.html) | Extraction review queue — approve or reject detected objects. |
+| [`prototype/wo012-results.html`](prototype/wo012-results.html) | **New** — WO-012 prototype results: does Canny edge detection improve SAM's masks on engraved line art? Two independent runs, six techniques, an honest agree/disagree writeup, and a headline finding that 4 of 4 sampled apparatus labels were wrong. |
 
 ## What Was Consolidated
 
@@ -99,6 +102,38 @@ python prototype/serve.py
 python -m pytest tests/ -v --ignore=tests/test_pipeline_integration.py  # fast (no model)
 python -m pytest tests/ -v  # full including model inference (~3 min)
 ```
+
+## WO-012: edge-assisted segmentation prototype (2026-08-28)
+
+New module `scripts/pipeline/edge_refiner.py` (unwired into the default pipeline —
+opt-in only) tests whether Canny edge detection can refine SAM's masks on dense
+engraved hatching, where the base pipeline's hand-tuned OpenCV morphology
+(`postprocessor.py`) already fights soft boundaries and background bleed. Two
+independent prototype runs tested this the same day, on two different Atalanta
+Fugiens plates, without coordinating in advance:
+
+- **[Results page](prototype/wo012-results.html)** — both runs side by side, with an
+  honest "where they agree / where they disagree" synthesis, not just a combined
+  highlight reel.
+- **[Full report (Run A)](docs/EXTRACTION_PROTOTYPE_REPORT.md)** — methodology,
+  per-technique verdicts, quantitative deltas (IoU, pixel counts).
+- **[Review sheet (Run B)](prototype/wo012_canny_prototype/review.html)** — the
+  furnace-region run, including an exploratory SAM2 comparison.
+
+**Headline finding, independent of the edge-detection question itself:** of six
+apparatus-category labels checked across both runs ("athanor," "furnace," "hourglass,"
+"philosophical egg," "hearth"), only one bounded genuine apparatus, and even that one
+had the wrong name attached. Apparatus-category labels from this pipeline should not
+be trusted as evidence without a visual check first — a finding now folded into
+[3dprintlab's `docs/EXTRACTION.md`](https://github.com/t3dy/3dprinteralchemylab/blob/main/docs/EXTRACTION.md),
+which has its own writeup of this work at
+**[t3dy.github.io/3dprinteralchemylab/extraction.html](https://t3dy.github.io/3dprinteralchemylab/extraction.html)**,
+framed around 3dprintlab's Judge panel and its five-state evidence model (Source /
+Machine proposal / Human confirmed / Reconstructed / Generated).
+
+Nothing from this prototype is marked human-confirmed anywhere. `requirements.txt`
+(new — this repo didn't have one before) captures the actually-installed environment
+for reproducibility.
 
 ## Corpus Status
 
