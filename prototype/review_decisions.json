@@ -3658,5 +3658,130 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
     "note": "Composite bundling three already-covered background elements."
+  },
+  "emblem-44__altar": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "The plate's central murder scene -- correctly located, more specific than the generic label.",
+    "corrected_label": "Osiris (crowned) lying in the coffin as two men close the lid"
+  },
+  "emblem-44__angel_child": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Same coffin scene as 'altar', different framing -- duplicate detection."
+  },
+  "emblem-44__arch": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "The plate's other central vignette, pictured directly per the discourse -- correctly located.",
+    "corrected_label": "Isis discovering the murdered, scattered body; Typhon fleeing with a dagger"
+  },
+  "emblem-44__book_anvil": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Overlaps the coffin scene already covered by 'altar' -- not a distinct object."
+  },
+  "emblem-44__castle_building_hous": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Bbox covers the entire plate -- a whole-scene detection, not a single object."
+  },
+  "emblem-44__crown": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Osiris's crowned head, already covered by 'altar' -- not a distinct object."
+  },
+  "emblem-44__cup": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Crop is a tiny, illegible fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-44__cup_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Crop is a tiny, illegible fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-44__cup_03": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Crop is a tiny, illegible fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-44__door": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Correct figure, more specific than the generic label.",
+    "corrected_label": "Isis walking near a wall"
+  },
+  "emblem-44__man_old_man": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Overlaps the coffin scene already covered by 'altar' -- not a distinct object."
+  },
+  "emblem-44__palm": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Crop is a tiny, illegible fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-44__person": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Plausible: one of the banqueters at the background table."
+  },
+  "emblem-44__person_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Bbox covers essentially the entire plate -- a whole-scene detection."
+  },
+  "emblem-44__person_03": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Plausible: a banqueter at the background table, may overlap 'person'."
+  },
+  "emblem-44__person_man_old_man": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Same coffin scene as 'altar', different framing -- duplicate detection."
+  },
+  "emblem-44__philosophical_egg": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Crop is a tiny, illegible fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-44__scepter": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Crop is a tiny, illegible curved fragment -- too small/unclear to confirm; may overlap 'sword_axe'; flagging as unsupported."
+  },
+  "emblem-44__sword_axe": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Crop is a tiny, illegible curved fragment -- may overlap 'scepter'; flagging as unsupported."
+  },
+  "emblem-44__sword_axe_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Crop is mostly blank hatching texture with a face at the edge -- too unclear to confirm a distinct object."
+  },
+  "emblem-44__wall": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Correctly located -- the discourse's ironic background detail.",
+    "corrected_label": "Banquet scene continuing in the background, oblivious to the murder"
+  },
+  "emblem-44__window": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Plausible: cross-hatched wall/window paneling."
+  },
+  "emblem-44__woman": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "This is a man, not a woman -- part of the coffin scene already covered by 'altar'.",
+    "corrected_label": "Turbaned man reaching toward the coffin"
+  },
+  "emblem-44__door+cup+window+person_man_old_man+man_old_man+arch+altar+an_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
+    "note": "Composite bundling eight separate elements -- each already exists as its own (corrected) individual entry."
   }
 }
