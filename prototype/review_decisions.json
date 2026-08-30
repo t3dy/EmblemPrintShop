@@ -1579,5 +1579,86 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T07:56:10.273335+00:00",
     "note": "Composite of the duplicate club crop and an illegible fragment -- both already covered elsewhere."
+  },
+  "emblem-20__old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:58:37.347311+00:00",
+    "note": "No old man is present -- a young nude woman, correctly located.",
+    "corrected_label": "Nude woman standing by the water (likely a Nature figure)"
+  },
+  "emblem-20__old_man_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:58:37.347311+00:00",
+    "note": "No old man -- a fully armored knight, face hidden behind his visor.",
+    "corrected_label": "Armored knight with a sword, facing the nude woman, beside a great fire"
+  },
+  "emblem-20__distillation_vessel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:58:37.347311+00:00",
+    "note": "A sword, not a distillation apparatus.",
+    "corrected_label": "Knight's sword, held toward the fire"
+  },
+  "emblem-20__distillation_vessel_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:58:37.347311+00:00",
+    "note": "Same sword-and-fire region as 'distillation_vessel', wider crop -- duplicate detection."
+  },
+  "emblem-20__anvil": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:58:37.347311+00:00",
+    "note": "No anvil -- the knight's visored helmet and round shield.",
+    "corrected_label": "Knight's helmet and shield"
+  },
+  "emblem-20__building_house": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:58:37.347311+00:00",
+    "note": "Correct: a bridge or mill house, background left."
+  },
+  "emblem-20__chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:58:37.347311+00:00",
+    "note": "No chimney -- a fortified castle silhouette in the background.",
+    "corrected_label": "Castle on a distant hill"
+  },
+  "emblem-20__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:58:37.347311+00:00",
+    "note": "No hearth -- bbox bundles the legs of both figures walking toward the fire, not a single object (the fire itself is already visible/covered in 'distillation_vessel')."
+  },
+  "emblem-20__hourglass": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:58:37.347311+00:00",
+    "note": "Crop is a tiny, illegible fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-20__palm": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:58:37.347311+00:00",
+    "note": "Crop is a tiny, illegible fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-20__palm_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:58:37.347311+00:00",
+    "note": "No palm -- a curved plate-armor detail at the shoulder.",
+    "corrected_label": "Knight's shoulder armor (pauldron)"
+  },
+  "emblem-20__sword_axe": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:58:37.347311+00:00",
+    "note": "Same region as 'distillation_vessel' -- duplicate detection of the sword."
+  },
+  "emblem-20__wall_window": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:58:37.347311+00:00",
+    "note": "Bbox covers the entire plate (both figures + fire + full background) -- a whole-scene detection, not a single object."
+  },
+  "emblem-20__building_house+sword_axe+old_man+hourglass+palm+chimney+hear_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:58:37.347311+00:00",
+    "note": "Composite bundling seven separate elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-20__distillation_vessel+distillation_vessel_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:58:37.347311+00:00",
+    "note": "Composite of two duplicate sword crops -- already covered by 'distillation_vessel'."
   }
 }
