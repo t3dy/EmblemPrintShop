@@ -3554,5 +3554,109 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T13:26:26.268995+00:00",
     "note": "Composite bundling four elements, including a duplicate 'cave' crop -- each already covered by its own individual entry."
+  },
+  "emblem-43__angel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
+    "note": "No angel -- correctly located, the banner reads 'EGO SVM NIGER ALBVS CITRINVS ET RVBEVS' (the four alchemical colors).",
+    "corrected_label": "Bird of prey (eagle or hawk) holding a scroll banner in its beak"
+  },
+  "emblem-43__hermaphrodite": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
+    "note": "No hermaphrodite -- likely the discourse's screech owl figure.",
+    "corrected_label": "Large dark bird (raven or owl) perched on rocky cliffs"
+  },
+  "emblem-43__philosophical_egg": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
+    "note": "Identical crop to 'hermaphrodite' -- duplicate detection of the perched bird."
+  },
+  "emblem-43__philosophical_egg_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
+    "note": "Identical crop to 'angel' -- duplicate detection of the bird holding the banner."
+  },
+  "emblem-43__vessel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
+    "note": "No vessel apparatus -- a rowboat, background detail.",
+    "corrected_label": "Small boat on the water (background)"
+  },
+  "emblem-43__distillation_vessel": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
+    "note": "Identical crop to 'vessel' -- duplicate detection of the same boat."
+  },
+  "emblem-43__arch": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
+    "note": "No arch -- the banner text naming the four alchemical color stages.",
+    "corrected_label": "Scroll banner reading 'EGO SVM NIGER ALBVS CITRINVS ET RVBEVS'"
+  },
+  "emblem-43__arch_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
+    "note": "Same banner as 'arch', a shorter segment -- duplicate detection."
+  },
+  "emblem-43__moon": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
+    "note": "Another segment of the same banner as 'arch' -- duplicate detection, no moon present."
+  },
+  "emblem-43__book": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
+    "note": "Plausible: rocky cliff landscape (the perched bird's wing is visible at the edge)."
+  },
+  "emblem-43__bridge": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
+    "note": "Plausible: distant fields/farmland."
+  },
+  "emblem-43__castle_building": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
+    "note": "Correct: a ruined castle/tower with a cottage."
+  },
+  "emblem-43__mountain_hill": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
+    "note": "Correct: the wider river-town panorama with mountains."
+  },
+  "emblem-43__star": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
+    "note": "Crop is a tiny, illegible branch/twig fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-43__tower_building_chimn": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
+    "note": "Plausible: a small castle tower, may overlap 'tower_chimney'."
+  },
+  "emblem-43__tower_chimney": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
+    "note": "Same small tower as 'tower_building_chimn' -- duplicate detection."
+  },
+  "emblem-43__vessel_02": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
+    "note": "Plausible: clouds/background texture."
+  },
+  "emblem-43__arch+arch_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
+    "note": "Composite of two duplicate banner-segment crops."
+  },
+  "emblem-43__castle_building+tower_building_chimn_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
+    "note": "Composite of two already-covered architecture elements."
+  },
+  "emblem-43__tower_chimney+mountain_hill+bridge_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:28:54.132579+00:00",
+    "note": "Composite bundling three already-covered background elements."
   }
 }
