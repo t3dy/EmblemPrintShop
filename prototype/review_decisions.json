@@ -3131,5 +3131,144 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T13:16:15.740859+00:00",
     "note": "Composite bundling six separate elements, including the rejected whole-scene 'cave' -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-39__castle": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Correct: the walled town skyline with a domed building and towers."
+  },
+  "emblem-39__castle_02": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Correct: a wider crop of the same town, including the serpent-tailed water figure at its edge."
+  },
+  "emblem-39__crown": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Same crowned king's head as 'person_04' -- redundant, not a distinct object."
+  },
+  "emblem-39__crown_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Crop is a tiny, illegible fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-39__cup": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Crop is a tiny, illegible square fragment, possibly related to the blank-headed figure covered by 'lamb_frog' -- flagging as unsupported."
+  },
+  "emblem-39__distillation_vessel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "No distillation apparatus -- a mermaid/river-deity-like figure with a coiled serpent lower body.",
+    "corrected_label": "Serpent-tailed figure rising from the water before the town"
+  },
+  "emblem-39__lamb_frog": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "No lamb or frog -- an unusual figure, possibly the defeated Sphinx or Laius, too ambiguous to assert a specific identity.",
+    "corrected_label": "Crawling nude figure with a blank tablet/mask where the head should be"
+  },
+  "emblem-39__man_old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Correct figure, more specific than the generic label; possibly Oedipus himself given the forehead mark.",
+    "corrected_label": "Bearded man with a mark on his forehead, cloaked, walking"
+  },
+  "emblem-39__person": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Correct figure, more specific than the generic label.",
+    "corrected_label": "Helmeted warrior with a sword, likely Oedipus"
+  },
+  "emblem-39__person_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Correct figure, more specific than the generic label.",
+    "corrected_label": "Elderly bearded man leaning on a cane, likely Laius"
+  },
+  "emblem-39__person_03": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "A different pose of the same warrior figure elsewhere in this multi-vignette plate -- not asserting exact duplication.",
+    "corrected_label": "Helmeted warrior seen from behind, cloak visible"
+  },
+  "emblem-39__person_04": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Correct figure, more specific than the generic label.",
+    "corrected_label": "Crowned king, likely Laius"
+  },
+  "emblem-39__person_05": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Correct figure, more specific than the generic label.",
+    "corrected_label": "Crowned queen, likely Jocasta"
+  },
+  "emblem-39__person_06": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Pictures the myth's 'conquering'/'killing' action directly.",
+    "corrected_label": "Figure striking down the crawling creature with a sword"
+  },
+  "emblem-39__philosophical_egg": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Identical crop to 'lamb_frog' -- duplicate detection, no egg present."
+  },
+  "emblem-39__sword_axe": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Correct: a sword blade, part of the warrior scene."
+  },
+  "emblem-39__sword_axe_torch": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Correct: the warrior with a sword at his hip, may overlap 'person'/'person_03'."
+  },
+  "emblem-39__tower_chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Crop is a tiny, illegible fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-39__tower_chimney_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Crop is a tiny, illegible spire fragment -- may overlap 'tower_chimney_03'; flagging as unsupported."
+  },
+  "emblem-39__tower_chimney_03": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Crop is a tiny, illegible spire fragment -- may overlap 'tower_chimney_02'; flagging as unsupported."
+  },
+  "emblem-39__wheel": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "The coiled end of the serpent-tail already covered by 'distillation_vessel' -- not a distinct wheel."
+  },
+  "emblem-39__castle+castle+tower_chimney+tower_chimney+tower_chimney+crow_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Composite bundling six architecture crops, all already covered individually."
+  },
+  "emblem-39__crown+person_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Composite bundling the redundant crown crop with the warrior figure."
+  },
+  "emblem-39__lamb_frog+cup_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Composite of two already-covered fragments."
+  },
+  "emblem-39__person+sword_axe_torch_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Composite bundling two already-covered figures."
+  },
+  "emblem-39__sword_axe+person+person_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
+    "note": "Composite bundling three already-covered elements."
   }
 }
