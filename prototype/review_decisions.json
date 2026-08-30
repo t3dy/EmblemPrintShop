@@ -1738,5 +1738,125 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T08:01:11.312921+00:00",
     "note": "Composite bundling five elements including the rejected 'bridge' (wall texture) -- each already exists as its own individual entry."
+  },
+  "emblem-22__staff": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "Correct figure -- the plate's title subject doing 'women's work' -- she isn't holding a staff.",
+    "corrected_label": "The woman, watching the cauldron cook"
+  },
+  "emblem-22__furnace": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "Bbox covers the entire plate -- a whole-scene detection, not a single object (though the scene does contain a real fire and cauldron)."
+  },
+  "emblem-22__cauldron": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "Correct: the large cauldron suspended over the fire."
+  },
+  "emblem-22__wheel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "No wheel -- a round wooden vessel, background right.",
+    "corrected_label": "Wooden tub or barrel (kitchen furnishing)"
+  },
+  "emblem-22__fish": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "Correct: fish in a wooden tub of water."
+  },
+  "emblem-22__building_house": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "Identical whole-plate crop to 'furnace' -- duplicate whole-scene detection."
+  },
+  "emblem-22__cauldron_anvil": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "Identical crop to 'fish' -- duplicate detection of the same fish tub."
+  },
+  "emblem-22__cauldron_mortar": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "Correct: a smaller round-bellied cooking pot with a lid, also on the fire."
+  },
+  "emblem-22__cup": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "A handled jug, more specific than 'cup', but in the same vessel family.",
+    "corrected_label": "Tall jug/ewer beside the fire"
+  },
+  "emblem-22__distillation_vessel": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "Identical crop to 'fish'/'cauldron_anvil' -- duplicate detection of the fish tub."
+  },
+  "emblem-22__flower": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "No flower -- a cat, correctly located.",
+    "corrected_label": "Cat (curled up on the kitchen floor)"
+  },
+  "emblem-22__moon": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "Faint circular texture, plausibly one of the plates on the kitchen shelf, but too low-contrast to confirm; flagging as low-confidence rather than a firm approval."
+  },
+  "emblem-22__palm": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "Crop is a tiny, illegible fragment (possibly part of the woman's hand) -- too small/unclear to confirm; flagging as unsupported."
+  },
+  "emblem-22__philosophical_egg": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "Identical crop to 'staff' -- duplicate detection of the woman, no egg present."
+  },
+  "emblem-22__skeleton": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "Identical whole-plate crop to 'furnace' -- duplicate whole-scene detection, no skeleton."
+  },
+  "emblem-22__star": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "Crop is a tiny, illegible dark mark -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-22__sword_axe": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "A long tapered tool, not a sword or axe.",
+    "corrected_label": "Bellows or fire-tending tool lying on the counter"
+  },
+  "emblem-22__window": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "Correct: a leaded glass window with a view outside."
+  },
+  "emblem-22__cauldron_anvil+fish_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "Composite of two duplicate crops of the same fish tub."
+  },
+  "emblem-22__skeleton+cauldron+cup_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "Composite bundling the whole-scene 'skeleton' crop with already-covered cauldron/jug -- redundant."
+  },
+  "emblem-22__staff+palm_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "Composite bundling the woman with an illegible fragment -- already covered by 'staff'."
+  },
+  "emblem-22__sword_axe+star_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "Composite bundling the counter tool with an illegible fragment -- already covered by 'sword_axe'."
+  },
+  "emblem-22__wheel+window+flower+building_house_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
+    "note": "Composite bundling four separate elements, including the rejected whole-scene 'building_house' -- each already exists as its own (corrected) individual entry."
   }
 }

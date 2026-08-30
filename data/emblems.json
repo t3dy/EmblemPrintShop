@@ -9168,56 +9168,6 @@
     "object_catalog": [
       {
         "type": "individual",
-        "object_stem": "building_house",
-        "label": "building house",
-        "motif_id": null,
-        "category": "architecture",
-        "detection_score": 0.28999093174934387,
-        "detection_bbox": [
-          21,
-          21,
-          1556,
-          1345
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\building_house_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\building_house_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\building_house_review.jpg",
-        "mask_pixel_count": 777308,
-        "qc_flag": "fragmented",
-        "qc_note": "4 disconnected components of meaningful size; 37% of the mask sits outside the largest blob -- likely noise or a second, unrelated figure dragged in from elsewhere on the plate."
-      },
-      {
-        "type": "individual",
-        "object_stem": "cauldron_anvil",
-        "label": "cauldron anvil",
-        "motif_id": null,
-        "category": "objects",
-        "detection_score": 0.3773731589317322,
-        "detection_bbox": [
-          1211,
-          1082,
-          334,
-          240
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\cauldron_anvil_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\cauldron_anvil_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\cauldron_anvil_review.jpg",
-        "mask_pixel_count": 69802,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
         "object_stem": "cauldron",
         "label": "cauldron",
         "motif_id": "vessel",
@@ -9237,12 +9187,13 @@
           "philosophical_egg",
           "hermetic_sealing"
         ],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\cauldron_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\cauldron_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\cauldron_review.jpg",
         "mask_pixel_count": 20141,
+        "reviewer_note": "Correct: the large cauldron suspended over the fire.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -9262,19 +9213,20 @@
         "appearance": null,
         "iconographic_meaning": null,
         "alchemical_valence": [],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\cauldron_mortar_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\cauldron_mortar_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\cauldron_mortar_review.jpg",
         "mask_pixel_count": 22981,
+        "reviewer_note": "Correct: a smaller round-bellied cooking pot with a lid, also on the fire.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
       {
         "type": "individual",
         "object_stem": "cup",
-        "label": "cup",
+        "label": "Tall jug/ewer beside the fire",
         "motif_id": "vessel",
         "category": "objects",
         "detection_score": 0.2623661458492279,
@@ -9292,37 +9244,14 @@
           "philosophical_egg",
           "hermetic_sealing"
         ],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\cup_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\cup_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\cup_review.jpg",
         "mask_pixel_count": 23735,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "distillation_vessel",
-        "label": "distillation vessel cauldron",
-        "motif_id": null,
-        "category": "equipment",
-        "detection_score": 0.3514251112937927,
-        "detection_bbox": [
-          1210,
-          1080,
-          335,
-          242
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\distillation_vessel_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\distillation_vessel_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\distillation_vessel_review.jpg",
-        "mask_pixel_count": 69833,
+        "original_label": "cup",
+        "reviewer_note": "A handled jug, more specific than 'cup', but in the same vessel family.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -9347,19 +9276,20 @@
           "dissolution",
           "water"
         ],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\fish_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\fish_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\fish_review.jpg",
         "mask_pixel_count": 24474,
+        "reviewer_note": "Correct: fish in a wooden tub of water.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
       {
         "type": "individual",
         "object_stem": "flower",
-        "label": "flower",
+        "label": "Cat (curled up on the kitchen floor)",
         "motif_id": "flower",
         "category": "plants",
         "detection_score": 0.30085301399230957,
@@ -9377,42 +9307,16 @@
           "medicine",
           "earth"
         ],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\flower_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\flower_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\flower_review.jpg",
         "mask_pixel_count": 20371,
+        "original_label": "flower",
+        "reviewer_note": "No flower -- a cat, correctly located.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "furnace",
-        "label": "furnace",
-        "motif_id": "furnace",
-        "category": "equipment",
-        "detection_score": 0.2616039216518402,
-        "detection_bbox": [
-          26,
-          23,
-          1547,
-          1341
-        ],
-        "appearance": "Domed or cylindrical tower-shaped furnace (athanor) with fire door at base and ash-pit below; in engravings rendered as a chimney-tower with visible fire at the opening; workshop hearth is a low open fireplace.",
-        "iconographic_meaning": "The source of alchemical heat: athanor, open furnace, or allegorical fire. Governs the timing of every stage; too much fire destroys the work. The athanor (from Arabic al-tannur, the bread oven) provides gentle sustained heat. Appears prominently in Maier, Mylius, and Khunrath laboratory scenes.",
-        "alchemical_valence": [
-          "fire",
-          "calcinatio",
-          "heat",
-          "operation"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\furnace_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\furnace_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\furnace_review.jpg",
-        "mask_pixel_count": 777308
       },
       {
         "type": "individual",
@@ -9435,12 +9339,13 @@
           "water",
           "mercury"
         ],
-        "review_status": "auto",
+        "review_status": "flagged",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\moon_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\moon_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\moon_review.jpg",
         "mask_pixel_count": 16609,
+        "reviewer_note": "Faint circular texture, plausibly one of the plates on the kitchen shelf, but too low-contrast to confirm; flagging as low-confidence rather than a firm approval.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -9465,79 +9370,20 @@
           "medicine",
           "earth"
         ],
-        "review_status": "auto",
+        "review_status": "flagged",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\palm_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\palm_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\palm_review.jpg",
         "mask_pixel_count": 6414,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "philosophical_egg",
-        "label": "philosophical egg",
-        "motif_id": "vessel",
-        "category": "equipment",
-        "detection_score": 0.2649092674255371,
-        "detection_bbox": [
-          887,
-          343,
-          308,
-          907
-        ],
-        "appearance": "Round-bellied glass or clay container with narrow neck; alembic has a domed cap with condensation tube; retort is a pear-shaped flask with long curved neck; the philosophical egg is oval and sealed; rendered with smooth outlines and light hatching to suggest translucency.",
-        "iconographic_meaning": "The sealed container in which the Work proceeds: glass flask, clay vessel, philosophical egg (ovum philosophicum), alembic, or retort. The vessel is the microcosmic world in which the opus is performed. It must be sealed hermetically to prevent the volatile spirit from escaping.",
-        "alchemical_valence": [
-          "opus",
-          "containment",
-          "philosophical_egg",
-          "hermetic_sealing"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\philosophical_egg_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\philosophical_egg_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\philosophical_egg_review.jpg",
-        "mask_pixel_count": 185010,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "skeleton",
-        "label": "skeleton",
-        "motif_id": "skeleton",
-        "category": "figures",
-        "detection_score": 0.303239643573761,
-        "detection_bbox": [
-          42,
-          105,
-          589,
-          784
-        ],
-        "appearance": "Articulated human skeleton, often carrying scythe or hourglass; may be dancing, enthroned, or lying prostrate; rendered in fine line-work showing each bone.",
-        "iconographic_meaning": "The skeleton figures mortificatio, the death of metals or the dissolution of the body prior to resurrection. Death is a necessary stage in the Work: the king must die before he can be resurrected as the philosophical gold. Found prominently in Atalanta Fugiens emblems 6, 8, and 32.",
-        "alchemical_valence": [
-          "mortificatio",
-          "nigredo",
-          "dissolution",
-          "putrefaction"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\skeleton_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\skeleton_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\skeleton_review.jpg",
-        "mask_pixel_count": 389449,
+        "reviewer_note": "Crop is a tiny, illegible fragment (possibly part of the woman's hand) -- too small/unclear to confirm; flagging as unsupported.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
       {
         "type": "individual",
         "object_stem": "staff",
-        "label": "staff",
+        "label": "The woman, watching the cauldron cook",
         "motif_id": "staff",
         "category": "objects",
         "detection_score": 0.4196596145629883,
@@ -9555,12 +9401,14 @@
           "unification",
           "caduceus"
         ],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\staff_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\staff_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\staff_review.jpg",
         "mask_pixel_count": 184840,
+        "original_label": "staff",
+        "reviewer_note": "Correct figure -- the plate's title subject doing 'women's work' -- she isn't holding a staff.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -9585,19 +9433,20 @@
           "macrocosm",
           "celestial"
         ],
-        "review_status": "auto",
+        "review_status": "flagged",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\star_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\star_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\star_review.jpg",
         "mask_pixel_count": 836,
+        "reviewer_note": "Crop is a tiny, illegible dark mark -- too small/unclear to confirm what it depicts; flagging as unsupported.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
       {
         "type": "individual",
         "object_stem": "sword_axe",
-        "label": "sword axe",
+        "label": "Bellows or fire-tending tool lying on the counter",
         "motif_id": null,
         "category": "objects",
         "detection_score": 0.4571363925933838,
@@ -9610,19 +9459,21 @@
         "appearance": null,
         "iconographic_meaning": null,
         "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\sword_axe_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\sword_axe_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\sword_axe_review.jpg",
         "mask_pixel_count": 45478,
+        "original_label": "sword axe",
+        "reviewer_note": "A long tapered tool, not a sword or axe.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
       {
         "type": "individual",
         "object_stem": "wheel",
-        "label": "wheel",
+        "label": "Wooden tub or barrel (kitchen furnishing)",
         "motif_id": "wheel",
         "category": "objects",
         "detection_score": 0.4409252405166626,
@@ -9640,12 +9491,14 @@
           "operations_sequence",
           "fire_control"
         ],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\wheel_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\wheel_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\wheel_review.jpg",
         "mask_pixel_count": 29788,
+        "original_label": "wheel",
+        "reviewer_note": "No wheel -- a round wooden vessel, background right.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -9670,155 +9523,22 @@
           "passage",
           "boundary"
         ],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\window_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\window_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\individual\\window_review.jpg",
         "mask_pixel_count": 131035,
+        "reviewer_note": "Correct: a leaded glass window with a view outside.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "composite",
-        "object_stem": "cauldron_anvil+fish_composite",
-        "label": "cauldron anvil + fish",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "fish"
-        ],
-        "category": "objects/animals",
-        "detection_score": null,
-        "detection_bbox": [
-          1210,
-          1087,
-          336,
-          237
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\composites\\cauldron_anvil+fish_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\composites\\cauldron_anvil+fish_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\composites\\cauldron_anvil+fish_composite_review.jpg",
-        "mask_pixel_count": 69802
-      },
-      {
-        "type": "composite",
-        "object_stem": "skeleton+cauldron+cup_composite",
-        "label": "skeleton + cauldron + cup",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "vessel",
-          "skeleton"
-        ],
-        "category": "figures/objects/objects",
-        "detection_score": null,
-        "detection_bbox": [
-          36,
-          86,
-          594,
-          872
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\composites\\skeleton+cauldron+cup_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\composites\\skeleton+cauldron+cup_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\composites\\skeleton+cauldron+cup_composite_review.jpg",
-        "mask_pixel_count": 408957
-      },
-      {
-        "type": "composite",
-        "object_stem": "staff+palm_composite",
-        "label": "staff + palm",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "flower",
-          "staff"
-        ],
-        "category": "objects/plants",
-        "detection_score": null,
-        "detection_bbox": [
-          907,
-          347,
-          288,
-          906
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\composites\\staff+palm_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\composites\\staff+palm_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\composites\\staff+palm_composite_review.jpg",
-        "mask_pixel_count": 184840
-      },
-      {
-        "type": "composite",
-        "object_stem": "sword_axe+star_composite",
-        "label": "sword axe + star",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "star"
-        ],
-        "category": "objects/landscape",
-        "detection_score": null,
-        "detection_bbox": [
-          619,
-          776,
-          302,
-          202
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\composites\\sword_axe+star_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\composites\\sword_axe+star_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\composites\\sword_axe+star_composite_review.jpg",
-        "mask_pixel_count": 45478
-      },
-      {
-        "type": "composite",
-        "object_stem": "wheel+window+flower+building_house_composite",
-        "label": "wheel + window + flower + building house",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "flower",
-          "wheel",
-          "gate"
-        ],
-        "category": "objects/architecture/plants/architecture",
-        "detection_score": null,
-        "detection_bbox": [
-          16,
-          10,
-          1569,
-          1370
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\composites\\wheel+window+flower+building_house_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\composites\\wheel+window+flower+building_house_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-22\\composites\\wheel+window+flower+building_house_composite_review.jpg",
-        "mask_pixel_count": 870398
       }
     ],
-    "object_catalog_extracted_at": "2026-06-06T17:18:02.570208",
+    "object_catalog_extracted_at": "2026-06-06T17:18:01.579938",
     "object_catalog_count": {
-      "individual": 18,
-      "composite": 5,
-      "total": 23
+      "individual": 12,
+      "composite": 0,
+      "total": 12
     }
   },
   {
