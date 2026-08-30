@@ -4165,5 +4165,91 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T13:43:09.783376+00:00",
     "note": "Composite bundling seven separate elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-50__philosophical_egg": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:45:34.956017+00:00",
+    "note": "The final emblem's central image, pictured directly per the discourse's 'double death' -- no egg is present.",
+    "corrected_label": "The winged dragon coiled around the woman, biting her neck, both entwined in death"
+  },
+  "emblem-50__wheel": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:45:34.956017+00:00",
+    "note": "Close-up of the dragon's coiled tail, already covered by 'philosophical_egg' -- not a distinct object."
+  },
+  "emblem-50__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:45:34.956017+00:00",
+    "note": "Same dragon-and-woman scene as 'philosophical_egg', different framing -- duplicate detection, no hearth present."
+  },
+  "emblem-50__pestle": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:45:34.956017+00:00",
+    "note": "Plausible: a tree beside the ruins, no pestle present but correctly isolates real foliage."
+  },
+  "emblem-50__arch": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:45:34.956017+00:00",
+    "note": "Correct: a ruined archway."
+  },
+  "emblem-50__bridge": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:45:34.956017+00:00",
+    "note": "Plausible: ruins wall, may overlap the dragon crop's edge."
+  },
+  "emblem-50__castle": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:45:34.956017+00:00",
+    "note": "Correct: twin obelisks with an arched base."
+  },
+  "emblem-50__castle_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:45:34.956017+00:00",
+    "note": "Identical crop to 'castle' -- duplicate detection of the same twin obelisks."
+  },
+  "emblem-50__castle_building_hous": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:45:34.956017+00:00",
+    "note": "Correct: the ruined aqueduct arches."
+  },
+  "emblem-50__flower": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:45:34.956017+00:00",
+    "note": "Correct: trees near the ruins."
+  },
+  "emblem-50__tower_chimney": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:45:34.956017+00:00",
+    "note": "Correct: a ruined tower."
+  },
+  "emblem-50__tower_chimney_02": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:45:34.956017+00:00",
+    "note": "Plausible: one of the obelisks, may overlap 'castle'."
+  },
+  "emblem-50__tower_chimney_03": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:45:34.956017+00:00",
+    "note": "Plausible: the other obelisk, tight crop, may overlap 'tower_chimney_02'."
+  },
+  "emblem-50__tree": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:45:34.956017+00:00",
+    "note": "Correct: trees near the ruins, may overlap 'flower'."
+  },
+  "emblem-50__wall": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:45:34.956017+00:00",
+    "note": "Plausible: the wide background panorama (clouds, ruins, obelisks)."
+  },
+  "emblem-50__wall_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:45:34.956017+00:00",
+    "note": "Bbox covers the entire plate (the final, complete composition) -- a whole-scene detection, already covered piece by piece by 'philosophical_egg' and the individual architecture entries."
+  },
+  "emblem-50__tower_chimney+arch+tree+castle_building_hous+hearth+tower_ch_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:45:34.956017+00:00",
+    "note": "Composite bundling six separate elements -- each already exists as its own (corrected) individual entry."
   }
 }
