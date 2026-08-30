@@ -991,5 +991,84 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T07:38:14.779774+00:00",
     "note": "Composite bundling the distant village architecture together -- each already exists as its own individual entry."
+  },
+  "emblem-07__eagle_peacock_bee": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:40:20.560335+00:00",
+    "note": "The plate's title motif -- correctly located; the generic category label ('eagle/peacock/bee') doesn't match any of the three, just the closest available animal prompt.",
+    "corrected_label": "Two birds at a nest atop a rocky pinnacle"
+  },
+  "emblem-07__person": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:40:20.560335+00:00",
+    "note": "No person present -- this crop is the bare rock face of the pinnacle itself, same region as 'philosophical_egg'."
+  },
+  "emblem-07__philosophical_egg": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:40:20.560335+00:00",
+    "note": "Identical crop to 'person' -- duplicate detection of the pinnacle's rock face, no egg present."
+  },
+  "emblem-07__mountain_hill": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:40:20.560335+00:00",
+    "note": "Correct: the distant mountain range, lake, and trees on the left side of the panorama."
+  },
+  "emblem-07__castle": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:40:20.560335+00:00",
+    "note": "Correct region -- a real town skyline, more specific than 'castle'.",
+    "corrected_label": "Distant walled town with church spires (background cityscape)"
+  },
+  "emblem-07__castle_building": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:40:20.560335+00:00",
+    "note": "Correct region -- the city's arched bridge and fortified round tower.",
+    "corrected_label": "City with a stone bridge and round tower (foreground of the panorama)"
+  },
+  "emblem-07__chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:40:20.560335+00:00",
+    "note": "No chimney -- a stone tower, likely overlapping the tower visible in 'castle_building''s wider crop.",
+    "corrected_label": "Round fortified tower with an arched base"
+  },
+  "emblem-07__sky": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:40:20.560335+00:00",
+    "note": "Plausible: open sky texture at the top of the plate (the birds' wingtips bleed in at the bottom edge, already covered by 'eagle_peacock_bee')."
+  },
+  "emblem-07__tower_chimney": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:40:20.560335+00:00",
+    "note": "Plausible: a church tower with a spire, part of the town skyline."
+  },
+  "emblem-07__tower_chimney_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:40:20.560335+00:00",
+    "note": "A plain tower/blockhouse, plausibly the same tower already covered by 'chimney' or 'castle_building' -- flagging possible overlap rather than asserting a distinct object."
+  },
+  "emblem-07__tree": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:40:20.560335+00:00",
+    "note": "Correct: foreground foliage at the base of the pinnacle."
+  },
+  "emblem-07__wall": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:40:20.560335+00:00",
+    "note": "Crop is a tiny, illegible sliver -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-07__window": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:40:20.560335+00:00",
+    "note": "Bbox covers the entire plate (whole-scene panorama) -- no window is depicted anywhere in this emblem."
+  },
+  "emblem-07__chimney+tower_chimney+castle_building+mountain_hill+window_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:40:20.560335+00:00",
+    "note": "Composite bundling five separate elements, including the rejected whole-scene 'window' -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-07__sky+wall+tower_chimney+person+castle_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:40:20.560335+00:00",
+    "note": "Composite bundling five separate elements, including the rejected 'person' (actually bare rock) -- each already exists as its own individual entry."
   }
 }
