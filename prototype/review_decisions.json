@@ -2309,5 +2309,109 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T12:50:49.589447+00:00",
     "note": "Composite bundling six elements, all duplicates of the gate and its spires -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-28__person": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
+    "note": "Correct figure, more specific than the generic label.",
+    "corrected_label": "King Duenech, crowned, reclining in the steam bath"
+  },
+  "emblem-28__philosophical_egg": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
+    "note": "Identical crop to 'person' -- duplicate detection, no egg present."
+  },
+  "emblem-28__furnace_altar": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
+    "note": "The emblem's genuine central apparatus -- correctly captured, though 'furnace_altar' undersells it as a bath structure.",
+    "corrected_label": "Wooden steam-bath box with the king seated inside, fire burning below, steam billowing on both sides"
+  },
+  "emblem-28__mortar": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
+    "note": "Same steam-bath box as 'furnace_altar' -- duplicate detection."
+  },
+  "emblem-28__ite_skeleton": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
+    "note": "No skeleton -- the steam issuing from the bath box.",
+    "corrected_label": "Billowing steam clouds beside the bath"
+  },
+  "emblem-28__sun_moon": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
+    "note": "No sun or moon -- a lit lamp inside the bath chamber.",
+    "corrected_label": "Small oil lamp with a radiant glow, mounted on the wall"
+  },
+  "emblem-28__castle": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
+    "note": "Correct: a domed church tower and city buildings, background."
+  },
+  "emblem-28__chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
+    "note": "Crop is a tiny, illegible sliver -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-28__chimney_02": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
+    "note": "Plausible: a stone chimney/tower structure, may overlap 'castle'."
+  },
+  "emblem-28__crown": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
+    "note": "Correct: the king's crowned head, close-up."
+  },
+  "emblem-28__forest": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
+    "note": "Correct: trees and bushes."
+  },
+  "emblem-28__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
+    "note": "The fire and base of the bath box plus steps -- already covered by 'furnace_altar'; not a distinct hearth."
+  },
+  "emblem-28__palm": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
+    "note": "Crop is a tiny, illegible textured fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-28__tower_chimney": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
+    "note": "Plausible: a domed tower building, background."
+  },
+  "emblem-28__tree": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
+    "note": "Correct: trees/shrubs, may overlap 'forest'."
+  },
+  "emblem-28__window": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
+    "note": "Crop is a dark, low-contrast rectangular texture -- too unclear to confirm a window specifically; flagging as low-confidence."
+  },
+  "emblem-28__forest+tree_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
+    "note": "Composite of two already-covered elements -- 'forest' and 'tree'."
+  },
+  "emblem-28__philosophical_egg+mortar_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
+    "note": "Composite of two already-rejected duplicate crops (the king and the bath box)."
+  },
+  "emblem-28__sun_moon+person+crown+hearth+furnace_altar+ite_skeleton+palm_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
+    "note": "Composite bundling seven separate elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-28__tower_chimney+chimney+castle_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
+    "note": "Composite bundling three already-covered background architecture elements."
   }
 }
