@@ -511,5 +511,114 @@
     "reviewed_at": "2026-08-30T02:24:43.012428+00:00",
     "note": "No vessel or apparatus is present -- foreground foliage, a thick coiling trunk or vine among berry clusters. Flagged rather than asserting a precise species/reading.",
     "corrected_label": "Gnarled tree trunk/vine with berries (foreground foliage)"
+  },
+  "emblem-02__person": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "The plate's central figure -- correctly located, but 'person' is generic for what is a specific, discourse-central personification.",
+    "corrected_label": "Earth personified, holding a world-globe that embraces a nursing mother and infant"
+  },
+  "emblem-02__child": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "A human infant from one of the plate's nursing scenes, but the crop is ambiguous about which (possibly one of the wolf-nursed twins) -- flagging rather than asserting a specific match."
+  },
+  "emblem-02__skeleton": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "No skeleton is present -- crop is a landscape panorama (hillside, trees, distant town, goat, edge of the globe), bundling several already-catalogued elements rather than isolating one."
+  },
+  "emblem-02__dog_lamb": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "Correct region and correct nursing-motif, wrong species -- it's a horned goat, not a dog, standing over a suckling infant.",
+    "corrected_label": "Goat nursing a human infant"
+  },
+  "emblem-02__lamb_frog": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "A recumbent wolf with two human infants suckling -- a Romulus-and-Remus-style scene, not a lamb or frog.",
+    "corrected_label": "Wolf nursing two infant twins"
+  },
+  "emblem-02__tree": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "Correct: a pine/cypress tree, foreground left."
+  },
+  "emblem-02__anvil": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "No anvil -- landscape hillside strip with distant town rooftops and a small stone bridge/arch, same background visible behind 'castle_building'."
+  },
+  "emblem-02__book": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "Bbox covers the entire plate (whole-scene detection), not a single object -- no book is depicted anywhere in this emblem."
+  },
+  "emblem-02__castle_building": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "Correct: the hillside town with a tower and a small stone bridge/arch, background left."
+  },
+  "emblem-02__cauldron": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "Four different category prompts (cauldron/distillation_vessel/egg_cauldron/philosophical_egg) all detected the identical crop region: the world-map globe held against the Earth-personification's chest, with a smaller nursing woman and infant embedded inside it. No apparatus of any kind is present -- keeping one entry, rejecting the other three as exact-region duplicates.",
+    "corrected_label": "World-globe embracing a nursing mother and infant"
+  },
+  "emblem-02__distillation_vessel": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "Four different category prompts (cauldron/distillation_vessel/egg_cauldron/philosophical_egg) all detected the identical crop region: the world-map globe held against the Earth-personification's chest, with a smaller nursing woman and infant embedded inside it. No apparatus of any kind is present -- keeping one entry, rejecting the other three as exact-region duplicates. (kept under 'cauldron')"
+  },
+  "emblem-02__egg_cauldron": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "Four different category prompts (cauldron/distillation_vessel/egg_cauldron/philosophical_egg) all detected the identical crop region: the world-map globe held against the Earth-personification's chest, with a smaller nursing woman and infant embedded inside it. No apparatus of any kind is present -- keeping one entry, rejecting the other three as exact-region duplicates. (kept under 'cauldron')"
+  },
+  "emblem-02__philosophical_egg": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "Four different category prompts (cauldron/distillation_vessel/egg_cauldron/philosophical_egg) all detected the identical crop region: the world-map globe held against the Earth-personification's chest, with a smaller nursing woman and infant embedded inside it. No apparatus of any kind is present -- keeping one entry, rejecting the other three as exact-region duplicates. (kept under 'cauldron')"
+  },
+  "emblem-02__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "Bbox is a wide panoramic strip bundling the goat-nursing infant (left) and the wolf-nursing twins (right) together as one region -- both are already separate catalog entries ('dog_lamb', 'lamb_frog'); no hearth is present anywhere."
+  },
+  "emblem-02__pestle": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "Same hillside/town-background region as 'anvil'/'castle_building' -- no pestle present."
+  },
+  "emblem-02__pestle_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "Identical crop to 'tree' -- duplicate detection of the pine tree, wrong label."
+  },
+  "emblem-02__retort_distillation": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "Identical crop to 'lamb_frog' (the wolf nursing twins) -- duplicate detection, wrong label."
+  },
+  "emblem-02__tower_chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "Crop is a narrow, low-resolution sliver -- too small/unclear to confirm what it depicts (possibly a fence post or building edge fragment); flagging as unsupported rather than asserting 'tower_chimney'."
+  },
+  "emblem-02__distillation_vessel+pestle_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "Composite bundling the globe-nursing scene with the pine tree -- both already exist as corrected individual entries ('cauldron', 'tree'); not a single coherent object."
+  },
+  "emblem-02__egg_cauldron+philosophical_egg_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "Composite of two duplicate detections of the same globe-nursing region -- already covered by 'cauldron'."
+  },
+  "emblem-02__person+cauldron+skeleton+dog_lamb+tree+lamb_frog+tower_chimn_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T02:27:14.291355+00:00",
+    "note": "Bundles seven separate elements (the whole plate, essentially) into one detection -- every component already exists as its own (corrected) individual entry."
   }
 }

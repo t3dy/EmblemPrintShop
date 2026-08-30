@@ -39,6 +39,23 @@ def load_human_corrections() -> dict:
     return {k: v["corrected_label"] for k, v in decisions.items() if v.get("corrected_label")}
 
 
+def load_rejected_keys() -> set:
+    """
+    Object stems a human reviewer marked "rejected" in review.html (duplicate
+    detections, whole-scene/bundled boxes, or regions with no real subject).
+    These must be dropped from the catalog entirely, not just relabeled --
+    otherwise manual review corrects the label text but the junk detection
+    still ships to the public gallery.
+    """
+    if not REVIEW_DECISIONS_PATH.exists():
+        return set()
+    try:
+        decisions = json.loads(REVIEW_DECISIONS_PATH.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, UnicodeDecodeError):
+        return set()
+    return {k for k, v in decisions.items() if v.get("status") == "rejected"}
+
+
 def resolve_path(path_str: str) -> Path:
     """Resolve a path that may be absolute or relative to the project root."""
     p = Path(path_str)
@@ -244,6 +261,7 @@ def load_comprehensive_extractions() -> list[dict]:
         return records
 
     corrections = load_human_corrections()
+    rejected = load_rejected_keys()
 
     for emblem_dir in sorted(EXTRACTED_ALL_DIR.iterdir()):
         if not emblem_dir.is_dir():
@@ -311,8 +329,10 @@ def load_comprehensive_extractions() -> list[dict]:
             # collapse all of them onto one review decision and one
             # correction. object_stem is unique by construction (it's the
             # actual filename each extraction wrote).
-            label_source = "vision-verified" if v else "detector"
             correction_key = f"{src_stem}__{obj_stem}"
+            if correction_key in rejected:
+                continue
+            label_source = "vision-verified" if v else "detector"
             display_label = label
             if correction_key in corrections:
                 display_label = corrections[correction_key]

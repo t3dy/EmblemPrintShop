@@ -227,6 +227,9 @@ def build_object_catalog_for_emblem(
                 continue
             object_stem = meta_path.stem[:-5] if meta_path.stem.endswith("_meta") else meta_path.stem
             key = f"{stem}__{object_stem}"
+            correction = corrections.get(key)
+            if correction and correction.get("status") == "rejected":
+                continue
             entry = _build_catalog_entry(
                 detection, motif_db, detection, entry_type=entry_type,
                 object_stem=object_stem,
