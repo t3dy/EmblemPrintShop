@@ -1426,5 +1426,77 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T07:50:55.348060+00:00",
     "note": "Composite bundling six elements, including the rejected whole-scene 'book_mirror' -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-16__angel_old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:53:51.495209+00:00",
+    "note": "The plate's title pair, correctly bounded. No angel or old man is present -- this is the exact case cited in the original bug report: an emblem of two lions with no 'lion' label anywhere in its detections.",
+    "corrected_label": "Two lions -- a winged lion (front) and a wingless lion (behind, partly visible)"
+  },
+  "emblem-16__distillation_vessel": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:53:51.495209+00:00",
+    "note": "Identical crop to 'angel_old_man' -- duplicate detection of the two lions."
+  },
+  "emblem-16__pestle": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:53:51.495209+00:00",
+    "note": "Three category prompts (pestle/spear_axe_wand_torch/sword_axe_torch) all detected the same region: the lions' curling tails ending in flame-like tufts. No pestle, spear, or sword is present -- keeping one entry, rejecting the other two as exact-region duplicates.",
+    "corrected_label": "The lions' curling tails, ending in flame-like tufts"
+  },
+  "emblem-16__spear_axe_wand_torch": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:53:51.495209+00:00",
+    "note": "Three category prompts (pestle/spear_axe_wand_torch/sword_axe_torch) all detected the same region: the lions' curling tails ending in flame-like tufts. No pestle, spear, or sword is present -- keeping one entry, rejecting the other two as exact-region duplicates. (kept under 'pestle')"
+  },
+  "emblem-16__sword_axe_torch": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:53:51.495209+00:00",
+    "note": "Three category prompts (pestle/spear_axe_wand_torch/sword_axe_torch) all detected the same region: the lions' curling tails ending in flame-like tufts. No pestle, spear, or sword is present -- keeping one entry, rejecting the other two as exact-region duplicates. (kept under 'pestle')"
+  },
+  "emblem-16__castle_building_hous": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:53:51.495209+00:00",
+    "note": "Correct: a ruined round tower with a small arched window."
+  },
+  "emblem-16__cave": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:53:51.495209+00:00",
+    "note": "No cave -- crop is empty sky/cloud texture."
+  },
+  "emblem-16__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:53:51.495209+00:00",
+    "note": "No hearth -- crop is the lions' legs and paws, already covered by 'angel_old_man'."
+  },
+  "emblem-16__tree": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:53:51.495209+00:00",
+    "note": "Correct: foliage/tree cluster."
+  },
+  "emblem-16__wall": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:53:51.495209+00:00",
+    "note": "Correct: a walled tower with an arched doorway, background left (the winged lion's head is also visible at the bottom edge, already covered by 'angel_old_man')."
+  },
+  "emblem-16__window": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:53:51.495209+00:00",
+    "note": "Crop is a tiny, illegible textured sliver -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-16__pestle+distillation_vessel_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:53:51.495209+00:00",
+    "note": "Composite of the tails crop and a duplicate two-lions crop -- both already covered by 'pestle' and 'angel_old_man'."
+  },
+  "emblem-16__spear_axe_wand_torch+wall+sword_axe_torch+angel_old_man+cave_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:53:51.495209+00:00",
+    "note": "Composite bundling five elements, several already duplicates -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-16__window+castle_building_hous_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:53:51.495209+00:00",
+    "note": "Composite bundling the illegible window fragment with the already-approved tower -- redundant."
   }
 }
