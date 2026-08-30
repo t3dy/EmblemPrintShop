@@ -17404,7 +17404,7 @@
       {
         "type": "individual",
         "object_stem": "angel_king_man_witch",
-        "label": "angel king man witch",
+        "label": "The wolf and dog biting each other",
         "motif_id": null,
         "category": "figures",
         "detection_score": 0.3858727514743805,
@@ -17417,12 +17417,14 @@
         "appearance": null,
         "iconographic_meaning": null,
         "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\angel_king_man_witch_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\angel_king_man_witch_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\angel_king_man_witch_review.jpg",
         "mask_pixel_count": 457780,
+        "original_label": "angel king man witch",
+        "reviewer_note": "The plate's title myth pictured directly -- no angel, king, man, or witch is present.",
         "qc_flag": "fragmented",
         "qc_note": "3 disconnected components of meaningful size; 13% of the mask sits outside the largest blob -- likely noise or a second, unrelated figure dragged in from elsewhere on the plate."
       },
@@ -17442,12 +17444,13 @@
         "appearance": null,
         "iconographic_meaning": null,
         "alchemical_valence": [],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\angel_old_man_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\angel_old_man_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\angel_old_man_review.jpg",
         "mask_pixel_count": 432676,
+        "reviewer_note": "Plausible: a different crop of the same wolf-and-dog combat, with more of the ruins background visible.",
         "qc_flag": "fragmented",
         "qc_note": "4 disconnected components of meaningful size; 7% of the mask sits outside the largest blob -- likely noise or a second, unrelated figure dragged in from elsewhere on the plate."
       },
@@ -17472,12 +17475,13 @@
           "passage",
           "stage_change"
         ],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\bridge_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\bridge_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\bridge_review.jpg",
         "mask_pixel_count": 12726,
+        "reviewer_note": "Plausible: a distant shoreline with sailboats.",
         "qc_flag": "fragmented",
         "qc_note": "3 disconnected components of meaningful size; 48% of the mask sits outside the largest blob -- likely noise or a second, unrelated figure dragged in from elsewhere on the plate."
       },
@@ -17502,12 +17506,13 @@
           "fortification",
           "mortificatio"
         ],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\castle_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\castle_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\castle_review.jpg",
         "mask_pixel_count": 92651,
+        "reviewer_note": "Correct: ruined castle/tower architecture.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -17532,154 +17537,15 @@
           "heat",
           "operation"
         ],
-        "review_status": "auto",
+        "review_status": "flagged",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\chimney_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\chimney_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\chimney_review.jpg",
         "mask_pixel_count": 8344,
+        "reviewer_note": "Crop is a tiny, illegible fragment -- too small/unclear to confirm what it depicts; flagging as unsupported.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "forest",
-        "label": "forest",
-        "motif_id": "earth",
-        "category": "landscape",
-        "detection_score": 0.3006053566932678,
-        "detection_bbox": [
-          31,
-          296,
-          252,
-          585
-        ],
-        "appearance": "Earth shown as hatched ground plane with grass tufts; forest as silhouetted trees in distance; volcanic mountains with plume at peak; soil as darkly hatched terrain.",
-        "iconographic_meaning": "The Earth (terra) is one of the four elements and the nurse of the Stone (emblem 1: Nutrix ejus terra est). The philosopher's earth is the fixed, receiving matter; the forest is the wild, uninitiated nature prior to cultivation. Volcanic earth signals subterranean fire and the union of fire with earth.",
-        "alchemical_valence": [
-          "terra",
-          "prima_materia",
-          "fixation",
-          "nurse"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\forest_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\forest_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\forest_review.jpg",
-        "mask_pixel_count": 126730,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (2 significant component(s), largest covers 98% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "hearth",
-        "label": "hearth",
-        "motif_id": "furnace",
-        "category": "architecture",
-        "detection_score": 0.3027991056442261,
-        "detection_bbox": [
-          23,
-          1143,
-          1544,
-          369
-        ],
-        "appearance": "Domed or cylindrical tower-shaped furnace (athanor) with fire door at base and ash-pit below; in engravings rendered as a chimney-tower with visible fire at the opening; workshop hearth is a low open fireplace.",
-        "iconographic_meaning": "The source of alchemical heat: athanor, open furnace, or allegorical fire. Governs the timing of every stage; too much fire destroys the work. The athanor (from Arabic al-tannur, the bread oven) provides gentle sustained heat. Appears prominently in Maier, Mylius, and Khunrath laboratory scenes.",
-        "alchemical_valence": [
-          "fire",
-          "calcinatio",
-          "heat",
-          "operation"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\hearth_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\hearth_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\hearth_review.jpg",
-        "mask_pixel_count": 408145,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "pestle",
-        "label": "pestle",
-        "motif_id": null,
-        "category": "equipment",
-        "detection_score": 0.2710092067718506,
-        "detection_bbox": [
-          486,
-          258,
-          201,
-          348
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\pestle_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\pestle_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\pestle_review.jpg",
-        "mask_pixel_count": 41926,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "philosophical_egg",
-        "label": "philosophical egg",
-        "motif_id": "vessel",
-        "category": "equipment",
-        "detection_score": 0.3756931722164154,
-        "detection_bbox": [
-          29,
-          553,
-          906,
-          886
-        ],
-        "appearance": "Round-bellied glass or clay container with narrow neck; alembic has a domed cap with condensation tube; retort is a pear-shaped flask with long curved neck; the philosophical egg is oval and sealed; rendered with smooth outlines and light hatching to suggest translucency.",
-        "iconographic_meaning": "The sealed container in which the Work proceeds: glass flask, clay vessel, philosophical egg (ovum philosophicum), alembic, or retort. The vessel is the microcosmic world in which the opus is performed. It must be sealed hermetically to prevent the volatile spirit from escaping.",
-        "alchemical_valence": [
-          "opus",
-          "containment",
-          "philosophical_egg",
-          "hermetic_sealing"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\philosophical_egg_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\philosophical_egg_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\philosophical_egg_review.jpg",
-        "mask_pixel_count": 457322,
-        "qc_flag": "fragmented",
-        "qc_note": "2 disconnected components of meaningful size; 12% of the mask sits outside the largest blob -- likely noise or a second, unrelated figure dragged in from elsewhere on the plate."
-      },
-      {
-        "type": "individual",
-        "object_stem": "retort_distillation",
-        "label": "retort distillation vessel",
-        "motif_id": null,
-        "category": "equipment",
-        "detection_score": 0.30103087425231934,
-        "detection_bbox": [
-          655,
-          468,
-          815,
-          944
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\retort_distillation_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\retort_distillation_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\retort_distillation_review.jpg",
-        "mask_pixel_count": 432950,
-        "qc_flag": "fragmented",
-        "qc_note": "4 disconnected components of meaningful size; 8% of the mask sits outside the largest blob -- likely noise or a second, unrelated figure dragged in from elsewhere on the plate."
       },
       {
         "type": "individual",
@@ -17702,12 +17568,13 @@
           "macrocosm",
           "celestial"
         ],
-        "review_status": "auto",
+        "review_status": "flagged",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\star_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\star_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\star_review.jpg",
         "mask_pixel_count": 4178,
+        "reviewer_note": "Crop is a tiny, illegible mark (possibly a bird silhouette) -- too small/unclear to confirm; flagging as unsupported.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -17732,12 +17599,13 @@
           "fire",
           "sulphur"
         ],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\sun_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\sun_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\sun_review.jpg",
         "mask_pixel_count": 17939,
+        "reviewer_note": "Correct: the radiant sun with birds flying, ruins in the background.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -17757,19 +17625,20 @@
         "appearance": null,
         "iconographic_meaning": null,
         "alchemical_valence": [],
-        "review_status": "auto",
+        "review_status": "flagged",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\sword_axe_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\sword_axe_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\sword_axe_review.jpg",
         "mask_pixel_count": 4671,
+        "reviewer_note": "Crop is a tiny, illegible bark-texture fragment -- too small/unclear to confirm; flagging as unsupported.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
       {
         "type": "individual",
         "object_stem": "tree",
-        "label": "tree",
+        "label": "A pine tree",
         "motif_id": "tree",
         "category": "plants",
         "detection_score": 0.41483378410339355,
@@ -17787,184 +17656,23 @@
           "arbor_philosophica",
           "coniunctio"
         ],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\tree_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\tree_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\tree_review.jpg",
         "mask_pixel_count": 41913,
+        "original_label": "tree",
+        "reviewer_note": "Three category prompts (tree/forest/pestle) all detected the identical crop: a single pine tree. No pestle is present -- keeping one entry, rejecting the other two as exact-region duplicates.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "wall",
-        "label": "wall",
-        "motif_id": "castle",
-        "category": "architecture",
-        "detection_score": 0.29463422298431396,
-        "detection_bbox": [
-          32,
-          33,
-          1538,
-          562
-        ],
-        "appearance": "Stone-built structure with crenellated battlements; towers shown as cylindrical or square pillars with arrow-slit windows; ruins with collapsed sections; domestic buildings with pitched roofs and small windows.",
-        "iconographic_meaning": "The castle or tower in emblems is the sealed vessel writ large: the philosophical fortress that contains and defends the Work. It is also the philosopher's tower of contemplation (ivory tower), and in mythological emblems the tower of Danaë (gold raining down = rubedo). Ruins signal the decay and mortificatio necessary before rebuilding.",
-        "alchemical_valence": [
-          "vessel_analogy",
-          "containment",
-          "fortification",
-          "mortificatio"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\wall_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\wall_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\individual\\wall_review.jpg",
-        "mask_pixel_count": 543039,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "composite",
-        "object_stem": "angel_king_man_witch+hearth+angel_old_man+bridge_composite",
-        "label": "angel king man witch + hearth + angel old man + bridge",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "furnace",
-          "bridge"
-        ],
-        "category": "figures/architecture/figures/architecture",
-        "detection_score": null,
-        "detection_bbox": [
-          24,
-          398,
-          1541,
-          1118
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\composites\\angel_king_man_witch+hearth+angel_old_man+bridge_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\composites\\angel_king_man_witch+hearth+angel_old_man+bridge_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\composites\\angel_king_man_witch+hearth+angel_old_man+bridge_composite_review.jpg",
-        "mask_pixel_count": 1069829
-      },
-      {
-        "type": "composite",
-        "object_stem": "castle+chimney_composite",
-        "label": "castle + chimney",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "furnace",
-          "castle"
-        ],
-        "category": "architecture/architecture",
-        "detection_score": null,
-        "detection_bbox": [
-          985,
-          270,
-          581,
-          353
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\composites\\castle+chimney_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\composites\\castle+chimney_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\composites\\castle+chimney_composite_review.jpg",
-        "mask_pixel_count": 93369
-      },
-      {
-        "type": "composite",
-        "object_stem": "forest+sword_axe_composite",
-        "label": "forest + sword axe",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "earth"
-        ],
-        "category": "landscape/objects",
-        "detection_score": null,
-        "detection_bbox": [
-          25,
-          298,
-          285,
-          674
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\composites\\forest+sword_axe_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\composites\\forest+sword_axe_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\composites\\forest+sword_axe_composite_review.jpg",
-        "mask_pixel_count": 128784
-      },
-      {
-        "type": "composite",
-        "object_stem": "philosophical_egg+retort_distillation_composite",
-        "label": "philosophical egg + retort distillation vessel",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "vessel"
-        ],
-        "category": "equipment/equipment",
-        "detection_score": null,
-        "detection_bbox": [
-          32,
-          398,
-          1525,
-          1054
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\composites\\philosophical_egg+retort_distillation_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\composites\\philosophical_egg+retort_distillation_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\composites\\philosophical_egg+retort_distillation_composite_review.jpg",
-        "mask_pixel_count": 744124
-      },
-      {
-        "type": "composite",
-        "object_stem": "star+wall_composite",
-        "label": "star + wall",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "star",
-          "castle"
-        ],
-        "category": "landscape/architecture",
-        "detection_score": null,
-        "detection_bbox": [
-          31,
-          29,
-          1537,
-          545
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\composites\\star+wall_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\composites\\star+wall_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-47\\composites\\star+wall_composite_review.jpg",
-        "mask_pixel_count": 543039
       }
     ],
-    "object_catalog_extracted_at": "2026-06-06T17:28:01.683917",
+    "object_catalog_extracted_at": "2026-06-04T00:19:30.320668",
     "object_catalog_count": {
-      "individual": 15,
-      "composite": 5,
-      "total": 20
+      "individual": 9,
+      "composite": 0,
+      "total": 9
     }
   },
   {

@@ -3899,5 +3899,107 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T13:35:56.801343+00:00",
     "note": "Composite bundling seven separate elements, including the rejected whole-scene 'wall_window' -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-47__angel_king_man_witch": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
+    "note": "The plate's title myth pictured directly -- no angel, king, man, or witch is present.",
+    "corrected_label": "The wolf and dog biting each other"
+  },
+  "emblem-47__angel_old_man": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
+    "note": "Plausible: a different crop of the same wolf-and-dog combat, with more of the ruins background visible."
+  },
+  "emblem-47__philosophical_egg": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
+    "note": "Identical crop to 'angel_king_man_witch' -- duplicate detection, no egg present."
+  },
+  "emblem-47__retort_distillation": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
+    "note": "Identical crop to 'angel_old_man' -- duplicate detection, no apparatus present."
+  },
+  "emblem-47__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
+    "note": "No hearth -- the wolf and dog's legs, already covered by 'angel_king_man_witch'."
+  },
+  "emblem-47__tree": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
+    "note": "Three category prompts (tree/forest/pestle) all detected the identical crop: a single pine tree. No pestle is present -- keeping one entry, rejecting the other two as exact-region duplicates.",
+    "corrected_label": "A pine tree"
+  },
+  "emblem-47__forest": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
+    "note": "Three category prompts (tree/forest/pestle) all detected the identical crop: a single pine tree. No pestle is present -- keeping one entry, rejecting the other two as exact-region duplicates. (kept under 'tree')"
+  },
+  "emblem-47__pestle": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
+    "note": "Three category prompts (tree/forest/pestle) all detected the identical crop: a single pine tree. No pestle is present -- keeping one entry, rejecting the other two as exact-region duplicates. (kept under 'tree')"
+  },
+  "emblem-47__bridge": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
+    "note": "Plausible: a distant shoreline with sailboats."
+  },
+  "emblem-47__castle": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
+    "note": "Correct: ruined castle/tower architecture."
+  },
+  "emblem-47__chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
+    "note": "Crop is a tiny, illegible fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-47__star": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
+    "note": "Crop is a tiny, illegible mark (possibly a bird silhouette) -- too small/unclear to confirm; flagging as unsupported."
+  },
+  "emblem-47__sun": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
+    "note": "Correct: the radiant sun with birds flying, ruins in the background."
+  },
+  "emblem-47__sword_axe": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
+    "note": "Crop is a tiny, illegible bark-texture fragment -- too small/unclear to confirm; flagging as unsupported."
+  },
+  "emblem-47__wall": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
+    "note": "Same sun/clouds/ruins panorama as 'sun' -- duplicate detection."
+  },
+  "emblem-47__angel_king_man_witch+hearth+angel_old_man+bridge_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
+    "note": "Composite bundling four elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-47__castle+chimney_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
+    "note": "Composite of the castle and an illegible fragment -- already covered by 'castle'."
+  },
+  "emblem-47__forest+sword_axe_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
+    "note": "Composite of the duplicate tree crop and an illegible fragment."
+  },
+  "emblem-47__philosophical_egg+retort_distillation_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
+    "note": "Composite of two already-rejected duplicate crops of the wolf and dog."
+  },
+  "emblem-47__star+wall_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
+    "note": "Composite of an illegible fragment and the duplicate sun/ruins panorama."
   }
 }
