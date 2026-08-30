@@ -1122,5 +1122,122 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T07:42:16.416384+00:00",
     "note": "Composite bundling eight separate elements, including two rejected whole-scene detections -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-10__altar": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "Correct: the stone altar/hearth block bearing the fire."
+  },
+  "emblem-10__building": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "Same Mercury-head-against-palazzo crop as 'castle_building_hous' -- duplicate detection."
+  },
+  "emblem-10__castle_building_hous": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "Correct region -- the courtyard's building backdrop -- more specific than the generic label.",
+    "corrected_label": "Grand palazzo facade (background), with Mercury's winged helmet in the foreground"
+  },
+  "emblem-10__crown_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "Same Mercury-head-against-palazzo crop as 'castle_building_hous' -- duplicate detection."
+  },
+  "emblem-10__crown": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "Crop is a tiny, illegible sliver -- possibly the winged helmet's wingtip, too small/unclear to confirm; flagging as unsupported."
+  },
+  "emblem-10__distillation_vessel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "Crop is a tiny, illegible sliver -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-10__gate": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "A multi-story facade with arcaded arches, not a single gate.",
+    "corrected_label": "Building facade with arched ground-floor openings"
+  },
+  "emblem-10__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "No hearth here -- bbox bundles the legs of all three figures (Mercury, the old man, seated Mercury) around the altar into one region; the altar itself is already separately covered by 'altar'."
+  },
+  "emblem-10__man_old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "Correct figure, more specific than the generic label.",
+    "corrected_label": "Bearded old man tending the fire"
+  },
+  "emblem-10__person_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "Bbox covers most of the plate's width, bundling Mercury, the old man, the fire, and seated Mercury together -- not a single object."
+  },
+  "emblem-10__person": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "Bundles two adjacent figures into one bbox; kept as the best available reference to Mercury, since no cleaner single-figure detection of him exists among the individual crops.",
+    "corrected_label": "Mercury (winged helmet, caduceus) walking beside the old man"
+  },
+  "emblem-10__pestle": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "Mercury's attribute staff, not a pestle.",
+    "corrected_label": "Caduceus (staff with two entwined serpents) held by Mercury"
+  },
+  "emblem-10__philosophical_egg_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "Crop is a tiny, illegible sliver -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-10__philosophical_egg": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "Identical crop to 'rodite_skeleton' -- duplicate detection of the billowing flames, no egg present."
+  },
+  "emblem-10__rodite_skeleton": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "No skeleton -- this is the fire itself, close-up.",
+    "corrected_label": "Tall billowing flames on the stone altar"
+  },
+  "emblem-10__star": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "Same caduceus close-up as 'pestle' -- duplicate detection, no star present."
+  },
+  "emblem-10__sword_axe": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "Same walking-pair composition as 'person' -- duplicate detection, no sword or axe present."
+  },
+  "emblem-10__sword_axe_torch": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "Seated Mercury with his caduceus -- same subject already covered by 'wolf_hare' (the figure) and 'pestle' (the caduceus); no sword, axe, or torch present."
+  },
+  "emblem-10__wolf_hare": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "No wolf or hare -- this is Mercury's second appearance in the plate, seated by the altar.",
+    "corrected_label": "Mercury seated beside the fire, holding his caduceus"
+  },
+  "emblem-10__altar+man_old_man+hearth+castle_building_hous+gate+person+pe_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "Composite bundling seven separate elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-10__distillation_vessel+philosophical_egg_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "Composite of two already-corrected/rejected fragments (an illegible sliver and the flames)."
+  },
+  "emblem-10__rodite_skeleton+star+wolf_hare+sword_axe_torch_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
+    "note": "Composite bundling the flames, seated Mercury, and duplicate caduceus crops -- each already exists as its own corrected individual entry."
   }
 }
