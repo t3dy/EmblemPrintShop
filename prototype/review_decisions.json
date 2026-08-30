@@ -4100,5 +4100,70 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T13:40:50.206147+00:00",
     "note": "Composite bundling seven separate elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-49__person": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:43:09.783376+00:00",
+    "note": "Correct: the full group scene around the bull hide, the plate's central myth."
+  },
+  "emblem-49__person_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:43:09.783376+00:00",
+    "note": "Correct figure, more specific than the generic label.",
+    "corrected_label": "Armored young man helping hold the bull hide"
+  },
+  "emblem-49__person_03": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:43:09.783376+00:00",
+    "note": "Two of the three gods -- correctly located, more specific than the generic label.",
+    "corrected_label": "Winged-sandaled figure and a helmeted warrior conversing"
+  },
+  "emblem-49__man_old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:43:09.783376+00:00",
+    "note": "The third figure in the trio -- correctly located.",
+    "corrected_label": "Turbaned bearded man holding the bull hide"
+  },
+  "emblem-49__man_old_man_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:43:09.783376+00:00",
+    "note": "Tighter crop of the same turbaned man's face, already covered by 'man_old_man' -- not a distinct object."
+  },
+  "emblem-49__woman": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:43:09.783376+00:00",
+    "note": "This is a man, not a woman.",
+    "corrected_label": "Young man with a bow and quiver (witness to the scene)"
+  },
+  "emblem-49__woman_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:43:09.783376+00:00",
+    "note": "Same figures as 'person_03' -- duplicate detection, no woman present."
+  },
+  "emblem-49__cauldron": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:43:09.783376+00:00",
+    "note": "The myth's central object -- no cauldron is present.",
+    "corrected_label": "The bull hide being held up, its head/face visible"
+  },
+  "emblem-49__cauldron_anvil": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:43:09.783376+00:00",
+    "note": "Identical crop to 'cauldron' -- duplicate detection of the same hide."
+  },
+  "emblem-49__crown": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:43:09.783376+00:00",
+    "note": "Another close-up of the turbaned man's head, already covered by 'man_old_man' -- not a distinct object."
+  },
+  "emblem-49__scepter": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:43:09.783376+00:00",
+    "note": "Crop is a tiny, illegible fragment near the hide, possibly a knife -- too small/unclear to confirm; flagging as unsupported."
+  },
+  "emblem-49__crown+cauldron_anvil+person+man_old_man+woman+person+man_old_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:43:09.783376+00:00",
+    "note": "Composite bundling seven separate elements -- each already exists as its own (corrected) individual entry."
   }
 }
