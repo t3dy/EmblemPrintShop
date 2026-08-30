@@ -1379,5 +1379,52 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T07:49:04.502114+00:00",
     "note": "Composite of the hoe-head crop and a duplicate of the flying figure -- both already covered by 'pestle' and 'person'."
+  },
+  "emblem-14__bear_ox": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:50:55.348060+00:00",
+    "note": "The plate's central figure -- correctly located; no bear or ox is present.",
+    "corrected_label": "Winged dragon coiled devouring its own tail (ouroboros)"
+  },
+  "emblem-14__distillation_vessel": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:50:55.348060+00:00",
+    "note": "Identical crop to 'bear_ox' -- duplicate detection of the dragon."
+  },
+  "emblem-14__cauldron": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:50:55.348060+00:00",
+    "note": "No cauldron -- a round masonry ruin, background right-of-center.",
+    "corrected_label": "Ruined round tower/silo (background ruins)"
+  },
+  "emblem-14__mortar": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:50:55.348060+00:00",
+    "note": "Identical crop to 'cauldron' -- duplicate detection of the same ruined tower."
+  },
+  "emblem-14__book_mirror": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:50:55.348060+00:00",
+    "note": "Bbox covers the entire plate (dragon + full ruins backdrop) -- a whole-scene detection, not a single object."
+  },
+  "emblem-14__arch": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:50:55.348060+00:00",
+    "note": "Correct: a stone arched ruin, foreground right."
+  },
+  "emblem-14__star": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:50:55.348060+00:00",
+    "note": "Crop is a tiny, illegible dark blob -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-14__wall": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:50:55.348060+00:00",
+    "note": "Correct: the full background ruins panorama (broken wall, round tower, trees, second ruined arch), excluding the dragon."
+  },
+  "emblem-14__arch+bear_ox+book_mirror+wall+star+cauldron_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:50:55.348060+00:00",
+    "note": "Composite bundling six elements, including the rejected whole-scene 'book_mirror' -- each already exists as its own (corrected) individual entry."
   }
 }
