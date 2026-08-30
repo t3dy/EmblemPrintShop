@@ -477,5 +477,39 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T00:28:12.496313+00:00",
     "note": "Bbox bundles the coin-basin, the operator's legs, and the dog together (width 1538 of ~1600px) -- not a single coherent element."
+  },
+  "emblem-01__old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T02:24:43.012428+00:00",
+    "note": "Matches the discourse directly: the substance 'conceived in air' before being nursed by earth, pictured here as gestation. 'Old man' undersells the figure -- he's the central wind/spirit figure of the plate, not a generic elder.",
+    "corrected_label": "Bearded wind-spirit exhaling billowing clouds, embryo visible at his belly"
+  },
+  "emblem-01__bridge": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T02:24:43.012428+00:00",
+    "note": "Hedge/tree-line horizon in the background -- no bridge is depicted here."
+  },
+  "emblem-01__castle": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T02:24:43.012428+00:00",
+    "note": "Correct: the walled hillside town with a castle/tower, background left."
+  },
+  "emblem-01__mirror": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T02:24:43.012428+00:00",
+    "note": "No mirror is present -- this crop is the billowing cloak, with a ruined tower and sailboat visible in the background.",
+    "corrected_label": "Cloak/drapery wrapped around the figure's legs"
+  },
+  "emblem-01__bird": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T02:24:43.012428+00:00",
+    "note": "A single-masted sailboat, not a bird.",
+    "corrected_label": "Sailboat on the water"
+  },
+  "emblem-01__distillation_vessel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T02:24:43.012428+00:00",
+    "note": "No vessel or apparatus is present -- foreground foliage, a thick coiling trunk or vine among berry clusters. Flagged rather than asserting a precise species/reading.",
+    "corrected_label": "Gnarled tree trunk/vine with berries (foreground foliage)"
   }
 }
