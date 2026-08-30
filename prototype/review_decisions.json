@@ -2439,5 +2439,106 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T12:55:17.700323+00:00",
     "note": "Composite of the rejected whole-scene crop and the smoke fragment -- already covered by 'angel_skeleton_witch'."
+  },
+  "emblem-30__person": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:57:54.698238+00:00",
+    "note": "Correct: both sun-masked figures together, the plate's central pair."
+  },
+  "emblem-30__furnace": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:57:54.698238+00:00",
+    "note": "Identical crop to 'person' -- duplicate detection of both figures."
+  },
+  "emblem-30__person_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:57:54.698238+00:00",
+    "note": "Correct figure, more specific than the generic label.",
+    "corrected_label": "The male figure, crowned with a radiant sun-mask"
+  },
+  "emblem-30__bird": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:57:54.698238+00:00",
+    "note": "Correct: the rooster at the figures' feet."
+  },
+  "emblem-30__cauldron": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:57:54.698238+00:00",
+    "note": "Four category prompts (cauldron/cauldron_02/cauldron_anvil/cauldron_anvil_02) all detected the identical crop: the hen at the woman's feet. No cauldron or anvil is present -- keeping one entry, rejecting the other three as exact-region duplicates.",
+    "corrected_label": "Hen at the woman's feet"
+  },
+  "emblem-30__cauldron_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:57:54.698238+00:00",
+    "note": "Four category prompts (cauldron/cauldron_02/cauldron_anvil/cauldron_anvil_02) all detected the identical crop: the hen at the woman's feet. No cauldron or anvil is present -- keeping one entry, rejecting the other three as exact-region duplicates. (kept under 'cauldron')"
+  },
+  "emblem-30__cauldron_anvil": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:57:54.698238+00:00",
+    "note": "Four category prompts (cauldron/cauldron_02/cauldron_anvil/cauldron_anvil_02) all detected the identical crop: the hen at the woman's feet. No cauldron or anvil is present -- keeping one entry, rejecting the other three as exact-region duplicates. (kept under 'cauldron')"
+  },
+  "emblem-30__cauldron_anvil_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:57:54.698238+00:00",
+    "note": "Four category prompts (cauldron/cauldron_02/cauldron_anvil/cauldron_anvil_02) all detected the identical crop: the hen at the woman's feet. No cauldron or anvil is present -- keeping one entry, rejecting the other three as exact-region duplicates. (kept under 'cauldron')"
+  },
+  "emblem-30__distillation_vessel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:57:54.698238+00:00",
+    "note": "Two category prompts (distillation_vessel/eagle_peacock) both detected the identical crop: a sailboat on the water. Keeping one entry, rejecting the other as an exact-region duplicate.",
+    "corrected_label": "Sailboat on the water"
+  },
+  "emblem-30__eagle_peacock": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:57:54.698238+00:00",
+    "note": "Two category prompts (distillation_vessel/eagle_peacock) both detected the identical crop: a sailboat on the water. Keeping one entry, rejecting the other as an exact-region duplicate. (kept under 'distillation_vessel')"
+  },
+  "emblem-30__moon": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:57:54.698238+00:00",
+    "note": "Three category prompts (moon/sun/sun_moon) all produced near-identical crops of one figure's radiant sun-mask close-up. Keeping one entry, rejecting the others as likely duplicates of the same detail.",
+    "corrected_label": "Close-up of one figure's radiant sun-mask"
+  },
+  "emblem-30__sun": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:57:54.698238+00:00",
+    "note": "Three category prompts (moon/sun/sun_moon) all produced near-identical crops of one figure's radiant sun-mask close-up. Keeping one entry, rejecting the others as likely duplicates of the same detail. (kept under 'moon')"
+  },
+  "emblem-30__sun_moon": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:57:54.698238+00:00",
+    "note": "Three category prompts (moon/sun/sun_moon) all produced near-identical crops of one figure's radiant sun-mask close-up. Keeping one entry, rejecting the others as likely duplicates of the same detail. (kept under 'moon')"
+  },
+  "emblem-30__palm": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:57:54.698238+00:00",
+    "note": "No palm tree -- a hand gesture, close-up.",
+    "corrected_label": "The woman's clasped hands at her chest"
+  },
+  "emblem-30__philosophical_egg": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:57:54.698238+00:00",
+    "note": "Two category prompts (philosophical_egg/staff) both detected the identical crop: the woman's full figure. Keeping one entry, rejecting the other as an exact-region duplicate.",
+    "corrected_label": "Woman with a radiant sun-mask, hand at her chest"
+  },
+  "emblem-30__staff": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:57:54.698238+00:00",
+    "note": "Two category prompts (philosophical_egg/staff) both detected the identical crop: the woman's full figure. Keeping one entry, rejecting the other as an exact-region duplicate. (kept under 'philosophical_egg')"
+  },
+  "emblem-30__cauldron+cauldron+philosophical_egg_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:57:54.698238+00:00",
+    "note": "Composite bundling duplicate hen crops with the woman -- each already covered elsewhere."
+  },
+  "emblem-30__moon+staff+cauldron_anvil+cauldron_anvil+palm_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:57:54.698238+00:00",
+    "note": "Composite bundling five separate elements, several already duplicates -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-30__sun_moon+person+sun_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:57:54.698238+00:00",
+    "note": "Composite bundling duplicate sun-mask crops with the pair of figures -- each already covered elsewhere."
   }
 }
