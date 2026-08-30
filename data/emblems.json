@@ -11746,7 +11746,7 @@
       {
         "type": "individual",
         "object_stem": "angel_skeleton_witch",
-        "label": "angel skeleton witch",
+        "label": "Star-spotted salamander lying in the flames",
         "motif_id": null,
         "category": "figures",
         "detection_score": 0.31910330057144165,
@@ -11759,62 +11759,14 @@
         "appearance": null,
         "iconographic_meaning": null,
         "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-29\\individual\\angel_skeleton_witch_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-29\\individual\\angel_skeleton_witch_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-29\\individual\\angel_skeleton_witch_review.jpg",
         "mask_pixel_count": 331930,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "book_mirror",
-        "label": "book mirror",
-        "motif_id": null,
-        "category": "objects",
-        "detection_score": 0.3122996687889099,
-        "detection_bbox": [
-          32,
-          23,
-          1538,
-          1453
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-29\\individual\\book_mirror_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-29\\individual\\book_mirror_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-29\\individual\\book_mirror_review.jpg",
-        "mask_pixel_count": 1871059,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "distillation_vessel",
-        "label": "distillation vessel",
-        "motif_id": null,
-        "category": "equipment",
-        "detection_score": 0.48381924629211426,
-        "detection_bbox": [
-          142,
-          542,
-          1155,
-          873
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-29\\individual\\distillation_vessel_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-29\\individual\\distillation_vessel_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-29\\individual\\distillation_vessel_review.jpg",
-        "mask_pixel_count": 331884,
+        "original_label": "angel skeleton witch",
+        "reviewer_note": "The plate's title subject -- correctly located; no angel, skeleton, or witch is present.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -11839,47 +11791,22 @@
           "water",
           "mercury"
         ],
-        "review_status": "auto",
+        "review_status": "flagged",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-29\\individual\\moon_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-29\\individual\\moon_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-29\\individual\\moon_review.jpg",
         "mask_pixel_count": 26815,
+        "reviewer_note": "Crop is a small, ambiguous circular blob -- likely part of the billowing smoke's texture, too unclear to confirm as a distinct object.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "composite",
-        "object_stem": "book_mirror+moon_composite",
-        "label": "book mirror + moon",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "moon"
-        ],
-        "category": "objects/landscape",
-        "detection_score": null,
-        "detection_bbox": [
-          14,
-          10,
-          1573,
-          1481
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-29\\composites\\book_mirror+moon_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-29\\composites\\book_mirror+moon_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-29\\composites\\book_mirror+moon_composite_review.jpg",
-        "mask_pixel_count": 1871059
       }
     ],
-    "object_catalog_extracted_at": "2026-06-06T17:20:42.138695",
+    "object_catalog_extracted_at": "2026-06-03T23:41:58.280415",
     "object_catalog_count": {
-      "individual": 4,
-      "composite": 1,
-      "total": 5
+      "individual": 2,
+      "composite": 0,
+      "total": 2
     }
   },
   {

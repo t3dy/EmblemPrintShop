@@ -2413,5 +2413,31 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T12:53:20.428407+00:00",
     "note": "Composite bundling three already-covered background architecture elements."
+  },
+  "emblem-29__angel_skeleton_witch": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:55:17.700323+00:00",
+    "note": "The plate's title subject -- correctly located; no angel, skeleton, or witch is present.",
+    "corrected_label": "Star-spotted salamander lying in the flames"
+  },
+  "emblem-29__book_mirror": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:55:17.700323+00:00",
+    "note": "Bbox covers the entire plate (the salamander plus the full smoke cloud above) -- a whole-scene detection, already covered more precisely by 'angel_skeleton_witch'."
+  },
+  "emblem-29__distillation_vessel": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:55:17.700323+00:00",
+    "note": "Identical crop to 'angel_skeleton_witch' -- duplicate detection of the salamander."
+  },
+  "emblem-29__moon": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:55:17.700323+00:00",
+    "note": "Crop is a small, ambiguous circular blob -- likely part of the billowing smoke's texture, too unclear to confirm as a distinct object."
+  },
+  "emblem-29__book_mirror+moon_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:55:17.700323+00:00",
+    "note": "Composite of the rejected whole-scene crop and the smoke fragment -- already covered by 'angel_skeleton_witch'."
   }
 }
