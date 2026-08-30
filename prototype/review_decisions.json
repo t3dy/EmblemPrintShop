@@ -366,5 +366,56 @@
     "status": "approved",
     "reviewed_at": "2026-08-29T06:33:10.648825+00:00",
     "note": "Plausible: a small hanging object (lamp or shop sign) on the building facade. Low confidence given crop size, but not contesting -- 'lamp' is a reasonable read."
+  },
+  "emblem-15__athanor": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T00:23:30.814316+00:00",
+    "note": "A human figure, not any furnace/apparatus. This plate's discourse is an explicit analogy (potter's craft models the alchemical work) -- the vessels shown are literal pottery, not lab equipment.",
+    "corrected_label": "The potter, seated at a foot-treadle wheel, shaping a clay vessel"
+  },
+  "emblem-15__staff": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T00:23:30.814316+00:00",
+    "note": "Same figure/near-identical bbox as 'athanor' -- duplicate detection of the potter."
+  },
+  "emblem-15__furnace": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T00:23:30.814316+00:00",
+    "note": "No furnace or fire of any kind -- a dark hallway/doorway with a small window.",
+    "corrected_label": "Doorway leading to a receding room (architecture)"
+  },
+  "emblem-15__cave": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T00:23:30.814316+00:00",
+    "note": "Same bbox as 'furnace' -- duplicate detection of the same doorway/hallway."
+  },
+  "emblem-15__bellows": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T00:23:30.814316+00:00",
+    "note": "No bellows present -- a cluster of finished pottery jugs.",
+    "corrected_label": "Ceramic jugs/vessels on the workshop shelf"
+  },
+  "emblem-15__cauldron": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T00:23:30.814316+00:00",
+    "note": "A plain basin, not a cooking/alchemical cauldron -- no fire or cooking context, matches the wash basin visible on the wall.",
+    "corrected_label": "Wash basin (shallow ceramic bowl)"
+  },
+  "emblem-15__cauldron_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T00:23:30.814316+00:00",
+    "note": "Correct subject region (the jar being thrown) but it's pottery in progress, not an alchemical cauldron.",
+    "corrected_label": "Clay vessel/pot in progress on the potter's wheel"
+  },
+  "emblem-15__cauldron_03": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T00:23:30.814316+00:00",
+    "note": "A shallow bowl with a small handle, similar to 'cauldron' -- a wash basin, not a cooking vessel.",
+    "corrected_label": "Handled basin/bowl"
+  },
+  "emblem-15__cauldron_cup": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T00:23:30.814316+00:00",
+    "note": "Same/overlapping bbox as 'cauldron_03' -- duplicate detection of the handled basin."
   }
 }
