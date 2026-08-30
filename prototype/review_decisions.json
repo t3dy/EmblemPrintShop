@@ -4001,5 +4001,104 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T13:38:24.300773+00:00",
     "note": "Composite of an illegible fragment and the duplicate sun/ruins panorama."
+  },
+  "emblem-48__person": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:40:50.206147+00:00",
+    "note": "Correct: King Duenech, crowned, flanked by a physician and guards."
+  },
+  "emblem-48__person_man_old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:40:50.206147+00:00",
+    "note": "Correct figure, more specific than the generic label.",
+    "corrected_label": "Servant carrying the chalice of medicine"
+  },
+  "emblem-48__woman": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:40:50.206147+00:00",
+    "note": "This is a bearded man, not a woman -- overlaps 'person'.",
+    "corrected_label": "Physician/advisor beside the king"
+  },
+  "emblem-48__cup": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:40:50.206147+00:00",
+    "note": "Correct: the chalice held out to the king."
+  },
+  "emblem-48__altar": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:40:50.206147+00:00",
+    "note": "No altar -- a small nightstand table in the background bedroom vignette.",
+    "corrected_label": "Round table beside the king's bed"
+  },
+  "emblem-48__castle_building_hous": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:40:50.206147+00:00",
+    "note": "Bbox covers the entire plate -- a whole-scene detection, not a single object."
+  },
+  "emblem-48__crown": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:40:50.206147+00:00",
+    "note": "Correct: the king's crowned head, close-up."
+  },
+  "emblem-48__cup_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:40:50.206147+00:00",
+    "note": "Crop is a tiny, illegible dark fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-48__distillation_vessel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:40:50.206147+00:00",
+    "note": "No distillation apparatus -- a jug, foreground left.",
+    "corrected_label": "Ornate decorated jug on the floor"
+  },
+  "emblem-48__globe": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:40:50.206147+00:00",
+    "note": "Identical crop to 'distillation_vessel' -- duplicate detection of the same jug."
+  },
+  "emblem-48__door_window": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:40:50.206147+00:00",
+    "note": "Plausible: a brick window panel, background architecture."
+  },
+  "emblem-48__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:40:50.206147+00:00",
+    "note": "No hearth -- the servant's and king's legs, already covered by 'person'/'person_man_old_man'."
+  },
+  "emblem-48__hourglass": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:40:50.206147+00:00",
+    "note": "Crop is a tiny, illegible fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-48__star": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:40:50.206147+00:00",
+    "note": "Crop is a tiny fragment, possibly a spear-tip -- too small/unclear to confirm; may overlap 'sword_axe'."
+  },
+  "emblem-48__sword_axe": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:40:50.206147+00:00",
+    "note": "Crop is a tiny fragment, possibly a spear-tip -- may overlap 'star'."
+  },
+  "emblem-48__sword_axe_torch": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:40:50.206147+00:00",
+    "note": "Plausible: brick wall with a guard's spear-tip visible, background."
+  },
+  "emblem-48__window": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:40:50.206147+00:00",
+    "note": "Plausible: brick wall/window panel texture, may overlap 'door_window'."
+  },
+  "emblem-48__window_02": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:40:50.206147+00:00",
+    "note": "Correct: an arched window with cross-hatched glass."
+  },
+  "emblem-48__cup+altar+person_man_old_man+woman+hearth+sword_axe+hourglas_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:40:50.206147+00:00",
+    "note": "Composite bundling seven separate elements -- each already exists as its own (corrected) individual entry."
   }
 }
