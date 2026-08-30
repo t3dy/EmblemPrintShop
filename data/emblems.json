@@ -14099,12 +14099,13 @@
         "appearance": null,
         "iconographic_meaning": null,
         "alchemical_valence": [],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\building_house_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\building_house_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\building_house_review.jpg",
         "mask_pixel_count": 23148,
+        "reviewer_note": "Correct: ruined castle wall/tower structure.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -14124,12 +14125,13 @@
         "appearance": null,
         "iconographic_meaning": null,
         "alchemical_valence": [],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\castle_building_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\castle_building_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\castle_building_review.jpg",
         "mask_pixel_count": 28054,
+        "reviewer_note": "Correct: castle ruins, may overlap 'building_house'.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (2 significant component(s), largest covers 98% of the mask)."
       },
@@ -14154,12 +14156,13 @@
           "heat",
           "operation"
         ],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\chimney_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\chimney_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\chimney_review.jpg",
         "mask_pixel_count": 5763,
+        "reviewer_note": "Plausible: a tower fragment, may overlap the other architecture crops.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -14184,49 +14187,20 @@
           "restoration",
           "stone"
         ],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\crown_02_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\crown_02_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\crown_02_review.jpg",
         "mask_pixel_count": 40934,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "crown",
-        "label": "crown",
-        "motif_id": "crown",
-        "category": "objects",
-        "detection_score": 0.2972724437713623,
-        "detection_bbox": [
-          68,
-          33,
-          473,
-          297
-        ],
-        "appearance": "Royal corona with points or arches; shown on heads of king/queen figures or held aloft; golden crowns rendered with elaborate fleur-de-lis points and gem settings.",
-        "iconographic_meaning": "The crown as a standalone object (detached from the figure wearing it) signals the prize: the completed Stone is crowned, as the king is crowned at his restoration. In Maier, the crowning of the philosophical child is an emblem of the Stone's completion. The crown falling from the king's head emblematizes mortificatio.",
-        "alchemical_valence": [
-          "completion",
-          "kingship",
-          "restoration",
-          "stone"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\crown_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\crown_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\crown_review.jpg",
-        "mask_pixel_count": 107069,
+        "reviewer_note": "Correct: the laurel wreath on the lion's head, close-up.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
       {
         "type": "individual",
         "object_stem": "dog_bear_ox",
-        "label": "dog bear ox",
+        "label": "Laurel-crowned lion (the 'green lion' of the motto)",
         "motif_id": null,
         "category": "animals",
         "detection_score": 0.34066855907440186,
@@ -14239,12 +14213,14 @@
         "appearance": null,
         "iconographic_meaning": null,
         "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\dog_bear_ox_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\dog_bear_ox_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\dog_bear_ox_review.jpg",
         "mask_pixel_count": 631507,
+        "original_label": "dog bear ox",
+        "reviewer_note": "The plate's central figure -- correctly located; no dog, bear, or ox is present.",
         "qc_flag": "fragmented",
         "qc_note": "3 disconnected components of meaningful size; 3% of the mask sits outside the largest blob -- likely noise or a second, unrelated figure dragged in from elsewhere on the plate."
       },
@@ -14269,12 +14245,13 @@
           "medicine",
           "earth"
         ],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\flower_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\flower_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\flower_review.jpg",
         "mask_pixel_count": 73278,
+        "reviewer_note": "Plausible: a flowering bush/tree.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -14299,79 +14276,20 @@
           "fixation",
           "nurse"
         ],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\forest_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\forest_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\forest_review.jpg",
         "mask_pixel_count": 63163,
+        "reviewer_note": "Correct: trees.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
       {
         "type": "individual",
-        "object_stem": "hearth",
-        "label": "hearth",
-        "motif_id": "furnace",
-        "category": "architecture",
-        "detection_score": 0.33044469356536865,
-        "detection_bbox": [
-          35,
-          1098,
-          1535,
-          420
-        ],
-        "appearance": "Domed or cylindrical tower-shaped furnace (athanor) with fire door at base and ash-pit below; in engravings rendered as a chimney-tower with visible fire at the opening; workshop hearth is a low open fireplace.",
-        "iconographic_meaning": "The source of alchemical heat: athanor, open furnace, or allegorical fire. Governs the timing of every stage; too much fire destroys the work. The athanor (from Arabic al-tannur, the bread oven) provides gentle sustained heat. Appears prominently in Maier, Mylius, and Khunrath laboratory scenes.",
-        "alchemical_valence": [
-          "fire",
-          "calcinatio",
-          "heat",
-          "operation"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\hearth_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\hearth_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\hearth_review.jpg",
-        "mask_pixel_count": 351956,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 99% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "philosophical_egg",
-        "label": "philosophical egg",
-        "motif_id": "vessel",
-        "category": "equipment",
-        "detection_score": 0.33887332677841187,
-        "detection_bbox": [
-          52,
-          439,
-          1205,
-          1004
-        ],
-        "appearance": "Round-bellied glass or clay container with narrow neck; alembic has a domed cap with condensation tube; retort is a pear-shaped flask with long curved neck; the philosophical egg is oval and sealed; rendered with smooth outlines and light hatching to suggest translucency.",
-        "iconographic_meaning": "The sealed container in which the Work proceeds: glass flask, clay vessel, philosophical egg (ovum philosophicum), alembic, or retort. The vessel is the microcosmic world in which the opus is performed. It must be sealed hermetically to prevent the volatile spirit from escaping.",
-        "alchemical_valence": [
-          "opus",
-          "containment",
-          "philosophical_egg",
-          "hermetic_sealing"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\philosophical_egg_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\philosophical_egg_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\philosophical_egg_review.jpg",
-        "mask_pixel_count": 631631,
-        "qc_flag": "fragmented",
-        "qc_note": "3 disconnected components of meaningful size; 3% of the mask sits outside the largest blob -- likely noise or a second, unrelated figure dragged in from elsewhere on the plate."
-      },
-      {
-        "type": "individual",
         "object_stem": "skeleton",
-        "label": "skeleton",
+        "label": "Mountain emitting billowing white smoke",
         "motif_id": "skeleton",
         "category": "figures",
         "detection_score": 0.2594084143638611,
@@ -14389,12 +14307,14 @@
           "dissolution",
           "putrefaction"
         ],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\skeleton_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\skeleton_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\skeleton_review.jpg",
         "mask_pixel_count": 345181,
+        "original_label": "skeleton",
+        "reviewer_note": "Matches the motto's 'white smoke' directly -- no skeleton is present.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 99% of the mask)."
       },
@@ -14414,101 +14334,22 @@
         "appearance": null,
         "iconographic_meaning": null,
         "alchemical_valence": [],
-        "review_status": "auto",
+        "review_status": "flagged",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\tower_chimney_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\tower_chimney_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\individual\\tower_chimney_review.jpg",
         "mask_pixel_count": 3925,
+        "reviewer_note": "Crop is a tiny, low-resolution tower silhouette -- plausible but too small to confirm with confidence; flagging.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "composite",
-        "object_stem": "castle_building+chimney_composite",
-        "label": "castle building + chimney",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "furnace"
-        ],
-        "category": "architecture/architecture",
-        "detection_score": null,
-        "detection_bbox": [
-          1155,
-          120,
-          264,
-          195
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\composites\\castle_building+chimney_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\composites\\castle_building+chimney_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\composites\\castle_building+chimney_composite_review.jpg",
-        "mask_pixel_count": 28121
-      },
-      {
-        "type": "composite",
-        "object_stem": "crown+flower+skeleton_composite",
-        "label": "crown + flower + skeleton",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "flower",
-          "skeleton",
-          "crown"
-        ],
-        "category": "objects/plants/figures",
-        "detection_score": null,
-        "detection_bbox": [
-          32,
-          34,
-          572,
-          954
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\composites\\crown+flower+skeleton_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\composites\\crown+flower+skeleton_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\composites\\crown+flower+skeleton_composite_review.jpg",
-        "mask_pixel_count": 383342
-      },
-      {
-        "type": "composite",
-        "object_stem": "dog_bear_ox+crown_composite",
-        "label": "dog bear ox + crown",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "crown"
-        ],
-        "category": "animals/objects",
-        "detection_score": null,
-        "detection_bbox": [
-          48,
-          304,
-          1364,
-          1138
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\composites\\dog_bear_ox+crown_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\composites\\dog_bear_ox+crown_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-37\\composites\\dog_bear_ox+crown_composite_review.jpg",
-        "mask_pixel_count": 635588
       }
     ],
-    "object_catalog_extracted_at": "2026-06-06T17:23:51.570805",
+    "object_catalog_extracted_at": "2026-06-03T23:58:06.928128",
     "object_catalog_count": {
-      "individual": 12,
-      "composite": 3,
-      "total": 15
+      "individual": 9,
+      "composite": 0,
+      "total": 9
     }
   },
   {

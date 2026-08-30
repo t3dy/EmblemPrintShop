@@ -3007,5 +3007,82 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
     "note": "Composite bundling seven separate elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-37__dog_bear_ox": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:14:07.683015+00:00",
+    "note": "The plate's central figure -- correctly located; no dog, bear, or ox is present.",
+    "corrected_label": "Laurel-crowned lion (the 'green lion' of the motto)"
+  },
+  "emblem-37__philosophical_egg": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:14:07.683015+00:00",
+    "note": "Identical crop to 'dog_bear_ox' -- duplicate detection of the lion."
+  },
+  "emblem-37__skeleton": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:14:07.683015+00:00",
+    "note": "Matches the motto's 'white smoke' directly -- no skeleton is present.",
+    "corrected_label": "Mountain emitting billowing white smoke"
+  },
+  "emblem-37__crown": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:14:07.683015+00:00",
+    "note": "Same smoking mountain as 'skeleton', tighter crop -- duplicate detection."
+  },
+  "emblem-37__building_house": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:14:07.683015+00:00",
+    "note": "Correct: ruined castle wall/tower structure."
+  },
+  "emblem-37__castle_building": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:14:07.683015+00:00",
+    "note": "Correct: castle ruins, may overlap 'building_house'."
+  },
+  "emblem-37__chimney": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:14:07.683015+00:00",
+    "note": "Plausible: a tower fragment, may overlap the other architecture crops."
+  },
+  "emblem-37__crown_02": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:14:07.683015+00:00",
+    "note": "Correct: the laurel wreath on the lion's head, close-up."
+  },
+  "emblem-37__flower": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:14:07.683015+00:00",
+    "note": "Plausible: a flowering bush/tree."
+  },
+  "emblem-37__forest": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:14:07.683015+00:00",
+    "note": "Correct: trees."
+  },
+  "emblem-37__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:14:07.683015+00:00",
+    "note": "No hearth -- the lion's paws and legs, already covered by 'dog_bear_ox'."
+  },
+  "emblem-37__tower_chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:14:07.683015+00:00",
+    "note": "Crop is a tiny, low-resolution tower silhouette -- plausible but too small to confirm with confidence; flagging."
+  },
+  "emblem-37__castle_building+chimney_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:14:07.683015+00:00",
+    "note": "Composite of two already-covered architecture elements."
+  },
+  "emblem-37__crown+flower+skeleton_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:14:07.683015+00:00",
+    "note": "Composite bundling the duplicate mountain crop, foliage, and the mountain again -- already covered by 'skeleton'/'flower'."
+  },
+  "emblem-37__dog_bear_ox+crown_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:14:07.683015+00:00",
+    "note": "Composite of the lion and its wreath -- both already covered by 'dog_bear_ox' and 'crown_02'."
   }
 }
