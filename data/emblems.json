@@ -10836,7 +10836,7 @@
       {
         "type": "individual",
         "object_stem": "axe_wheel",
-        "label": "axe wheel",
+        "label": "Banner reading 'Longitudo dierum et Sanitas' (Length of days and health)",
         "motif_id": null,
         "category": "objects",
         "detection_score": 0.39502161741256714,
@@ -10849,39 +10849,16 @@
         "appearance": null,
         "iconographic_meaning": null,
         "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\axe_wheel_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\axe_wheel_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\axe_wheel_review.jpg",
         "mask_pixel_count": 157575,
+        "original_label": "axe wheel",
+        "reviewer_note": "Three category prompts (axe_wheel/wheel/distillation_vessel) all detected the identical crop: the banner scroll reading 'Longitudo dierum et Sanitas'. No axe, wheel, or vessel is present -- keeping one entry, rejecting the other two as exact-region duplicates.",
         "qc_flag": "fragmented",
         "qc_note": "2 disconnected components of meaningful size; 6% of the mask sits outside the largest blob -- likely noise or a second, unrelated figure dragged in from elsewhere on the plate."
-      },
-      {
-        "type": "individual",
-        "object_stem": "book_mirror",
-        "label": "book mirror",
-        "motif_id": null,
-        "category": "objects",
-        "detection_score": 0.2736935317516327,
-        "detection_bbox": [
-          26,
-          23,
-          1547,
-          1464
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\book_mirror_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\book_mirror_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\book_mirror_review.jpg",
-        "mask_pixel_count": 989343,
-        "qc_flag": "fragmented",
-        "qc_note": "4 disconnected components of meaningful size; 8% of the mask sits outside the largest blob -- likely noise or a second, unrelated figure dragged in from elsewhere on the plate."
       },
       {
         "type": "individual",
@@ -10904,37 +10881,13 @@
           "restoration",
           "stone"
         ],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\crown_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\crown_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\crown_review.jpg",
         "mask_pixel_count": 10233,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "distillation_vessel",
-        "label": "distillation vessel",
-        "motif_id": null,
-        "category": "equipment",
-        "detection_score": 0.2809058129787445,
-        "detection_bbox": [
-          206,
-          459,
-          349,
-          663
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\distillation_vessel_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\distillation_vessel_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\distillation_vessel_review.jpg",
-        "mask_pixel_count": 178510,
+        "reviewer_note": "Correct: Lady Sapientia's crown.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -10959,12 +10912,13 @@
           "prima_materia",
           "human_soul"
         ],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\person_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\person_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\person_review.jpg",
         "mask_pixel_count": 566570,
+        "reviewer_note": "Correct: Lady Sapientia, the plate's central figure.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -10989,80 +10943,22 @@
           "arbor_philosophica",
           "coniunctio"
         ],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\tree_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\tree_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\tree_review.jpg",
         "mask_pixel_count": 546358,
+        "reviewer_note": "Correct: the fruit-bearing Tree of Life.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "wheel",
-        "label": "wheel",
-        "motif_id": "wheel",
-        "category": "objects",
-        "detection_score": 0.27366021275520325,
-        "detection_bbox": [
-          211,
-          839,
-          228,
-          279
-        ],
-        "appearance": "Spoked wheel in full profile; Fortune's wheel has figures clinging to its rim at various heights; the rota philosophorum has text on the rim; bellows are wedge-shaped with a long nozzle.",
-        "iconographic_meaning": "The wheel (rota Fortunae) figures the cyclical nature of all things, including the alchemical stages. What rises must fall and rise again. The rota philosophorum shows the sequence of operations. Bellows supply the philosophical fire: they are the operator's instrument for calibrating heat and keeping the Work alive.",
-        "alchemical_valence": [
-          "cycle",
-          "fortune",
-          "operations_sequence",
-          "fire_control"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\wheel_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\wheel_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\individual\\wheel_review.jpg",
-        "mask_pixel_count": 34255,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "composite",
-        "object_stem": "crown+axe_wheel+tree+person+book_mirror+wheel_composite",
-        "label": "crown + axe wheel + tree + person + book mirror + wheel",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "figure",
-          "wheel",
-          "tree",
-          "crown"
-        ],
-        "category": "objects/objects/plants/figures/objects/objects",
-        "detection_score": null,
-        "detection_bbox": [
-          37,
-          34,
-          1534,
-          1437
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\composites\\crown+axe_wheel+tree+person+book_mirror+wheel_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\composites\\crown+axe_wheel+tree+person+book_mirror+wheel_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-26\\composites\\crown+axe_wheel+tree+person+book_mirror+wheel_composite_review.jpg",
-        "mask_pixel_count": 1404533
       }
     ],
-    "object_catalog_extracted_at": "2026-06-06T17:19:37.780922",
+    "object_catalog_extracted_at": "2026-06-03T23:36:21.877759",
     "object_catalog_count": {
-      "individual": 7,
-      "composite": 1,
-      "total": 8
+      "individual": 4,
+      "composite": 0,
+      "total": 4
     }
   },
   {

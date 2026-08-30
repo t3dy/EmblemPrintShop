@@ -2167,5 +2167,46 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
     "note": "Composite bundling four separate elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-26__person": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:48:22.214279+00:00",
+    "note": "Correct: Lady Sapientia, the plate's central figure."
+  },
+  "emblem-26__tree": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:48:22.214279+00:00",
+    "note": "Correct: the fruit-bearing Tree of Life."
+  },
+  "emblem-26__crown": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:48:22.214279+00:00",
+    "note": "Correct: Lady Sapientia's crown."
+  },
+  "emblem-26__axe_wheel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:48:22.214279+00:00",
+    "note": "Three category prompts (axe_wheel/wheel/distillation_vessel) all detected the identical crop: the banner scroll reading 'Longitudo dierum et Sanitas'. No axe, wheel, or vessel is present -- keeping one entry, rejecting the other two as exact-region duplicates.",
+    "corrected_label": "Banner reading 'Longitudo dierum et Sanitas' (Length of days and health)"
+  },
+  "emblem-26__wheel": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:48:22.214279+00:00",
+    "note": "Three category prompts (axe_wheel/wheel/distillation_vessel) all detected the identical crop: the banner scroll reading 'Longitudo dierum et Sanitas'. No axe, wheel, or vessel is present -- keeping one entry, rejecting the other two as exact-region duplicates. (kept under 'axe_wheel')"
+  },
+  "emblem-26__distillation_vessel": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:48:22.214279+00:00",
+    "note": "Three category prompts (axe_wheel/wheel/distillation_vessel) all detected the identical crop: the banner scroll reading 'Longitudo dierum et Sanitas'. No axe, wheel, or vessel is present -- keeping one entry, rejecting the other two as exact-region duplicates. (kept under 'axe_wheel')"
+  },
+  "emblem-26__book_mirror": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:48:22.214279+00:00",
+    "note": "Bbox covers the entire plate -- a whole-scene detection, not a single object."
+  },
+  "emblem-26__crown+axe_wheel+tree+person+book_mirror+wheel_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:48:22.214279+00:00",
+    "note": "Composite bundling six elements, including the rejected whole-scene 'book_mirror' -- each already exists as its own (corrected) individual entry."
   }
 }
