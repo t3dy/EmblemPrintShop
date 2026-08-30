@@ -1660,5 +1660,83 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T07:58:37.347311+00:00",
     "note": "Composite of two duplicate sword crops -- already covered by 'distillation_vessel'."
+  },
+  "emblem-21__man_old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T08:01:11.312921+00:00",
+    "note": "Correct figure, more specific than the generic label.",
+    "corrected_label": "Bearded man (paired with the woman in the diagram's central circle)"
+  },
+  "emblem-21__man_old_man_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T08:01:11.312921+00:00",
+    "note": "This crop is the woman, not a second old man.",
+    "corrected_label": "Woman (paired with the man in the diagram's central circle)"
+  },
+  "emblem-21__woman": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T08:01:11.312921+00:00",
+    "note": "No woman-specific identification is confirmable -- the figure is fully robed and hooded; this is the geometer illustrating the emblem's formula, not the woman from the central circle.",
+    "corrected_label": "Robed figure drawing the diagram with a compass/rod"
+  },
+  "emblem-21__person": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T08:01:11.312921+00:00",
+    "note": "Correct: the small circle containing both the man and woman together, the coniunctio at the heart of the diagram."
+  },
+  "emblem-21__cup": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T08:01:11.312921+00:00",
+    "note": "Part of the geometric-formula illustration, not a cup.",
+    "corrected_label": "Octagon shape drawn on the ground"
+  },
+  "emblem-21__moon": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T08:01:11.312921+00:00",
+    "note": "No moon -- one of the geometric figures drawn on the ground.",
+    "corrected_label": "Fan-shaped geometric diagram (a sector with radiating lines)"
+  },
+  "emblem-21__crown": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T08:01:11.312921+00:00",
+    "note": "Hood/headwear of the robed geometer figure, already covered by 'woman' -- redundant."
+  },
+  "emblem-21__arch": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T08:01:11.312921+00:00",
+    "note": "Correctly captures the emblem's title formula as one composed diagram, drawn against a brick wall; no arch is present.",
+    "corrected_label": "The circle-square-triangle diagram, with the man-and-woman circle at its center"
+  },
+  "emblem-21__bridge": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T08:01:11.312921+00:00",
+    "note": "No bridge -- brick wall texture, background."
+  },
+  "emblem-21__cauldron": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T08:01:11.312921+00:00",
+    "note": "Identical crop to 'moon' -- duplicate detection of the same fan-shaped diagram."
+  },
+  "emblem-21__chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T08:01:11.312921+00:00",
+    "note": "No chimney -- a tower silhouette in the background.",
+    "corrected_label": "Distant tower (background architecture)"
+  },
+  "emblem-21__hearth": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T08:01:11.312921+00:00",
+    "note": "No hearth -- a cluster of the diagram's geometric figures on the ground (the octagon overlaps 'cup').",
+    "corrected_label": "Geometric shapes drawn on the ground (octagon, hexagram, rhombus) beside the geometer's feet"
+  },
+  "emblem-21__crown+woman+cup+moon+hearth+chimney_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T08:01:11.312921+00:00",
+    "note": "Composite bundling six separate elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-21__man_old_man+man_old_man+person+bridge+arch_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T08:01:11.312921+00:00",
+    "note": "Composite bundling five elements including the rejected 'bridge' (wall texture) -- each already exists as its own individual entry."
   }
 }
