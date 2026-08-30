@@ -12585,12 +12585,13 @@
         "appearance": null,
         "iconographic_meaning": null,
         "alchemical_valence": [],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\building_house_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\building_house_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\building_house_review.jpg",
         "mask_pixel_count": 72743,
+        "reviewer_note": "Correct: a small wooden shed/structure.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -12615,19 +12616,20 @@
           "fortification",
           "mortificatio"
         ],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\castle_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\castle_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\castle_review.jpg",
         "mask_pixel_count": 175571,
+        "reviewer_note": "Correct: the hillside castle and town skyline.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (2 significant component(s), largest covers 98% of the mask)."
       },
       {
         "type": "individual",
         "object_stem": "crown",
-        "label": "crown",
+        "label": "Close-up of the man's wide-brimmed hat",
         "motif_id": "crown",
         "category": "objects",
         "detection_score": 0.5547870397567749,
@@ -12645,12 +12647,14 @@
           "restoration",
           "stone"
         ],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\crown_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\crown_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\crown_review.jpg",
         "mask_pixel_count": 15172,
+        "original_label": "crown",
+        "reviewer_note": "No crown -- a plain hat.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -12675,49 +12679,20 @@
           "passage",
           "boundary"
         ],
-        "review_status": "auto",
+        "review_status": "flagged",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\gate_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\gate_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\gate_review.jpg",
         "mask_pixel_count": 30211,
+        "reviewer_note": "Crop is a tiny, illegible cross-hatched fragment (possibly water-reflection texture) -- too small/unclear to confirm; flagging as unsupported.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
       {
         "type": "individual",
-        "object_stem": "hearth",
-        "label": "hearth",
-        "motif_id": "furnace",
-        "category": "architecture",
-        "detection_score": 0.2941776216030121,
-        "detection_bbox": [
-          39,
-          1008,
-          1510,
-          447
-        ],
-        "appearance": "Domed or cylindrical tower-shaped furnace (athanor) with fire door at base and ash-pit below; in engravings rendered as a chimney-tower with visible fire at the opening; workshop hearth is a low open fireplace.",
-        "iconographic_meaning": "The source of alchemical heat: athanor, open furnace, or allegorical fire. Governs the timing of every stage; too much fire destroys the work. The athanor (from Arabic al-tannur, the bread oven) provides gentle sustained heat. Appears prominently in Maier, Mylius, and Khunrath laboratory scenes.",
-        "alchemical_valence": [
-          "fire",
-          "calcinatio",
-          "heat",
-          "operation"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\hearth_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\hearth_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\hearth_review.jpg",
-        "mask_pixel_count": 411921,
-        "qc_flag": "fragmented",
-        "qc_note": "2 disconnected components of meaningful size; 9% of the mask sits outside the largest blob -- likely noise or a second, unrelated figure dragged in from elsewhere on the plate."
-      },
-      {
-        "type": "individual",
         "object_stem": "hermaphrodite",
-        "label": "hermaphrodite",
+        "label": "Coral branches underwater",
         "motif_id": "hermaphrodite",
         "category": "figures",
         "detection_score": 0.25126975774765015,
@@ -12735,12 +12710,14 @@
           "completion",
           "philosophical_stone"
         ],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\hermaphrodite_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\hermaphrodite_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\hermaphrodite_review.jpg",
         "mask_pixel_count": 51384,
+        "original_label": "hermaphrodite",
+        "reviewer_note": "The plate's title subject -- correctly located; no hermaphrodite is present.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -12765,19 +12742,20 @@
           "medicine",
           "earth"
         ],
-        "review_status": "auto",
+        "review_status": "flagged",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\palm_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\palm_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\palm_review.jpg",
         "mask_pixel_count": 3949,
+        "reviewer_note": "Crop is a tiny, illegible fragment (possibly drapery/fabric texture) -- too small/unclear to confirm; flagging as unsupported.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
       {
         "type": "individual",
         "object_stem": "person",
-        "label": "person",
+        "label": "Man harvesting coral from the water with a long pole",
         "motif_id": "figure",
         "category": "figures",
         "detection_score": 0.39788511395454407,
@@ -12795,39 +12773,16 @@
           "prima_materia",
           "human_soul"
         ],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\person_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\person_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\person_review.jpg",
         "mask_pixel_count": 306386,
+        "original_label": "person",
+        "reviewer_note": "Correct figure, more specific than the generic label.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "sword_spear_axe",
-        "label": "sword spear axe",
-        "motif_id": null,
-        "category": "objects",
-        "detection_score": 0.3731130361557007,
-        "detection_bbox": [
-          901,
-          620,
-          376,
-          668
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\sword_spear_axe_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\sword_spear_axe_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\sword_spear_axe_review.jpg",
-        "mask_pixel_count": 35367,
-        "qc_flag": "fragmented",
-        "qc_note": "2 disconnected components of meaningful size; 41% of the mask sits outside the largest blob -- likely noise or a second, unrelated figure dragged in from elsewhere on the plate."
       },
       {
         "type": "individual",
@@ -12845,103 +12800,22 @@
         "appearance": null,
         "iconographic_meaning": null,
         "alchemical_valence": [],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\tower_chimney_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\tower_chimney_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\individual\\tower_chimney_review.jpg",
         "mask_pixel_count": 4694,
+        "reviewer_note": "Plausible: a tall tower building, may overlap 'castle'.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "composite",
-        "object_stem": "castle+tower_chimney_composite",
-        "label": "castle + tower chimney",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "castle"
-        ],
-        "category": "architecture/architecture",
-        "detection_score": null,
-        "detection_bbox": [
-          397,
-          125,
-          846,
-          353
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\composites\\castle+tower_chimney_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\composites\\castle+tower_chimney_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\composites\\castle+tower_chimney_composite_review.jpg",
-        "mask_pixel_count": 177276
-      },
-      {
-        "type": "composite",
-        "object_stem": "crown+person+sword_spear_axe+palm_composite",
-        "label": "crown + person + sword spear axe + palm",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "figure",
-          "flower",
-          "crown"
-        ],
-        "category": "objects/figures/objects/plants",
-        "detection_score": null,
-        "detection_bbox": [
-          909,
-          340,
-          655,
-          1005
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\composites\\crown+person+sword_spear_axe+palm_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\composites\\crown+person+sword_spear_axe+palm_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\composites\\crown+person+sword_spear_axe+palm_composite_review.jpg",
-        "mask_pixel_count": 316983
-      },
-      {
-        "type": "composite",
-        "object_stem": "hearth+gate+hermaphrodite_composite",
-        "label": "hearth + gate + hermaphrodite",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "furnace",
-          "hermaphrodite",
-          "gate"
-        ],
-        "category": "architecture/architecture/figures",
-        "detection_score": null,
-        "detection_bbox": [
-          39,
-          870,
-          1332,
-          594
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\composites\\hearth+gate+hermaphrodite_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\composites\\hearth+gate+hermaphrodite_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-32\\composites\\hearth+gate+hermaphrodite_composite_review.jpg",
-        "mask_pixel_count": 449040
       }
     ],
-    "object_catalog_extracted_at": "2026-06-03T23:48:06.639387",
+    "object_catalog_extracted_at": "2026-06-03T23:48:04.719116",
     "object_catalog_count": {
-      "individual": 10,
-      "composite": 3,
-      "total": 13
+      "individual": 8,
+      "composite": 0,
+      "total": 8
     }
   },
   {

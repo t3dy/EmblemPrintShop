@@ -2638,5 +2638,73 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T13:00:17.732171+00:00",
     "note": "Composite bundling four overlapping crops of the king -- each already exists as its own individual entry."
+  },
+  "emblem-32__person": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:02:31.049535+00:00",
+    "note": "Correct figure, more specific than the generic label.",
+    "corrected_label": "Man harvesting coral from the water with a long pole"
+  },
+  "emblem-32__hermaphrodite": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:02:31.049535+00:00",
+    "note": "The plate's title subject -- correctly located; no hermaphrodite is present.",
+    "corrected_label": "Coral branches underwater"
+  },
+  "emblem-32__sword_spear_axe": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:02:31.049535+00:00",
+    "note": "Same figure and pose as 'person', nearly identical crop -- duplicate detection."
+  },
+  "emblem-32__crown": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:02:31.049535+00:00",
+    "note": "No crown -- a plain hat.",
+    "corrected_label": "Close-up of the man's wide-brimmed hat"
+  },
+  "emblem-32__building_house": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:02:31.049535+00:00",
+    "note": "Correct: a small wooden shed/structure."
+  },
+  "emblem-32__castle": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:02:31.049535+00:00",
+    "note": "Correct: the hillside castle and town skyline."
+  },
+  "emblem-32__gate": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:02:31.049535+00:00",
+    "note": "Crop is a tiny, illegible cross-hatched fragment (possibly water-reflection texture) -- too small/unclear to confirm; flagging as unsupported."
+  },
+  "emblem-32__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:02:31.049535+00:00",
+    "note": "No hearth -- bundles rocks, a wooden dock post, and the coral together into one wide region; the coral itself is already separately covered by 'hermaphrodite'."
+  },
+  "emblem-32__palm": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:02:31.049535+00:00",
+    "note": "Crop is a tiny, illegible fragment (possibly drapery/fabric texture) -- too small/unclear to confirm; flagging as unsupported."
+  },
+  "emblem-32__tower_chimney": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:02:31.049535+00:00",
+    "note": "Plausible: a tall tower building, may overlap 'castle'."
+  },
+  "emblem-32__castle+tower_chimney_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:02:31.049535+00:00",
+    "note": "Composite of two already-covered background elements."
+  },
+  "emblem-32__crown+person+sword_spear_axe+palm_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:02:31.049535+00:00",
+    "note": "Composite bundling four elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-32__hearth+gate+hermaphrodite_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:02:31.049535+00:00",
+    "note": "Composite bundling the rejected wide-water crop with an illegible fragment and the coral -- coral already covered by 'hermaphrodite'."
   }
 }
