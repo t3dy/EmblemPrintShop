@@ -12846,36 +12846,8 @@
     "object_catalog": [
       {
         "type": "individual",
-        "object_stem": "cave",
-        "label": "cave",
-        "motif_id": "mountain",
-        "category": "landscape",
-        "detection_score": 0.2700038254261017,
-        "detection_bbox": [
-          39,
-          34,
-          1523,
-          1425
-        ],
-        "appearance": "Ranges from craggy peaks with hatched rock faces to gentle rolling hills; cave openings rendered as dark ellipses with radiating shadow hatching; foreground rocks as roughly triangular forms with parallel weathering lines.",
-        "iconographic_meaning": "The mountain is both prima materia (the raw earth) and the destination of VITRIOL: Visita Interiora Terrae Rectificando Invenies Occultum Lapidem. Grottos are thresholds between surface and interior work. In Maier, the mountain is the laboratory of Nature herself.",
-        "alchemical_valence": [
-          "prima_materia",
-          "earth",
-          "descent",
-          "vitriol"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-33\\individual\\cave_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-33\\individual\\cave_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-33\\individual\\cave_review.jpg",
-        "mask_pixel_count": 2131587
-      },
-      {
-        "type": "individual",
         "object_stem": "man_old_man",
-        "label": "man old man",
+        "label": "The Hermaphrodite lying bound on a rack over the fire",
         "motif_id": null,
         "category": "figures",
         "detection_score": 0.40436697006225586,
@@ -12888,12 +12860,14 @@
         "appearance": null,
         "iconographic_meaning": null,
         "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-33\\individual\\man_old_man_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-33\\individual\\man_old_man_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-33\\individual\\man_old_man_review.jpg",
         "mask_pixel_count": 348371,
+        "original_label": "man old man",
+        "reviewer_note": "The plate's title subject, correctly located -- not an old man, but the two-headed hermaphrodite figure.",
         "qc_flag": "fragmented",
         "qc_note": "2 disconnected components of meaningful size; 5% of the mask sits outside the largest blob -- likely noise or a second, unrelated figure dragged in from elsewhere on the plate."
       },
@@ -12918,79 +12892,22 @@
           "water",
           "mercury"
         ],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-33\\individual\\moon_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-33\\individual\\moon_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-33\\individual\\moon_review.jpg",
         "mask_pixel_count": 10354,
+        "reviewer_note": "Correct: the crescent moon in the night sky.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "palm",
-        "label": "palm",
-        "motif_id": "flower",
-        "category": "plants",
-        "detection_score": 0.26311206817626953,
-        "detection_bbox": [
-          785,
-          955,
-          101,
-          118
-        ],
-        "appearance": "Generic botanical element: small flowering plants in foreground, grasses in landscape, reeds at water's edge, palm tree silhouette; all rendered in simple line-work as landscape fill.",
-        "iconographic_meaning": "Generic plant life in emblems signals the garden of nature (natura naturans), the growing principle, and the earth's generative power. Medicinal herbs signal the healing and purifying aspect of the Work; reeds and grasses the liminal zones of water and earth.",
-        "alchemical_valence": [
-          "natura",
-          "growth",
-          "medicine",
-          "earth"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-33\\individual\\palm_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-33\\individual\\palm_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-33\\individual\\palm_review.jpg",
-        "mask_pixel_count": 5231,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "composite",
-        "object_stem": "moon+man_old_man+cave+palm_composite",
-        "label": "moon + man old man + cave + palm",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "flower",
-          "mountain",
-          "moon"
-        ],
-        "category": "landscape/figures/landscape/plants",
-        "detection_score": null,
-        "detection_bbox": [
-          34,
-          32,
-          1531,
-          1434
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-33\\composites\\moon+man_old_man+cave+palm_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-33\\composites\\moon+man_old_man+cave+palm_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-33\\composites\\moon+man_old_man+cave+palm_composite_review.jpg",
-        "mask_pixel_count": 2131587
       }
     ],
-    "object_catalog_extracted_at": "2026-06-03T23:49:16.640850",
+    "object_catalog_extracted_at": "2026-06-03T23:49:14.826475",
     "object_catalog_count": {
-      "individual": 4,
-      "composite": 1,
-      "total": 5
+      "individual": 2,
+      "composite": 0,
+      "total": 2
     }
   },
   {

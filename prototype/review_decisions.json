@@ -2706,5 +2706,31 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T13:02:31.049535+00:00",
     "note": "Composite bundling the rejected wide-water crop with an illegible fragment and the coral -- coral already covered by 'hermaphrodite'."
+  },
+  "emblem-33__man_old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:04:21.875711+00:00",
+    "note": "The plate's title subject, correctly located -- not an old man, but the two-headed hermaphrodite figure.",
+    "corrected_label": "The Hermaphrodite lying bound on a rack over the fire"
+  },
+  "emblem-33__cave": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:04:21.875711+00:00",
+    "note": "Bbox covers the entire plate (the figure, fire, moon, and mountains) -- a whole-scene detection, already covered more precisely by 'man_old_man'."
+  },
+  "emblem-33__moon": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:04:21.875711+00:00",
+    "note": "Correct: the crescent moon in the night sky."
+  },
+  "emblem-33__palm": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:04:21.875711+00:00",
+    "note": "A hand detail already covered within 'man_old_man''s crop -- not a distinct object."
+  },
+  "emblem-33__moon+man_old_man+cave+palm_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:04:21.875711+00:00",
+    "note": "Composite bundling four elements -- each already exists as its own (corrected) individual entry."
   }
 }
