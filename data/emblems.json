@@ -12939,7 +12939,7 @@
       {
         "type": "individual",
         "object_stem": "bellows",
-        "label": "bellows",
+        "label": "Distant castle (background, far left)",
         "motif_id": "wheel",
         "category": "equipment",
         "detection_score": 0.3383190631866455,
@@ -12957,12 +12957,14 @@
           "operations_sequence",
           "fire_control"
         ],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\bellows_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\bellows_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\bellows_review.jpg",
         "mask_pixel_count": 25018,
+        "original_label": "bellows",
+        "reviewer_note": "No bellows -- a small fortified castle.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -12987,164 +12989,20 @@
           "philosophical_egg",
           "hermetic_sealing"
         ],
-        "review_status": "auto",
+        "review_status": "flagged",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\cauldron_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\cauldron_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\cauldron_review.jpg",
         "mask_pixel_count": 96486,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "cave",
-        "label": "cave",
-        "motif_id": "mountain",
-        "category": "landscape",
-        "detection_score": 0.2674790620803833,
-        "detection_bbox": [
-          32,
-          30,
-          1536,
-          1442
-        ],
-        "appearance": "Ranges from craggy peaks with hatched rock faces to gentle rolling hills; cave openings rendered as dark ellipses with radiating shadow hatching; foreground rocks as roughly triangular forms with parallel weathering lines.",
-        "iconographic_meaning": "The mountain is both prima materia (the raw earth) and the destination of VITRIOL: Visita Interiora Terrae Rectificando Invenies Occultum Lapidem. Grottos are thresholds between surface and interior work. In Maier, the mountain is the laboratory of Nature herself.",
-        "alchemical_valence": [
-          "prima_materia",
-          "earth",
-          "descent",
-          "vitriol"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\cave_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\cave_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\cave_review.jpg",
-        "mask_pixel_count": 2222645,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "chimney",
-        "label": "chimney",
-        "motif_id": "furnace",
-        "category": "architecture",
-        "detection_score": 0.26883673667907715,
-        "detection_bbox": [
-          37,
-          493,
-          71,
-          166
-        ],
-        "appearance": "Domed or cylindrical tower-shaped furnace (athanor) with fire door at base and ash-pit below; in engravings rendered as a chimney-tower with visible fire at the opening; workshop hearth is a low open fireplace.",
-        "iconographic_meaning": "The source of alchemical heat: athanor, open furnace, or allegorical fire. Governs the timing of every stage; too much fire destroys the work. The athanor (from Arabic al-tannur, the bread oven) provides gentle sustained heat. Appears prominently in Maier, Mylius, and Khunrath laboratory scenes.",
-        "alchemical_valence": [
-          "fire",
-          "calcinatio",
-          "heat",
-          "operation"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\chimney_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\chimney_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\chimney_review.jpg",
-        "mask_pixel_count": 15179,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "distillation_vessel",
-        "label": "distillation vessel cauldron",
-        "motif_id": null,
-        "category": "equipment",
-        "detection_score": 0.2850279211997986,
-        "detection_bbox": [
-          32,
-          1153,
-          376,
-          299
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\distillation_vessel_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\distillation_vessel_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\distillation_vessel_review.jpg",
-        "mask_pixel_count": 85543,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "hearth",
-        "label": "hearth",
-        "motif_id": "furnace",
-        "category": "architecture",
-        "detection_score": 0.30115005373954773,
-        "detection_bbox": [
-          27,
-          973,
-          1539,
-          506
-        ],
-        "appearance": "Domed or cylindrical tower-shaped furnace (athanor) with fire door at base and ash-pit below; in engravings rendered as a chimney-tower with visible fire at the opening; workshop hearth is a low open fireplace.",
-        "iconographic_meaning": "The source of alchemical heat: athanor, open furnace, or allegorical fire. Governs the timing of every stage; too much fire destroys the work. The athanor (from Arabic al-tannur, the bread oven) provides gentle sustained heat. Appears prominently in Maier, Mylius, and Khunrath laboratory scenes.",
-        "alchemical_valence": [
-          "fire",
-          "calcinatio",
-          "heat",
-          "operation"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\hearth_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\hearth_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\hearth_review.jpg",
-        "mask_pixel_count": 452946,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (2 significant component(s), largest covers 97% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "hermaphrodite",
-        "label": "hermaphrodite",
-        "motif_id": "hermaphrodite",
-        "category": "figures",
-        "detection_score": 0.3360341191291809,
-        "detection_bbox": [
-          34,
-          1153,
-          376,
-          299
-        ],
-        "appearance": "A single body bearing attributes of both sexes: one breast exposed, dual clothing, sun and moon crowns, or the two-headed Rebis figure standing on a winged dragon or sphere; often flanked by Sol and Luna.",
-        "iconographic_meaning": "The coniunctio made visible: a single body bearing the attributes of sun and moon, king and queen, red and white. The Rebis is the completed Stone. Central to Rosarium, Maier emblem 33, and Khunrath's Amphitheatrum.",
-        "alchemical_valence": [
-          "coniunctio",
-          "rubedo",
-          "completion",
-          "philosophical_stone"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\hermaphrodite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\hermaphrodite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\hermaphrodite_review.jpg",
-        "mask_pixel_count": 85561,
+        "reviewer_note": "No cauldron -- billowing cloud/cave-interior texture, too generic to confirm a distinct object.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
       {
         "type": "individual",
         "object_stem": "man_old_man",
-        "label": "man old man",
+        "label": "Figure floating among clouds (the 'born in the air' stage)",
         "motif_id": null,
         "category": "figures",
         "detection_score": 0.46129077672958374,
@@ -13157,19 +13015,21 @@
         "appearance": null,
         "iconographic_meaning": null,
         "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\man_old_man_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\man_old_man_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\man_old_man_review.jpg",
         "mask_pixel_count": 40314,
+        "original_label": "man old man",
+        "reviewer_note": "Correct figure, more specific than the generic label.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
       {
         "type": "individual",
         "object_stem": "person",
-        "label": "person",
+        "label": "Sol and Luna embracing, kneeling in the bath within a cave",
         "motif_id": "figure",
         "category": "figures",
         "detection_score": 0.307916522026062,
@@ -13187,44 +13047,16 @@
           "prima_materia",
           "human_soul"
         ],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\person_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\person_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\person_review.jpg",
         "mask_pixel_count": 297945,
+        "original_label": "person",
+        "reviewer_note": "Correctly located -- the 'conceived in the bath' stage of the discourse's threefold progression.",
         "qc_flag": "fragmented",
         "qc_note": "2 disconnected components of meaningful size; 3% of the mask sits outside the largest blob -- likely noise or a second, unrelated figure dragged in from elsewhere on the plate."
-      },
-      {
-        "type": "individual",
-        "object_stem": "philosophical_egg",
-        "label": "philosophical egg",
-        "motif_id": "vessel",
-        "category": "equipment",
-        "detection_score": 0.25974196195602417,
-        "detection_bbox": [
-          1021,
-          593,
-          476,
-          644
-        ],
-        "appearance": "Round-bellied glass or clay container with narrow neck; alembic has a domed cap with condensation tube; retort is a pear-shaped flask with long curved neck; the philosophical egg is oval and sealed; rendered with smooth outlines and light hatching to suggest translucency.",
-        "iconographic_meaning": "The sealed container in which the Work proceeds: glass flask, clay vessel, philosophical egg (ovum philosophicum), alembic, or retort. The vessel is the microcosmic world in which the opus is performed. It must be sealed hermetically to prevent the volatile spirit from escaping.",
-        "alchemical_valence": [
-          "opus",
-          "containment",
-          "philosophical_egg",
-          "hermetic_sealing"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\philosophical_egg_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\philosophical_egg_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\philosophical_egg_review.jpg",
-        "mask_pixel_count": 314301,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
       {
         "type": "individual",
@@ -13247,83 +13079,22 @@
           "macrocosm",
           "celestial"
         ],
-        "review_status": "auto",
+        "review_status": "flagged",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\star_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\star_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\star_review.jpg",
         "mask_pixel_count": 12852,
+        "reviewer_note": "Crop is a tiny, illegible fragment (small triangular marks, likely cave-rock texture) -- too small/unclear to confirm; flagging as unsupported.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "sun",
-        "label": "sun",
-        "motif_id": "sun",
-        "category": "landscape",
-        "detection_score": 0.3313446342945099,
-        "detection_bbox": [
-          1179,
-          593,
-          315,
-          336
-        ],
-        "appearance": "Circular disc with radiating rays, either straight or wavy; in early modern prints rays alternate long-short; often shown in the upper portion of plates; may have a face (personified sun).",
-        "iconographic_meaning": "The solar disc, radiate crown, or personified Sol. Governs gold, fire, and the masculine principle throughout the alchemical tradition. In conjunction with the moon, the coniunctio produces the hermaphrodite and the Stone.",
-        "alchemical_valence": [
-          "sol",
-          "gold",
-          "fire",
-          "sulphur"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\sun_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\sun_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\individual\\sun_review.jpg",
-        "mask_pixel_count": 137830,
-        "qc_flag": "fragmented",
-        "qc_note": "2 disconnected components of meaningful size; 4% of the mask sits outside the largest blob -- likely noise or a second, unrelated figure dragged in from elsewhere on the plate."
-      },
-      {
-        "type": "composite",
-        "object_stem": "man_old_man+hermaphrodite+sun+person+hearth+bellows+chimney+_composite",
-        "label": "man old man + hermaphrodite + sun + person + hearth + bellows + chimney + cave + star",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "star",
-          "figure",
-          "hermaphrodite",
-          "furnace",
-          "sun",
-          "wheel",
-          "mountain"
-        ],
-        "category": "figures/figures/landscape/figures/architecture/objects/architecture/landscape/landscape",
-        "detection_score": null,
-        "detection_bbox": [
-          28,
-          24,
-          1540,
-          1460
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\composites\\man_old_man+hermaphrodite+sun+person+hearth+bellows+chimney+_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\composites\\man_old_man+hermaphrodite+sun+person+hearth+bellows+chimney+_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-34\\composites\\man_old_man+hermaphrodite+sun+person+hearth+bellows+chimney+_composite_review.jpg",
-        "mask_pixel_count": 2228659
       }
     ],
-    "object_catalog_extracted_at": "2026-06-06T17:22:48.196053",
+    "object_catalog_extracted_at": "2026-06-06T17:22:47.672491",
     "object_catalog_count": {
-      "individual": 12,
-      "composite": 1,
-      "total": 13
+      "individual": 5,
+      "composite": 0,
+      "total": 5
     }
   },
   {

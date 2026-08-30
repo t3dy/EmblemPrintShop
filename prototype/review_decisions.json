@@ -2732,5 +2732,73 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T13:04:21.875711+00:00",
     "note": "Composite bundling four elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-34__person": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:06:44.004203+00:00",
+    "note": "Correctly located -- the 'conceived in the bath' stage of the discourse's threefold progression.",
+    "corrected_label": "Sol and Luna embracing, kneeling in the bath within a cave"
+  },
+  "emblem-34__man_old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:06:44.004203+00:00",
+    "note": "Correct figure, more specific than the generic label.",
+    "corrected_label": "Figure floating among clouds (the 'born in the air' stage)"
+  },
+  "emblem-34__hermaphrodite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:06:44.004203+00:00",
+    "note": "No hermaphrodite figure here -- bare rock/cave wall texture (the actual embracing pair is covered by 'person')."
+  },
+  "emblem-34__cauldron": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:06:44.004203+00:00",
+    "note": "No cauldron -- billowing cloud/cave-interior texture, too generic to confirm a distinct object."
+  },
+  "emblem-34__philosophical_egg": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:06:44.004203+00:00",
+    "note": "Identical crop to 'person' -- duplicate detection of the Sol/Luna embrace."
+  },
+  "emblem-34__bellows": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:06:44.004203+00:00",
+    "note": "No bellows -- a small fortified castle.",
+    "corrected_label": "Distant castle (background, far left)"
+  },
+  "emblem-34__cave": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:06:44.004203+00:00",
+    "note": "Bbox covers nearly the entire plate -- a whole-scene detection, not a single object."
+  },
+  "emblem-34__chimney": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:06:44.004203+00:00",
+    "note": "Identical crop to 'bellows' -- duplicate detection of the same distant castle."
+  },
+  "emblem-34__distillation_vessel": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:06:44.004203+00:00",
+    "note": "No distillation apparatus -- water surface, rocks, and the third figure's legs, overlapping content not isolated as a single object."
+  },
+  "emblem-34__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:06:44.004203+00:00",
+    "note": "No hearth -- same water/rocks scene as 'distillation_vessel', wider crop."
+  },
+  "emblem-34__star": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:06:44.004203+00:00",
+    "note": "Crop is a tiny, illegible fragment (small triangular marks, likely cave-rock texture) -- too small/unclear to confirm; flagging as unsupported."
+  },
+  "emblem-34__sun": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:06:44.004203+00:00",
+    "note": "Identical crop to 'person' -- duplicate detection of the Sol/Luna embrace."
+  },
+  "emblem-34__man_old_man+hermaphrodite+sun+person+hearth+bellows+chimney+_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:06:44.004203+00:00",
+    "note": "Composite bundling seven separate elements -- each already exists as its own (corrected) individual entry."
   }
 }
