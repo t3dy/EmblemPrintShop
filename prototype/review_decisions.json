@@ -3387,5 +3387,94 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
     "note": "Composite bundling five already-covered architecture elements."
+  },
+  "emblem-41__bear_ox_lamb_frog": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:24:11.099786+00:00",
+    "note": "The discourse's central animal -- correctly located.",
+    "corrected_label": "The boar that killed Adonis"
+  },
+  "emblem-41__person": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:24:11.099786+00:00",
+    "note": "The plate's central figure -- correctly located, more specific than the generic label.",
+    "corrected_label": "Adonis lying dead, spear in hand, hunting dogs behind him"
+  },
+  "emblem-41__man_old_man": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:24:11.099786+00:00",
+    "note": "Plausible: a soldier figure with a plumed helmet and shield, standing apart."
+  },
+  "emblem-41__shield": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:24:11.099786+00:00",
+    "note": "Same shield detail as 'man_old_man' -- duplicate detection."
+  },
+  "emblem-41__cauldron": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:24:11.099786+00:00",
+    "note": "A close-up of Adonis's armored torso, already covered by 'person' -- not a distinct object."
+  },
+  "emblem-41__distillation_vessel": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:24:11.099786+00:00",
+    "note": "Identical crop to 'bear_ox_lamb_frog' -- duplicate detection of the boar."
+  },
+  "emblem-41__eagle_dragon_peacock": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:24:11.099786+00:00",
+    "note": "Matches the discourse directly -- no eagle, dragon, or peacock is present.",
+    "corrected_label": "Venus rushing toward Adonis, arms raised, running through the rose bushes"
+  },
+  "emblem-41__forest": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:24:11.099786+00:00",
+    "note": "Correct: trees and hedge landscape."
+  },
+  "emblem-41__lamb_frog": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:24:11.099786+00:00",
+    "note": "No lamb or frog -- a running dog.",
+    "corrected_label": "One of Adonis's hunting dogs"
+  },
+  "emblem-41__mirror": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:24:11.099786+00:00",
+    "note": "Another close-up of Adonis's armored torso, already covered by 'person' -- not a distinct object."
+  },
+  "emblem-41__philosophical_egg": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:24:11.099786+00:00",
+    "note": "Identical crop to 'person' -- duplicate detection of Adonis, no egg present."
+  },
+  "emblem-41__sword_spear_axe": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:24:11.099786+00:00",
+    "note": "Adonis's hand holding the spear, already covered by 'person' -- not a distinct object."
+  },
+  "emblem-41__tree": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:24:11.099786+00:00",
+    "note": "Correct: a single tree."
+  },
+  "emblem-41__cauldron+philosophical_egg_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:24:11.099786+00:00",
+    "note": "Composite of two already-rejected duplicate crops of Adonis."
+  },
+  "emblem-41__eagle_dragon_peacock+tree_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:24:11.099786+00:00",
+    "note": "Composite bundling Venus and a tree -- both already covered by their own individual entries."
+  },
+  "emblem-41__lamb_frog+sword_spear_axe+person+mirror+cauldron_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:24:11.099786+00:00",
+    "note": "Composite bundling five elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-41__man_old_man+shield_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:24:11.099786+00:00",
+    "note": "Composite of the soldier and his shield -- both already covered by 'man_old_man'."
   }
 }
