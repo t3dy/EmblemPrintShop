@@ -2900,5 +2900,112 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T13:09:23.396413+00:00",
     "note": "Composite bundling four elements -- each already exists as its own individual entry."
+  },
+  "emblem-36__old_man": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
+    "note": "Plausible: one of the two walking travelers, hat and cane."
+  },
+  "emblem-36__old_man_02": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
+    "note": "Plausible: the second walking traveler."
+  },
+  "emblem-36__phoenix": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
+    "note": "Bbox covers nearly the entire plate -- a whole-scene detection, not a single object. No phoenix is present."
+  },
+  "emblem-36__eagle_peacock_butter": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
+    "note": "Plausible: distant town skyline with a church spire."
+  },
+  "emblem-36__altar": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
+    "note": "Matches the motto's central image of the stone thrown on the earth -- no altar is present.",
+    "corrected_label": "One of the cube-shaped 'stones' scattered on the ground"
+  },
+  "emblem-36__building_house": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
+    "note": "Correct: castle wall/battlement."
+  },
+  "emblem-36__castle_temple": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
+    "note": "Correct: a village church with a spire."
+  },
+  "emblem-36__distillation_vessel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
+    "note": "No distillation apparatus -- swans swimming.",
+    "corrected_label": "Swans on the river"
+  },
+  "emblem-36__distillation_vessel_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
+    "note": "A different scattered cube than 'altar', not an apparatus.",
+    "corrected_label": "One of the cube-shaped 'stones'"
+  },
+  "emblem-36__flower": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
+    "note": "Correct: foreground trees/bushes, with cube-shapes visible at the edge."
+  },
+  "emblem-36__horse": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
+    "note": "Correct: the mounted horseman."
+  },
+  "emblem-36__river_sea": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
+    "note": "Matches the motto directly -- the stones dwelling near water.",
+    "corrected_label": "Cube-shaped 'stones' scattered near the riverbank"
+  },
+  "emblem-36__sky": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
+    "note": "The plate's central paradox pictured literally -- the stone 'lives in the air.'",
+    "corrected_label": "Cube-shaped 'stones' floating in the clouds above the village"
+  },
+  "emblem-36__sword_axe": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
+    "note": "Crop is a tiny, illegible fabric/hatching texture -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-36__tower_chimney": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
+    "note": "Correct: a castle tower."
+  },
+  "emblem-36__tower_chimney_02": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
+    "note": "Correct: a church spire, may overlap 'castle_temple'."
+  },
+  "emblem-36__tree": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
+    "note": "Plausible: trees, a shed, and a nude figure on the path (not separately catalogued elsewhere)."
+  },
+  "emblem-36__window": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
+    "note": "A different scattered cube, not a window.",
+    "corrected_label": "One of the cube-shaped 'stones'"
+  },
+  "emblem-36__window_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
+    "note": "A different scattered cube, not a window.",
+    "corrected_label": "One of the cube-shaped 'stones'"
+  },
+  "emblem-36__tower_chimney+window+horse+sword_axe+tower_chimney+flower+ol_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:11:54.456436+00:00",
+    "note": "Composite bundling seven separate elements -- each already exists as its own (corrected) individual entry."
   }
 }
