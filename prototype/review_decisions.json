@@ -1239,5 +1239,76 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T07:45:04.211772+00:00",
     "note": "Composite bundling the flames, seated Mercury, and duplicate caduceus crops -- each already exists as its own corrected individual entry."
+  },
+  "emblem-11__person": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:47:07.779027+00:00",
+    "note": "Bbox covers the entire plate (all four figures + background) -- a whole-scene detection, not a single object."
+  },
+  "emblem-11__man_old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:47:07.779027+00:00",
+    "note": "Correct figure, more specific than the generic label.",
+    "corrected_label": "Bearded man pouring water over Latona's head"
+  },
+  "emblem-11__man_old_man_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:47:07.779027+00:00",
+    "note": "This crop is the seated woman and sun-child, not a second old man.",
+    "corrected_label": "Latona (seated woman) being washed, with the radiant sun-child beside her"
+  },
+  "emblem-11__child": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:47:07.779027+00:00",
+    "note": "Correct figure -- the spiky-haloed child representing the sun, more specific than the generic label.",
+    "corrected_label": "Radiant sun-child (Sol)"
+  },
+  "emblem-11__cauldron": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:47:07.779027+00:00",
+    "note": "A washing basin, not a cauldron.",
+    "corrected_label": "Shallow basin catching the poured water, above a wicker basket"
+  },
+  "emblem-11__cauldron_globe_drum": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:47:07.779027+00:00",
+    "note": "Same basin-and-basket region as 'cauldron', slightly wider crop -- duplicate detection."
+  },
+  "emblem-11__chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:47:07.779027+00:00",
+    "note": "A round battlemented tower in the background, not a chimney.",
+    "corrected_label": "Distant fortified tower"
+  },
+  "emblem-11__distillation_vessel": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:47:07.779027+00:00",
+    "note": "Same basin-and-basket region as 'cauldron' -- duplicate detection."
+  },
+  "emblem-11__flower": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:47:07.779027+00:00",
+    "note": "No flower -- this is wicker-basket weave texture, part of the basket already covered by 'cauldron'."
+  },
+  "emblem-11__flower_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:47:07.779027+00:00",
+    "note": "Matches the motto's second command ('tear up the books') directly -- no flower is present, these are torn pages.",
+    "corrected_label": "Torn book pages scattered on the ground"
+  },
+  "emblem-11__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:47:07.779027+00:00",
+    "note": "No hearth -- bbox bundles several figures' legs together with more scattered torn-book pages, already covered by 'flower_02'."
+  },
+  "emblem-11__distillation_vessel+cauldron_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:47:07.779027+00:00",
+    "note": "Composite of two already-rejected duplicate crops of the same basin/basket region."
+  },
+  "emblem-11__person+flower+man_old_man+chimney+man_old_man+child+flower+h_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:47:07.779027+00:00",
+    "note": "Composite bundling essentially the entire plate's figures and background together -- each already exists as its own (corrected) individual entry."
   }
 }
