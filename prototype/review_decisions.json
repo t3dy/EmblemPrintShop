@@ -2800,5 +2800,105 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T13:06:44.004203+00:00",
     "note": "Composite bundling seven separate elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-35__person": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:09:23.396413+00:00",
+    "note": "Correct figure, more specific than the generic label.",
+    "corrected_label": "Woman running toward the distant town, arm raised (calling for help)"
+  },
+  "emblem-35__child": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:09:23.396413+00:00",
+    "note": "Correct: wheat-crowned Ceres holding the infant Triptolemus."
+  },
+  "emblem-35__child_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:09:23.396413+00:00",
+    "note": "Crop is a tiny, illegible fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-35__man_old_man": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:09:23.396413+00:00",
+    "note": "Same Ceres-and-infant crop as 'child', slightly different framing -- duplicate detection."
+  },
+  "emblem-35__cauldron": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:09:23.396413+00:00",
+    "note": "No cauldron -- possibly fire tongs or a hook lying on the ground near the pyre; low confidence given the crop."
+  },
+  "emblem-35__castle": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:09:23.396413+00:00",
+    "note": "Plausible: the distant town with the running woman visible at its edge."
+  },
+  "emblem-35__cauldron_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:09:23.396413+00:00",
+    "note": "No cauldron -- part of the shield lying on the ground.",
+    "corrected_label": "Coiled serpent design on a round shield (foreground)"
+  },
+  "emblem-35__chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:09:23.396413+00:00",
+    "note": "Crop is a tiny, illegible fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-35__chimney_02": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:09:23.396413+00:00",
+    "note": "Plausible: town buildings, may overlap 'castle'."
+  },
+  "emblem-35__lamb_frog": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:09:23.396413+00:00",
+    "note": "Same region as 'cauldron' -- duplicate detection, no lamb or frog present."
+  },
+  "emblem-35__person_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:09:23.396413+00:00",
+    "note": "Bundles Ceres-and-infant with the background running woman -- both already covered by 'child' and 'person'."
+  },
+  "emblem-35__person_03": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:09:23.396413+00:00",
+    "note": "The plate's central myth pictured directly -- Ceres/Thetis tempering the divine child in flame -- correctly located, more specific than the generic label.",
+    "corrected_label": "Woman holding the infant over the fire pyre, with a bearded fire-spirit emerging from the rocks"
+  },
+  "emblem-35__skeleton": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:09:23.396413+00:00",
+    "note": "No skeleton -- may overlap 'person_03', a tighter crop of the same fire scene.",
+    "corrected_label": "Woman kneeling before the pyre, fire-spirit emerging from the rocks"
+  },
+  "emblem-35__sword_axe": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:09:23.396413+00:00",
+    "note": "Correctly located tools, more specific than the generic label.",
+    "corrected_label": "Sword and fire tongs on the ground near the pyre"
+  },
+  "emblem-35__thorn": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:09:23.396413+00:00",
+    "note": "Crop is a tiny, illegible fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-35__window": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:09:23.396413+00:00",
+    "note": "Bbox covers the entire plate -- a whole-scene detection, not a single object."
+  },
+  "emblem-35__child+man_old_man+person_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:09:23.396413+00:00",
+    "note": "Composite bundling three elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-35__person+castle+sword_axe+window+chimney+chimney_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:09:23.396413+00:00",
+    "note": "Composite bundling six elements, including the rejected whole-scene 'window' -- each already exists as its own individual entry."
+  },
+  "emblem-35__thorn+person+child+lamb_frog_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:09:23.396413+00:00",
+    "note": "Composite bundling four elements -- each already exists as its own individual entry."
   }
 }
