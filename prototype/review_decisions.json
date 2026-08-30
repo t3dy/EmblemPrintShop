@@ -1310,5 +1310,74 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T07:47:07.779027+00:00",
     "note": "Composite bundling essentially the entire plate's figures and background together -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-12__person": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:49:04.502114+00:00",
+    "note": "The plate's central figure -- likely alluding to digging directly in the earth (per the discourse's 'direct engagement with the material' argument) rather than a specific named myth. Correctly located, more descriptive than the generic label.",
+    "corrected_label": "Windblown figure flying through clouds, carrying a hoe/mattock"
+  },
+  "emblem-12__philosophical_egg": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:49:04.502114+00:00",
+    "note": "Identical crop to 'person' -- duplicate detection, no egg present."
+  },
+  "emblem-12__pestle": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:49:04.502114+00:00",
+    "note": "A digging tool, not a pestle.",
+    "corrected_label": "Head of the hoe/mattock carried by the flying figure"
+  },
+  "emblem-12__distillation_vessel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:49:04.502114+00:00",
+    "note": "No distillation apparatus -- a boat on the river in the background landscape.",
+    "corrected_label": "Small sailboat on water (background)"
+  },
+  "emblem-12__vessel": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:49:04.502114+00:00",
+    "note": "Identical crop to 'distillation_vessel' -- duplicate detection of the same boat."
+  },
+  "emblem-12__castle_building_hous": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:49:04.502114+00:00",
+    "note": "Correct: the stone cottage/chapel with an arched doorway at the base of the pinnacle."
+  },
+  "emblem-12__cave": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:49:04.502114+00:00",
+    "note": "Same cottage doorway as 'castle_building_hous', tighter crop -- duplicate detection."
+  },
+  "emblem-12__sword_axe": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:49:04.502114+00:00",
+    "note": "Identical crop to 'pestle' -- duplicate detection of the hoe/mattock head, no sword or axe present."
+  },
+  "emblem-12__sword_axe_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:49:04.502114+00:00",
+    "note": "A tumbling rock, not a sword or axe.",
+    "corrected_label": "Boulder falling through the clouds"
+  },
+  "emblem-12__tree": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:49:04.502114+00:00",
+    "note": "Correct: foreground tree and rocky outcrop."
+  },
+  "emblem-12__wall": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:49:04.502114+00:00",
+    "note": "Bbox covers the entire plate (the whole panorama) -- a whole-scene detection, not a single object."
+  },
+  "emblem-12__castle_building_hous+sword_axe+vessel+person+wall+cave+tree+_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:49:04.502114+00:00",
+    "note": "Composite bundling nearly every element of the plate, including the rejected whole-scene 'wall' -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-12__pestle+philosophical_egg_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:49:04.502114+00:00",
+    "note": "Composite of the hoe-head crop and a duplicate of the flying figure -- both already covered by 'pestle' and 'person'."
   }
 }
