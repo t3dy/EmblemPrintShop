@@ -3783,5 +3783,58 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T13:31:33.401153+00:00",
     "note": "Composite bundling eight separate elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-45__book_mirror": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:33:46.493587+00:00",
+    "note": "Three category prompts (book_mirror/bush/cauldron) all detected the identical crop: the starry night sky. Keeping one entry, rejecting the others as exact-region duplicates.",
+    "corrected_label": "Starry night sky"
+  },
+  "emblem-45__bush": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:33:46.493587+00:00",
+    "note": "Three category prompts (book_mirror/bush/cauldron) all detected the identical crop: the starry night sky. Keeping one entry, rejecting the others as exact-region duplicates. (kept under 'book_mirror')"
+  },
+  "emblem-45__cauldron": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:33:46.493587+00:00",
+    "note": "Three category prompts (book_mirror/bush/cauldron) all detected the identical crop: the starry night sky. Keeping one entry, rejecting the others as exact-region duplicates. (kept under 'book_mirror')"
+  },
+  "emblem-45__sun": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:33:46.493587+00:00",
+    "note": "Two category prompts (sun/philosophical_egg_02) both detected the identical crop: the radiant sun-face. Keeping one entry, rejecting the other."
+  },
+  "emblem-45__philosophical_egg_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:33:46.493587+00:00",
+    "note": "Two category prompts (sun/philosophical_egg_02) both detected the identical crop: the radiant sun-face. Keeping one entry, rejecting the other. (kept under 'sun')"
+  },
+  "emblem-45__philosophical_egg": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:33:46.493587+00:00",
+    "note": "Two category prompts (philosophical_egg/flower) both detected the identical crop: a textured, map-like globe or sphere. Keeping one entry, rejecting the other.",
+    "corrected_label": "Textured, map-like globe or sphere (possibly Sol's shadow or the moon)"
+  },
+  "emblem-45__flower": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:33:46.493587+00:00",
+    "note": "Two category prompts (philosophical_egg/flower) both detected the identical crop: a textured, map-like globe or sphere. Keeping one entry, rejecting the other. (kept under 'philosophical_egg')"
+  },
+  "emblem-45__philosophical_egg_ca": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:33:46.493587+00:00",
+    "note": "Two category prompts (philosophical_egg_ca/moon) both detected the identical crop: a small sphere resting on a ledge. Keeping one entry, rejecting the other.",
+    "corrected_label": "Small sphere resting on a ledge"
+  },
+  "emblem-45__moon": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:33:46.493587+00:00",
+    "note": "Two category prompts (philosophical_egg_ca/moon) both detected the identical crop: a small sphere resting on a ledge. Keeping one entry, rejecting the other. (kept under 'philosophical_egg_ca')"
+  },
+  "emblem-45__bush+book_mirror_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:33:46.493587+00:00",
+    "note": "Composite of two duplicate starry-sky crops."
   }
 }

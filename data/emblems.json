@@ -16983,7 +16983,7 @@
       {
         "type": "individual",
         "object_stem": "book_mirror",
-        "label": "book mirror",
+        "label": "Starry night sky",
         "motif_id": null,
         "category": "objects",
         "detection_score": 0.348715215921402,
@@ -16996,169 +16996,21 @@
         "appearance": null,
         "iconographic_meaning": null,
         "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\book_mirror_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\book_mirror_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\book_mirror_review.jpg",
         "mask_pixel_count": 34994,
+        "original_label": "book mirror",
+        "reviewer_note": "Three category prompts (book_mirror/bush/cauldron) all detected the identical crop: the starry night sky. Keeping one entry, rejecting the others as exact-region duplicates.",
         "qc_flag": "fragmented",
         "qc_note": "7 disconnected components of meaningful size; 35% of the mask sits outside the largest blob -- likely noise or a second, unrelated figure dragged in from elsewhere on the plate."
       },
       {
         "type": "individual",
-        "object_stem": "bush",
-        "label": "bush",
-        "motif_id": "tree",
-        "category": "plants",
-        "detection_score": 0.3937262296676636,
-        "detection_bbox": [
-          1115,
-          989,
-          459,
-          507
-        ],
-        "appearance": "Upright woody plant with branching crown; in emblematic prints often stylized with perfectly balanced branching; may bear sun and moon as fruit; roots shown exposed or entering earth.",
-        "iconographic_meaning": "The philosophical tree (arbor philosophica) grows from the putrefied seed of the Stone. Bears sun and moon as fruit; may be a rose tree (Rosarium) or a golden tree (Aureum Vellus). In Maier emblem 4 a king and queen grow from the same root.",
-        "alchemical_valence": [
-          "growth",
-          "maturation",
-          "arbor_philosophica",
-          "coniunctio"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\bush_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\bush_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\bush_review.jpg",
-        "mask_pixel_count": 193916,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "cauldron",
-        "label": "cauldron",
-        "motif_id": "vessel",
-        "category": "equipment",
-        "detection_score": 0.34036195278167725,
-        "detection_bbox": [
-          1115,
-          986,
-          459,
-          509
-        ],
-        "appearance": "Round-bellied glass or clay container with narrow neck; alembic has a domed cap with condensation tube; retort is a pear-shaped flask with long curved neck; the philosophical egg is oval and sealed; rendered with smooth outlines and light hatching to suggest translucency.",
-        "iconographic_meaning": "The sealed container in which the Work proceeds: glass flask, clay vessel, philosophical egg (ovum philosophicum), alembic, or retort. The vessel is the microcosmic world in which the opus is performed. It must be sealed hermetically to prevent the volatile spirit from escaping.",
-        "alchemical_valence": [
-          "opus",
-          "containment",
-          "philosophical_egg",
-          "hermetic_sealing"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\cauldron_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\cauldron_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\cauldron_review.jpg",
-        "mask_pixel_count": 193868,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "flower",
-        "label": "flower",
-        "motif_id": "flower",
-        "category": "plants",
-        "detection_score": 0.3474382162094116,
-        "detection_bbox": [
-          546,
-          503,
-          436,
-          515
-        ],
-        "appearance": "Generic botanical element: small flowering plants in foreground, grasses in landscape, reeds at water's edge, palm tree silhouette; all rendered in simple line-work as landscape fill.",
-        "iconographic_meaning": "Generic plant life in emblems signals the garden of nature (natura naturans), the growing principle, and the earth's generative power. Medicinal herbs signal the healing and purifying aspect of the Work; reeds and grasses the liminal zones of water and earth.",
-        "alchemical_valence": [
-          "natura",
-          "growth",
-          "medicine",
-          "earth"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\flower_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\flower_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\flower_review.jpg",
-        "mask_pixel_count": 286801,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "moon",
-        "label": "moon",
-        "motif_id": "moon",
-        "category": "landscape",
-        "detection_score": 0.34626975655555725,
-        "detection_bbox": [
-          918,
-          1229,
-          147,
-          146
-        ],
-        "appearance": "Crescent form (horns pointing left or right) or full disc; often shown in upper corners of emblem plates opposite the sun; may have a face; stars may surround it.",
-        "iconographic_meaning": "The lunar crescent or personified Luna. Governs silver, water, and the feminine principle. In conjunction with the sun the coniunctio produces the hermaphrodite. Luna also governs the tidal, cyclical, and dreaming aspects of the Work.",
-        "alchemical_valence": [
-          "luna",
-          "silver",
-          "water",
-          "mercury"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\moon_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\moon_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\moon_review.jpg",
-        "mask_pixel_count": 16464,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "philosophical_egg_02",
-        "label": "philosophical egg",
-        "motif_id": "vessel",
-        "category": "equipment",
-        "detection_score": 0.2517409324645996,
-        "detection_bbox": [
-          41,
-          43,
-          422,
-          378
-        ],
-        "appearance": "Round-bellied glass or clay container with narrow neck; alembic has a domed cap with condensation tube; retort is a pear-shaped flask with long curved neck; the philosophical egg is oval and sealed; rendered with smooth outlines and light hatching to suggest translucency.",
-        "iconographic_meaning": "The sealed container in which the Work proceeds: glass flask, clay vessel, philosophical egg (ovum philosophicum), alembic, or retort. The vessel is the microcosmic world in which the opus is performed. It must be sealed hermetically to prevent the volatile spirit from escaping.",
-        "alchemical_valence": [
-          "opus",
-          "containment",
-          "philosophical_egg",
-          "hermetic_sealing"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\philosophical_egg_02_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\philosophical_egg_02_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\philosophical_egg_02_review.jpg",
-        "mask_pixel_count": 95359,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 98% of the mask)."
-      },
-      {
-        "type": "individual",
         "object_stem": "philosophical_egg_ca",
-        "label": "philosophical egg cauldron",
+        "label": "Small sphere resting on a ledge",
         "motif_id": null,
         "category": "equipment",
         "detection_score": 0.2723732888698578,
@@ -17171,19 +17023,21 @@
         "appearance": null,
         "iconographic_meaning": null,
         "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\philosophical_egg_ca_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\philosophical_egg_ca_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\philosophical_egg_ca_review.jpg",
         "mask_pixel_count": 16463,
+        "original_label": "philosophical egg cauldron",
+        "reviewer_note": "Two category prompts (philosophical_egg_ca/moon) both detected the identical crop: a small sphere resting on a ledge. Keeping one entry, rejecting the other.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
       {
         "type": "individual",
         "object_stem": "philosophical_egg",
-        "label": "philosophical egg",
+        "label": "Textured, map-like globe or sphere (possibly Sol's shadow or the moon)",
         "motif_id": "vessel",
         "category": "equipment",
         "detection_score": 0.36596041917800903,
@@ -17201,12 +17055,14 @@
           "philosophical_egg",
           "hermetic_sealing"
         ],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\philosophical_egg_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\philosophical_egg_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\philosophical_egg_review.jpg",
         "mask_pixel_count": 315007,
+        "original_label": "philosophical egg",
+        "reviewer_note": "Two category prompts (philosophical_egg/flower) both detected the identical crop: a textured, map-like globe or sphere. Keeping one entry, rejecting the other.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -17231,47 +17087,22 @@
           "fire",
           "sulphur"
         ],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\sun_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\sun_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\individual\\sun_review.jpg",
         "mask_pixel_count": 95365,
+        "reviewer_note": "Two category prompts (sun/philosophical_egg_02) both detected the identical crop: the radiant sun-face. Keeping one entry, rejecting the other.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 98% of the mask)."
-      },
-      {
-        "type": "composite",
-        "object_stem": "bush+book_mirror_composite",
-        "label": "bush + book mirror",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "tree"
-        ],
-        "category": "plants/objects",
-        "detection_score": null,
-        "detection_bbox": [
-          1118,
-          990,
-          454,
-          506
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\composites\\bush+book_mirror_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\composites\\bush+book_mirror_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-45\\composites\\bush+book_mirror_composite_review.jpg",
-        "mask_pixel_count": 193956
       }
     ],
-    "object_catalog_extracted_at": "2026-06-06T17:27:10.249868",
+    "object_catalog_extracted_at": "2026-06-06T17:27:09.728429",
     "object_catalog_count": {
-      "individual": 9,
-      "composite": 1,
-      "total": 10
+      "individual": 4,
+      "composite": 0,
+      "total": 4
     }
   },
   {
