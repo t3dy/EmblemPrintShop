@@ -3476,5 +3476,83 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T13:24:11.099786+00:00",
     "note": "Composite of the soldier and his shield -- both already covered by 'man_old_man'."
+  },
+  "emblem-42__person": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:26:26.268995+00:00",
+    "note": "Likely personifies 'Reading' -- correctly located, more specific than the generic label.",
+    "corrected_label": "Bespectacled old scholar walking with a cane"
+  },
+  "emblem-42__person_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:26:26.268995+00:00",
+    "note": "Correctly located, more specific than the generic label.",
+    "corrected_label": "Nature personified, windblown, holding flowers and a fruit basket"
+  },
+  "emblem-42__distillation_vessel": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:26:26.268995+00:00",
+    "note": "Identical crop to 'person_02' -- duplicate detection of the Nature figure."
+  },
+  "emblem-42__mortar": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:26:26.268995+00:00",
+    "note": "No mortar -- a lantern, matching the 'Reading' figure's need for light.",
+    "corrected_label": "Lit lantern held by the scholar"
+  },
+  "emblem-42__hourglass": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:26:26.268995+00:00",
+    "note": "A close-up of the scholar's spectacled face, already covered by 'person' -- not a distinct object."
+  },
+  "emblem-42__arch_window": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:26:26.268995+00:00",
+    "note": "Crop is a tiny, illegible crescent-shaped fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-42__cave": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:26:26.268995+00:00",
+    "note": "Another crop of the Nature figure, already covered by 'person_02' -- duplicate."
+  },
+  "emblem-42__flower": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:26:26.268995+00:00",
+    "note": "Correct: the flowers held by Nature, may overlap 'person_02'."
+  },
+  "emblem-42__flower_02": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:26:26.268995+00:00",
+    "note": "Correct: a village landscape with houses and trees, background."
+  },
+  "emblem-42__forest": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:26:26.268995+00:00",
+    "note": "Plausible: trees and a house, may overlap 'flower_02'."
+  },
+  "emblem-42__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:26:26.268995+00:00",
+    "note": "No hearth -- bundles both figures' legs/feet together, not a single object."
+  },
+  "emblem-42__sword_axe": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:26:26.268995+00:00",
+    "note": "Crop is a tiny, illegible fragment -- likely part of the scholar's cane, already covered by 'person'; flagging as unsupported."
+  },
+  "emblem-42__tower_chimney": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:26:26.268995+00:00",
+    "note": "Identical crop to 'mortar' -- duplicate detection of the lantern."
+  },
+  "emblem-42__hourglass+sword_axe+person_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:26:26.268995+00:00",
+    "note": "Composite bundling three elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-42__person+flower+flower+cave_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:26:26.268995+00:00",
+    "note": "Composite bundling four elements, including a duplicate 'cave' crop -- each already covered by its own individual entry."
   }
 }
