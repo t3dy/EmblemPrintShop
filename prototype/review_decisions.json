@@ -2208,5 +2208,106 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T12:48:22.214279+00:00",
     "note": "Composite bundling six elements, including the rejected whole-scene 'book_mirror' -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-27__person": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:50:49.589447+00:00",
+    "note": "Matches the discourse's warning literally -- entering without the proper key is like walking without feet.",
+    "corrected_label": "Man walking toward the locked gate, shown without visible feet"
+  },
+  "emblem-27__philosophical_egg": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:50:49.589447+00:00",
+    "note": "Identical crop to 'person' -- duplicate detection, no egg present."
+  },
+  "emblem-27__distillation_vessel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:50:49.589447+00:00",
+    "note": "Three category prompts (door/tower_temple/distillation_vessel) all detected the identical crop: the grand padlocked gate. No apparatus, door, or temple label fits precisely -- keeping one entry as 'gate', rejecting the other two as exact-region duplicates.",
+    "corrected_label": "Grand locked gate with chains and padlocks (the rose-garden's entrance)"
+  },
+  "emblem-27__door": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:50:49.589447+00:00",
+    "note": "Three category prompts (door/tower_temple/distillation_vessel) all detected the identical crop: the grand padlocked gate. No apparatus, door, or temple label fits precisely -- keeping one entry as 'gate', rejecting the other two as exact-region duplicates. (kept under 'distillation_vessel')"
+  },
+  "emblem-27__tower_temple": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:50:49.589447+00:00",
+    "note": "Three category prompts (door/tower_temple/distillation_vessel) all detected the identical crop: the grand padlocked gate. No apparatus, door, or temple label fits precisely -- keeping one entry as 'gate', rejecting the other two as exact-region duplicates. (kept under 'distillation_vessel')"
+  },
+  "emblem-27__axe_torch": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:50:49.589447+00:00",
+    "note": "Crop is a tiny, illegible fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-27__arch": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:50:49.589447+00:00",
+    "note": "Part of the same gate structure already covered by 'distillation_vessel', a different detail of it.",
+    "corrected_label": "The gate's fan-shaped pediment window"
+  },
+  "emblem-27__bridge": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:50:49.589447+00:00",
+    "note": "No bridge -- a garden wall lined with arched planting niches.",
+    "corrected_label": "Formal walled garden with arched niches (the rose-garden)"
+  },
+  "emblem-27__castle": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:50:49.589447+00:00",
+    "note": "Correct: a hillside castle/fortress with a tower."
+  },
+  "emblem-27__chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:50:49.589447+00:00",
+    "note": "Two further crops (chimney_02/chimney_03) duplicate this same gate spire at slightly different framing -- keeping one entry, rejecting the others.",
+    "corrected_label": "One of the gate's spires (obelisk-topped pinnacle)"
+  },
+  "emblem-27__chimney_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:50:49.589447+00:00",
+    "note": "Two further crops (chimney_02/chimney_03) duplicate this same gate spire at slightly different framing -- keeping one entry, rejecting the others. (kept under 'chimney')"
+  },
+  "emblem-27__chimney_03": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:50:49.589447+00:00",
+    "note": "Two further crops (chimney_02/chimney_03) duplicate this same gate spire at slightly different framing -- keeping one entry, rejecting the others. (kept under 'chimney')"
+  },
+  "emblem-27__flower": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:50:49.589447+00:00",
+    "note": "No flower -- a group of three allegorical figures seated together.",
+    "corrected_label": "Three seated women in a garden bower"
+  },
+  "emblem-27__forest": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:50:49.589447+00:00",
+    "note": "Correct: trees and hedge with castle battlements behind."
+  },
+  "emblem-27__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:50:49.589447+00:00",
+    "note": "No hearth -- the man's legs/feet and the garden wall, already covered by 'person'."
+  },
+  "emblem-27__tree_plant": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:50:49.589447+00:00",
+    "note": "Correct: a single planted tree within the garden."
+  },
+  "emblem-27__forest+castle_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:50:49.589447+00:00",
+    "note": "Composite of two already-covered elements -- 'forest' and 'castle'."
+  },
+  "emblem-27__person+hearth_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:50:49.589447+00:00",
+    "note": "Composite bundling the man with the rejected 'hearth' crop -- already covered by 'person'."
+  },
+  "emblem-27__tower_temple+door+chimney+chimney+arch+chimney_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:50:49.589447+00:00",
+    "note": "Composite bundling six elements, all duplicates of the gate and its spires -- each already exists as its own (corrected) individual entry."
   }
 }
