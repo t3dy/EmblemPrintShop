@@ -3270,5 +3270,122 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T13:19:12.559705+00:00",
     "note": "Composite bundling three already-covered elements."
+  },
+  "emblem-40__person": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "Correctly located -- one of the plate's twin fountain figures.",
+    "corrected_label": "Nude child fountain-statue, water streaming from his mouth (one of the 'two waters')"
+  },
+  "emblem-40__person_man_old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "The second, matching fountain figure -- no old man is present.",
+    "corrected_label": "Nude child fountain-statue, water streaming from his mouth (the second of the 'two waters')"
+  },
+  "emblem-40__person_man_old_man_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "Correct figure, more specific than the generic label.",
+    "corrected_label": "Worker stirring or pouring liquid into a trough with a rake/paddle"
+  },
+  "emblem-40__woman_angel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "No woman or angel specifically -- a group of onlookers.",
+    "corrected_label": "Group of cloaked figures gathered around the fountain"
+  },
+  "emblem-40__person_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "Crop is a tiny, illegible fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-40__person_03": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "Plausible: a walking figure with a staff/cane, part of the gathered group."
+  },
+  "emblem-40__altar": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "Matches the 'two waters' motif directly -- no altar is present.",
+    "corrected_label": "One of the two stone fountain basins"
+  },
+  "emblem-40__building_house": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "Correct: a domed rotunda building with an entrance."
+  },
+  "emblem-40__castle": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "Correct: the river-town panorama with a bridge and obelisk."
+  },
+  "emblem-40__cave": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "Identical crop to 'building_house' -- duplicate detection of the same rotunda doorway."
+  },
+  "emblem-40__crown": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "Crop is a tiny, illegible hat-brim fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-40__distillation_vessel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "Three category prompts (distillation_vessel/hourglass/sword_spear_axe_torc) all detected the identical crop: a worker catching the fountain's water stream in a basin. No apparatus is present -- keeping one entry, rejecting the other two as exact-region duplicates.",
+    "corrected_label": "Worker catching the fountain's water in a basin"
+  },
+  "emblem-40__hourglass": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "Three category prompts (distillation_vessel/hourglass/sword_spear_axe_torc) all detected the identical crop: a worker catching the fountain's water stream in a basin. No apparatus is present -- keeping one entry, rejecting the other two as exact-region duplicates. (kept under 'distillation_vessel')"
+  },
+  "emblem-40__sword_spear_axe_torc": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "Three category prompts (distillation_vessel/hourglass/sword_spear_axe_torc) all detected the identical crop: a worker catching the fountain's water stream in a basin. No apparatus is present -- keeping one entry, rejecting the other two as exact-region duplicates. (kept under 'distillation_vessel')"
+  },
+  "emblem-40__distillation_vessel_02": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "Correct: a wider crop showing one fountain statue, the worker catching its water, and the second fountain visible at the far edge -- the best overview of the twin-fountain motif."
+  },
+  "emblem-40__door": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "Correct: a doorway/archway with a pediment, may overlap 'building_house'."
+  },
+  "emblem-40__hearth": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "Crop is a tiny, illegible dark texture -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-40__sword_axe": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "No sword or axe -- a garden rake.",
+    "corrected_label": "Rake lying on the ground between the two fountains"
+  },
+  "emblem-40__tower_chimney": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "Correct: the obelisk visible in the town panorama."
+  },
+  "emblem-40__crown+sword_axe+person_man_old_man+altar+hourglass+hearth_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "Composite bundling six separate elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-40__distillation_vessel+distillation_vessel_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "Composite of two duplicate worker-and-water crops -- already covered."
+  },
+  "emblem-40__tower_chimney+building_house+door+castle+cave_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:21:47.415281+00:00",
+    "note": "Composite bundling five already-covered architecture elements."
   }
 }
