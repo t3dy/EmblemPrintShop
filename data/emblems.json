@@ -3858,38 +3858,8 @@
     "object_catalog": [
       {
         "type": "individual",
-        "object_stem": "cave",
-        "label": "cave",
-        "motif_id": "mountain",
-        "category": "landscape",
-        "detection_score": 0.38357099890708923,
-        "detection_bbox": [
-          223,
-          52,
-          1238,
-          1351
-        ],
-        "appearance": "Ranges from craggy peaks with hatched rock faces to gentle rolling hills; cave openings rendered as dark ellipses with radiating shadow hatching; foreground rocks as roughly triangular forms with parallel weathering lines.",
-        "iconographic_meaning": "The mountain is both prima materia (the raw earth) and the destination of VITRIOL: Visita Interiora Terrae Rectificando Invenies Occultum Lapidem. Grottos are thresholds between surface and interior work. In Maier, the mountain is the laboratory of Nature herself.",
-        "alchemical_valence": [
-          "prima_materia",
-          "earth",
-          "descent",
-          "vitriol"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\cave_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\cave_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\cave_review.jpg",
-        "mask_pixel_count": 2032165,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
         "object_stem": "crown",
-        "label": "crown",
+        "label": "Medallion of a crowned head on the pavilion's pediment",
         "motif_id": "crown",
         "category": "objects",
         "detection_score": 0.26428940892219543,
@@ -3907,12 +3877,14 @@
           "restoration",
           "stone"
         ],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\crown_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\crown_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\crown_review.jpg",
         "mask_pixel_count": 18234,
+        "original_label": "crown",
+        "reviewer_note": "Correct object -- a carved roundel above the pavilion's entrance, not a crown by itself.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -3937,102 +3909,20 @@
           "medicine",
           "earth"
         ],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\flower_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\flower_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\flower_review.jpg",
         "mask_pixel_count": 65974,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "furnace_mortar",
-        "label": "furnace mortar",
-        "motif_id": null,
-        "category": "equipment",
-        "detection_score": 0.31628653407096863,
-        "detection_bbox": [
-          222,
-          46,
-          1240,
-          1368
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\furnace_mortar_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\furnace_mortar_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\furnace_mortar_review.jpg",
-        "mask_pixel_count": 2034297
-      },
-      {
-        "type": "individual",
-        "object_stem": "hearth",
-        "label": "hearth",
-        "motif_id": "furnace",
-        "category": "architecture",
-        "detection_score": 0.3933422863483429,
-        "detection_bbox": [
-          30,
-          1076,
-          1540,
-          413
-        ],
-        "appearance": "Domed or cylindrical tower-shaped furnace (athanor) with fire door at base and ash-pit below; in engravings rendered as a chimney-tower with visible fire at the opening; workshop hearth is a low open fireplace.",
-        "iconographic_meaning": "The source of alchemical heat: athanor, open furnace, or allegorical fire. Governs the timing of every stage; too much fire destroys the work. The athanor (from Arabic al-tannur, the bread oven) provides gentle sustained heat. Appears prominently in Maier, Mylius, and Khunrath laboratory scenes.",
-        "alchemical_valence": [
-          "fire",
-          "calcinatio",
-          "heat",
-          "operation"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\hearth_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\hearth_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\hearth_review.jpg",
-        "mask_pixel_count": 300734,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 99% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "person_02",
-        "label": "person",
-        "motif_id": "figure",
-        "category": "figures",
-        "detection_score": 0.26267173886299133,
-        "detection_bbox": [
-          827,
-          150,
-          69,
-          82
-        ],
-        "appearance": "Upright human form in period dress or nude; typically rendered with cross-hatched drapery, fine line work for anatomy, and ground-shadow in early modern copperplate style.",
-        "iconographic_meaning": "The generic human figure in emblem imagery is the operator, observer, or subject of the alchemical drama. Clothed figures denote social roles (philosopher, artisan, noble); nude figures indicate the prima materia or the purified soul stripped of accident.",
-        "alchemical_valence": [
-          "operator",
-          "anima",
-          "prima_materia",
-          "human_soul"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\person_02_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\person_02_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\person_02_review.jpg",
-        "mask_pixel_count": 8767,
+        "reviewer_note": "Plausible: background garden trees/foliage outside the pavilion, left side of the plate.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
       {
         "type": "individual",
         "object_stem": "person",
-        "label": "person",
+        "label": "Old man kneeling in prayer toward a small tree with a carved face",
         "motif_id": "figure",
         "category": "figures",
         "detection_score": 0.3214334547519684,
@@ -4050,42 +3940,14 @@
           "prima_materia",
           "human_soul"
         ],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\person_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\person_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\person_review.jpg",
         "mask_pixel_count": 116939,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "skeleton",
-        "label": "skeleton",
-        "motif_id": "skeleton",
-        "category": "figures",
-        "detection_score": 0.29398322105407715,
-        "detection_bbox": [
-          29,
-          552,
-          148,
-          446
-        ],
-        "appearance": "Articulated human skeleton, often carrying scythe or hourglass; may be dancing, enthroned, or lying prostrate; rendered in fine line-work showing each bone.",
-        "iconographic_meaning": "The skeleton figures mortificatio, the death of metals or the dissolution of the body prior to resurrection. Death is a necessary stage in the Work: the king must die before he can be resurrected as the philosophical gold. Found prominently in Atalanta Fugiens emblems 6, 8, and 32.",
-        "alchemical_valence": [
-          "mortificatio",
-          "nigredo",
-          "dissolution",
-          "putrefaction"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\skeleton_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\skeleton_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\skeleton_review.jpg",
-        "mask_pixel_count": 34942,
+        "original_label": "person",
+        "reviewer_note": "The plate's central figure, inside the garden pavilion -- correctly located, adding the specific action/context.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
@@ -4110,53 +3972,22 @@
           "macrocosm",
           "celestial"
         ],
-        "review_status": "auto",
+        "review_status": "flagged",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\star_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\star_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\individual\\star_review.jpg",
         "mask_pixel_count": 3956,
+        "reviewer_note": "Crop is a tiny, illegible textured sliver -- too small/unclear to confirm what it depicts; flagging as unsupported.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "composite",
-        "object_stem": "hearth+cave+star+person+flower+skeleton+crown+person_composite",
-        "label": "hearth + cave + star + person + flower + skeleton + crown + person",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "star",
-          "skeleton",
-          "figure",
-          "furnace",
-          "mountain",
-          "crown",
-          "flower"
-        ],
-        "category": "architecture/landscape/landscape/figures/plants/figures/objects/figures",
-        "detection_score": null,
-        "detection_bbox": [
-          24,
-          11,
-          1548,
-          1490
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\composites\\hearth+cave+star+person+flower+skeleton+crown+person_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\composites\\hearth+cave+star+person+flower+skeleton+crown+person_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-09\\composites\\hearth+cave+star+person+flower+skeleton+crown+person_composite_review.jpg",
-        "mask_pixel_count": 2107583
       }
     ],
-    "object_catalog_extracted_at": "2026-06-06T17:10:58.141023",
+    "object_catalog_extracted_at": "2026-06-03T23:00:39.988261",
     "object_catalog_count": {
-      "individual": 9,
-      "composite": 1,
-      "total": 10
+      "individual": 4,
+      "composite": 0,
+      "total": 4
     }
   },
   {

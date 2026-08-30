@@ -1070,5 +1070,57 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T07:40:20.560335+00:00",
     "note": "Composite bundling five separate elements, including the rejected 'person' (actually bare rock) -- each already exists as its own individual entry."
+  },
+  "emblem-09__person": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:42:16.416384+00:00",
+    "note": "The plate's central figure, inside the garden pavilion -- correctly located, adding the specific action/context.",
+    "corrected_label": "Old man kneeling in prayer toward a small tree with a carved face"
+  },
+  "emblem-09__person_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:42:16.416384+00:00",
+    "note": "Same pediment medallion as 'crown' -- duplicate detection."
+  },
+  "emblem-09__skeleton": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:42:16.416384+00:00",
+    "note": "No skeleton -- crop is background garden trees outside the pavilion."
+  },
+  "emblem-09__star": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:42:16.416384+00:00",
+    "note": "Crop is a tiny, illegible textured sliver -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-09__crown": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:42:16.416384+00:00",
+    "note": "Correct object -- a carved roundel above the pavilion's entrance, not a crown by itself.",
+    "corrected_label": "Medallion of a crowned head on the pavilion's pediment"
+  },
+  "emblem-09__furnace_mortar": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:42:16.416384+00:00",
+    "note": "Bbox covers the entire plate (the whole pavilion + garden) -- a whole-scene detection; no furnace or mortar is depicted anywhere in this emblem."
+  },
+  "emblem-09__cave": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:42:16.416384+00:00",
+    "note": "Identical whole-plate crop to 'furnace_mortar' -- duplicate whole-scene detection, no cave present."
+  },
+  "emblem-09__flower": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:42:16.416384+00:00",
+    "note": "Plausible: background garden trees/foliage outside the pavilion, left side of the plate."
+  },
+  "emblem-09__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:42:16.416384+00:00",
+    "note": "No hearth -- bbox bundles the pavilion's column bases with the old man's leg/foot, not a single coherent object."
+  },
+  "emblem-09__hearth+cave+star+person+flower+skeleton+crown+person_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:42:16.416384+00:00",
+    "note": "Composite bundling eight separate elements, including two rejected whole-scene detections -- each already exists as its own (corrected) individual entry."
   }
 }
