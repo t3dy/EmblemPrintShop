@@ -2540,5 +2540,103 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T12:57:54.698238+00:00",
     "note": "Composite bundling duplicate sun-mask crops with the pair of figures -- each already covered elsewhere."
+  },
+  "emblem-31__old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:00:17.732171+00:00",
+    "note": "Correct figure, more specific than the generic label.",
+    "corrected_label": "The crowned king swimming, reaching out"
+  },
+  "emblem-31__philosophical_egg": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:00:17.732171+00:00",
+    "note": "Correct: the swimming king, a different crop framing than 'old_man' (his outstretched reaching arm), no egg present but correctly identifies the same figure."
+  },
+  "emblem-31__horse": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:00:17.732171+00:00",
+    "note": "No horse -- a small boat on the water.",
+    "corrected_label": "Distant boat with figures (background)"
+  },
+  "emblem-31__crown": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:00:17.732171+00:00",
+    "note": "Correct: the king's crown, close-up."
+  },
+  "emblem-31__anvil": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:00:17.732171+00:00",
+    "note": "No anvil -- another crop of the king's outstretched arm, overlapping content already covered by 'old_man'/'philosophical_egg'."
+  },
+  "emblem-31__hourglass": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:00:17.732171+00:00",
+    "note": "No hourglass -- a crop of the king's face, overlapping content already covered by 'crown'/'old_man'."
+  },
+  "emblem-31__axe": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:00:17.732171+00:00",
+    "note": "Crop is a tiny, illegible wave/rock texture -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-31__distillation_vessel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:00:17.732171+00:00",
+    "note": "No distillation apparatus -- a sailing ship.",
+    "corrected_label": "Tall-masted ship at dock (background)"
+  },
+  "emblem-31__bridge": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:00:17.732171+00:00",
+    "note": "Plausible: a waterfront town skyline."
+  },
+  "emblem-31__building_house": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:00:17.732171+00:00",
+    "note": "Plausible: a small domed building."
+  },
+  "emblem-31__castle": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:00:17.732171+00:00",
+    "note": "Correct: a hillside castle and town cluster."
+  },
+  "emblem-31__chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:00:17.732171+00:00",
+    "note": "Crop is a tiny, illegible tower fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-31__river": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:00:17.732171+00:00",
+    "note": "Crop is the king's leg/foot in the water, already covered by 'old_man'/'philosophical_egg' -- not a distinct river feature."
+  },
+  "emblem-31__sky": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:00:17.732171+00:00",
+    "note": "Plausible: the wide background panorama (mountains, town, and a ship)."
+  },
+  "emblem-31__tower_chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:00:17.732171+00:00",
+    "note": "Crop is a tiny, illegible building fragment -- possibly overlapping 'castle'/'chimney'; flagging as unsupported."
+  },
+  "emblem-31__tree": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:00:17.732171+00:00",
+    "note": "Identical crop to 'distillation_vessel' -- duplicate detection of the ship, no tree present."
+  },
+  "emblem-31__bridge+building_house_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:00:17.732171+00:00",
+    "note": "Composite of two already-covered background elements."
+  },
+  "emblem-31__castle+chimney_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:00:17.732171+00:00",
+    "note": "Composite of the castle and an illegible fragment -- already covered by 'castle'."
+  },
+  "emblem-31__crown+old_man+anvil+hourglass_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:00:17.732171+00:00",
+    "note": "Composite bundling four overlapping crops of the king -- each already exists as its own individual entry."
   }
 }
