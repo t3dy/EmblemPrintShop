@@ -1498,5 +1498,86 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T07:53:51.495209+00:00",
     "note": "Composite bundling the illegible window fragment with the already-approved tower -- redundant."
+  },
+  "emblem-19__person": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:56:10.273335+00:00",
+    "note": "Crop is a tiny, illegible torso-texture fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-19__person_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:56:10.273335+00:00",
+    "note": "Correct figure -- the mythological hero opposing Geryon, more specific than the generic label.",
+    "corrected_label": "Hercules raising his club to strike"
+  },
+  "emblem-19__person_03": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:56:10.273335+00:00",
+    "note": "Correct -- a close crop of one of the three identical bodies.",
+    "corrected_label": "One of Geryon's three conjoined bodies, with flame at the hip"
+  },
+  "emblem-19__person_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:56:10.273335+00:00",
+    "note": "The plate's central figure, correctly bounded -- three identical men walking as one, per the discourse's Geryon allegory.",
+    "corrected_label": "Geryon, the three-bodied king, depicted as three conjoined men"
+  },
+  "emblem-19__cauldron": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:56:10.273335+00:00",
+    "note": "No cauldron -- a tightly curled texture at one of Geryon's bodies' hips.",
+    "corrected_label": "Curly bundle (matted hair or fleece) at Geryon's hip"
+  },
+  "emblem-19__chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:56:10.273335+00:00",
+    "note": "Crop is a tiny, illegible sliver -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-19__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:56:10.273335+00:00",
+    "note": "No hearth -- bbox bundles the legs of Hercules and all three of Geryon's bodies together, not a single object."
+  },
+  "emblem-19__pestle": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:56:10.273335+00:00",
+    "note": "A wooden club, not a pestle.",
+    "corrected_label": "Hercules' club, raised to strike"
+  },
+  "emblem-19__skeleton": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:56:10.273335+00:00",
+    "note": "No skeleton -- background scenery, a river town on a hillside.",
+    "corrected_label": "Distant hillside town (background landscape)"
+  },
+  "emblem-19__star": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:56:10.273335+00:00",
+    "note": "Crop is a tiny, illegible mark -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-19__sword_spear_axe": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:56:10.273335+00:00",
+    "note": "Identical crop to 'pestle' -- duplicate detection of Hercules' club, no sword, spear, or axe present."
+  },
+  "emblem-19__tower_chimney": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:56:10.273335+00:00",
+    "note": "Correct: a castle/town skyline with towers, background."
+  },
+  "emblem-19__person_man+person+cauldron_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:56:10.273335+00:00",
+    "note": "Composite bundling three separate elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-19__star+hearth_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:56:10.273335+00:00",
+    "note": "Composite of an illegible fragment and the bundled-legs crop -- both already covered by their own individual entries."
+  },
+  "emblem-19__sword_spear_axe+person_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:56:10.273335+00:00",
+    "note": "Composite of the duplicate club crop and an illegible fragment -- both already covered elsewhere."
   }
 }
