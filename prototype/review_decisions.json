@@ -1934,5 +1934,121 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T12:41:17.263794+00:00",
     "note": "Composite bundling six separate elements, including the rejected whole-scene 'person' -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-24__person": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "Correct figure -- the king in his restored/upright state, more specific than the generic label.",
+    "corrected_label": "The king, crowned and cloaked, standing"
+  },
+  "emblem-24__dog_lamb_frog": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "No dog, lamb, or frog -- correctly located, the allegory's first stage.",
+    "corrected_label": "The wolf devouring the fallen king"
+  },
+  "emblem-24__bear_ox_frog": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "Identical crop to 'dog_lamb_frog' -- duplicate detection of the wolf devouring the king."
+  },
+  "emblem-24__crown": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "Crop is a tiny, illegible fragment -- possibly part of the king's crown, but too small/unclear to confirm; flagging as unsupported."
+  },
+  "emblem-24__philosophical_egg": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "Identical crop to 'dog_lamb_frog'/'bear_ox_frog' -- duplicate detection of the wolf devouring the king, no egg present."
+  },
+  "emblem-24__bridge": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "Plausible: town buildings along the waterfront."
+  },
+  "emblem-24__castle": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "Correct: the river-town cityscape with a domed building and stone bridge."
+  },
+  "emblem-24__cave": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "No cave -- a masonry bridge arch.",
+    "corrected_label": "Stone bridge arch (part of the town's waterfront)"
+  },
+  "emblem-24__distillation_vessel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "No distillation apparatus -- a single-masted sailboat.",
+    "corrected_label": "Sailboat on the water"
+  },
+  "emblem-24__distillation_vessel_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "Identical crop to 'person' -- duplicate detection of the standing king."
+  },
+  "emblem-24__flower": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "Plausible: foreground trees/bushes."
+  },
+  "emblem-24__flower_02": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "Plausible: trees/bushes, may overlap 'flower' and 'tree'."
+  },
+  "emblem-24__gate_altar": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "No gate or altar -- a low wooden fence/jetty structure.",
+    "corrected_label": "Fence or jetty along the waterfront"
+  },
+  "emblem-24__peacock": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "Same sailboat as 'distillation_vessel', tighter crop -- duplicate detection, no peacock present."
+  },
+  "emblem-24__river_sea": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "Bundles the town, the boat, and the trees together into one wide region -- each already exists as its own individual entry."
+  },
+  "emblem-24__tower_chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "Crop is a tiny, illegible sliver -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-24__tower_chimney_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "Crop is a tiny, illegible sliver -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-24__tree": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "Plausible: foreground foliage, may overlap 'flower'/'flower_02'."
+  },
+  "emblem-24__vessel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "No vessel -- this is the allegory's second stage, the wolf being burned, matching the motto's second clause directly.",
+    "corrected_label": "The wolf, howling as it burns in flames"
+  },
+  "emblem-24__bear_ox_frog+dog_lamb_frog_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "Composite of two duplicate crops of the wolf devouring the king."
+  },
+  "emblem-24__person+crown_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "Composite bundling the king with an illegible crown fragment -- already covered by 'person'."
+  },
+  "emblem-24__tower_chimney+castle+flower+cave+peacock+tower_chimney+vesse_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
+    "note": "Composite bundling seven elements, including the important 'vessel' (the burning wolf) -- each already exists as its own (corrected) individual entry."
   }
 }
