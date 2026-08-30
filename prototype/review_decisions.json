@@ -3836,5 +3836,68 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T13:33:46.493587+00:00",
     "note": "Composite of two duplicate starry-sky crops."
+  },
+  "emblem-46__old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:35:56.801343+00:00",
+    "note": "The plate's title myth pictured directly -- correctly located.",
+    "corrected_label": "Crowned king with an eagle perched on each outstretched hand"
+  },
+  "emblem-46__distillation_vessel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:35:56.801343+00:00",
+    "note": "No distillation apparatus -- the left-hand eagle.",
+    "corrected_label": "One of the two eagles meeting on the king's hands"
+  },
+  "emblem-46__sword_axe": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:35:56.801343+00:00",
+    "note": "Identical crop to 'distillation_vessel' -- duplicate detection of the same eagle."
+  },
+  "emblem-46__distillation_vessel_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:35:56.801343+00:00",
+    "note": "Two category prompts (distillation_vessel_02/sword_axe_02) both detected the identical crop: the right-hand eagle. Keeping one entry, rejecting the other as an exact-region duplicate.",
+    "corrected_label": "The right-hand eagle, king's crown visible at the edge"
+  },
+  "emblem-46__sword_axe_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:35:56.801343+00:00",
+    "note": "Two category prompts (distillation_vessel_02/sword_axe_02) both detected the identical crop: the right-hand eagle. Keeping one entry, rejecting the other as an exact-region duplicate. (kept under 'distillation_vessel_02')"
+  },
+  "emblem-46__castle": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:35:56.801343+00:00",
+    "note": "Correct: the river town with boats, background."
+  },
+  "emblem-46__crown": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:35:56.801343+00:00",
+    "note": "Correct: the king's crown, close-up, may overlap 'old_man'."
+  },
+  "emblem-46__forest": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:35:56.801343+00:00",
+    "note": "Correct: bushes/trees."
+  },
+  "emblem-46__mountain_hill": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T13:35:56.801343+00:00",
+    "note": "Correct: the mountain with a town at its base."
+  },
+  "emblem-46__ring": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T13:35:56.801343+00:00",
+    "note": "Crop is a tiny, illegible feather-texture fragment -- too small/unclear to confirm; flagging as unsupported."
+  },
+  "emblem-46__wall_window": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:35:56.801343+00:00",
+    "note": "Bbox covers the entire plate -- a whole-scene detection, not a single object."
+  },
+  "emblem-46__crown+old_man+sword_axe+sword_axe+mountain_hill+castle+wall__composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T13:35:56.801343+00:00",
+    "note": "Composite bundling seven separate elements, including the rejected whole-scene 'wall_window' -- each already exists as its own (corrected) individual entry."
   }
 }
