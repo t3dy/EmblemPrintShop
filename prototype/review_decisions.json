@@ -805,5 +805,97 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T07:33:36.680164+00:00",
     "note": "Composite bundling seven separate elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-05__woman": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:35:54.066714+00:00",
+    "note": "Correct: the woman being made to suckle the toad, matching the plate's title. Note: the toad itself, held in the man's hand at her breast, was never separately detected/extracted as its own object anywhere in this emblem's catalog -- a real gap, since it's the plate's title subject."
+  },
+  "emblem-05__man_old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:35:54.066714+00:00",
+    "note": "Correct figure, more specific than the generic label -- he's the one administering the toad, per the discourse.",
+    "corrected_label": "Bearded man holding a toad up to the woman's breast"
+  },
+  "emblem-05__ring": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:35:54.066714+00:00",
+    "note": "Crop is a tiny, illegible sliver -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-05__torch": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:35:54.066714+00:00",
+    "note": "Crop is a tiny, illegible sliver -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-05__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:35:54.066714+00:00",
+    "note": "No hearth -- bbox bundles both figures' legs and a stone pedestal/block into one region, not a single object."
+  },
+  "emblem-05__building_house": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:35:54.066714+00:00",
+    "note": "Correct: the dormered townhouse with an arched ground-floor door."
+  },
+  "emblem-05__building_house_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:35:54.066714+00:00",
+    "note": "Wider crop of the same house as 'building_house', bundling in both already-catalogued figures -- redundant, not a distinct object."
+  },
+  "emblem-05__castle": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:35:54.066714+00:00",
+    "note": "Bbox covers nearly the entire plate (whole street scene, figures included) -- a whole-scene detection."
+  },
+  "emblem-05__castle_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:35:54.066714+00:00",
+    "note": "A cluster of church/cathedral spires, not a castle specifically -- correctly isolated from the background street view.",
+    "corrected_label": "Distant Gothic church towers (cityscape skyline)"
+  },
+  "emblem-05__castle_temple": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:35:54.066714+00:00",
+    "note": "Bbox covers nearly the entire plate -- same whole-scene issue as 'castle', not a single object."
+  },
+  "emblem-05__chimney": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:35:54.066714+00:00",
+    "note": "Correct: a small chimney stack, cleanly isolated."
+  },
+  "emblem-05__tower": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:35:54.066714+00:00",
+    "note": "Correct: the tall central Gothic church tower in the distant skyline (may overlap 'castle_02''s wider cluster crop)."
+  },
+  "emblem-05__tower_chimney": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:35:54.066714+00:00",
+    "note": "Plausible: a smaller turret/spire structure in the background skyline."
+  },
+  "emblem-05__window": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:35:54.066714+00:00",
+    "note": "Plausible: a barred window or gated opening on the townhouse facade."
+  },
+  "emblem-05__window_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:35:54.066714+00:00",
+    "note": "Crop is low-resolution grid/hatching texture -- plausibly one of the house's many facade windows, but too unclear to confirm."
+  },
+  "emblem-05__window_03": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:35:54.066714+00:00",
+    "note": "Crop is low-resolution grid/hatching texture -- plausibly one of the house's many facade windows, but too unclear to confirm."
+  },
+  "emblem-05__window_04": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:35:54.066714+00:00",
+    "note": "Crop is low-resolution grid/hatching texture -- plausibly one of the house's many facade windows, but too unclear to confirm."
+  },
+  "emblem-05__man_old_man+chimney+woman+building_house+building_house+cast_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:35:54.066714+00:00",
+    "note": "Composite bundling multiple separate elements -- each already exists as its own (corrected) individual entry."
   }
 }
