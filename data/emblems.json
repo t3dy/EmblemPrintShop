@@ -14380,66 +14380,6 @@
     "object_catalog": [
       {
         "type": "individual",
-        "object_stem": "athanor",
-        "label": "athanor",
-        "motif_id": "furnace",
-        "category": "equipment",
-        "detection_score": 0.2655140161514282,
-        "detection_bbox": [
-          578,
-          29,
-          466,
-          585
-        ],
-        "appearance": "Domed or cylindrical tower-shaped furnace (athanor) with fire door at base and ash-pit below; in engravings rendered as a chimney-tower with visible fire at the opening; workshop hearth is a low open fireplace.",
-        "iconographic_meaning": "The source of alchemical heat: athanor, open furnace, or allegorical fire. Governs the timing of every stage; too much fire destroys the work. The athanor (from Arabic al-tannur, the bread oven) provides gentle sustained heat. Appears prominently in Maier, Mylius, and Khunrath laboratory scenes.",
-        "alchemical_valence": [
-          "fire",
-          "calcinatio",
-          "heat",
-          "operation"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\athanor_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\athanor_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\athanor_review.jpg",
-        "mask_pixel_count": 90979,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "cave",
-        "label": "cave",
-        "motif_id": "mountain",
-        "category": "landscape",
-        "detection_score": 0.29126131534576416,
-        "detection_bbox": [
-          36,
-          30,
-          1529,
-          1438
-        ],
-        "appearance": "Ranges from craggy peaks with hatched rock faces to gentle rolling hills; cave openings rendered as dark ellipses with radiating shadow hatching; foreground rocks as roughly triangular forms with parallel weathering lines.",
-        "iconographic_meaning": "The mountain is both prima materia (the raw earth) and the destination of VITRIOL: Visita Interiora Terrae Rectificando Invenies Occultum Lapidem. Grottos are thresholds between surface and interior work. In Maier, the mountain is the laboratory of Nature herself.",
-        "alchemical_valence": [
-          "prima_materia",
-          "earth",
-          "descent",
-          "vitriol"
-        ],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\cave_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\cave_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\cave_review.jpg",
-        "mask_pixel_count": 2058174,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "individual",
         "object_stem": "child",
         "label": "child",
         "motif_id": "child",
@@ -14459,19 +14399,20 @@
           "prima_materia",
           "generation"
         ],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\child_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\child_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\child_review.jpg",
         "mask_pixel_count": 145046,
+        "reviewer_note": "Correct: the child playing with a jug and a swan/goose.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
       {
         "type": "individual",
         "object_stem": "distillation_vessel",
-        "label": "distillation vessel",
+        "label": "Mercury's caduceus lying on the ground",
         "motif_id": null,
         "category": "equipment",
         "detection_score": 0.3541751801967621,
@@ -14484,39 +14425,16 @@
         "appearance": null,
         "iconographic_meaning": null,
         "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\distillation_vessel_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\distillation_vessel_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\distillation_vessel_review.jpg",
         "mask_pixel_count": 56708,
+        "original_label": "distillation vessel",
+        "reviewer_note": "No distillation apparatus -- the staff with two entwined serpents.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 99% of the mask)."
-      },
-      {
-        "type": "individual",
-        "object_stem": "man_old_man",
-        "label": "man old man",
-        "motif_id": null,
-        "category": "figures",
-        "detection_score": 0.48865434527397156,
-        "detection_bbox": [
-          678,
-          496,
-          526,
-          968
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\man_old_man_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\man_old_man_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\man_old_man_review.jpg",
-        "mask_pixel_count": 277870,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
       {
         "type": "individual",
@@ -14539,19 +14457,20 @@
           "prima_materia",
           "human_soul"
         ],
-        "review_status": "auto",
+        "review_status": "approved",
         "label_source": "detector",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\person_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\person_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\person_review.jpg",
         "mask_pixel_count": 91104,
+        "reviewer_note": "Correct: the two-headed standing Hermaphrodite, the plate's title figure.",
         "qc_flag": "clean",
         "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
       },
       {
         "type": "individual",
         "object_stem": "person_old_man",
-        "label": "person old man",
+        "label": "Mercury (winged helmet) embracing Venus, his caduceus on the ground",
         "motif_id": null,
         "category": "figures",
         "detection_score": 0.3587338626384735,
@@ -14564,74 +14483,23 @@
         "appearance": null,
         "iconographic_meaning": null,
         "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
+        "review_status": "flagged",
+        "label_source": "human-corrected",
         "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\person_old_man_transparent.png",
         "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\person_old_man_crop.jpg",
         "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\person_old_man_review.jpg",
         "mask_pixel_count": 530486,
+        "original_label": "person old man",
+        "reviewer_note": "Correctly located -- pictures the discourse's 'two mountains of Mercury and Venus' directly; not an old man.",
         "qc_flag": "fragmented",
         "qc_note": "2 disconnected components of meaningful size; 9% of the mask sits outside the largest blob -- likely noise or a second, unrelated figure dragged in from elsewhere on the plate."
-      },
-      {
-        "type": "individual",
-        "object_stem": "sword_axe",
-        "label": "sword axe",
-        "motif_id": null,
-        "category": "objects",
-        "detection_score": 0.3624255657196045,
-        "detection_bbox": [
-          36,
-          982,
-          276,
-          206
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\sword_axe_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\sword_axe_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\individual\\sword_axe_review.jpg",
-        "mask_pixel_count": 50110,
-        "qc_flag": "clean",
-        "qc_note": "Single connected figure (1 significant component(s), largest covers 100% of the mask)."
-      },
-      {
-        "type": "composite",
-        "object_stem": "man_old_man+child+sword_axe+person_old_man+person+cave_composite",
-        "label": "man old man + child + sword axe + person old man + person + cave",
-        "motif_id": null,
-        "constituent_motif_ids": [
-          "child",
-          "mountain",
-          "figure"
-        ],
-        "category": "figures/figures/objects/figures/figures/landscape",
-        "detection_score": null,
-        "detection_bbox": [
-          32,
-          26,
-          1534,
-          1450
-        ],
-        "appearance": null,
-        "iconographic_meaning": null,
-        "alchemical_valence": [],
-        "review_status": "auto",
-        "label_source": "detector",
-        "transparent_png": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\composites\\man_old_man+child+sword_axe+person_old_man+person+cave_composite_transparent.png",
-        "crop_jpg": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\composites\\man_old_man+child+sword_axe+person_old_man+person+cave_composite_crop.jpg",
-        "review_overlay": "C:\\Dev\\EmblemPrintShop\\assets\\extracted_all\\emblem-38\\composites\\man_old_man+child+sword_axe+person_old_man+person+cave_composite_review.jpg",
-        "mask_pixel_count": 2058174
       }
     ],
-    "object_catalog_extracted_at": "2026-06-06T17:24:14.639724",
+    "object_catalog_extracted_at": "2026-06-06T17:24:14.145713",
     "object_catalog_count": {
-      "individual": 8,
-      "composite": 1,
-      "total": 9
+      "individual": 4,
+      "composite": 0,
+      "total": 4
     }
   },
   {
