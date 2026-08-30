@@ -417,5 +417,65 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T00:23:30.814316+00:00",
     "note": "Same/overlapping bbox as 'cauldron_03' -- duplicate detection of the handled basin."
+  },
+  "emblem-18__philosophical_egg": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T00:28:12.496313+00:00",
+    "note": "Applying Run B's WO-012 finding (prototype/wo012_canny_prototype/review.html): 'the furnace/flame opening -- correct region, wrong name'. This is a genuine furnace -- the one confirmed apparatus detection found across 6 emblems reviewed so far.",
+    "corrected_label": "Furnace with flames and a bellows/blow-pipe at its mouth"
+  },
+  "emblem-18__hermaphrodite_skelet": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T00:28:12.496313+00:00",
+    "note": "Same region as 'philosophical_egg' (the furnace) -- duplicate detection, wrong label."
+  },
+  "emblem-18__athanor": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T00:28:12.496313+00:00",
+    "note": "Applying Run B's WO-012 finding: 'bounds the standing operator, not any apparatus'. A human figure, not an athanor.",
+    "corrected_label": "The standing operator/figure beside the furnace"
+  },
+  "emblem-18__person": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T00:28:12.496313+00:00",
+    "note": "Same figure/near-identical bbox as 'athanor' -- duplicate detection."
+  },
+  "emblem-18__distillation_vessel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T00:28:12.496313+00:00",
+    "note": "Applying Run B's WO-012 finding: 'vessel/basin on pedestal, box looks correct'. A real vessel, but holding coins (matches this emblem's gold theme), not a distillation apparatus.",
+    "corrected_label": "Two-handled basin filled with coins, on a rocky pedestal"
+  },
+  "emblem-18__cauldron": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T00:28:12.496313+00:00",
+    "note": "Same coin-basin as 'distillation_vessel' -- duplicate detection under a third different wrong label."
+  },
+  "emblem-18__scepter_cauldron": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T00:28:12.496313+00:00",
+    "note": "Same coin-basin as 'distillation_vessel' -- duplicate detection."
+  },
+  "emblem-18__pestle": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T00:28:12.496313+00:00",
+    "note": "A long tapered tube with a handle -- matches the blow-pipe visible at the furnace's mouth in the full plate, not a pestle.",
+    "corrected_label": "Bellows or blow-pipe (tool used to work the furnace)"
+  },
+  "emblem-18__sword_axe": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T00:28:12.496313+00:00",
+    "note": "Identical crop to 'pestle' (the blow-pipe/bellows) -- duplicate detection."
+  },
+  "emblem-18__anvil": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T00:28:12.496313+00:00",
+    "note": "Clearly a dog, not an anvil -- no metalworking tool of any kind at this location.",
+    "corrected_label": "Dog (seated, scratching itself)"
+  },
+  "emblem-18__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T00:28:12.496313+00:00",
+    "note": "Bbox bundles the coin-basin, the operator's legs, and the dog together (width 1538 of ~1600px) -- not a single coherent element."
   }
 }
