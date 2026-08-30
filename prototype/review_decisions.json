@@ -2050,5 +2050,122 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T12:43:53.963246+00:00",
     "note": "Composite bundling seven elements, including the important 'vessel' (the burning wolf) -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-25__dragon": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "Correct: the dragon's head and neck beside Sol's radiant sun-mask."
+  },
+  "emblem-25__person": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "Bbox covers the entire plate -- a whole-scene detection, not a single object."
+  },
+  "emblem-25__person_man_old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "Correct figure, more specific than the generic label.",
+    "corrected_label": "Sol, radiant sun-mask, clubbing the dragon"
+  },
+  "emblem-25__person_old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "This is a young woman, not an old man.",
+    "corrected_label": "Luna, crowned with a crescent moon, clubbing the dragon"
+  },
+  "emblem-25__wolf": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "Three category prompts (angel_witch_figure/wolf/distillation_vessel) all detected the identical crop: the background radiant Sol figure drawing a bow. No angel, witch, wolf, or vessel is present -- keeping one entry, rejecting the other two as exact-region duplicates.",
+    "corrected_label": "Radiant Sol archer (background), drawing a bow"
+  },
+  "emblem-25__angel_witch_figure": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "Three category prompts (angel_witch_figure/wolf/distillation_vessel) all detected the identical crop: the background radiant Sol figure drawing a bow. No angel, witch, wolf, or vessel is present -- keeping one entry, rejecting the other two as exact-region duplicates. (kept under 'wolf')"
+  },
+  "emblem-25__distillation_vessel": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "Three category prompts (angel_witch_figure/wolf/distillation_vessel) all detected the identical crop: the background radiant Sol figure drawing a bow. No angel, witch, wolf, or vessel is present -- keeping one entry, rejecting the other two as exact-region duplicates. (kept under 'wolf')"
+  },
+  "emblem-25__sun": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "Correct: a tight crop of Sol's sunburst mask."
+  },
+  "emblem-25__building_house": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "Plausible: background town ruins with a domed building."
+  },
+  "emblem-25__castle_building": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "Plausible: a wider crop of the same town ruins, may overlap 'building_house'."
+  },
+  "emblem-25__distillation_vessel_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "No distillation apparatus -- the second archer figure.",
+    "corrected_label": "Diana/Luna archer (background), drawing a bow, crescent on her head"
+  },
+  "emblem-25__hermaphrodite_skelet": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "No hermaphrodite or skeleton -- the dragon's serpentine coils.",
+    "corrected_label": "The dragon's coiled body and tail"
+  },
+  "emblem-25__mountain_hill": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "Correct: a rocky island in the sea, background right."
+  },
+  "emblem-25__mountain": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "Correct: the mountain range with the town at its base, may overlap 'building_house'/'castle_building'."
+  },
+  "emblem-25__pestle": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "Two category prompts (pestle/sword_axe_02) both detected the identical crop: Sol's club, raised to strike the dragon. No pestle, sword, or axe is present -- keeping one entry, rejecting the other.",
+    "corrected_label": "Sol's club, raised to strike the dragon"
+  },
+  "emblem-25__sword_axe_02": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "Two category prompts (pestle/sword_axe_02) both detected the identical crop: Sol's club, raised to strike the dragon. No pestle, sword, or axe is present -- keeping one entry, rejecting the other. (kept under 'pestle')"
+  },
+  "emblem-25__star": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "Crop is a tiny, illegible mark -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-25__sword_axe": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "Same region as 'distillation_vessel_02' -- duplicate detection of the Diana/Luna archer, no sword or axe present."
+  },
+  "emblem-25__sword_spear_axe_torc": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "Crop is a tiny, illegible fragment -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-25__tower_chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "Crop is a tiny, illegible fragment (a few faint vertical lines) -- possibly building ruins already covered by 'building_house'/'mountain'; flagging as unsupported."
+  },
+  "emblem-25__wheel": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "No wheel -- a detail of the dragon.",
+    "corrected_label": "The dragon's head and neck, with a curved fin/horn"
+  },
+  "emblem-25__building_house+person_man_old_man+sword_spear_axe_torc+tower_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:46:25.686023+00:00",
+    "note": "Composite bundling four separate elements -- each already exists as its own (corrected) individual entry."
   }
 }
