@@ -1858,5 +1858,81 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T08:03:30.985143+00:00",
     "note": "Composite bundling four separate elements, including the rejected whole-scene 'building_house' -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-23__person": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:41:17.263794+00:00",
+    "note": "Bbox covers nearly the entire plate -- a whole-scene detection, not a single object."
+  },
+  "emblem-23__person_02": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T12:41:17.263794+00:00",
+    "note": "Correct: the Apollo statue (radiant halo, bow) on its pedestal."
+  },
+  "emblem-23__person_03": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:41:17.263794+00:00",
+    "note": "Correct figure, more specific than the generic label -- the plate's title myth.",
+    "corrected_label": "Tiny Athena/Pallas emerging from Zeus's head, arms raised"
+  },
+  "emblem-23__person_man_old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:41:17.263794+00:00",
+    "note": "Bundles two figures (Vulcan and Zeus) but is a coherent narrative unit not otherwise separately catalogued, unlike the broader whole-scene 'person' crop.",
+    "corrected_label": "Vulcan raising an axe to split Zeus's head"
+  },
+  "emblem-23__anvil": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:41:17.263794+00:00",
+    "note": "No anvil -- crop is Zeus's cloak/drapery fold; too generic a texture to confirm a distinct object."
+  },
+  "emblem-23__book": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:41:17.263794+00:00",
+    "note": "Crop is a tiny, illegible sliver -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-23__chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:41:17.263794+00:00",
+    "note": "No chimney -- a classical tholos/rotunda near the Apollo statue.",
+    "corrected_label": "Small domed temple (background architecture)"
+  },
+  "emblem-23__crown": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:41:17.263794+00:00",
+    "note": "A tighter crop of the Apollo statue's radiant head, already covered by 'person_02' -- redundant, not a distinct object."
+  },
+  "emblem-23__dillation_pestle": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:41:17.263794+00:00",
+    "note": "An axe, not a distillation vessel or pestle.",
+    "corrected_label": "Vulcan's axe, raised to strike Zeus's head"
+  },
+  "emblem-23__skeleton": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:41:17.263794+00:00",
+    "note": "No skeleton -- the flames and brick furnace at the forge, left side.",
+    "corrected_label": "Vulcan's forge fire (background)"
+  },
+  "emblem-23__star": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:41:17.263794+00:00",
+    "note": "Crop is a tiny, illegible mark -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-23__sword_axe": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:41:17.263794+00:00",
+    "note": "Identical crop to 'dillation_pestle' -- duplicate detection of Vulcan's axe."
+  },
+  "emblem-23__sword_axe_torch": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T12:41:17.263794+00:00",
+    "note": "No sword, axe, or torch -- a crescent-topped staff near the reclining figures on the right.",
+    "corrected_label": "Staff or scepter topped with a crescent moon"
+  },
+  "emblem-23__person_man_old_man+sword_axe+anvil+sword_axe_torch+person+bo_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T12:41:17.263794+00:00",
+    "note": "Composite bundling six separate elements, including the rejected whole-scene 'person' -- each already exists as its own (corrected) individual entry."
   }
 }
