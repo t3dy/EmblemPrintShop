@@ -897,5 +897,99 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T07:35:54.066714+00:00",
     "note": "Composite bundling multiple separate elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-06__staff": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:38:14.779774+00:00",
+    "note": "The plate's central figure -- correctly located, but he's not holding a staff; he's sowing by hand from a basket.",
+    "corrected_label": "Farmer/sower scattering seed (or gold coins) from a basket into the furrowed field"
+  },
+  "emblem-06__hourglass": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:38:14.779774+00:00",
+    "note": "Crop is a tiny, illegible sliver -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-06__crown": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:38:14.779774+00:00",
+    "note": "A wide-brimmed hat with a feather plume, not a crown.",
+    "corrected_label": "Sower's plumed hat"
+  },
+  "emblem-06__cauldron": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:38:14.779774+00:00",
+    "note": "A wicker basket full of round discs, matching the motto's literal 'gold' -- not a cauldron.",
+    "corrected_label": "Basket of seed (or gold coins) carried by the sower"
+  },
+  "emblem-06__palm": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:38:14.779774+00:00",
+    "note": "Crop is a tiny, illegible sliver -- plausibly the sower's hand scattering seed, but too small/unclear to confirm; flagging as unsupported."
+  },
+  "emblem-06__sky": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:38:14.779774+00:00",
+    "note": "Plausible: background treeline against open sky, right side of the plate."
+  },
+  "emblem-06__building_house": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:38:14.779774+00:00",
+    "note": "Correct: a small cottage/barn with a hipped roof."
+  },
+  "emblem-06__castle": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:38:14.779774+00:00",
+    "note": "A cluster of village buildings and a church spire, not a castle.",
+    "corrected_label": "Distant village with a church steeple"
+  },
+  "emblem-06__castle_building_temp": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:38:14.779774+00:00",
+    "note": "Same distant village cluster as 'castle', different framing -- duplicate detection."
+  },
+  "emblem-06__flower": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:38:14.779774+00:00",
+    "note": "Plausible: foreground shrub/foliage cluster (some scattered seed-discs from the field bleed in at the edge, but the crop is dominated by real foliage)."
+  },
+  "emblem-06__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:38:14.779774+00:00",
+    "note": "No hearth -- crop is the sower's legs walking through the furrowed field with the basket's edge visible, duplicating content already covered by 'staff' and the field itself."
+  },
+  "emblem-06__tower_chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:38:14.779774+00:00",
+    "note": "Crop is a tiny, low-resolution sliver -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-06__tower_chimney_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:38:14.779774+00:00",
+    "note": "A small rooftop/building cluster, plausibly the cottage or distant village, but the crop is low-resolution and may overlap 'building_house'/'castle' -- flagging confidence."
+  },
+  "emblem-06__tree": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:38:14.779774+00:00",
+    "note": "Correct: the foreground trees framing the cottage and furrowed field."
+  },
+  "emblem-06__window": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:38:14.779774+00:00",
+    "note": "Bbox covers the entire plate (whole-scene detection) -- no window is depicted anywhere in this emblem."
+  },
+  "emblem-06__sky+tree+window+building_house+flower+hearth_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:38:14.779774+00:00",
+    "note": "Composite bundling six separate elements -- each already exists as its own (corrected) individual entry."
+  },
+  "emblem-06__staff+crown+cauldron+hourglass+palm_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:38:14.779774+00:00",
+    "note": "Composite bundling the sower figure with his hat and basket -- each already exists as its own corrected individual entry."
+  },
+  "emblem-06__tower_chimney+castle+castle_building_temp+tower_chimney_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:38:14.779774+00:00",
+    "note": "Composite bundling the distant village architecture together -- each already exists as its own individual entry."
   }
 }
