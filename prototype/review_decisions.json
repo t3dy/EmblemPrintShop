@@ -725,5 +725,85 @@
     "status": "rejected",
     "reviewed_at": "2026-08-30T07:30:11.188042+00:00",
     "note": "Composite bundling the woman figure with the duplicate jug-pouring detection -- both already covered by 'person' and 'pestle'."
+  },
+  "emblem-04__person": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:33:36.680164+00:00",
+    "note": "Bbox covers essentially the entire plate (all three figures + full background) -- a whole-scene detection, not a single object."
+  },
+  "emblem-04__old_man": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:33:36.680164+00:00",
+    "note": "The discourse's 'cup of love' that unites the two -- correct figure, more specific than the generic label.",
+    "corrected_label": "Bearded elder extending a chalice toward the couple"
+  },
+  "emblem-04__witch_figure": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:33:36.680164+00:00",
+    "note": "No witch is present -- this is the plate's central pair, walking arm in arm, matching the emblem's own title.",
+    "corrected_label": "Embracing couple (brother and sister uniting)"
+  },
+  "emblem-04__cauldron": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:33:36.680164+00:00",
+    "note": "No cauldron present -- a hillside/landscape texture crop, same background visible behind the figures."
+  },
+  "emblem-04__anvil": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:33:36.680164+00:00",
+    "note": "Same hillside texture as 'cauldron' -- duplicate detection, no anvil present."
+  },
+  "emblem-04__stillation_mortar": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:33:36.680164+00:00",
+    "note": "Correct object (the cup extended toward the couple), but 'mortar/stillation' is the wrong apparatus term for a plain drinking chalice.",
+    "corrected_label": "Chalice/cup held by the elder"
+  },
+  "emblem-04__lamp_globe": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:33:36.680164+00:00",
+    "note": "Identical crop to 'stillation_mortar' -- duplicate detection of the same chalice, wrong label."
+  },
+  "emblem-04__crown": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:33:36.680164+00:00",
+    "note": "Crop is a tiny, low-resolution sliver -- too small/unclear to confirm what it depicts; flagging as unsupported."
+  },
+  "emblem-04__castle": {
+    "status": "approved",
+    "reviewed_at": "2026-08-30T07:33:36.680164+00:00",
+    "note": "Correct: the walled town with a gate and towers, background."
+  },
+  "emblem-04__hearth": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:33:36.680164+00:00",
+    "note": "No hearth -- bbox bundles the legs/feet of all three figures plus ground puddles into one region, not a single object."
+  },
+  "emblem-04__scepter": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:33:36.680164+00:00",
+    "note": "A handled jug, not a scepter.",
+    "corrected_label": "Jug/ewer at the elder's feet"
+  },
+  "emblem-04__tower_chimney": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:33:36.680164+00:00",
+    "note": "A small tower silhouette, plausibly one of the background town's towers, but the crop is tiny/low-resolution -- flagging confidence rather than a confident approval."
+  },
+  "emblem-04__tower_chimney_02": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:33:36.680164+00:00",
+    "note": "A spire silhouette, plausibly the town's church spire, but the crop is tiny/low-resolution and may overlap 'tower_chimney' -- flagging confidence rather than a confident approval."
+  },
+  "emblem-04__window": {
+    "status": "flagged",
+    "reviewed_at": "2026-08-30T07:33:36.680164+00:00",
+    "note": "Matches the arched gate visible in the town background -- a gate, not a window.",
+    "corrected_label": "Archway/gate in the town wall"
+  },
+  "emblem-04__lamp_globe+old_man+tower_chimney+window+person+castle+hearth_composite": {
+    "status": "rejected",
+    "reviewed_at": "2026-08-30T07:33:36.680164+00:00",
+    "note": "Composite bundling seven separate elements -- each already exists as its own (corrected) individual entry."
   }
 }
